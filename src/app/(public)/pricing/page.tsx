@@ -57,7 +57,7 @@ export default function PricingPage() {
   const businessPlans = [
     {
       name: "Startup",
-      users: "Up to 10",
+      devices: 10,
       priceMonthly: 49,
       priceYearly: 470,
       features: [
@@ -70,7 +70,7 @@ export default function PricingPage() {
     },
     {
       name: "SME Pro",
-      users: "Up to 50",
+      devices: 50,
       priceMonthly: 199,
       priceYearly: 1900,
       features: [
@@ -83,7 +83,7 @@ export default function PricingPage() {
     },
     {
       name: "Enterprise",
-      users: "Custom",
+      devices: 100, // mettre une valeur par défaut ou max
       priceMonthly: 0,
       priceYearly: 0,
       features: [
@@ -230,7 +230,7 @@ export default function PricingPage() {
                     <span>/{billing === "monthly" ? "month" : "year"}</span>
                   )}
                 </p>
-                <p className="users">{plan.users} users</p>
+                <p className="users">{plan.devices} users</p>
                 <ul>
                   {plan.features.map((f, i) => (
                     <li key={i}>{f}</li>
