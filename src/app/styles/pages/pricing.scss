@@ -1,0 +1,343 @@
+@use "../variables.scss" as vars;
+
+.pricing {
+  background-color: var(--bg-main);
+
+  /* ================= HERO ================= */
+  .pricing-hero {
+    padding: 6rem 1.5rem 4rem;
+    text-align: center;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    p {
+      margin-top: 1rem;
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
+    }
+
+    .billing-toggle {
+      margin-top: 2rem;
+      display: inline-flex;
+      background-color: var(--bg-soft);
+      border-radius: 999px;
+      padding: 0.25rem;
+      box-shadow: var(--shadow-sm);
+
+      button {
+        padding: 0.5rem 1.25rem;
+        border-radius: 999px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--text-muted);
+        transition: 0.25s;
+
+        span {
+          color: vars.$oxo-orange;
+          font-size: 0.8rem;
+          margin-left: 0.25rem;
+        }
+
+        &.active {
+          background-color: vars.$oxo-blue;
+          color: white;
+        }
+      }
+    }
+  }
+  /* ================= PLAN RECOMMENDER ================= */
+  .plan-recommender {
+    padding: 4rem 1.5rem;
+    background-color: var(--bg-soft);
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: vars.$oxo-orange;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+    }
+
+    .recommender-form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.95rem;
+        color: var(--text-main);
+        input[type="number"] {
+          margin-top: 0.5rem;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          border: 1px solid var(--border-soft);
+          width: 80px;
+          text-align: center;
+        }
+        input[type="checkbox"] {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    .recommended-plan {
+      background-color: var(--card-bg);
+      border-radius: 1rem;
+      padding: 2rem;
+      display: inline-block;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .price {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  /* ================= SECTIONS ================= */
+  .pricing-section {
+    padding: 4rem 1.5rem;
+
+    &.alt {
+      background-color: var(--bg-soft);
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      color: vars.$oxo-orange;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      align-items: stretch;
+    }
+  }
+
+  /* ================= CARD ================= */
+  .pricing-card {
+    background-color: var(--card-bg);
+    border-radius: 1.25rem;
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    &.highlight {
+      border: 2px solid vars.$oxo-blue;
+      transform: translateY(-6px);
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+
+      span {
+        font-size: 1rem;
+        color: var(--text-muted);
+      }
+    }
+
+    .devices,
+    .users {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 2rem;
+
+      li {
+        margin-bottom: 0.6rem;
+        color: var(--text-main);
+      }
+    }
+
+    .btn {
+      margin-top: auto;
+      padding: 0.65rem 1.5rem;
+      font-weight: 600;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      transition: 0.25s;
+
+      &.primary {
+        background-color: vars.$oxo-orange;
+        color: white;
+
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
+
+      &.secondary {
+        background-color: transparent;
+        border: 2px solid vars.$oxo-orange;
+        color: vars.$oxo-orange;
+
+        &:hover {
+          background-color: vars.$oxo-orange;
+          color: white;
+        }
+      }
+    }
+  }
+
+  /* ================= COMPARISON TABLE ================= */
+  .pricing-compare {
+    padding: 5rem 1.5rem;
+    background-color: var(--bg-main);
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 3rem;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: var(--card-bg);
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+
+        th,
+        td {
+          padding: 1rem;
+          text-align: center;
+          font-size: 0.95rem;
+        }
+
+        th {
+          background-color: var(--bg-soft);
+          font-weight: 700;
+        }
+
+        td:first-child,
+        th:first-child {
+          text-align: left;
+          font-weight: 600;
+        }
+
+        tbody tr {
+          border-top: 1px solid var(--border-color);
+        }
+
+        tbody td {
+          font-size: 0.95rem;
+
+          &::before {
+            /* Optionnel: icône ✔ / — pour lisibilité */
+          }
+        }
+      }
+    }
+  }
+
+  /* ================= CTA ================= */
+  .pricing-cta {
+    padding: 5rem 1.5rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      font-size: 1rem;
+      padding: 0.75rem 2rem;
+    }
+  }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 768px) {
+    .pricing-section .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .pricing-hero h1 {
+      font-size: 2rem;
+    }
+
+    .pricing-hero p {
+      font-size: 1rem;
+    }
+
+    .pricing-card .price {
+      font-size: 1.8rem;
+    }
+  }
+}

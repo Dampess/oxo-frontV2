@@ -1,0 +1,28 @@
+@use "../variables.scss" as vars;
+
+.newsletter {
+  padding: 4rem 1rem;
+  background-color: vars.$oxo-blue;
+  color: vars.$foreground-dark;
+  text-align: center;
+
+  input {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    border: none;
+    width: 250px;
+  }
+
+  button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    border: none;
+    background-color: vars.$oxo-orange;
+    color: vars.$oxo-white;
+    cursor: pointer;
+  }
+
+  form {
+    display: inline-flex;
+  }
+}

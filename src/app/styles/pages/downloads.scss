@@ -1,0 +1,176 @@
+@use "../variables.scss" as vars;
+
+.downloads {
+  background-color: var(--bg-page, #f9fafb);
+
+  .downloads-hero {
+    padding: 6rem 1.5rem 4rem;
+    text-align: center;
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+
+      .title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-main, #111827);
+        margin-bottom: 1rem;
+      }
+
+      .subtitle {
+        font-size: 1.15rem;
+        color: var(--text-muted, #6b7280);
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .downloads-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+
+    button {
+      padding: 0.6rem 1.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft, #d1d5db);
+      background: var(--bg-card, #fff);
+      color: var(--text-main, #111827);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s;
+
+      &.active,
+      &:hover {
+        background-color: vars.$oxo-blue;
+        color: #fff;
+        border-color: vars.$oxo-blue;
+      }
+    }
+  }
+
+  .downloads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  .download-card {
+    background-color: var(--bg-card, #fff);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition:
+      transform 0.25s,
+      box-shadow 0.25s;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .os {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main, #111827);
+    }
+
+    .desc {
+      font-size: 0.95rem;
+      color: var(--text-muted, #6b7280);
+      line-height: 1.5;
+    }
+
+    .meta {
+      font-size: 0.8rem;
+      color: var(--text-soft, #9ca3af);
+    }
+
+    .btn {
+      margin-top: auto;
+      text-align: center;
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      background-color: vars.$oxo-blue;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+
+      &:hover {
+        filter: brightness(0.9);
+        transform: translateY(-1px);
+      }
+    }
+  }
+
+  .downloads-info {
+    background-color: var(--bg-card, #fff);
+    border-top: 1px solid var(--border-main, #e5e7eb);
+    padding: 3rem 1.5rem;
+    text-align: center;
+
+    p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--text-muted, #6b7280);
+      font-size: 0.95rem;
+    }
+  }
+
+  .downloads-cta {
+    padding: 5rem 1.5rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: vars.$oxo-orange;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      color: var(--text-muted, #6b7280);
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.6rem;
+      background-color: vars.$oxo-orange;
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.25s;
+
+      &:hover {
+        background-color: vars.$oxo-blue;
+      }
+    }
+  }
+
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    background-color: #0b0b0b;
+
+    .download-card,
+    .downloads-info {
+      background-color: #121212;
+      border-color: #374151;
+      color: #f3f4f6;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .downloads-cta p {
+      color: #9ca3af;
+    }
+  }
+}

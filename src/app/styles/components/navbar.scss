@@ -1,0 +1,358 @@
+@use "sass:color";
+@use "../variables.scss" as vars;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+  background-color: vars.$oxo-white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  .container {
+    max-width: 112rem;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ================= NAV ================= */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+  }
+
+  .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .nav-principal {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .nav-link {
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    .button-secondary {
+      border: 1px solid vars.$oxo-orange;
+      color: vars.$oxo-orange;
+      padding: 0.45rem 0.9rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+
+      &:hover {
+        background-color: vars.$oxo-orange;
+        color: white;
+      }
+    }
+  }
+
+  /* ================= BRAND ================= */
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+
+    img {
+      transition: transform 0.2s;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .brand-name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: vars.$oxo-orange;
+    }
+
+    .brand-tagline {
+      font-size: 0.8rem;
+      color: #6b7280;
+      font-style: italic;
+    }
+  }
+
+  /* ================= NAV LINKS ================= */
+  .nav-link {
+    position: relative;
+    font-weight: 500;
+    color: vars.$foreground-light;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: vars.$oxo-orange;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: vars.$oxo-orange;
+      transition: width 0.3s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  /* ================= NAV ITEM ================= */
+  .nav-item {
+    position: relative;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+
+    &:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+
+  /* ================= DROPDOWN ================= */
+  .dropdown {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+
+    min-width: 520px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease;
+  }
+
+  .dropdown-personal {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .dropdown-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    a {
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: vars.$foreground-light;
+
+      &:hover {
+        color: vars.$oxo-orange;
+      }
+    }
+  }
+
+  .dropdown-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #9ca3af;
+  }
+
+  .dropdown-highlight,
+  .dropdown-cta {
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .dropdown-highlight {
+    background: linear-gradient(
+      135deg,
+      rgba(74, 144, 226, 0.15),
+      rgba(255, 127, 80, 0.15)
+    );
+  }
+
+  .dropdown-cta {
+    background: linear-gradient(
+      135deg,
+      rgba(224, 122, 95, 0.1),
+      rgba(181, 205, 226, 0.15)
+    );
+
+    p {
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .nav-button {
+      margin-top: 0.5rem;
+      display: inline-block;
+      background-color: vars.$oxo-orange;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  /* ================= MOBILE ================= */
+  /* ================= MOBILE HEADER ================= */
+  .mobile-header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+
+    .burger {
+      font-size: 2rem;
+      font-weight: 900;
+      color: vars.$oxo-orange;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+
+      color: vars.$foreground-light;
+
+      span {
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .account-icon {
+    font-size: 1rem;
+    font-family: vars.$font-mono;
+    color: vars.$foreground-light;
+    cursor: pointer;
+    width: 8rem;
+    align-self: flex-start;
+
+    a {
+      text-decoration: none;
+      color: vars.$oxo-orange;
+    }
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    background-color: white;
+    height: 100vh;
+
+    a {
+      text-decoration: none;
+      color: vars.$foreground-light;
+      font-size: 1rem;
+      font-weight: 500;
+
+      &:hover {
+        color: vars.$oxo-orange;
+      }
+    }
+
+    .mobile-title {
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-top: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .mobile-dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-left: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .mobile-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+
+      a {
+        text-align: center;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+      }
+
+      .button-secondary {
+        border: 1px solid vars.$oxo-orange;
+        color: vars.$oxo-orange;
+
+        &:hover {
+          background-color: vars.$oxo-orange;
+          color: white;
+        }
+      }
+
+      .nav-button {
+        background-color: vars.$oxo-orange;
+        color: white;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+    }
+
+    .mobile-header {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "../variables.scss" as vars;
+
+.dashboard-section {
+  padding: 6rem 1rem;
+  background: linear-gradient(to bottom, #ffffff, #fdf5ef);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .dashboard-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .dashboard-text {
+      flex: 1;
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.05rem;
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .btn-primary {
+        background: vars.$oxo-orange;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 0.6rem;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .dashboard-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      .mockup-img {
+        border-radius: 1rem;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        width: 100%;
+
+        object-fit: cover;
+      }
+    }
+  }
+}

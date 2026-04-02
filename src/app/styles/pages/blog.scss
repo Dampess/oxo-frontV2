@@ -1,0 +1,269 @@
+@use "../variables.scss" as vars;
+@use "sass:color";
+
+.blog-page {
+  background-color: var(--bg-main);
+
+  /* ================= HERO ================= */
+  .blog-hero {
+    position: relative;
+    padding: 6rem 1.5rem;
+    min-height: 22rem;
+    background: linear-gradient(
+      135deg,
+      rgba(74, 144, 226, 0.12),
+      rgba(255, 127, 80, 0.12)
+    );
+    background-image: url("/blogHero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 20% 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 0 0 20% 0;
+      background-color: rgba(22, 21, 21, 0.4);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      max-width: 64rem;
+      margin: 0 auto;
+      text-align: center;
+      z-index: 1;
+
+      h1 {
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: vars.$oxo-orange;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.15rem;
+        color: vars.$oxo-white;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  /* ================= CATEGORY FILTER ================= */
+  .blog-filters {
+    padding: 2rem 1.5rem;
+    text-align: center;
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+
+      button {
+        padding: 0.5rem 1.25rem;
+        border-radius: 999px;
+        border: 1px solid vars.$oxo-orange;
+        background: transparent;
+        font-weight: 600;
+        color: vars.$oxo-orange;
+        cursor: pointer;
+        transition: all 0.25s;
+
+        &.active,
+        &:hover {
+          background-color: vars.$oxo-orange;
+          color: white;
+        }
+      }
+    }
+  }
+
+  /* ================= POSTS ================= */
+  .blog-list {
+    padding: 5rem 1.5rem;
+
+    .container {
+      max-width: 96rem;
+      margin: 0 auto;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .post-card {
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: var(--card-bg);
+        border: 1px solid #e5e7eb;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+
+          .post-link {
+            transform: translateX(4px);
+          }
+        }
+
+        .post-meta {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.75rem;
+          margin-bottom: 1rem;
+
+          .category {
+            font-weight: 700;
+            text-transform: uppercase;
+            color: vars.$oxo-blue;
+            letter-spacing: 0.05em;
+          }
+
+          .date {
+            color: #9ca3af;
+          }
+        }
+
+        .post-title {
+          font-size: 1.35rem;
+          font-weight: 700;
+          margin-bottom: 0.75rem;
+        }
+
+        .post-excerpt {
+          color: #4b5563;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+          @media (prefers-color-scheme: dark) {
+            color: color.adjust(vars.$foreground-dark, $lightness: -5%);
+          }
+        }
+
+        .post-link {
+          color: vars.$oxo-blue;
+          font-weight: 600;
+          text-decoration: none;
+          display: inline-block;
+          transition: transform 0.2s ease;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .no-posts {
+        text-align: center;
+        color: #6b7280;
+        font-size: 1rem;
+        margin: 3rem 0;
+      }
+    }
+  }
+
+  /* ================= CTA ================= */
+  .blog-cta {
+    padding: 5rem 1.5rem;
+    text-align: center;
+    background-color: #f9fafb;
+    @media (prefers-color-scheme: dark) {
+      background-color: color.adjust(vars.$background-dark, $lightness: -5%);
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: vars.$oxo-orange;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #4b5563;
+      @media (prefers-color-scheme: dark) {
+        color: color.adjust(vars.$foreground-dark, $lightness: -5%);
+      }
+    }
+
+    .button-primary {
+      background-color: vars.$oxo-orange;
+      color: white;
+      padding: 0.75rem 1.75rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      transition: background 0.25s;
+
+      &:hover {
+        background-color: vars.$oxo-blue;
+      }
+    }
+  }
+
+  /* ================= NEWSLETTER ================= */
+  .blog-newsletter {
+    padding: 5rem 1.5rem;
+    text-align: center;
+    background-color: vars.$background-light;
+    border-top: 1px solid #e5e7eb;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: vars.$oxo-orange;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.75rem;
+      color: #4b5563;
+    }
+
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+
+      input {
+        padding: 0.65rem 1rem;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        width: 250px;
+        transition: border 0.2s;
+
+        &:focus {
+          outline: none;
+          border-color: vars.$oxo-orange;
+        }
+      }
+
+      button {
+        padding: 0.65rem 1.25rem;
+        border: none;
+        background-color: vars.$oxo-orange;
+        color: white;
+        font-weight: 600;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: background 0.25s;
+
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
+    }
+  }
+}

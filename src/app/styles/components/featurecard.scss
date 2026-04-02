@@ -1,0 +1,50 @@
+@use "../variables.scss" as vars;
+
+.feature-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1.8rem;
+  border-radius: 1rem;
+  background: white;
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  transition: all 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ICON BADGE */
+  .feature-icon {
+    min-width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 0.7rem;
+    background: rgba(255, 127, 80, 0.1);
+
+    font-size: 1.3rem;
+  }
+
+  .feature-content {
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: vars.$foreground-light;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+  }
+}
