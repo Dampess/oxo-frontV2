@@ -71,7 +71,7 @@ export default function LinkCheckerPage() {
         )}
       </section>
 
-      <section className="info-section">
+      <section className="info-section alt">
         <h2>Why malicious links are dangerous</h2>
         <p>
           Malicious URLs are one of the fastest ways attackers compromise users.

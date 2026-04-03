@@ -1,15 +1,12 @@
-@use "../variables.scss" as vars;
-
 .tools-section {
   padding: 6rem 1rem;
-  background: linear-gradient(to bottom, #fff5eb, #ffffff);
+  background: var(--tools-bg);
 
   .container {
     max-width: 1100px;
     margin: 0 auto;
   }
 
-  /* HEADER */
   .tools-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -18,54 +15,51 @@
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 0.5rem;
+      color: var(--tool-title);
     }
 
     p {
-      color: #6b7280;
       font-size: 1.05rem;
+      color: var(--tool-text);
     }
   }
 
-  /* GRID */
   .tools-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  /* CARD */
   .tool-card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 1.5rem;
     border-radius: 1rem;
-    background: white;
-
-    border: 1px solid rgba(0, 0, 0, 0.05);
-
+    background: var(--tool-card-bg);
+    border: 1px solid var(--tool-card-border);
     text-decoration: none;
     color: inherit;
-
     transition: all 0.25s ease;
+    box-shadow: var(--tool-card-shadow);
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
     }
 
     .tool-icon {
       width: 45px;
       height: 45px;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       border-radius: 0.7rem;
-      background: rgba(255, 127, 80, 0.1);
-
+      background: var(--tool-icon-bg);
       font-size: 1.3rem;
       margin-right: 1rem;
     }
@@ -77,33 +71,33 @@
         font-size: 1.05rem;
         font-weight: 600;
         margin-bottom: 0.2rem;
+        color: var(--tool-title);
       }
 
       p {
         font-size: 0.9rem;
-        color: #6b7280;
+        color: var(--tool-text);
       }
     }
 
     .tool-arrow {
       font-size: 1.2rem;
-      color: vars.$oxo-orange;
+      color: var(--tool-arrow);
       transition: transform 0.2s;
-    }
 
-    &:hover .tool-arrow {
-      transform: translateX(4px);
+      &:hover {
+        transform: translateX(4px);
+      }
     }
   }
 
-  /* CTA */
   .tools-cta {
     margin-top: 2.5rem;
     text-align: center;
 
     .btn-primary {
-      background: vars.$oxo-orange;
-      color: white;
+      background: var(--tools-cta-bg);
+      color: var(--tools-cta-text);
       padding: 0.7rem 1.5rem;
       border-radius: 0.6rem;
       font-weight: 600;
@@ -112,13 +106,6 @@
       &:hover {
         opacity: 0.9;
       }
-    }
-  }
-
-  /* MOBILE */
-  @media (max-width: 768px) {
-    .tools-grid {
-      grid-template-columns: 1fr;
     }
   }
 }

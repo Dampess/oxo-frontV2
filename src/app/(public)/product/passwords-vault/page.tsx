@@ -28,7 +28,7 @@ export default function PasswordVaultPage() {
       </section>
 
       {/* WHY PROTECT */}
-      <section className="info-section">
+      <section className="info-section alt">
         <h2>Why a password vault is important</h2>
         <ul>
           <li>🔐 Strong, unique passwords for every account</li>

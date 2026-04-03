@@ -70,7 +70,7 @@ export default function EmailCheckPage() {
       </section>
 
       {/* WHY */}
-      <section className="info-section">
+      <section className="info-section alt">
         <h2>Why phishing emails are dangerous</h2>
         <p>
           Email is the #1 attack vector used by cybercriminals. A single click

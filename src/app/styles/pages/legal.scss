@@ -59,3 +59,40 @@
     }
   }
 }
+
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  .legal-page {
+    background-color: #0f172a; /* fond sombre général */
+    color: #e5e7eb; /* texte principal clair */
+
+    h1 {
+      color: vars.$oxo-orange;
+    }
+
+    .legal-date {
+      color: #9ca3af;
+    }
+
+    h2 {
+      color: #f3f4f6;
+    }
+
+    p,
+    ul li {
+      color: #d1d5db;
+    }
+
+    a {
+      color: vars.$oxo-blue;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    section {
+      border-color: #374151; /* si tu as des bordures à ajouter pour séparation */
+    }
+  }
+}

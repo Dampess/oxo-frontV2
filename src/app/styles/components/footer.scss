@@ -1,14 +1,12 @@
-@use "sass:color";
-@use "../variables.scss" as vars;
-
 .footer {
-  background-color: vars.$oxo-white;
+  background-color: var(--footer-bg);
   padding: 3rem 1.5rem;
+  border-top: 1px solid var(--card-border);
 
   .container {
     max-width: 96rem;
     margin: 0 auto;
-    color: #555;
+    color: var(--footer-text);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -20,27 +18,27 @@
 
     .brand {
       font-weight: 600;
-      color: vars.$oxo-orange;
+      color: var(--brand-color);
     }
   }
 
   .links {
-    font-size: 0.875rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
+    font-size: 0.875rem;
 
     .link {
-      color: vars.$oxo-blue;
+      color: var(--footer-link);
       text-decoration: none;
       transition:
         color 0.3s,
         text-decoration 0.3s;
 
       &:hover {
+        color: var(--footer-link-hover);
         text-decoration: underline;
-        color: color.adjust(vars.$oxo-blue, $lightness: -10%);
       }
     }
   }

@@ -1,10 +1,308 @@
 @use "./variables.scss" as vars;
 @use "./mixins.scss" as mix;
 
+:root {
+  --background: #{vars.$background-light};
+  --foreground: #{vars.$foreground-light};
+
+  --primary: #{vars.$oxo-orange};
+  --primary-contrast: #{vars.$oxo-white};
+
+  /* Header */
+  --header-bg: rgba(255, 245, 235, 0.8);
+  --header-border: rgba(0, 0, 0, 0.05);
+
+  /* Text */
+  --nav-text: #{vars.$foreground-light};
+  --nav-text-muted: #6b7280;
+
+  /* Brand */
+  --brand-color: #{vars.$oxo-orange};
+
+  /* Hover */
+  --nav-hover-bg: rgba(0, 0, 0, 0.04);
+
+  /* Dropdown */
+  --dropdown-bg: #ffffff;
+  --dropdown-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+
+  /* Mobile */
+  --mobile-bg: #ffffff;
+
+  /* Hero */
+  --hero-bg: #{vars.$oxo-blue};
+
+  --hero-text-muted: #5b616c;
+
+  /* Section */
+  --pricing-bg: #{vars.$background-light};
+
+  /* Text */
+  --text-muted: #6b7280;
+  --text-secondary: #4b5563;
+  --text-tertiary: #374151;
+
+  /* Card */
+  --plan-bg: #{vars.$oxo-blue};
+  --plan-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --plan-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  /* Highlight */
+  --plan-highlight-border: #{vars.$oxo-orange};
+  --plan-highlight-shadow: 0 10px 25px rgba(224, 122, 95, 0.25);
+
+  /* Badge */
+  --badge-bg: #{vars.$oxo-orange};
+  --badge-text: #ffffff;
+
+  /* Button */
+  --btn-primary-bg: #{vars.$oxo-orange};
+  --btn-primary-text: #ffffff;
+
+  /* Scrollbar */
+  --scrollbar-thumb: #{vars.$oxo-orange};
+  --scrollbar-track: #f0f0f0;
+
+  /* Carousel buttons */
+  --carousel-btn-bg: #{vars.$oxo-orange};
+  --carousel-btn-text: #ffffff;
+
+  /* CTA */
+  --btn-primary-bg: #{vars.$oxo-orange};
+  --btn-primary-text: #ffffff;
+
+  --btn-secondary-border: #{vars.$oxo-orange};
+  --btn-secondary-text: #{vars.$oxo-orange};
+  --btn-secondary-hover-bg: #{vars.$oxo-orange};
+  --btn-secondary-hover-text: #ffffff;
+
+  /* Shadow */
+  --hero-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+  /*CTA*/
+  --cta-bg: #{vars.$oxo-orange};
+  --cta-text: #{vars.$oxo-white};
+  --cta-button-bg: #{vars.$oxo-white};
+  --cta-button-text: #{vars.$oxo-orange};
+
+  /* Dashboard */
+  --dashboard-bg-start: #ffffff;
+  --dashboard-bg-end: #fdf5ef;
+
+  --text-muted: #6b7280;
+
+  --btn-primary-bg: #{vars.$oxo-orange};
+  --btn-primary-text: #ffffff;
+
+  --shadow-soft: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.08);
+
+  /* Texte */
+  --text-primary: #{vars.$foreground-light};
+  --text-muted: #6b7280;
+
+  /* Icon */
+  --icon-bg: rgba(255, 127, 80, 0.1);
+
+  /* Button */
+  --btn-bg: #{vars.$oxo-orange};
+  --btn-text: #{vars.$oxo-white};
+
+  --section-bg: #{vars.$background-light};
+  --text-muted: #6b7280;
+
+  /* Footer */
+  --footer-bg: #{vars.$oxo-white};
+  --footer-text: #555;
+
+  --footer-link: #{vars.$oxo-blue};
+  --footer-link-hover: #9bbad6;
+
+  --brand-color: #{vars.$oxo-orange};
+
+  /* Newsletter */
+  --newsletter-bg: #{vars.$oxo-blue};
+  --newsletter-text: #{vars.$foreground-dark};
+
+  --input-bg: #ffffff;
+  --input-text: #111111;
+  --input-placeholder: #9ca3af;
+
+  --btn-primary-bg: #{vars.$oxo-orange};
+  --btn-primary-text: #{vars.$oxo-white};
+
+  --testimonials-bg: #{vars.$background-light};
+
+  /* Text */
+  --testimonial-quote: #374151;
+  --testimonial-role: #6b7280;
+  --testimonial-name: #{vars.$foreground-light};
+
+  /* Card */
+  --testimonial-card-bg: #{vars.$oxo-blue};
+  --testimonial-card-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --testimonial-card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+  /* Carousel */
+  --scrollbar-thumb: #{vars.$oxo-orange};
+  --scrollbar-track: #f0f0f0;
+  --carousel-btn-bg: #{vars.$oxo-orange};
+  --carousel-btn-text: #ffffff;
+
+  --tools-bg: #{vars.$background-light};
+
+  /* Card */
+  --tool-card-bg: #ffffff;
+  --tool-card-border: rgba(0, 0, 0, 0.05);
+  --tool-card-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+
+  /* Text */
+  --tool-title: #{vars.$foreground-light};
+  --tool-text: #6b7280;
+
+  /* Icon */
+  --tool-icon-bg: rgba(255, 127, 80, 0.1);
+  --tool-arrow: #{vars.$oxo-orange};
+
+  /* CTA */
+  --tools-cta-bg: #{vars.$oxo-orange};
+  --tools-cta-text: #ffffff;
+
+  --trust-bg: #{vars.$background-light};
+  --reason-card-bg: #ffffff;
+  --reason-card-border: rgba(0, 0, 0, 0.05);
+  --reason-card-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+  --reason-title: #{vars.$foreground-light};
+  --reason-text: #6b7280;
+
+  --reason-icon-bg: rgba(255, 127, 80, 0.1);
+}
+
+/* Dark mode automatique */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #{vars.$background-dark};
+    --foreground: #{vars.$foreground-dark};
+
+    --header-bg: rgba(10, 10, 10, 0.7);
+    --header-border: rgba(255, 255, 255, 0.08);
+
+    --nav-text: #{vars.$foreground-dark};
+    --nav-text-muted: #9ca3af;
+
+    --nav-hover-bg: rgba(255, 255, 255, 0.06);
+
+    --dropdown-bg: #111111;
+    --dropdown-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+
+    --mobile-bg: #0f0f0f;
+
+    --hero-bg: #0f172a;
+
+    --hero-text-muted: #9ca3af;
+
+    --hero-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+    --cta-bg: #{vars.$oxo-orange};
+    --cta-text: #{vars.$oxo-white};
+
+    --cta-button-bg: #{vars.$oxo-white};
+    --cta-button-text: #{vars.$oxo-orange};
+
+    --dashboard-bg-start: #0a0a0a;
+    --dashboard-bg-end: #121212;
+
+    --text-muted: #9ca3af;
+
+    --btn-primary-bg: #{vars.$oxo-orange};
+    --btn-primary-text: #ffffff;
+
+    --shadow-soft: 0 15px 35px rgba(0, 0, 0, 0.5);
+
+    --card-bg: #111111;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --card-shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.6);
+
+    --text-primary: #{vars.$foreground-dark};
+    --text-muted: #9ca3af;
+
+    --icon-bg: rgba(255, 127, 80, 0.2);
+
+    --section-bg: #{vars.$background-dark};
+    --text-muted: #9ca3af;
+
+    --footer-bg: #0f0f0f;
+    --footer-text: #9ca3af;
+
+    --footer-link: #{vars.$oxo-blue};
+    --footer-link-hover: #d0e2f2;
+
+    --brand-color: #{vars.$oxo-orange};
+    --newsletter-bg: #0f172a; // bleu sombre cohérent avec ton hero
+    --newsletter-text: #ededed;
+
+    --input-bg: #111111;
+    --input-text: #ffffff;
+    --input-placeholder: #6b7280;
+
+    --pricing-bg: #{vars.$background-dark};
+
+    --text-muted: #9ca3af;
+    --text-secondary: #9ca3af;
+    --text-tertiary: #d1d5db;
+
+    --plan-bg: #111827; // bleu sombre (plus premium que noir pur)
+    --plan-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    --plan-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.7);
+
+    --plan-highlight-shadow: 0 10px 25px rgba(224, 122, 95, 0.4);
+
+    --scrollbar-track: #1f2937;
+
+    --testimonials-bg: #{vars.$background-dark};
+
+    --testimonial-quote: #d1d5db;
+    --testimonial-role: #9ca3af;
+    --testimonial-name: #{vars.$foreground-dark};
+
+    --testimonial-card-bg: #1f2937; // bleu sombre
+    --testimonial-card-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+    --testimonial-card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.7);
+
+    --scrollbar-track: #374151;
+    --tools-bg: #{vars.$background-dark};
+
+    --tool-card-bg: #1f2937;
+    --tool-card-border: rgba(255, 255, 255, 0.1);
+    --tool-card-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+
+    --tool-title: #{vars.$foreground-dark};
+    --tool-text: #9ca3af;
+
+    --tool-icon-bg: rgba(224, 122, 95, 0.2);
+
+    --trust-bg: #{vars.$background-dark};
+
+    --reason-card-bg: #1f2937;
+    --reason-card-border: rgba(255, 255, 255, 0.1);
+    --reason-card-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+
+    --reason-title: #{vars.$foreground-dark};
+    --reason-text: #9ca3af;
+
+    --reason-icon-bg: rgba(224, 122, 95, 0.2);
+  }
+}
+
 body {
   font-family: vars.$font-sans;
   margin: auto;
   padding: 0;
-  background-color: vars.$background-light;
-  color: vars.$foreground-light;
+  background-color: var(--background);
+  color: var(--foreground);
 }

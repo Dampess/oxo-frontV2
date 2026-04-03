@@ -75,7 +75,7 @@ export default function PasswordPage() {
         )}
       </section>
 
-      <section className="info-section">
+      <section className="info-section alt">
         <h2>Why weak passwords are dangerous</h2>
         <p>
           Weak passwords are responsible for the majority of data breaches

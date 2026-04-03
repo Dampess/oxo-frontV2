@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import "../../styles/pages/tools.scss";
 
 export default function ToolsPage() {
@@ -17,11 +17,11 @@ export default function ToolsPage() {
               with simple but powerful cybersecurity tools.
             </p>
 
-            <div className="hero-actions">
-              <Link href="/tools/email-sec" className="btn-primary">
+            <div className="cta">
+              <Link href="/tools/email-sec" className="btn primary">
                 Check Email
               </Link>
-              <Link href="/tools/link-sec" className="btn_secondary">
+              <Link href="/tools/link-sec" className="btn secondary">
                 Analyze Link
               </Link>
             </div>
@@ -31,8 +31,8 @@ export default function ToolsPage() {
             <Image
               src="/oxo-protection.webp"
               alt="cybersecurity tools"
-              width={500}
-              height={400}
+              width={300}
+              height={300}
             />
           </div>
         </div>
@@ -106,10 +106,11 @@ export default function ToolsPage() {
                 <li>✔ Detect phishing keywords</li>
                 <li>✔ Analyze suspicious patterns</li>
               </ul>
-
-              <Link href="/tools/email-sec" className="btn primary">
-                Use tool
-              </Link>
+              <div className="cta">
+                <Link href="/tools/email-sec" className="btn primary">
+                  Use tool
+                </Link>
+              </div>
             </div>
 
             {/* PASSWORD */}
@@ -133,10 +134,11 @@ export default function ToolsPage() {
                 <li>✔ Strength evaluation</li>
                 <li>✔ Security best practices</li>
               </ul>
-
-              <Link href="/tools/password-sec" className="btn primary">
-                Use tool
-              </Link>
+              <div className="cta">
+                <Link href="/tools/password-sec" className="btn primary">
+                  Use tool
+                </Link>
+              </div>
             </div>
 
             {/* LINKS */}
@@ -159,10 +161,11 @@ export default function ToolsPage() {
                 <li>✔ Suspicious pattern detection</li>
                 <li>✔ Phishing protection</li>
               </ul>
-
-              <Link href="/tools/link-sec" className="btn primary">
-                Use tool
-              </Link>
+              <div className="cta">
+                <Link href="/tools/link-sec" className="btn primary">
+                  Use tool
+                </Link>
+              </div>
             </div>
           </div>
         </div>

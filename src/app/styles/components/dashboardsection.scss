@@ -1,8 +1,10 @@
-@use "../variables.scss" as vars;
-
 .dashboard-section {
   padding: 6rem 1rem;
-  background: linear-gradient(to bottom, #ffffff, #fdf5ef);
+  background: linear-gradient(
+    to bottom,
+    var(--dashboard-bg-start),
+    var(--dashboard-bg-end)
+  );
 
   .container {
     max-width: 1200px;
@@ -30,21 +32,21 @@
 
       p {
         font-size: 1.05rem;
-        color: #6b7280;
+        color: var(--text-muted);
         margin-bottom: 1.5rem;
         line-height: 1.6;
       }
 
       .btn-primary {
-        background: vars.$oxo-orange;
-        color: white;
+        background: var(--btn-primary-bg);
+        color: var(--btn-primary-text);
         padding: 0.7rem 1.5rem;
         border-radius: 0.6rem;
         font-weight: 600;
         text-decoration: none;
 
         &:hover {
-          opacity: 0.9;
+          filter: brightness(0.9);
         }
       }
     }
@@ -56,9 +58,8 @@
 
       .mockup-img {
         border-radius: 1rem;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-soft);
         width: 100%;
-
         object-fit: cover;
       }
     }

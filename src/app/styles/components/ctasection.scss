@@ -1,11 +1,8 @@
-@use "sass:color";
-@use "../variables.scss" as vars;
-
 .cta-section {
   text-align: center;
   padding: 5rem 1rem;
-  background-color: vars.$oxo-orange;
-  color: vars.$oxo-white;
+  background-color: var(--cta-bg);
+  color: var(--cta-text);
 
   h2 {
     font-size: 2rem;
@@ -13,14 +10,14 @@
   }
 
   .btn-primary {
-    background-color: vars.$oxo-white;
-    color: vars.$oxo-orange;
+    background-color: var(--cta-button-bg);
+    color: var(--cta-button-text);
     padding: 0.75rem 2rem;
     border-radius: 0.5rem;
     text-decoration: none;
 
     &:hover {
-      background-color: color.adjust(vars.$oxo-white, $lightness: 10%);
+      filter: brightness(1.1);
     }
   }
 }

@@ -146,9 +146,6 @@
           font-size: 1rem;
           line-height: 1.6;
           margin-bottom: 1.5rem;
-          @media (prefers-color-scheme: dark) {
-            color: color.adjust(vars.$foreground-dark, $lightness: -5%);
-          }
         }
 
         .post-link {
@@ -178,9 +175,6 @@
     padding: 5rem 1.5rem;
     text-align: center;
     background-color: #f9fafb;
-    @media (prefers-color-scheme: dark) {
-      background-color: color.adjust(vars.$background-dark, $lightness: -5%);
-    }
 
     h2 {
       font-size: 2.2rem;
@@ -192,9 +186,6 @@
       font-size: 1.1rem;
       margin-bottom: 2rem;
       color: #4b5563;
-      @media (prefers-color-scheme: dark) {
-        color: color.adjust(vars.$foreground-dark, $lightness: -5%);
-      }
     }
 
     .button-primary {
@@ -259,6 +250,118 @@
         border-radius: 0.5rem;
         cursor: pointer;
         transition: background 0.25s;
+
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
+    }
+  }
+}
+
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  .blog-page {
+    background-color: #0f172a; /* fond sombre général */
+    color: #e5e7eb; /* texte principal clair */
+
+    .blog-hero {
+      &::before {
+        background-color: rgba(0, 0, 0, 0.6); /* fondu sombre sur l'image */
+      }
+
+      h1 {
+        color: vars.$oxo-orange;
+      }
+
+      p {
+        color: #f3f4f6;
+      }
+    }
+
+    .blog-filters button {
+      border-color: vars.$oxo-orange;
+      color: vars.$oxo-orange;
+
+      &.active,
+      &:hover {
+        background-color: vars.$oxo-orange;
+        color: white;
+      }
+    }
+
+    .blog-list .post-card {
+      background-color: #1e293b; /* carte sombre */
+      border-color: #334155;
+      color: #e5e7eb;
+
+      .post-meta .category {
+        color: vars.$oxo-blue;
+      }
+
+      .post-meta .date {
+        color: #9ca3af;
+      }
+
+      .post-excerpt {
+        color: #cbd5e1;
+      }
+
+      .post-link {
+        color: vars.$oxo-blue;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .blog-cta {
+      background-color: #1e293b;
+
+      h2 {
+        color: vars.$oxo-orange;
+      }
+
+      p {
+        color: #cbd5e1;
+      }
+
+      .button-primary {
+        background-color: vars.$oxo-orange;
+        color: white;
+
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
+    }
+
+    .blog-newsletter {
+      background-color: #1e293b;
+      border-top-color: #334155;
+
+      h2 {
+        color: vars.$oxo-orange;
+      }
+
+      p {
+        color: #cbd5e1;
+      }
+
+      .newsletter-form input {
+        border-color: #475569;
+        background-color: #1e293b;
+        color: #e5e7eb;
+
+        &:focus {
+          border-color: vars.$oxo-orange;
+        }
+      }
+
+      .newsletter-form button {
+        background-color: vars.$oxo-orange;
+        color: white;
 
         &:hover {
           background-color: vars.$oxo-blue;

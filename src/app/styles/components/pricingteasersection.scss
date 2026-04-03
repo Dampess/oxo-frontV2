@@ -1,10 +1,8 @@
-@use "../variables.scss" as vars;
-
 .pricing-carousel {
   width: 90%;
   margin: auto;
   padding: 6rem 1rem;
-  background-color: vars.$background-light;
+  background-color: var(--pricing-bg);
   text-align: center;
 
   h2 {
@@ -14,7 +12,7 @@
   }
 
   p {
-    color: #6b7280;
+    color: var(--text-muted);
     margin-bottom: 3rem;
     font-size: 1.05rem;
   }
@@ -28,18 +26,19 @@
     gap: 2rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding: 1rem 0;
 
     &::-webkit-scrollbar {
       height: 8px;
     }
+
     &::-webkit-scrollbar-thumb {
-      background: vars.$oxo-orange;
+      background: var(--scrollbar-thumb);
       border-radius: 4px;
     }
+
     &::-webkit-scrollbar-track {
-      background: #f0f0f0;
+      background: var(--scrollbar-track);
       border-radius: 4px;
     }
   }
@@ -49,10 +48,10 @@
     flex-direction: column;
     gap: 1.5rem;
     min-width: 250px;
-    background-color: vars.$oxo-blue;
+    background-color: var(--plan-bg);
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--plan-shadow);
     flex-shrink: 0;
     position: relative;
     transition:
@@ -61,20 +60,20 @@
 
     &:hover {
       transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      box-shadow: var(--plan-shadow-hover);
     }
 
     &.highlight {
-      border: 2px solid vars.$oxo-orange;
-      box-shadow: 0 10px 25px rgba(224, 122, 95, 0.25);
+      border: 2px solid var(--plan-highlight-border);
+      box-shadow: var(--plan-highlight-shadow);
     }
 
     .badge {
       position: absolute;
       top: -0.75rem;
       right: -0.75rem;
-      background-color: vars.$oxo-orange;
-      color: white;
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
       font-size: 0.7rem;
       padding: 0.3rem 0.6rem;
       border-radius: 0.5rem;
@@ -96,7 +95,7 @@
     .plan-devices {
       font-size: 0.9rem;
       margin-bottom: 1rem;
-      color: #4b5563;
+      color: var(--text-secondary);
     }
 
     ul {
@@ -107,24 +106,23 @@
 
       li {
         margin-bottom: 0.5rem;
-        color: #374151;
+        color: var(--text-tertiary);
         font-size: 0.95rem;
       }
     }
 
     .btn-primary {
       display: inline-block;
-      background: vars.$oxo-orange;
-      color: white;
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-text);
       padding: 0.65rem 1.4rem;
       border-radius: 0.6rem;
       font-weight: 600;
       text-decoration: none;
-      transition: opacity 0.2s;
       align-self: center;
 
       &:hover {
-        opacity: 0.9;
+        filter: brightness(0.95);
       }
     }
   }
@@ -133,8 +131,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: vars.$oxo-orange;
-    color: white;
+    background: var(--carousel-btn-bg);
+    color: var(--carousel-btn-text);
     border: none;
     font-size: 1.5rem;
     width: 2.5rem;

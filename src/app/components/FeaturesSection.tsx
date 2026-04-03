@@ -8,21 +8,25 @@ export default function FeaturesSection() {
       title: "Antivirus Protection",
       description: "Real-time threat detection across your devices.",
       icon: "🛡️",
+      link: "product/anti-virus",
     },
     {
       title: "Password Vault",
       description: "Securely store and manage all your credentials.",
       icon: "🔑",
+      link: "product/passwords-vault",
     },
     {
       title: "Email & SMS Security",
       description: "Detect phishing and malicious messages instantly.",
       icon: "✉️",
+      link: "product/spam-phishing",
     },
     {
       title: "Device Scan",
       description: "Identify vulnerabilities and fix them fast.",
       icon: "💻",
+      link: "product/anti-virus",
     },
   ];
 

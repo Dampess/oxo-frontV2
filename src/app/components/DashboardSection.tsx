@@ -25,7 +25,7 @@ export default function DashboardSection() {
               action in real-time.
             </p>
             <Link href="/product" className="btn-primary">
-              Explore the Dashboard
+              Explore Products
             </Link>
           </div>
         </div>

@@ -8,19 +8,19 @@ export default function ToolsSection() {
       emoji: "📧",
       title: "Email Leak Check",
       desc: "Check if your email has been exposed in a data breach.",
-      href: "/tools/email-leak",
+      href: "/tools/email-sec",
     },
     {
       emoji: "🔑",
       title: "Password Tester",
       desc: "Evaluate the strength of your password instantly.",
-      href: "/tools/password",
+      href: "/tools/password-sec",
     },
     {
       emoji: "🔗",
       title: "Link Scanner",
       desc: "Analyze suspicious URLs safely before clicking.",
-      href: "/tools/link",
+      href: "/tools/link-sec",
     },
   ];
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "../styles/components/hero.scss";
 
 export default function Hero() {
@@ -31,7 +32,12 @@ export default function Hero() {
 
         {/* RIGHT */}
         <div className="hero-visual">
-          <img src="/heroBgImage2.jpg" alt="Oxo dashboard" />
+          <Image
+            src="/heroBgImage2.jpg"
+            alt="Oxo dashboard"
+            width={350}
+            height={300}
+          />
         </div>
       </div>
     </section>

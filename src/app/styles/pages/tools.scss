@@ -142,7 +142,7 @@
     &::before {
       content: "";
       position: absolute;
-      inset: 0;
+
       background: linear-gradient(
         135deg,
         rgba(74, 144, 226, 0.08),
@@ -599,6 +599,89 @@
         transform: translateY(-2px);
       }
     }
+  }
+}
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  .tools-page {
+    --bg-card: #1f2937;
+    --bg-soft: #111827;
+    --text-main: #ededed;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero-main {
+    .hero-text {
+      h1,
+      p {
+        color: var(--text-main);
+      }
+    }
+    .hero-actions a {
+      color: vars.$oxo-white;
+      padding: 0.5rem;
+      border-radius: 10px;
+    }
+  }
+
+  .tools-features,
+  .tools-list,
+  .tools-steps,
+  .tool,
+  .result-box,
+  .info-section,
+  .split {
+    background: var(--bg-card);
+
+    h2,
+    h3,
+    p,
+    li,
+    span {
+      color: var(--text-main);
+    }
+    p {
+      color: var(--text-muted);
+    }
+  }
+
+  .tool-box input {
+    background: #1f2937;
+    color: #ededed;
+    border-color: var(--border-color);
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+    }
+  }
+
+  .tool-box button,
+  .cta .btn.primary,
+  .hero-actions a {
+    background-color: vars.$oxo-orange;
+    color: #fff;
+
+    &:hover {
+      background-color: vars.$oxo-blue;
+    }
+  }
+
+  .result-box.safe {
+    background: rgba(34, 197, 94, 0.2);
+    color: #16a34a;
+  }
+
+  .result-box.warning {
+    background: rgba(234, 179, 8, 0.2);
+    color: #ca8a04;
+  }
+
+  .result-box.danger {
+    background: rgba(239, 68, 68, 0.2);
+    color: #dc2626;
   }
 }
 

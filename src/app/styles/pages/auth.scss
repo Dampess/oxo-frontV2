@@ -247,6 +247,117 @@
   }
 }
 
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  .auth-page,
+  .signup-info-page {
+    background-color: #0f172a;
+    color: #e5e7eb;
+
+    .split {
+      .auth-login,
+      .auth-signup {
+        background-color: #1e293b;
+        color: #e5e7eb;
+
+        h2 {
+          color: #f3f4f6;
+        }
+
+        p {
+          color: #cbd5e1;
+        }
+
+        input {
+          background-color: #0f172a;
+          border: 1px solid #334155;
+          color: #e5e7eb;
+
+          &::placeholder {
+            color: #94a3b8;
+          }
+        }
+
+        button {
+          background-color: vars.$oxo-blue;
+          color: #fff;
+
+          &:hover {
+            background-color: vars.$oxo-orange;
+          }
+        }
+
+        .forgot-link {
+          color: vars.$oxo-blue;
+        }
+      }
+    }
+
+    .signup-form-container {
+      background-color: #1e293b;
+
+      h2 {
+        color: #f3f4f6;
+      }
+
+      p {
+        color: #cbd5e1;
+
+        a {
+          color: vars.$oxo-blue;
+        }
+      }
+
+      input {
+        background-color: #0f172a;
+        border: 1px solid #334155;
+        color: #e5e7eb;
+
+        &::placeholder {
+          color: #94a3b8;
+        }
+      }
+
+      button {
+        background-color: vars.$oxo-blue;
+        color: #fff;
+
+        &:hover {
+          background-color: vars.$oxo-orange;
+        }
+      }
+    }
+
+    .signup-info-page .info-section {
+      h2 {
+        color: vars.$oxo-orange;
+      }
+
+      p,
+      li {
+        color: #cbd5e1;
+      }
+
+      li:before {
+        color: vars.$oxo-blue;
+      }
+
+      .btn {
+        background-color: vars.$oxo-orange;
+        color: #fff;
+
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
+    }
+
+    .info-section-right-img img {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .signup-info-page .info-section {

@@ -1,8 +1,6 @@
-@use "../variables.scss" as vars;
-
 .hero {
   padding: 6rem 1.5rem;
-  background-color: vars.$oxo-blue;
+  background-color: var(--hero-bg);
 
   .hero-content {
     max-width: 1200px;
@@ -21,14 +19,14 @@
       line-height: 1.2;
 
       span {
-        color: vars.$oxo-orange;
+        color: var(--btn-primary-bg);
       }
     }
 
     p {
       margin-top: 1.2rem;
       font-size: 1.1rem;
-      color: #5b616c;
+      color: var(--hero-text-muted);
       max-width: 500px;
     }
   }
@@ -40,29 +38,29 @@
     gap: 1rem;
 
     .btn-primary {
-      background-color: vars.$oxo-orange;
-      color: white;
+      background-color: var(--btn-primary-bg);
+      color: var(--btn-primary-text);
       padding: 0.8rem 1.5rem;
       border-radius: 0.6rem;
       font-weight: 600;
       text-decoration: none;
 
       &:hover {
-        opacity: 0.9;
+        filter: brightness(0.95);
       }
     }
 
     .btn-secondary {
-      border: 1px solid vars.$oxo-orange;
-      color: vars.$oxo-orange;
+      border: 1px solid var(--btn-secondary-border);
+      color: var(--btn-secondary-text);
       padding: 0.8rem 1.5rem;
       border-radius: 0.6rem;
       font-weight: 600;
       text-decoration: none;
 
       &:hover {
-        background: vars.$oxo-orange;
-        color: white;
+        background: var(--btn-secondary-hover-bg);
+        color: var(--btn-secondary-hover-text);
       }
     }
   }
@@ -70,15 +68,16 @@
   .hero-trust {
     margin-top: 1rem;
     font-size: 0.85rem;
-    color: #5b616c;
+    color: var(--hero-text-muted);
   }
 
   /* VISUAL */
   .hero-visual {
     img {
       width: 100%;
+      height: 100%;
       border-radius: 1rem;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--hero-shadow);
     }
   }
 

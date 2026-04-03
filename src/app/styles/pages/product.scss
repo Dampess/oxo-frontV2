@@ -333,6 +333,122 @@
   }
 }
 
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  .product-page {
+    --bg-card: #1f2937;
+    --bg-soft: #111827;
+    --text-main: #ededed;
+    --text-muted: #9ca3af;
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.7);
+    --border-color: #374151;
+  }
+
+  /* Hero */
+  .hero-main {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.85),
+      rgba(15, 23, 42, 0.6)
+    );
+
+    .hero-text {
+      h1,
+      p {
+        color: var(--text-main);
+      }
+
+      .hero-actions .btn.primary {
+        background-color: vars.$oxo-orange;
+        color: #fff;
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
+
+      .hero-actions .btn.secondary {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  /* Products list */
+  .products-list .product-card {
+    background: var(--bg-card);
+    color: var(--text-main);
+
+    p {
+      color: var(--text-muted);
+    }
+    ul li {
+      color: var(--text-main);
+    }
+
+    .btn {
+      background-color: vars.$oxo-orange;
+      color: #fff;
+      &:hover {
+        background-color: vars.$oxo-blue;
+      }
+    }
+  }
+
+  /* Features */
+  .product-features .feature-card {
+    background: var(--bg-card);
+    color: var(--text-main);
+    p {
+      color: var(--text-muted);
+    }
+  }
+
+  /* Steps */
+  .product-steps {
+    &.alt {
+      background: var(--bg-soft);
+    }
+
+    .step {
+      p {
+        color: var(--text-muted);
+      }
+      span {
+        background: vars.$oxo-blue;
+        color: #fff;
+      }
+    }
+  }
+
+  /* Security section */
+  .product-security .split {
+    background-color: #11182700;
+    h2 {
+      color: vars.$oxo-orange;
+    }
+    p,
+    li {
+      color: var(--text-muted);
+    }
+    img {
+      box-shadow: var(--shadow-md);
+    }
+  }
+
+  /* CTA */
+  .cta .btn.primary {
+    background-color: vars.$oxo-orange;
+    color: #fff;
+    &:hover {
+      background-color: vars.$oxo-blue;
+    }
+  }
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .hero .hero-text h1 {

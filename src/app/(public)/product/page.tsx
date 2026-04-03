@@ -54,7 +54,7 @@ export default function ProductPage() {
                 <li>✔ Automatic updates</li>
                 <li>✔ Cross-device protection</li>
               </ul>
-              <Link href="/products/antivirus" className="btn primary">
+              <Link href="/product/anti-virus" className="btn primary">
                 Learn More
               </Link>
             </div>
@@ -71,7 +71,7 @@ export default function ProductPage() {
                 <li>✔ Smart spam filters</li>
                 <li>✔ Inbox safety scoring</li>
               </ul>
-              <Link href="/products/antispam" className="btn primary">
+              <Link href="/product/spam-phishing" className="btn primary">
                 Learn More
               </Link>
             </div>
@@ -88,7 +88,7 @@ export default function ProductPage() {
                 <li>✔ Deep system scans</li>
                 <li>✔ Automatic threat removal</li>
               </ul>
-              <Link href="/products/antimalware" className="btn primary">
+              <Link href="/product/anti-virus" className="btn primary">
                 Learn More
               </Link>
             </div>
@@ -105,7 +105,7 @@ export default function ProductPage() {
                 <li>✔ Email threat analysis</li>
                 <li>✔ Fraud alert notifications</li>
               </ul>
-              <Link href="/products/phishing" className="btn primary">
+              <Link href="/product/spam-phishing" className="btn primary">
                 Learn More
               </Link>
             </div>
@@ -123,7 +123,7 @@ export default function ProductPage() {
                 <li>✔ Generate strong passwords</li>
                 <li>✔ Cross-device access</li>
               </ul>
-              <Link href="/products/password-vault" className="btn primary">
+              <Link href="/product/passwords-vault" className="btn primary">
                 Learn More
               </Link>
             </div>

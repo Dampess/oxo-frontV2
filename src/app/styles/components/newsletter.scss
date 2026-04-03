@@ -1,28 +1,45 @@
-@use "../variables.scss" as vars;
-
 .newsletter {
   padding: 4rem 1rem;
-  background-color: vars.$oxo-blue;
-  color: vars.$foreground-dark;
+  background-color: var(--newsletter-bg);
+  color: var(--newsletter-text);
   text-align: center;
+
+  form {
+    display: inline-flex;
+  }
 
   input {
     padding: 0.75rem 1rem;
     border-radius: 0.5rem 0 0 0.5rem;
     border: none;
     width: 250px;
+
+    background-color: var(--input-bg);
+    color: var(--input-text);
+
+    &::placeholder {
+      color: var(--input-placeholder);
+    }
   }
 
   button {
     padding: 0.75rem 1.5rem;
     border-radius: 0 0.5rem 0.5rem 0;
     border: none;
-    background-color: vars.$oxo-orange;
-    color: vars.$oxo-white;
-    cursor: pointer;
-  }
 
-  form {
-    display: inline-flex;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter input {
+    width: 200px;
   }
 }

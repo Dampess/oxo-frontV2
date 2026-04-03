@@ -1,15 +1,12 @@
-@use "../variables.scss" as vars;
-
 .trust-reasons {
   padding: 6rem 1rem;
-  background: linear-gradient(to bottom, #fff5eb, #ffffff);
+  background: var(--trust-bg);
 
   .container {
     max-width: 1100px;
     margin: 0 auto;
   }
 
-  /* HEADER */
   .trust-header {
     text-align: center;
     margin-bottom: 3.5rem;
@@ -18,51 +15,50 @@
       font-size: 2.2rem;
       font-weight: 700;
       margin-bottom: 0.8rem;
+      color: var(--reason-title);
     }
 
     p {
-      color: #6b7280;
       font-size: 1.05rem;
+      color: var(--reason-text);
       max-width: 600px;
       margin: 0 auto;
     }
   }
 
-  /* GRID */
   .reasons-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  /* CARD */
   .reason-card {
-    background: white;
+    background: var(--reason-card-bg);
     padding: 2rem;
     border-radius: 1rem;
     text-align: left;
-
-    border: 1px solid rgba(0, 0, 0, 0.05);
-
+    border: 1px solid var(--reason-card-border);
     transition: all 0.25s ease;
+    box-shadow: var(--reason-card-shadow);
 
     &:hover {
       transform: translateY(-6px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
 
-    /* ICON BADGE */
     .icon {
       width: 45px;
       height: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
-
       border-radius: 0.75rem;
-      background: rgba(255, 127, 80, 0.1);
+      background: var(--reason-icon-bg);
       font-size: 1.4rem;
-
       margin-bottom: 1rem;
     }
 
@@ -70,21 +66,17 @@
       font-size: 1.15rem;
       margin-bottom: 0.5rem;
       font-weight: 600;
+      color: var(--reason-title);
     }
 
     p {
       font-size: 0.95rem;
-      color: #6b7280;
+      color: var(--reason-text);
       line-height: 1.5;
     }
   }
 
-  /* MOBILE */
   @media (max-width: 768px) {
-    .reasons-grid {
-      grid-template-columns: 1fr;
-    }
-
     .trust-header h2 {
       font-size: 1.8rem;
     }

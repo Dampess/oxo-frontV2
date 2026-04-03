@@ -1,8 +1,6 @@
-@use "../variables.scss" as vars;
-
 .testimonials-section {
   padding: 6rem 1rem;
-  background: linear-gradient(to bottom, #ffffff, #fff5eb);
+  background: var(--testimonials-bg);
   text-align: center;
 
   h2 {
@@ -28,22 +26,22 @@
       height: 8px;
     }
     &::-webkit-scrollbar-thumb {
-      background: vars.$oxo-orange;
+      background: var(--scrollbar-thumb);
       border-radius: 4px;
     }
     &::-webkit-scrollbar-track {
-      background: #f0f0f0;
+      background: var(--scrollbar-track);
       border-radius: 4px;
     }
   }
 
   .testimonial-card {
-    min-width: 280px;
+    max-width: 280px;
     margin: auto;
-    background-color: vars.$oxo-blue;
+    background-color: var(--testimonial-card-bg);
     border-radius: 1rem;
     padding: 2rem;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--testimonial-card-shadow);
     flex-shrink: 0;
     text-align: left;
     display: flex;
@@ -55,13 +53,13 @@
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      box-shadow: var(--testimonial-card-shadow-hover);
     }
 
     .quote {
       font-size: 1rem;
       font-style: italic;
-      color: #374151;
+      color: var(--testimonial-quote);
       margin-bottom: 1.5rem;
     }
 
@@ -71,17 +69,18 @@
       gap: 1rem;
 
       .avatar-emoji {
-        font-size: 2.5rem; // taille emoji
+        font-size: 2.5rem;
       }
 
       .name {
         font-weight: 600;
         font-size: 1rem;
+        color: var(--testimonial-name);
       }
 
       .role {
         font-size: 0.85rem;
-        color: #6b7280;
+        color: var(--testimonial-role);
       }
     }
   }
@@ -90,8 +89,8 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: vars.$oxo-orange;
-    color: white;
+    background: var(--carousel-btn-bg);
+    color: var(--carousel-btn-text);
     border: none;
     font-size: 1.5rem;
     width: 2.5rem;

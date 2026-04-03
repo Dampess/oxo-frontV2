@@ -6,8 +6,8 @@
   top: 0;
   z-index: 50;
   backdrop-filter: blur(8px);
-  background-color: vars.$oxo-white;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--header-border);
 
   .container {
     max-width: 112rem;
@@ -99,15 +99,16 @@
   .nav-link {
     position: relative;
     font-weight: 500;
-    color: vars.$foreground-light;
+    color: var(--nav-text);
     text-decoration: none;
     cursor: pointer;
 
     &:hover {
-      color: vars.$oxo-orange;
+      color: var(--brand-color);
     }
 
     &::after {
+      background-color: var(--brand-color);
       content: "";
       position: absolute;
       bottom: -4px;
@@ -130,7 +131,7 @@
     border-radius: 0.5rem;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.04);
+      background-color: var(--nav-hover-bg);
     }
 
     &:hover .dropdown {
@@ -152,10 +153,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
-    background-color: white;
+    background-color: var(--dropdown-bg);
+    box-shadow: var(--dropdown-shadow);
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 
     opacity: 0;
     visibility: hidden;
@@ -174,10 +175,10 @@
     a {
       font-size: 0.95rem;
       text-decoration: none;
-      color: vars.$foreground-light;
+      color: var(--nav-text);
 
       &:hover {
-        color: vars.$oxo-orange;
+        color: var(--brand-color);
       }
     }
   }
@@ -186,10 +187,9 @@
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #9ca3af;
+    color: var(--nav-text-muted);
   }
 
-  .dropdown-highlight,
   .dropdown-cta {
     border-radius: 0.75rem;
     padding: 1.5rem;
@@ -212,13 +212,13 @@
 
     p {
       font-size: 0.9rem;
-      color: #6b7280;
+      color: var(--nav-text-muted);
     }
 
     .nav-button {
       margin-top: 0.5rem;
       display: inline-block;
-      background-color: vars.$oxo-orange;
+      background-color: var(--brand-color);
       color: white;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
@@ -263,14 +263,14 @@
   .account-icon {
     font-size: 1rem;
     font-family: vars.$font-mono;
-    color: vars.$foreground-light;
+    color: var(--nav-text);
     cursor: pointer;
     width: 8rem;
     align-self: flex-start;
 
     a {
       text-decoration: none;
-      color: vars.$oxo-orange;
+      color: var(--brand-color);
     }
   }
 
@@ -279,17 +279,17 @@
     flex-direction: column;
     padding: 1.5rem;
     gap: 1rem;
-    background-color: white;
+    background-color: var(--mobile-bg);
     height: 100vh;
 
     a {
       text-decoration: none;
-      color: vars.$foreground-light;
+      color: var(--nav-text);
       font-size: 1rem;
       font-weight: 500;
 
       &:hover {
-        color: vars.$oxo-orange;
+        color: var(--brand-color);
       }
     }
 
@@ -297,7 +297,7 @@
       font-weight: 700;
       font-size: 0.85rem;
       text-transform: uppercase;
-      color: #9ca3af;
+      color: var(--nav-text-muted);
       margin-top: 1rem;
       cursor: pointer;
       display: flex;

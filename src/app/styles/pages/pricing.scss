@@ -321,6 +321,153 @@
     }
   }
 
+  /* ================= DARK MODE ================= */
+  @media (prefers-color-scheme: dark) {
+    .pricing {
+      --bg-main: #0f172a;
+      --bg-soft: #1e293b;
+      --card-bg: #1f2937;
+      --text-main: #ededed;
+      --text-muted: #9ca3af;
+      --border-color: #374151;
+      --border-soft: #4b5563;
+      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.5);
+      --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Hero */
+    .pricing-hero {
+      background: transparent;
+
+      h1,
+      p {
+        color: var(--text-main);
+      }
+
+      .billing-toggle {
+        background-color: var(--bg-soft);
+
+        button {
+          color: var(--text-muted);
+
+          &.active {
+            background-color: vars.$oxo-blue;
+            color: #fff;
+          }
+
+          span {
+            color: vars.$oxo-orange;
+          }
+        }
+      }
+    }
+
+    /* Plan Recommender */
+    .plan-recommender {
+      background-color: var(--bg-soft);
+
+      h2 {
+        color: vars.$oxo-orange;
+      }
+      p {
+        color: var(--text-muted);
+      }
+      .recommender-form label {
+        color: var(--text-main);
+      }
+
+      .recommended-plan {
+        background-color: var(--card-bg);
+        h3,
+        .price {
+          color: var(--text-main);
+        }
+        .btn {
+          background-color: vars.$oxo-orange;
+          color: #fff;
+        }
+      }
+    }
+
+    /* Pricing sections */
+    .pricing-section {
+      &.alt {
+        background-color: var(--bg-soft);
+      }
+      .section-title {
+        color: vars.$oxo-orange;
+      }
+
+      .pricing-card {
+        background-color: var(--card-bg);
+        color: var(--text-main);
+
+        h3,
+        .price,
+        ul li,
+        .devices,
+        .users {
+          color: var(--text-main);
+        }
+
+        .btn.primary {
+          background-color: vars.$oxo-orange;
+          color: #fff;
+          &:hover {
+            background-color: vars.$oxo-blue;
+          }
+        }
+
+        .btn.secondary {
+          background-color: transparent;
+          border-color: vars.$oxo-orange;
+          color: vars.$oxo-orange;
+          &:hover {
+            background-color: vars.$oxo-orange;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    /* Comparison table */
+    .pricing-compare {
+      background-color: var(--bg-main);
+
+      table {
+        background-color: var(--card-bg);
+
+        th {
+          background-color: var(--bg-soft);
+          color: var(--text-main);
+        }
+        td {
+          color: var(--text-main);
+        }
+        tbody tr {
+          border-top: 1px solid var(--border-color);
+        }
+      }
+    }
+
+    /* CTA */
+    .pricing-cta {
+      h2,
+      p {
+        color: var(--text-main);
+      }
+
+      .btn.primary {
+        background-color: vars.$oxo-orange;
+        color: #fff;
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
+    }
+  }
+
   /* ================= RESPONSIVE ================= */
   @media (max-width: 768px) {
     .pricing-section .pricing-grid {

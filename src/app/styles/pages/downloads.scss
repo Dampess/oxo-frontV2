@@ -14,7 +14,7 @@
       .title {
         font-size: 2.5rem;
         font-weight: 700;
-        color: var(--text-main, #111827);
+        color: vars.$oxo-orange;
         margin-bottom: 1rem;
       }
 
@@ -156,21 +156,89 @@
       }
     }
   }
+}
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  .downloads {
+    background-color: #0f172a;
+    color: #e5e7eb;
 
-  /* Dark Mode */
-  @media (prefers-color-scheme: dark) {
-    background-color: #0b0b0b;
-
-    .download-card,
-    .downloads-info {
-      background-color: #121212;
-      border-color: #374151;
-      color: #f3f4f6;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    .downloads-hero {
+      .title {
+        color: vars.$oxo-orange;
+      }
+      .subtitle {
+        color: #cbd5e1;
+      }
     }
 
-    .downloads-cta p {
-      color: #9ca3af;
+    .downloads-tabs button {
+      background-color: #1e293b;
+      border-color: #475569;
+      color: #e5e7eb;
+
+      &.active,
+      &:hover {
+        background-color: vars.$oxo-blue;
+        color: #fff;
+        border-color: vars.$oxo-blue;
+      }
+    }
+
+    .downloads-grid .download-card {
+      background-color: #1e293b;
+      color: #e5e7eb;
+      border-color: #334155;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+      .os {
+        color: #f3f4f6;
+      }
+
+      .desc {
+        color: #cbd5e1;
+      }
+
+      .meta {
+        color: #9ca3af;
+      }
+
+      .btn {
+        background-color: vars.$oxo-blue;
+        color: #fff;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }
+    }
+
+    .downloads-info {
+      background-color: #1e293b;
+      border-top-color: #334155;
+
+      p {
+        color: #cbd5e1;
+      }
+    }
+
+    .downloads-cta {
+      h2 {
+        color: vars.$oxo-orange;
+      }
+
+      p {
+        color: #cbd5e1;
+      }
+
+      .btn-primary {
+        background-color: vars.$oxo-orange;
+        color: #fff;
+
+        &:hover {
+          background-color: vars.$oxo-blue;
+        }
+      }
     }
   }
 }

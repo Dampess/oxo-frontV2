@@ -28,7 +28,7 @@ export default function AntivirusPage() {
       </section>
 
       {/* WHY PROTECT */}
-      <section className="info-section">
+      <section className="info-section alt">
         <h2>Why antivirus is essential</h2>
         <ul>
           <li>💻 Prevent malware infections</li>

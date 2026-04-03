@@ -28,7 +28,7 @@ export default function AntiPhishingPage() {
       </section>
 
       {/* WHY PROTECT */}
-      <section className="info-section">
+      <section className="info-section alt">
         <h2>Why phishing & spam are dangerous</h2>
         <ul>
           <li>🎣 Steal credentials and financial data</li>

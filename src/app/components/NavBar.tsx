@@ -70,12 +70,12 @@ export default function Header() {
                 <div className="dropdown dropdown-personal">
                   <div className="dropdown-column">
                     <span className="dropdown-title">Quick Checks</span>
-                    <Link href="/tools/email-sec">Email Leak Check</Link>
+                    <Link href="/tools/email-sec">Email Check</Link>
                     <Link href="/tools/password-sec">Password Tester</Link>
                     <Link href="/tools/link-sec">Link Scanner</Link>
                   </div>
 
-                  <div className="dropdown-highlight">
+                  <div className="dropdown-cta">
                     <p>Test your security instantly, no account required.</p>
                     <Link href="/tools" className="nav-button">
                       Try Free Tools
