@@ -179,9 +179,9 @@ export default function PricingPage() {
       </section>
       <section className="cta-section">
         <div className="container">
-          <h2>You&apos;r not sure ? Wee help you to find wich plan fits !</h2>
+          <h2>You&apos;r not sure ? We help you to find wich plan fit !</h2>
           <Link href="/free-trial" className="btn-primary">
-            GET SECURE
+            TAKE A LOOK
           </Link>
         </div>
       </section>
