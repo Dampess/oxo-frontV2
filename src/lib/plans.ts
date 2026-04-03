@@ -61,18 +61,18 @@ export const businessPlans = [
     cta: "/contact",
     type: "primary",
   },
-  // {
-  //   name: "Enterprise",
-  //   devices: 100,
-  //   priceMonthly: 0,
-  //   priceYearly: 0,
-  //   features: [
-  //     "Full audits & compliance",
-  //     "Custom integrations",
-  //     "Dedicated security team",
-  //   ],
-  //   cta: "/contact",
-  //   type: "primary",
-  //   highlight: true,
-  // },
+  {
+    name: "Enterprise",
+    devices: 100,
+    priceMonthly: 0,
+    priceYearly: 0,
+    features: [
+      "Full audits & compliance",
+      "Custom integrations",
+      "Dedicated security team",
+    ],
+    cta: "/contact",
+    type: "primary",
+    highlight: true,
+  },
 ];
