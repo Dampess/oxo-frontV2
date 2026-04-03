@@ -84,9 +84,24 @@ export default function Header() {
                 </div>
               </div>
 
-              <Link href="/pricing" className="nav-link">
-                Pricing
-              </Link>
+              {/* Pricing */}
+              <div className="nav-item">
+                <span className="nav-link">Pricing ▾</span>
+
+                <div className="dropdown dropdown-personal">
+                  <div className="dropdown-column">
+                    <span className="dropdown-title">See all plan</span>
+                    <Link href="/pricing">Our Plan</Link>
+                  </div>
+
+                  <div className="dropdown-cta">
+                    <p>You&apos;r not sure ? We see which plan feat !</p>
+                    <Link href="/plan-advisor" className="nav-button">
+                      Plan Advisor
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
               <Link href="/blog" className="nav-link">
                 Blog
