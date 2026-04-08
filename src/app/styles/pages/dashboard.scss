@@ -16,6 +16,7 @@
   flex-direction: column;
   transition: transform 0.3s ease;
   z-index: 100;
+  // border-right: 2px solid vars.$oxo-blue;
 
   &.open {
     transform: translateX(0);
@@ -199,6 +200,111 @@
   }
 }
 
+/* ================= CHATBOT MODAL ================= */
+.chatbot-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 120;
+}
+
+.chatbot-modal {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  width: 300px;
+  max-height: 400px;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 130;
+  animation: slideUp 0.3s ease-out;
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .chatbot-header {
+    padding: 0.5rem 1rem;
+    background: var(--brand-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+
+  .chatbot-messages {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    .message {
+      padding: 0.4rem 0.6rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+
+      &.user {
+        align-self: flex-end;
+        background: var(--oxo-orange);
+        color: white;
+      }
+      &.bot {
+        align-self: flex-start;
+        background: var(--hover-bg);
+        color: var(--text-main);
+      }
+    }
+  }
+
+  .chatbot-input {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    input {
+      flex: 1;
+      border: none;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.9rem;
+      background: var(--bg-soft);
+      color: var(--text-main);
+      outline: none;
+    }
+    button {
+      padding: 0 1rem;
+      border: none;
+      background: var(--oxo-orange);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &:hover {
+        background: var(--oxo-blue);
+      }
+    }
+  }
+}
+
 /* ================= CONTENT ================= */
 .dashboard-content {
   padding: 2rem;
@@ -355,7 +461,7 @@
 
     h1,
     .welcome {
-      margin-left: 35%;
+      margin-left: 38%;
     }
   }
 
