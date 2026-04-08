@@ -358,6 +358,13 @@
   }
 }
 
+.error-msg {
+  color: vars.$oxo-orange;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .signup-info-page .info-section {
