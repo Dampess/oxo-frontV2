@@ -1,40 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import "../../../styles/pages/tools.scss";
 
 export default function EmailCheckPage() {
-  const [email, setEmail] = useState("");
-  const [result, setResult] = useState<string | null>(null);
-
-  const validateEmail = (email: string) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-  };
-
-  const handleCheck = () => {
-    if (!email) {
-      setResult("❌ Please enter an email address");
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      setResult("❌ Invalid email format");
-      return;
-    }
-
-    if (
-      email.includes("support") ||
-      email.includes("secure") ||
-      email.includes("verify")
-    ) {
-      setResult("⚠️ Suspicious email pattern detected");
-    } else {
-      setResult("✅ Email format looks safe");
-    }
-  };
-
   return (
     <main className="tools-page">
       {/* HERO */}
@@ -50,23 +20,6 @@ export default function EmailCheckPage() {
         <div className="hero-image">
           <Image src="/email-security.webp" alt="" width={500} height={350} />
         </div>
-      </section>
-
-      {/* TOOL */}
-      <section className="tool">
-        <h2>Check an email</h2>
-
-        <div className="tool-box">
-          <input
-            type="email"
-            placeholder="example@domain.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <button onClick={handleCheck}>Analyze Email</button>
-        </div>
-
-        {result && <div className="result-box">{result}</div>}
       </section>
 
       {/* WHY */}
@@ -112,6 +65,11 @@ export default function EmailCheckPage() {
           <li>🔍 Deep email & link inspection</li>
           <li>🔔 Instant alerts on suspicious activity</li>
         </ul>
+        <div className="cta">
+          <Link href="/auth" className="btn primary">
+            Acces with your account now !
+          </Link>
+        </div>
       </section>
 
       {/* CTA */}

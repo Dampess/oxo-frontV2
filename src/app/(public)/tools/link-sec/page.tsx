@@ -3,41 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import "../../../styles/pages/tools.scss";
+import Link from "next/link";
 
 export default function LinkCheckerPage() {
-  const [url, setUrl] = useState("");
-  const [result, setResult] = useState<any>(null);
-
-  const checkUrl = () => {
-    if (!url) return;
-
-    try {
-      new URL(url);
-
-      if (url.includes("login") || url.includes("secure")) {
-        setResult({
-          status: "warning",
-          message: "⚠️ Suspicious phishing pattern detected",
-        });
-      } else if (url.length > 60) {
-        setResult({
-          status: "danger",
-          message: "❌ Potentially malicious long URL",
-        });
-      } else {
-        setResult({
-          status: "safe",
-          message: "✅ Link looks safe",
-        });
-      }
-    } catch {
-      setResult({
-        status: "danger",
-        message: "❌ Invalid URL format",
-      });
-    }
-  };
-
   return (
     <main className="tools-page">
       <section className="hero hero-split">
@@ -51,24 +19,6 @@ export default function LinkCheckerPage() {
         <div className="hero-image">
           <Image src="/links-security.webp" alt="" width={500} height={350} />
         </div>
-      </section>
-
-      <section className="tool">
-        <h2>Analyze a link</h2>
-
-        <div className="tool-box">
-          <input
-            type="text"
-            placeholder="https://example.com"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-          />
-          <button onClick={checkUrl}>Analyze</button>
-        </div>
-
-        {result && (
-          <div className={`result-box ${result.status}`}>{result.message}</div>
-        )}
       </section>
 
       <section className="info-section alt">
@@ -103,6 +53,11 @@ export default function LinkCheckerPage() {
           <li>🧠 Threat intelligence detection</li>
           <li>🚫 Automatic blocking of dangerous sites</li>
         </ul>
+        <div className="cta">
+          <Link href="/auth" className="btn primary">
+            Acces with your account now !
+          </Link>
+        </div>
       </section>
 
       <section className="cta">

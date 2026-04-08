@@ -99,9 +99,7 @@ export default function PricingPage() {
                   ))}
                 </ul>
                 <a href={plan.cta} className={`btn ${plan.type}`}>
-                  {plan.name === "Enterprise"
-                    ? "Request Demo"
-                    : "Contact Sales"}
+                  {plan.name === "Enterprise" ? "Contact Sales" : "Get Secure"}
                 </a>
               </div>
             ))}

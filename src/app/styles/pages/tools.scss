@@ -237,78 +237,6 @@
   }
 }
 
-/* ================= TOOL ================= */
-.tool {
-  max-width: 720px;
-  margin: 3rem auto;
-  padding: 2.5rem;
-  background: var(--card-bg);
-  border-radius: 1.5rem;
-  box-shadow: var(--shadow-md);
-  text-align: center;
-
-  .tool-box {
-    display: flex;
-    gap: 0.75rem;
-
-    @media (max-width: 600px) {
-      flex-direction: column;
-    }
-
-    input {
-      flex: 1;
-      padding: 0.8rem 1rem;
-      border-radius: 0.7rem;
-      border: 1px solid var(--border-color);
-      transition: 0.2s;
-
-      &:focus {
-        border-color: vars.$oxo-blue;
-        box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
-      }
-    }
-
-    button {
-      padding: 0.8rem 1.4rem;
-      border-radius: 0.7rem;
-      background: vars.$oxo-blue;
-      color: white;
-      font-weight: 600;
-      transition: 0.25s;
-
-      &:hover {
-        background: vars.$oxo-orange;
-        transform: translateY(-1px);
-      }
-    }
-  }
-}
-
-/* ================= RESULT ================= */
-.result-box {
-  margin-top: 1.5rem;
-  padding: 1rem 1.2rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-
-  background: var(--bg-soft);
-
-  &.safe {
-    background: rgba(34, 197, 94, 0.12);
-    color: #16a34a;
-  }
-
-  &.warning {
-    background: rgba(234, 179, 8, 0.12);
-    color: #ca8a04;
-  }
-
-  &.danger {
-    background: rgba(239, 68, 68, 0.12);
-    color: #dc2626;
-  }
-}
-
 /* ================= CTA ================= */
 .cta {
   text-align: center;
@@ -392,109 +320,6 @@
       border-radius: 1.5rem;
       box-shadow: var(--shadow-lg);
     }
-  }
-}
-
-/* ================= TOOL ================= */
-.tool {
-  max-width: 720px;
-  margin: 3rem auto;
-  padding: 2.5rem;
-  background: var(--card-bg);
-  border-radius: 1.25rem;
-  box-shadow: var(--shadow-md);
-  text-align: center;
-
-  h2 {
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-main);
-  }
-
-  .tool-box {
-    display: flex;
-    gap: 0.75rem;
-
-    @media (max-width: 600px) {
-      flex-direction: column;
-    }
-
-    input {
-      flex: 1;
-      padding: 0.75rem 1rem;
-      border-radius: 0.6rem;
-      border: 1px solid var(--border-color);
-      font-size: 0.95rem;
-      outline: none;
-      transition: 0.2s;
-
-      &:focus {
-        border-color: vars.$oxo-blue;
-        box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
-      }
-    }
-
-    button {
-      padding: 0.75rem 1.4rem;
-      border-radius: 0.6rem;
-      border: none;
-      font-weight: 600;
-      background-color: vars.$oxo-blue;
-      color: white;
-      cursor: pointer;
-      transition: 0.25s;
-
-      &:hover {
-        background-color: vars.$oxo-orange;
-        transform: translateY(-1px);
-      }
-    }
-  }
-}
-
-/* ================= RESULT ================= */
-.result-box {
-  margin-top: 1.5rem;
-  padding: 1rem 1.2rem;
-  border-radius: 0.75rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-
-  background: var(--bg-soft);
-  color: var(--text-main);
-
-  &.safe {
-    background: rgba(34, 197, 94, 0.1);
-    color: #16a34a;
-  }
-
-  &.warning {
-    background: rgba(234, 179, 8, 0.12);
-    color: #ca8a04;
-  }
-
-  &.danger {
-    background: rgba(239, 68, 68, 0.12);
-    color: #dc2626;
-  }
-}
-
-/* ================= PASSWORD STRENGTH ================= */
-.strength {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-
-  &.weak {
-    color: #dc2626;
-  }
-
-  &.medium {
-    color: #ca8a04;
-  }
-
-  &.strong {
-    color: #16a34a;
   }
 }
 
@@ -652,17 +477,6 @@
     }
   }
 
-  .tool-box input {
-    background: #1f2937;
-    color: #ededed;
-    border-color: var(--border-color);
-
-    &:focus {
-      box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
-    }
-  }
-
-  .tool-box button,
   .cta .btn.primary,
   .hero-actions a {
     background-color: vars.$oxo-orange;
@@ -673,33 +487,18 @@
     }
   }
 
-  .result-box.safe {
-    background: rgba(34, 197, 94, 0.2);
-    color: #16a34a;
-  }
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 768px) {
+    .hero .hero-text h1 {
+      font-size: 2rem;
+    }
 
-  .result-box.warning {
-    background: rgba(234, 179, 8, 0.2);
-    color: #ca8a04;
-  }
+    .tool {
+      padding: 2rem 1.5rem;
+    }
 
-  .result-box.danger {
-    background: rgba(239, 68, 68, 0.2);
-    color: #dc2626;
-  }
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .tool {
-    padding: 2rem 1.5rem;
-  }
-
-  .info-section h2 {
-    font-size: 1.6rem;
+    .info-section h2 {
+      font-size: 1.6rem;
+    }
   }
 }
