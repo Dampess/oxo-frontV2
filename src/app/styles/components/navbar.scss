@@ -188,6 +188,8 @@
     font-weight: 700;
     text-transform: uppercase;
     color: var(--nav-text-muted);
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .dropdown-cta {
@@ -265,8 +267,9 @@
     font-family: vars.$font-mono;
     color: var(--nav-text);
     cursor: pointer;
-    width: 8rem;
+    width: 15rem;
     align-self: flex-start;
+    text-align: right;
 
     a {
       text-decoration: none;

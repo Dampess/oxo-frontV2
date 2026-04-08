@@ -48,6 +48,7 @@
     flex-direction: column;
     gap: 1.5rem;
     min-width: 250px;
+    min-height: 25rem;
     background-color: var(--plan-bg);
     border-radius: 1rem;
     padding: 2rem;
@@ -113,6 +114,8 @@
 
     .btn-primary {
       display: inline-block;
+      position: absolute;
+      top: 85%;
       background: var(--btn-primary-bg);
       color: var(--btn-primary-text);
       padding: 0.65rem 1.4rem;
@@ -129,7 +132,7 @@
 
   .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     background: var(--carousel-btn-bg);
     color: var(--carousel-btn-text);

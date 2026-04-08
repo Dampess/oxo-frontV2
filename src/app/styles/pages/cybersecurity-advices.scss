@@ -1,0 +1,25 @@
+.advice {
+  padding: 6rem 1.5rem;
+  text-align: center;
+
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: auto;
+
+    .card {
+      padding: 2rem;
+      border-radius: 1rem;
+      background: var(--card-bg);
+      box-shadow: var(--shadow-soft);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .articles {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -49,7 +49,7 @@ export const businessPlans = [
       "Fraud detection",
       "Basic reporting",
     ],
-    cta: "/contact",
+    cta: "/auth",
     type: "secondary",
   },
   {
@@ -58,7 +58,7 @@ export const businessPlans = [
     priceMonthly: 199,
     priceYearly: 1900,
     features: ["All Startup features", "Advanced reporting", "Team management"],
-    cta: "/contact",
+    cta: "/auth",
     type: "primary",
   },
   {
