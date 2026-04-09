@@ -1,43 +1,36 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "../styles/components/trustreasons.scss";
 
-type Reason = {
-  emoji: string;
-  title: string;
-  description: string;
-};
-
-const reasons: Reason[] = [
-  {
-    emoji: "🛡️",
-    title: "All-in-one Protection",
-    description:
-      "Protect your emails, passwords, devices and links with a single platform.",
-  },
-  {
-    emoji: "⚡",
-    title: "Instant Security Checks",
-    description:
-      "Analyze threats in seconds with powerful and easy-to-use tools.",
-  },
-  {
-    emoji: "🔒",
-    title: "Privacy by Design",
-    description:
-      "Your data stays yours. Built with GDPR compliance and security best practices.",
-  },
-];
-
 export default function TrustReasons() {
+  const { t } = useTranslation();
+
+  const reasons = [
+    {
+      emoji: "🛡️",
+      title: t("trust.items.allInOne.title"),
+      description: t("trust.items.allInOne.description"),
+    },
+    {
+      emoji: "⚡",
+      title: t("trust.items.instant.title"),
+      description: t("trust.items.instant.description"),
+    },
+    {
+      emoji: "🔒",
+      title: t("trust.items.privacy.title"),
+      description: t("trust.items.privacy.description"),
+    },
+  ];
+
   return (
     <section className="trust-reasons">
       <div className="container">
         <div className="trust-header">
-          <h2>Why trust Oxo?</h2>
-          <p>
-            Built to keep you safe online with simple, powerful and transparent
-            security tools.
-          </p>
+          <h2>{t("trust.title")}</h2>
+          <p>{t("trust.subtitle")}</p>
         </div>
 
         <div className="reasons-grid">

@@ -146,6 +146,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-right: 10px;
   }
 
   .contact-btn {
@@ -508,5 +509,9 @@
 
   .card {
     background: #1f2937;
+  }
+
+  .tools-nav button {
+    color: vars.$oxo-white;
   }
 }

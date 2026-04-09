@@ -1,26 +1,32 @@
-import React from "react";
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "../styles/components/toolssection.scss";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function ToolsSection() {
+  const { t } = useTranslation();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const tools = [
     {
       emoji: "📧",
-      title: "Email Leak Check",
-      desc: "Check if your email has been exposed in a data breach.",
-      href: "/tools/email-sec",
+      title: t("tools.items.email.title"),
+      desc: t("tools.items.email.desc"),
+      href: "{`/${lang}/tools/email-sec`}",
     },
     {
       emoji: "🔑",
-      title: "Password Tester",
-      desc: "Evaluate the strength of your password instantly.",
-      href: "/tools/password-sec",
+      title: t("tools.items.password.title"),
+      desc: t("tools.items.password.desc"),
+      href: "{`/${lang}/tools/password-sec`}",
     },
     {
       emoji: "🔗",
-      title: "Link Scanner",
-      desc: "Analyze suspicious URLs safely before clicking.",
-      href: "/tools/link-sec",
+      title: t("tools.items.link.title"),
+      desc: t("tools.items.link.desc"),
+      href: "{`/${lang}/tools/link-sec`}",
     },
   ];
 
@@ -29,8 +35,8 @@ export default function ToolsSection() {
       <div className="container">
         {/* HEADER */}
         <div className="tools-header">
-          <h2>Free security tools</h2>
-          <p>Test your security in seconds. No account required.</p>
+          <h2>{t("tools.title")}</h2>
+          <p>{t("pricing.subtitle")}</p>
         </div>
 
         {/* GRID */}
@@ -51,8 +57,8 @@ export default function ToolsSection() {
 
         {/* CTA */}
         <div className="tools-cta">
-          <Link href="/tools" className="btn-primary">
-            Explore all tools
+          <Link href={`/${lang}/tools`} className="btn-primary">
+            {t("tools.cta")}
           </Link>
         </div>
       </div>

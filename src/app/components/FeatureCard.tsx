@@ -1,6 +1,9 @@
+"use client";
+
+import { useTranslation } from "@/hooks/useTranslation";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "../styles/components/featurecard.scss";
-import { features } from "process";
 
 type FeatureCardProps = {
   title: string;
@@ -15,6 +18,9 @@ export default function FeatureCard({
   icon,
   link,
 }: FeatureCardProps) {
+  const { t } = useTranslation();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   return (
     <div className="feature-card">
       <div className="feature-icon">{icon}</div>
@@ -23,8 +29,8 @@ export default function FeatureCard({
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <Link href={`/${link}`} className="btn">
-        See Product ➜
+      <Link href={`/${lang}/${link}`} className="btn">
+        {t("features.button")} ➜
       </Link>
     </div>
   );

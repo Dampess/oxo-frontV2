@@ -1,12 +1,17 @@
 "use client";
 
+import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-
+import { usePathname } from "next/navigation";
 import "../styles/components/navbar.scss";
 
 export default function Header() {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
   const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
@@ -21,123 +26,152 @@ export default function Header() {
     <header className="header">
       <div className="container">
         <nav className="nav">
-          {/* LEFT SIDE */}
           <div className="nav-left">
-            <Link href="/" className="nav-link">
+            <Link href={`/${lang}/`} className="nav-link">
               <div className="brand">
                 <Image
                   src="/logo_oxo.png"
                   alt="Oxo logo"
                   width={90}
                   height={90}
-                  loading="eager"
                 />
                 <div>
                   <div className="brand-name">Oxo</div>
-                  <div className="brand-tagline">See. Smell. Protect.</div>
+                  <div className="brand-tagline">{t("nav.tagline")}</div>
                 </div>
               </div>
             </Link>
 
             <div className="nav-principal">
-              {/* PRODUCT */}
+              {/* INDIVIDUALS */}
               <div className="nav-item">
-                <span className="nav-link">Individuals </span>
+                <span className="nav-link">{t("nav.individuals")}</span>
 
                 <div className="dropdown">
                   <div className="dropdown-column">
-                    <span className="dropdown-title">Products</span>
-                    <Link href="/product/anti-virus">
-                      Anti-virus & Anti-malware
+                    <span className="dropdown-title">{t("nav.products")}</span>
+
+                    <Link href={`/${lang}/product/anti-virus`}>
+                      {t("nav.product.antivirus")}
                     </Link>
-                    <Link href="/product/passwords-vault">Passwords Vault</Link>
-                    <Link href="/product/spam-phishing">
-                      Spam & Phishing protection
+                    <Link href={`/${lang}/product/passwords-vault`}>
+                      {t("nav.product.vault")}
+                    </Link>
+                    <Link href={`/${lang}/product/spam-phishing`}>
+                      {t("nav.product.phishing")}
                     </Link>
                   </div>
 
                   <div className="dropdown-column">
-                    <span className="dropdown-title">For Users</span>
-                    <Link href="/product/individual">Our Mission</Link>
+                    <span className="dropdown-title">{t("nav.forusers")}</span>
+                    <Link href={`/${lang}/product/individual`}>
+                      {t("nav.product.mission")}
+                    </Link>
                   </div>
 
                   <div className="dropdown-cta">
-                    <p>All-in-one cybersecurity platform.</p>
-                    <Link href="/product" className="nav-button">
-                      Explore Product
+                    <p>{t("nav.cta.allInOne")}</p>
+                    <Link href={`/${lang}/product`} className="nav-button">
+                      {t("nav.cta.exploreProducts")}
                     </Link>
                   </div>
                 </div>
               </div>
 
-              <Link href="/product/business" className="nav-link">
-                Businesses
+              {/* BUSINESS */}
+              <Link href={`/${lang}/product/business`} className="nav-link">
+                {t("nav.businesses")}
               </Link>
 
-              <Link href="/blog" className="nav-link">
-                Blog
+              {/* BLOG */}
+              <Link href={`/${lang}/blog`} className="nav-link">
+                {t("nav.blog")}
               </Link>
 
-              {/* Support */}
+              {/* SUPPORT */}
               <div className="nav-item">
-                <span className="nav-link">Support </span>
+                <span className="nav-link">{t("nav.support")}</span>
 
                 <div className="dropdown">
                   <div className="dropdown-column">
-                    <span className="dropdown-title">Usefull</span>
-                    <Link href="/support">Support HUB</Link>
-                    <Link href="/support/faq">FAQ</Link>
-                    <Link href="/support/client-support">Client Support</Link>
-                    <Link href="/support/cybersec-advices">
-                      Cybersécurity Advices
+                    <span className="dropdown-title">{t("nav.useful")}</span>
+
+                    <Link href={`/${lang}/support`}>
+                      {t("nav.supportLinks.hub")}
                     </Link>
+                    <Link href={`/${lang}/support/faq`}>
+                      {t("nav.supportLinks.faq")}
+                    </Link>
+                    <Link href={`/${lang}/support/client-support`}>
+                      {t("nav.supportLinks.client")}
+                    </Link>
+                    <Link href={`/${lang}/support/cybersec-advices`}>
+                      {t("nav.supportLinks.advices")}
+                    </Link>
+
                     {/* FREE TOOLS */}
                     <div className="dropdown-column">
-                      <span className="dropdown-title">Free Tools</span>
+                      <span className="dropdown-title">
+                        {t("nav.tools.title")}
+                      </span>
 
-                      <Link href="/tools/email-sec" className="dropdown-item">
-                        Email Check <br />
-                        <small>(Detect email leaks instantly)</small>
+                      <Link
+                        href={`/${lang}/tools/email-sec`}
+                        className="dropdown-item"
+                      >
+                        {t("nav.tools.email")}
+                        <br />
+                        <small>({t("nav.tools.emailDesc")})</small>
                       </Link>
 
                       <Link
-                        href="/tools/password-sec"
+                        href={`/${lang}/tools/password-sec`}
                         className="dropdown-item"
                       >
-                        Password Tester <br />
-                        <small>(Check password strength)</small>
+                        {t("nav.tools.password")}
+                        <br />
+                        <small>({t("nav.tools.passwordDesc")})</small>
                       </Link>
 
-                      <Link href="/tools/link-sec" className="dropdown-item">
-                        Link Scanner <br />
-                        <small>(Scan suspicious URLs)</small>
+                      <Link
+                        href={`/${lang}/tools/link-sec`}
+                        className="dropdown-item"
+                      >
+                        {t("nav.tools.link")}
+                        <br />
+                        <small>({t("nav.tools.linkDesc")})</small>
                       </Link>
                     </div>
                   </div>
 
                   <div className="dropdown-cta">
-                    <p>See All Free Tools</p>
-                    <Link href="/tools" className="nav-button">
-                      Explore Tools
+                    <p>{t("nav.tools.all")}</p>
+                    <Link href={`/${lang}/tools`} className="nav-button">
+                      {t("nav.tools.explore")}
                     </Link>
                   </div>
                 </div>
               </div>
 
-              {/* Pricing */}
+              {/* PRICING */}
               <div className="nav-item">
-                <span className="nav-link">Pricing </span>
+                <span className="nav-link">{t("nav.pricing.title")}</span>
 
                 <div className="dropdown dropdown-personal">
                   <div className="dropdown-column">
-                    <span className="dropdown-title">See all plan</span>
-                    <Link href="/pricing">Our Plans</Link>
+                    <span className="dropdown-title">
+                      {t("nav.pricing.allPlans")}
+                    </span>
+
+                    <Link href={`/${lang}/pricing`}>
+                      {t("nav.pricing.ourPlans")}
+                    </Link>
                   </div>
 
                   <div className="dropdown-cta">
-                    <p>Not sure which plan fits you?</p>
-                    <Link href="/plan-advisor" className="nav-button">
-                      Plan Advisor
+                    <p>{t("nav.pricing.notSure")}</p>
+                    <Link href={`/${lang}/plan-advisor`} className="nav-button">
+                      {t("nav.pricing.advisor")}
                     </Link>
                   </div>
                 </div>
@@ -152,15 +186,16 @@ export default function Header() {
             ☰
           </button>
 
-          <Link href="/" className="mobile-brand">
+          <Link href={`/${lang}/`} className="mobile-brand">
             <Image src="/logo_oxo.png" alt="Oxo" width={50} height={50} />
             <span>Oxo</span>
           </Link>
         </div>
-        {/* Account icon */}
+
+        {/* ACCOUNT */}
         <div className="account-icon">
-          <Link href="/auth">👤My Account</Link>
-          <Link href="/contact"> | Contact</Link>
+          <Link href={`/${lang}/auth`}>👤{t("nav.account")}</Link>
+          <Link href={`/${lang}/contact`}> | {t("nav.contact")}</Link>
         </div>
       </div>
 
@@ -176,42 +211,50 @@ export default function Header() {
                 className="mobile-title"
                 onClick={() => setMobileProductOpen(!mobileProductOpen)}
               >
-                Individuals {mobileProductOpen ? "▲" : "▼"}
+                {t("nav.individuals")} {mobileProductOpen ? "▲" : "▼"}
               </span>
 
               {mobileProductOpen && (
                 <div className="mobile-dropdown">
-                  <Link href="/product/anti-virus" onClick={handleLinkClick}>
-                    Anti-virus
-                  </Link>
                   <Link
-                    href="/product/passwords-vault"
+                    href={`/${lang}/product/anti-virus`}
                     onClick={handleLinkClick}
                   >
-                    Passwords Vault
+                    {t("nav.product.antivirus")}
                   </Link>
-                  <Link href="/product/spam-phishing" onClick={handleLinkClick}>
-                    Phishing protection
+
+                  <Link
+                    href={`/${lang}/product/passwords-vault`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.product.vault")}
                   </Link>
-                  <Link href="/product/individual" onClick={handleLinkClick}>
-                    Our Mission
+
+                  <Link
+                    href={`/${lang}/product/spam-phishing`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.product.phishing")}
+                  </Link>
+
+                  <Link
+                    href={`/${lang}/product/individual`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.product.mission")}
                   </Link>
                 </div>
               )}
             </div>
 
             {/* BUSINESS */}
-            <Link
-              href="/product/business"
-              className="nav-link"
-              onClick={handleLinkClick}
-            >
-              Businesses
+            <Link href={`/${lang}/product/business`} onClick={handleLinkClick}>
+              {t("nav.businesses")}
             </Link>
 
             {/* BLOG */}
-            <Link href="/blog" className="nav-link" onClick={handleLinkClick}>
-              Blog
+            <Link href={`/${lang}/blog`} onClick={handleLinkClick}>
+              {t("nav.blog")}
             </Link>
 
             {/* SUPPORT */}
@@ -220,48 +263,58 @@ export default function Header() {
                 className="mobile-title"
                 onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
               >
-                Support {mobileToolsOpen ? "▲" : "▼"}
+                {t("nav.support")} {mobileToolsOpen ? "▲" : "▼"}
               </span>
 
               {mobileToolsOpen && (
                 <div className="mobile-dropdown">
-                  <Link href="/support/faq" onClick={handleLinkClick}>
-                    FAQ
-                  </Link>
-                  <Link
-                    href="/support/client-support"
-                    onClick={handleLinkClick}
-                  >
-                    Client Support
-                  </Link>
-                  <Link
-                    href="/support/cybersec-advices"
-                    onClick={handleLinkClick}
-                  >
-                    Cybersécurity Advices
+                  <Link href={`/${lang}/support/faq`} onClick={handleLinkClick}>
+                    {t("nav.supportLinks.faq")}
                   </Link>
 
-                  <div className="mobile-subtitle">Free Tools</div>
-                  <Link href="/tools/email-sec" onClick={handleLinkClick}>
-                    Email Check
+                  <Link
+                    href={`/${lang}/support/client-support`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.supportLinks.client")}
                   </Link>
-                  <Link href="/tools/password-sec" onClick={handleLinkClick}>
-                    Password Tester
+
+                  <Link
+                    href={`/${lang}/support/cybersec-advices`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.supportLinks.advices")}
                   </Link>
-                  <Link href="/tools/link-sec" onClick={handleLinkClick}>
-                    Link Scanner
+
+                  <div className="mobile-subtitle">{t("nav.tools.title")}</div>
+
+                  <Link
+                    href={`/${lang}/tools/email-sec`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.tools.email")}
+                  </Link>
+
+                  <Link
+                    href={`/${lang}/tools/password-sec`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.tools.password")}
+                  </Link>
+
+                  <Link
+                    href={`/${lang}/tools/link-sec`}
+                    onClick={handleLinkClick}
+                  >
+                    {t("nav.tools.link")}
                   </Link>
                 </div>
               )}
             </div>
 
             {/* PRICING */}
-            <Link
-              href="/pricing"
-              className="nav-link"
-              onClick={handleLinkClick}
-            >
-              Pricing
+            <Link href={`/${lang}/pricing`} onClick={handleLinkClick}>
+              {t("nav.pricing.title")}
             </Link>
           </div>
         </>

@@ -1,0 +1,173 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "update": "Update",
+    "close": "Close",
+    "back": "Back",
+    "loading": "Loading...",
+    "search": "Search"
+  },
+  "nav": {
+    "tagline": "See. Smell. Protect.",
+
+    "individuals": "Individuals",
+    "products": "Products",
+
+    "product": {
+      "antivirus": "Anti-virus & Anti-malware",
+      "vault": "Passwords Vault",
+      "phishing": "Spam & Phishing Protection",
+      "mission": "Our Mission"
+    },
+
+    "cta": {
+      "allInOne": "All-in-one Cybersecurity Platform.",
+      "exploreProducts": "Explore Products"
+    },
+
+    "businesses": "Businesses",
+    "blog": "Blog",
+
+    "support": "Support",
+    "useful": "Useful",
+
+    "supportLinks": {
+      "hub": "Support Hub",
+      "faq": "FAQ",
+      "client": "Client Support",
+      "advices": "Cybersecurity Advices"
+    },
+
+    "tools": {
+      "title": "Free Tools",
+      "email": "Email Check",
+      "emailDesc": "Detect suspicious email instantly",
+      "password": "Password Tester",
+      "passwordDesc": "Check password strength",
+      "link": "Link Scanner",
+      "linkDesc": "Scan suspicious URLs",
+      "all": "See All Free Tools",
+      "explore": "Explore Tools"
+    },
+
+    "pricing": {
+      "title": "Pricing",
+      "allPlans": "See All Plans",
+      "ourPlans": "Our Plans",
+      "notSure": "Not sure which plan fits you?",
+      "advisor": "Plan Advisor"
+    },
+
+    "account": "My account",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "ugc": "UGC",
+    "sgc": "SGC"
+  },
+  "hero": {
+    "title": {
+      "line1": "Stay safe online.",
+      "line2": "Without complexity."
+    },
+    "description": "Oxo protects your emails, passwords and devices in real time. Simple tools. Powerful security.",
+    "trust": "Credit card required • Free tools available • GDPR compliant",
+    "cta": {
+      "primary": "Get started for free",
+      "secondary": "Try free tools"
+    }
+  },
+  "features": {
+    "title": "Everything you need to stay secure",
+    "subtitle": "Powerful tools designed to protect your digital life without complexity.",
+    "items": {
+      "antivirus": {
+        "title": "Antivirus Protection",
+        "description": "Real-time threat detection across your devices."
+      },
+      "vault": {
+        "title": "Password Vault",
+        "description": "Securely store and manage all your credentials."
+      },
+      "phishing": {
+        "title": "Email & SMS Security",
+        "description": "Detect phishing and malicious messages instantly."
+      },
+      "device": {
+        "title": "Device Scan",
+        "description": "Identify vulnerabilities and fix them fast."
+      }
+    },
+    "button": "See Product"
+  },
+  "trust": {
+    "title": "Why trust Oxo?",
+    "subtitle": "Built to keep you safe online with simple, powerful and transparent security tools.",
+    "items": {
+      "allInOne": {
+        "title": "All-in-one Protection",
+        "description": "Protect your emails, passwords, devices and links with a single platform."
+      },
+      "instant": {
+        "title": "Instant Security Checks",
+        "description": "Analyze threats in seconds with powerful and easy-to-use tools."
+      },
+      "privacy": {
+        "title": "Privacy by Design",
+        "description": "Your data stays yours. Built with GDPR compliance and security best practices."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Visualize Your Security at a Glance",
+    "description": "Our intuitive dashboard gives you instant insights into your devices, accounts, and overall security. Track risks and take action in real-time.",
+    "cta": "Explore Products",
+    "imageAlt": "Oxo dashboard preview"
+  },
+  "pricing": {
+    "title": "Simple Pricing, Maximum Protection",
+    "subtitle": "Free or premium, for individuals or teams pick what fits your needs.",
+    "mostPopular": "Most Popular",
+    "device": "device",
+    "devices": "devices",
+    "getStarted": "Get Started",
+    "contact": "Contact"
+  },
+  "cta": {
+    "title": "Ready to Secure Your Digital Life?",
+    "button": "Get Secure"
+  },
+  "tools": {
+    "title": "Free security tools",
+    "subtitle": "Test your security in seconds. No account required.",
+    "items": {
+      "email": {
+        "title": "Email Leak Check",
+        "desc": "Check if your email has been exposed in a data breach."
+      },
+      "password": {
+        "title": "Password Tester",
+        "desc": "Evaluate the strength of your password instantly."
+      },
+      "link": {
+        "title": "Link Scanner",
+        "desc": "Analyze suspicious URLs safely before clicking."
+      }
+    },
+    "cta": "Explore All Tools"
+  },
+  "testimonials": {
+    "title": "What Our Users Say"
+  },
+  "newletter": {
+    "title": "Stay Aware ",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  }
+}

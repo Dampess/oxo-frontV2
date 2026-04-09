@@ -2,10 +2,12 @@
 
 import React, { useRef } from "react";
 import Link from "next/link";
+import { useTranslation } from "@/hooks/useTranslation";
 import { businessPlans, personalPlans } from "@/lib/plans";
 import "../styles/components/pricingteasersection.scss";
 
 export default function PricingTeaserSection() {
+  const { t } = useTranslation();
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -18,16 +20,13 @@ export default function PricingTeaserSection() {
     }
   };
 
-  // 🔥 Fusion des plans
   const plans = [...personalPlans, ...businessPlans];
 
   return (
     <section className="pricing-carousel">
       <div className="container">
-        <h2>Simple Pricing, Maximum Protection</h2>
-        <p>
-          Free or premium, for individuals or teams pick what fits your needs.
-        </p>
+        <h2>{t("pricing.title")}</h2>
+        <p>{t("pricing.subtitle")}</p>
 
         <div className="carousel-wrapper">
           <button className="carousel-btn left" onClick={() => scroll("left")}>
@@ -45,16 +44,18 @@ export default function PricingTeaserSection() {
                   className={`plan-card ${plan.highlight ? "highlight" : ""}`}
                 >
                   {plan.highlight && (
-                    <span className="badge">Most Popular</span>
+                    <span className="badge">{t("pricing.mostPopular")}</span>
                   )}
 
                   <h3>{plan.name}</h3>
-
                   <p className="plan-price">{price}</p>
 
                   {plan.devices && (
                     <p className="plan-devices">
-                      {plan.devices} {plan.devices > 1 ? "devices" : "device"}
+                      {plan.devices}{" "}
+                      {plan.devices > 1
+                        ? t("pricing.devices")
+                        : t("pricing.device")}
                     </p>
                   )}
 
@@ -65,7 +66,9 @@ export default function PricingTeaserSection() {
                   </ul>
 
                   <Link href={plan.cta} className="btn-primary">
-                    {plan.cta === "/auth" ? "Get Started" : "Contact"}
+                    {plan.cta === "/auth"
+                      ? t("pricing.getStarted")
+                      : t("pricing.contact")}
                   </Link>
                 </div>
               );

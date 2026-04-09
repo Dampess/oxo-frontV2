@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import "../styles/components/testimonials.scss";
+import { useTranslation } from "@/hooks/useTranslation";
 
 type Testimonial = {
   name: string;
@@ -38,6 +39,7 @@ const testimonials: Testimonial[] = [
 ];
 
 export default function Testimonials() {
+  const { t } = useTranslation();
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -53,7 +55,7 @@ export default function Testimonials() {
   return (
     <section className="testimonials-section">
       <div className="container">
-        <h2>What Our Users Say</h2>
+        <h2>{t("testimonials.title")}</h2>
 
         <div className="carousel-wrapper">
           <button className="carousel-btn left" onClick={() => scroll("left")}>

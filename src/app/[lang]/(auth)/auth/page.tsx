@@ -1,0 +1,65 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import "@/app/styles/pages/auth.scss";
+
+export default function AuthPage() {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`Login attempt with ${email}`);
+  };
+
+  return (
+    <main className="auth-page">
+      <div className="split">
+        {/* LOGIN */}
+        <div className="auth-login">
+          <h2>Welcome Back</h2>
+          <p>Sign in to your account</p>
+
+          <form onSubmit={handleLogin}>
+            <input
+              type="email"
+              placeholder="Email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button type="submit" className="btn primary">
+              Login
+            </button>
+          </form>
+
+          <Link href={`/${lang}/auth/forgot`} className="forgot-link">
+            Forgot password?
+          </Link>
+        </div>
+
+        {/* SIGNUP */}
+        <div className="auth-signup">
+          <h2>New Here?</h2>
+          <p>
+            Create an account to start protecting your digital life with OXO.
+          </p>
+          <Link href={`/${lang}/auth/signupinfo`} className="btn secondary">
+            Create Account
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
+}

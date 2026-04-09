@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import "../styles/components/newsletter.scss";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Newsletter() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -15,16 +17,16 @@ export default function Newsletter() {
   return (
     <section className="newsletter">
       <div className="container">
-        <h2>Stay Updated</h2>
+        <h2>{t("newletter.title")}</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
-            placeholder="Your email address"
+            placeholder={t("newletter.placeholder")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <button type="submit">Subscribe</button>
+          <button type="submit">{t("newletter.button")}</button>
         </form>
       </div>
     </section>

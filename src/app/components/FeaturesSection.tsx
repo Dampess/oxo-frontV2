@@ -1,30 +1,35 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "../styles/components/featuressection.scss";
 import FeatureCard from "./FeatureCard";
 
 export default function FeaturesSection() {
+  const { t } = useTranslation();
+
   const features = [
     {
-      title: "Antivirus Protection",
-      description: "Real-time threat detection across your devices.",
+      title: t("features.items.antivirus.title"),
+      description: t("features.items.antivirus.description"),
       icon: "🛡️",
       link: "product/anti-virus",
     },
     {
-      title: "Password Vault",
-      description: "Securely store and manage all your credentials.",
+      title: t("features.items.vault.title"),
+      description: t("features.items.vault.description"),
       icon: "🔑",
       link: "product/passwords-vault",
     },
     {
-      title: "Email & SMS Security",
-      description: "Detect phishing and malicious messages instantly.",
+      title: t("features.items.phishing.title"),
+      description: t("features.items.phishing.description"),
       icon: "✉️",
       link: "product/spam-phishing",
     },
     {
-      title: "Device Scan",
-      description: "Identify vulnerabilities and fix them fast.",
+      title: t("features.items.device.title"),
+      description: t("features.items.device.description"),
       icon: "💻",
       link: "product/anti-virus",
     },
@@ -34,11 +39,8 @@ export default function FeaturesSection() {
     <section className="features-section">
       <div className="container">
         <div className="features-header">
-          <h2>Everything you need to stay secure</h2>
-          <p>
-            Powerful tools designed to protect your digital life without
-            complexity.
-          </p>
+          <h2>{t("features.title")}</h2>
+          <p>{t("features.subtitle")}</p>
         </div>
 
         <div className="features-grid">

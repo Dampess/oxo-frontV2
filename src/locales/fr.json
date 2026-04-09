@@ -1,0 +1,15 @@
+{
+  "dashboard": "Tableau de bord",
+  "welcome": "Ravi de vous revoir",
+  "contact": "Contact",
+  "currentPlan": "Plan actuel",
+  "devices": "Appareils",
+  "account": "Compte",
+  "tools": "Outils gratuits",
+  "recentActivity": "Activité récente",
+  "check": "Vérifier",
+  "generatePassword": "Générer un mot de passe",
+  "analyze": "Analyser",
+  "emailInvalid": "Email invalide ❌",
+  "emailValid": "Email valide ✅"
+}
