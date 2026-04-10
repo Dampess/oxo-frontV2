@@ -47,7 +47,7 @@ export default function PricingTeaserSection() {
                     <span className="badge">{t("pricing.mostPopular")}</span>
                   )}
 
-                  <h3>{plan.name}</h3>
+                  <h3>{t(plan.name)}</h3>
                   <p className="plan-price">{price}</p>
 
                   {plan.devices && (
@@ -61,7 +61,7 @@ export default function PricingTeaserSection() {
 
                   <ul>
                     {plan.features.map((f, i) => (
-                      <li key={i}>{f}</li>
+                      <li key={i}>{t(f)}</li>
                     ))}
                   </ul>
 

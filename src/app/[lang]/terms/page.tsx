@@ -1,71 +1,62 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/legal.scss";
 
 export default function TermsPage() {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="legal-page">
-      <Link href={"/"}>← Return Home</Link>
+      <Link href={`/${lang}`}>{t("legal.back")}</Link>
+
       <div className="container">
-        <h1>Terms of Service</h1>
-        <p className="legal-date">Last updated: January 2026</p>
+        <h1>{t("legal.terms.title")}</h1>
+        <p className="legal-date">{t("legal.terms.updated")}</p>
 
         <section>
-          <h2>1. Acceptance of Terms</h2>
-          <p>
-            By accessing or using Oxo services, you agree to be bound by these
-            Terms of Service. If you do not agree, you may not use the platform.
-          </p>
+          <h2>{t("legal.terms.sections.acceptance.title")}</h2>
+          <p>{t("legal.terms.sections.acceptance.text")}</p>
         </section>
 
         <section>
-          <h2>2. Description of Services</h2>
-          <p>
-            Oxo provides tools to analyze links, emails, phone numbers and
-            digital content to help detect fraud, phishing and malicious
-            activity.
-          </p>
+          <h2>{t("legal.terms.sections.services.title")}</h2>
+          <p>{t("legal.terms.sections.services.text")}</p>
         </section>
 
         <section>
-          <h2>3. User Responsibilities</h2>
+          <h2>{t("legal.terms.sections.responsibilities.title")}</h2>
           <ul>
-            <li>
-              You must use the services in compliance with applicable laws
-            </li>
-            <li>You may not abuse, reverse engineer or disrupt the platform</li>
-            <li>You are responsible for the data you submit</li>
+            <li>{t("legal.terms.sections.responsibilities.item1")}</li>
+            <li>{t("legal.terms.sections.responsibilities.item2")}</li>
+            <li>{t("legal.terms.sections.responsibilities.item3")}</li>
           </ul>
         </section>
 
         <section>
-          <h2>4. Limitations</h2>
-          <p>
-            Oxo provides risk analysis and indicators but does not guarantee
-            absolute protection against threats.
-          </p>
+          <h2>{t("legal.terms.sections.limitations.title")}</h2>
+          <p>{t("legal.terms.sections.limitations.text")}</p>
         </section>
 
         <section>
-          <h2>5. Intellectual Property</h2>
-          <p>
-            All content, branding and technology belong to Oxo and may not be
-            used without permission.
-          </p>
+          <h2>{t("legal.terms.sections.ip.title")}</h2>
+          <p>{t("legal.terms.sections.ip.text")}</p>
         </section>
 
         <section>
-          <h2>6. Termination</h2>
-          <p>
-            We reserve the right to suspend or terminate access to the service
-            at any time in case of misuse.
-          </p>
+          <h2>{t("legal.terms.sections.termination.title")}</h2>
+          <p>{t("legal.terms.sections.termination.text")}</p>
         </section>
 
         <section>
-          <h2>7. Contact</h2>
+          <h2>{t("legal.terms.sections.contact.title")}</h2>
           <p>
-            For any questions regarding these terms, contact us at{" "}
-            <a href="mailto:legal@oxo.security">legal@oxo.security</a>.
+            {t("legal.terms.sections.contact.text")}{" "}
+            <a href="mailto:legal@oxo.security">legal@oxo.security</a>
           </p>
         </section>
       </div>

@@ -17,16 +17,16 @@ export default function Newsletter() {
   return (
     <section className="newsletter">
       <div className="container">
-        <h2>{t("newletter.title")}</h2>
+        <h2>{t("newsletter.title")}</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
-            placeholder={t("newletter.placeholder")}
+            placeholder={t("newsletter.placeholder")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <button type="submit">{t("newletter.button")}</button>
+          <button type="submit">{t("newsletter.button")}</button>
         </form>
       </div>
     </section>

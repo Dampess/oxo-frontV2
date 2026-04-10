@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/devices.scss";
 
 type Device = {
@@ -13,6 +14,8 @@ type Device = {
 };
 
 export default function DevicesPage() {
+  const { t } = useTranslation();
+
   const [devices, setDevices] = useState<Device[]>([
     {
       id: 1,
@@ -43,7 +46,7 @@ export default function DevicesPage() {
   const maxDevices = 5;
 
   const renameDevice = (id: number) => {
-    const newName = prompt("Enter new device name");
+    const newName = prompt(t("devicesPage.prompts.rename"));
     if (!newName) return;
 
     setDevices((prev) =>
@@ -72,10 +75,10 @@ export default function DevicesPage() {
       ...prev,
       {
         id: Date.now(),
-        name: "New Device",
+        name: t("devicesPage.defaults.newDevice"),
         type: "mobile",
-        os: "Unknown",
-        lastActive: "Now",
+        os: t("devicesPage.defaults.unknownOs"),
+        lastActive: t("devicesPage.defaults.now"),
         status: "active",
       },
     ]);
@@ -99,14 +102,14 @@ export default function DevicesPage() {
       {/* HEADER */}
       <div className="devices-header">
         <div>
-          <h2>Your Devices</h2>
+          <h2>{t("devicesPage.title")}</h2>
           <p>
-            {devices.length} / {maxDevices} devices used
+            {devices.length} / {maxDevices} {t("devicesPage.header.used")}
           </p>
         </div>
 
         <button onClick={addDevice} disabled={devices.length >= maxDevices}>
-          + Add device
+          {t("devicesPage.actions.add")}
         </button>
       </div>
 
@@ -121,26 +124,31 @@ export default function DevicesPage() {
               <div>
                 <h3>{device.name}</h3>
                 <p>
-                  {device.os} • Last active {device.lastActive}
+                  {device.os} • {t("devicesPage.labels.lastActive")}{" "}
+                  {device.lastActive}
                 </p>
               </div>
             </div>
 
             {/* ACTIONS */}
             <div className="device-actions">
-              <button onClick={() => renameDevice(device.id)}>Rename</button>
-
-              <button onClick={() => toggleBlock(device.id)}>
-                {device.status === "active" ? "Block" : "Unblock"}
+              <button onClick={() => renameDevice(device.id)}>
+                {t("devicesPage.actions.rename")}
               </button>
 
-              <button>Locate</button>
+              <button onClick={() => toggleBlock(device.id)}>
+                {device.status === "active"
+                  ? t("devicesPage.actions.block")
+                  : t("devicesPage.actions.unblock")}
+              </button>
+
+              <button>{t("devicesPage.actions.locate")}</button>
 
               <button
                 className="danger"
                 onClick={() => removeDevice(device.id)}
               >
-                Remove
+                {t("devicesPage.actions.remove")}
               </button>
             </div>
           </div>

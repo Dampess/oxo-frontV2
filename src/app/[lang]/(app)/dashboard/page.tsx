@@ -3,11 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/dashboard.scss";
 
 export default function DashboardPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   const user = {
     email: "john@doe.com",
     createdAt: "Jan 2026",
@@ -20,9 +23,9 @@ export default function DashboardPage() {
   };
 
   const devices = [
-    { name: "MacBook Pro", lastSeen: "Today" },
-    { name: "iPhone 14", lastSeen: "Yesterday" },
-    { name: "Windows PC", lastSeen: "2 days ago" },
+    { name: "MacBook Pro", lastSeen: t("dashboardPage.devices.items.macbook") },
+    { name: "iPhone 14", lastSeen: t("dashboardPage.devices.items.iphone") },
+    { name: "Windows PC", lastSeen: t("dashboardPage.devices.items.windows") },
   ];
 
   // ======= TOOLS LOGIC =======
@@ -35,20 +38,22 @@ export default function DashboardPage() {
   const handleToolSubmit = () => {
     if (activeTool === "email") {
       setResult(
-        emailInput.includes("@") ? "Valid email ✅" : "Invalid email ❌",
+        emailInput.includes("@")
+          ? t("dashboardPage.tools.results.validEmail")
+          : t("dashboardPage.tools.results.invalidEmail"),
       );
     } else if (activeTool === "link") {
       setResult(
         linkInput.startsWith("https://")
-          ? "Link looks safe ✅"
-          : "Suspicious link ❌",
+          ? t("dashboardPage.tools.results.safeLink")
+          : t("dashboardPage.tools.results.suspiciousLink"),
       );
     } else if (activeTool === "scam") {
       setResult(
         scamText.toLowerCase().includes("free") ||
           scamText.toLowerCase().includes("urgent")
-          ? "Potential scam ⚠️"
-          : "Seems safe ✅",
+          ? t("dashboardPage.tools.results.potentialScam")
+          : t("dashboardPage.tools.results.seemsSafe"),
       );
     }
   };
@@ -57,19 +62,23 @@ export default function DashboardPage() {
     <div className="dashboard-grid">
       {/* PLAN */}
       <div className="card">
-        <h3>Current Plan</h3>
+        <h3>{t("dashboardPage.plan.title")}</h3>
         <p className="highlight">{plan.name}</p>
         <p>{plan.price}</p>
-        <p>Renews on {plan.renewal}</p>
+        <p>
+          {t("dashboardPage.plan.renewsOn")} {plan.renewal}
+        </p>
         <Link href={`/${lang}/dashboard/plan`} className="btn">
-          Manage plan
+          {t("dashboardPage.plan.button")}
         </Link>
       </div>
 
       {/* DEVICES */}
       <div className="card">
-        <h3>Devices</h3>
-        <p>{devices.length} active devices</p>
+        <h3>{t("dashboardPage.devices.title")}</h3>
+        <p>
+          {devices.length} {t("dashboardPage.devices.activeDevices")}
+        </p>
         <ul>
           {devices.map((d, i) => (
             <li key={i}>
@@ -78,65 +87,68 @@ export default function DashboardPage() {
           ))}
         </ul>
         <Link href={`/${lang}/dashboard/devices`} className="btn">
-          View all
+          {t("dashboardPage.devices.button")}
         </Link>
       </div>
 
       {/* ACCOUNT */}
       <div className="card">
-        <h3>Account</h3>
+        <h3>{t("dashboardPage.account.title")}</h3>
         <p>{user.email}</p>
-        <p>Created: {user.createdAt}</p>
+        <p>
+          {t("dashboardPage.account.created")} {user.createdAt}
+        </p>
         <Link href={`/${lang}/dashboard/settings`} className="btn">
-          Settings
+          {t("dashboardPage.account.button")}
         </Link>
       </div>
 
       {/* QUICK TOOLS */}
       <div className="card">
-        <h3>Quick Tools</h3>
+        <h3>{t("dashboardPage.tools.title")}</h3>
 
-        {/* Tool selection */}
         <div className="tools-nav">
-          <button onClick={() => setActiveTool("email")}>Email Checker</button>
-          <button onClick={() => setActiveTool("link")}>Link Scanner</button>
-          <button onClick={() => setActiveTool("scam")}>Scam Analyzer</button>
+          <button onClick={() => setActiveTool("email")}>
+            {t("dashboardPage.tools.nav.email")}
+          </button>
+          <button onClick={() => setActiveTool("link")}>
+            {t("dashboardPage.tools.nav.link")}
+          </button>
+          <button onClick={() => setActiveTool("scam")}>
+            {t("dashboardPage.tools.nav.scam")}
+          </button>
         </div>
 
-        {/* Tool content */}
         {activeTool && (
           <div className="tool-card">
             {activeTool === "email" && (
-              <>
-                <input
-                  type="text"
-                  placeholder="Enter email"
-                  value={emailInput}
-                  onChange={(e) => setEmailInput(e.target.value)}
-                />
-              </>
+              <input
+                type="text"
+                placeholder={t("dashboardPage.tools.placeholders.email")}
+                value={emailInput}
+                onChange={(e) => setEmailInput(e.target.value)}
+              />
             )}
+
             {activeTool === "link" && (
-              <>
-                <input
-                  type="text"
-                  placeholder="Enter link"
-                  value={linkInput}
-                  onChange={(e) => setLinkInput(e.target.value)}
-                />
-              </>
+              <input
+                type="text"
+                placeholder={t("dashboardPage.tools.placeholders.link")}
+                value={linkInput}
+                onChange={(e) => setLinkInput(e.target.value)}
+              />
             )}
+
             {activeTool === "scam" && (
-              <>
-                <textarea
-                  placeholder="Enter text to analyze"
-                  value={scamText}
-                  onChange={(e) => setScamText(e.target.value)}
-                />
-              </>
+              <textarea
+                placeholder={t("dashboardPage.tools.placeholders.scam")}
+                value={scamText}
+                onChange={(e) => setScamText(e.target.value)}
+              />
             )}
+
             <button className="primary" onClick={handleToolSubmit}>
-              Run
+              {t("dashboardPage.tools.run")}
             </button>
 
             {result && <div className="result-box">{result}</div>}
@@ -146,11 +158,11 @@ export default function DashboardPage() {
 
       {/* ACTIVITY */}
       <div className="card full">
-        <h3>Recent Activity</h3>
+        <h3>{t("dashboardPage.activity.title")}</h3>
         <ul>
-          <li>Login from Chrome — Today</li>
-          <li>Password check used — Yesterday</li>
-          <li>Device added — 3 days ago</li>
+          <li>{t("dashboardPage.activity.items.login")}</li>
+          <li>{t("dashboardPage.activity.items.passwordCheck")}</li>
+          <li>{t("dashboardPage.activity.items.deviceAdded")}</li>
         </ul>
       </div>
     </div>

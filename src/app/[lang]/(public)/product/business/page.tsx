@@ -3,26 +3,26 @@
 import "@/app/styles/pages/individual&business.scss";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function BusinessesPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="businesses-page">
       {/* HERO */}
       <section className="hero hero-main">
         <div className="container hero-grid">
           <div className="hero-text">
-            <h1>OXO for Businesses</h1>
-            <p>
-              Protect your company’s data, employees, and clients with
-              enterprise-grade cybersecurity tools.
-            </p>
+            <h1>{t("businesses.hero.title")}</h1>
+            <p>{t("businesses.hero.description")}</p>
           </div>
           <div className="hero-visual">
             <Image
               src="/handcheck.jpg"
-              alt="Business protection"
+              alt={t("businesses.hero.imageAlt")}
               width={400}
               height={300}
             />
@@ -32,32 +32,32 @@ export default function BusinessesPage() {
 
       {/* THREATS STATISTICS */}
       <section className="info-section">
-        <h2>Cyber threats in 2025 for businesses</h2>
+        <h2>{t("businesses.threats.title")}</h2>
         <ul>
-          <li>🛡️ 73% of businesses face phishing or spear-phishing attacks</li>
-          <li>💻 59% experience ransomware attempts</li>
-          <li>🔒 Average cost of a breach: $3.2M per incident</li>
-          <li>📈 41% of breaches come from compromised employee credentials</li>
+          <li>{t("businesses.threats.items.phishing")}</li>
+          <li>{t("businesses.threats.items.ransomware")}</li>
+          <li>{t("businesses.threats.items.cost")}</li>
+          <li>{t("businesses.threats.items.credentials")}</li>
         </ul>
       </section>
 
       {/* PROTECTION */}
       <section className="info-section alt">
-        <h2>How OXO protects your business</h2>
+        <h2>{t("businesses.protection.title")}</h2>
         <ul>
-          <li>🛡️ Endpoint security for all company devices</li>
-          <li>📧 Advanced anti-phishing & spam filters</li>
-          <li>🔐 Centralized password vault for teams</li>
-          <li>⚡ Real-time threat intelligence and alerts</li>
+          <li>{t("businesses.protection.items.endpoint")}</li>
+          <li>{t("businesses.protection.items.email")}</li>
+          <li>{t("businesses.protection.items.vault")}</li>
+          <li>{t("businesses.protection.items.alerts")}</li>
         </ul>
       </section>
 
       {/* CTA */}
       <section className="cta">
-        <h2>Secure your business operations</h2>
-        <p>Protect your company, employees, and clients from cyber threats.</p>
+        <h2>{t("businesses.cta.title")}</h2>
+        <p>{t("businesses.cta.description")}</p>
         <a href={`/${lang}/pricing`} className="btn primary">
-          Explore Plans
+          {t("businesses.cta.button")}
         </a>
       </section>
     </main>

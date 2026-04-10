@@ -3,26 +3,26 @@
 import "@/app/styles/pages/tools.scss";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function AntivirusPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="tools-page">
       {/* HERO */}
       <section className="hero hero-main">
         <div className="container hero-grid">
           <div className="hero-text">
-            <h1>Antivirus & Malware Protection</h1>
-            <p>
-              Protect your devices from viruses, malware, and ransomware with
-              real-time scanning and AI-powered detection.
-            </p>
+            <h1>{t("antivirus.hero.title")}</h1>
+            <p>{t("antivirus.hero.description")}</p>
           </div>
           <div className="hero-visual">
             <Image
               src="/malware-attack.webp"
-              alt="Antivirus illustration"
+              alt={t("antivirus.hero.imageAlt")}
               width={400}
               height={300}
             />
@@ -32,29 +32,29 @@ export default function AntivirusPage() {
 
       {/* WHY PROTECT */}
       <section className="info-section alt">
-        <h2>Why antivirus is essential</h2>
+        <h2>{t("antivirus.dangers.title")}</h2>
         <ul>
-          <li>💻 Prevent malware infections</li>
-          <li>🔒 Protect sensitive data</li>
-          <li>⚡ Keep devices fast and safe</li>
+          <li>{t("antivirus.dangers.items.infections")}</li>
+          <li>{t("antivirus.dangers.items.data")}</li>
+          <li>{t("antivirus.dangers.items.performance")}</li>
         </ul>
       </section>
 
       {/* HOW IT WORKS */}
       <section className="info-section alt">
-        <h2>How our antivirus works</h2>
+        <h2>{t("antivirus.protection.title")}</h2>
         <ul>
-          <li>🧠 AI detection of suspicious files</li>
-          <li>🛡️ Real-time scanning of apps and downloads</li>
-          <li>🔔 Instant alerts for potential threats</li>
+          <li>{t("antivirus.protection.items.aiDetection")}</li>
+          <li>{t("antivirus.protection.items.realTime")}</li>
+          <li>{t("antivirus.protection.items.alerts")}</li>
         </ul>
       </section>
 
       {/* CTA */}
       <section className="cta">
-        <h2>Stay protected from malware</h2>
+        <h2>{t("antivirus.cta.title")}</h2>
         <a href={`/${lang}/pricing`} className="btn primary">
-          Explore Plans
+          {t("antivirus.cta.button")}
         </a>
       </section>
     </main>

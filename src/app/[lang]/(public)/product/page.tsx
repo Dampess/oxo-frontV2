@@ -3,28 +3,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/product.scss";
 
 export default function ProductPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="product-page">
       {/* ================= HERO ================= */}
       <section className="hero hero-main">
         <div className="container hero-grid">
           <div className="hero-text">
-            <h1>OXO Security Suite</h1>
-            <p>
-              Protect your devices, emails, passwords, and links in real-time.
-              Stay safe online with enterprise-level cybersecurity made simple.
-            </p>
+            <h1>{t("product.hero.title")}</h1>
+            <p>{t("product.hero.description")}</p>
+
             <div className="hero-actions">
               <Link href={`/${lang}/pricing`} className="btn primary">
-                Get Started
+                {t("product.hero.ctaPrimary")}
               </Link>
               <Link href={`/${lang}/tools`} className="btn secondary">
-                Explore Tools
+                {t("product.hero.ctaSecondary")}
               </Link>
             </div>
           </div>
@@ -32,7 +33,7 @@ export default function ProductPage() {
           <div className="hero-visual">
             <Image
               src="/dashboard-mockup.png"
-              alt="OXO product illustration"
+              alt={t("product.hero.imageAlt")}
               width={500}
               height={400}
             />
@@ -43,106 +44,92 @@ export default function ProductPage() {
       {/* ================= PRODUCTS LIST ================= */}
       <section className="products-list">
         <div className="container">
-          <h2>Our Products</h2>
+          <h2>{t("product.products.title")}</h2>
+
           <div className="products-grid">
             {/* Antivirus */}
             <div className="product-card">
-              <h3>Antivirus</h3>
-              <p>
-                Detect and remove viruses, malware, and ransomware across all
-                your devices.
-              </p>
+              <h3>{t("product.products.items.antivirus.title")}</h3>
+              <p>{t("product.products.items.antivirus.description")}</p>
               <ul>
-                <li>✔ Real-time virus scanning</li>
-                <li>✔ Automatic updates</li>
-                <li>✔ Cross-device protection</li>
+                <li>{t("product.products.items.antivirus.f1")}</li>
+                <li>{t("product.products.items.antivirus.f2")}</li>
+                <li>{t("product.products.items.antivirus.f3")}</li>
               </ul>
               <Link
                 href={`/${lang}/product/anti-virus`}
                 className="btn primary"
               >
-                Learn More
+                {t("product.products.learnMore")}
               </Link>
             </div>
 
             {/* Anti-Spam */}
             <div className="product-card">
-              <h3>Anti-Spam</h3>
-              <p>
-                Filter out unwanted and malicious emails before they reach your
-                inbox.
-              </p>
+              <h3>{t("product.products.items.antispam.title")}</h3>
+              <p>{t("product.products.items.antispam.description")}</p>
               <ul>
-                <li>✔ Phishing email detection</li>
-                <li>✔ Smart spam filters</li>
-                <li>✔ Inbox safety scoring</li>
+                <li>{t("product.products.items.antispam.f1")}</li>
+                <li>{t("product.products.items.antispam.f2")}</li>
+                <li>{t("product.products.items.antispam.f3")}</li>
               </ul>
               <Link
                 href={`/${lang}/product/spam-phishing`}
                 className="btn primary"
               >
-                Learn More
+                {t("product.products.learnMore")}
               </Link>
             </div>
 
             {/* Anti-Malware */}
             <div className="product-card">
-              <h3>Anti-Malware</h3>
-              <p>
-                Advanced detection of malware, spyware, and other threats in
-                real-time.
-              </p>
+              <h3>{t("product.products.items.antimalware.title")}</h3>
+              <p>{t("product.products.items.antimalware.description")}</p>
               <ul>
-                <li>✔ Zero-day threat detection</li>
-                <li>✔ Deep system scans</li>
-                <li>✔ Automatic threat removal</li>
+                <li>{t("product.products.items.antimalware.f1")}</li>
+                <li>{t("product.products.items.antimalware.f2")}</li>
+                <li>{t("product.products.items.antimalware.f3")}</li>
               </ul>
               <Link
                 href={`/${lang}/product/anti-virus`}
                 className="btn primary"
               >
-                Learn More
+                {t("product.products.learnMore")}
               </Link>
             </div>
 
             {/* Phishing Protection */}
             <div className="product-card">
-              <h3>Phishing Protection</h3>
-              <p>
-                Identify and block phishing websites and emails before they
-                compromise your credentials.
-              </p>
+              <h3>{t("product.products.items.phishing.title")}</h3>
+              <p>{t("product.products.items.phishing.description")}</p>
               <ul>
-                <li>✔ Real-time URL scanning</li>
-                <li>✔ Email threat analysis</li>
-                <li>✔ Fraud alert notifications</li>
+                <li>{t("product.products.items.phishing.f1")}</li>
+                <li>{t("product.products.items.phishing.f2")}</li>
+                <li>{t("product.products.items.phishing.f3")}</li>
               </ul>
               <Link
                 href={`/${lang}/product/spam-phishing`}
                 className="btn primary"
               >
-                Learn More
+                {t("product.products.learnMore")}
               </Link>
             </div>
 
             {/* Password Vault */}
             <div className="product-card">
-              <h3>Password Vault</h3>
-              <p>
-                Store and manage all your passwords securely in one encrypted
-                vault.
-              </p>
+              <h3>{t("product.products.items.vault.title")}</h3>
+              <p>{t("product.products.items.vault.description")}</p>
               <ul>
-                <li>✔ Secure password storage</li>
-                <li>✔ Auto-fill credentials</li>
-                <li>✔ Generate strong passwords</li>
-                <li>✔ Cross-device access</li>
+                <li>{t("product.products.items.vault.f1")}</li>
+                <li>{t("product.products.items.vault.f2")}</li>
+                <li>{t("product.products.items.vault.f3")}</li>
+                <li>{t("product.products.items.vault.f4")}</li>
               </ul>
               <Link
                 href={`/${lang}/product/passwords-vault`}
                 className="btn primary"
               >
-                Learn More
+                {t("product.products.learnMore")}
               </Link>
             </div>
           </div>
@@ -152,31 +139,25 @@ export default function ProductPage() {
       {/* ================= HOW IT WORKS ================= */}
       <section className="product-steps alt">
         <div className="container">
-          <h2>How OXO Works</h2>
+          <h2>{t("product.steps.title")}</h2>
+
           <div className="steps-grid">
             <div className="step">
               <span>1</span>
-              <h3>Install & Connect</h3>
-              <p>
-                Install OXO and connect your devices, emails, and browsers
-                securely.
-              </p>
+              <h3>{t("product.steps.s1.title")}</h3>
+              <p>{t("product.steps.s1.description")}</p>
             </div>
+
             <div className="step">
               <span>2</span>
-              <h3>Real-Time Monitoring</h3>
-              <p>
-                Continuous scanning of emails, links, and system files for
-                threats.
-              </p>
+              <h3>{t("product.steps.s2.title")}</h3>
+              <p>{t("product.steps.s2.description")}</p>
             </div>
+
             <div className="step">
               <span>3</span>
-              <h3>Protect & Alert</h3>
-              <p>
-                Instant notifications and automatic blocking of phishing,
-                malware, and vulnerabilities.
-              </p>
+              <h3>{t("product.steps.s3.title")}</h3>
+              <p>{t("product.steps.s3.description")}</p>
             </div>
           </div>
         </div>
@@ -186,21 +167,19 @@ export default function ProductPage() {
       <section className="product-security">
         <div className="container split">
           <div>
-            <h2>Enterprise-level Security for Everyone</h2>
-            <p>
-              OXO ensures end-to-end encryption, AI threat detection, and a
-              zero-logs policy for maximum privacy.
-            </p>
+            <h2>{t("product.security.title")}</h2>
+            <p>{t("product.security.description")}</p>
             <ul>
-              <li>🔒 End-to-end encryption</li>
-              <li>🧠 AI-powered threat analysis</li>
-              <li>✅ No data stored or sold</li>
+              <li>{t("product.security.f1")}</li>
+              <li>{t("product.security.f2")}</li>
+              <li>{t("product.security.f3")}</li>
             </ul>
           </div>
+
           <div>
             <Image
               src="/oxo-protection.webp"
-              alt="OXO security illustration"
+              alt={t("product.security.imageAlt")}
               width={400}
               height={350}
             />
@@ -211,13 +190,10 @@ export default function ProductPage() {
       {/* ================= CTA ================= */}
       <section className="cta">
         <div className="container">
-          <h2>Ready to secure your digital life?</h2>
-          <p>
-            Start using OXO Security Suite and protect all your devices, emails,
-            and accounts instantly.
-          </p>
+          <h2>{t("product.cta.title")}</h2>
+          <p>{t("product.cta.description")}</p>
           <Link href={`/${lang}/pricing`} className="btn primary">
-            Get Started
+            {t("product.cta.button")}
           </Link>
         </div>
       </section>

@@ -4,84 +4,92 @@ import "@/app/styles/pages/tools.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function EmailCheckPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="tools-page">
       {/* HERO */}
       <section className="hero hero-split">
         <div className="hero-text">
-          <h1>Email Security Scanner</h1>
-          <p>
-            Instantly analyze suspicious email addresses and detect potential
-            phishing attempts before they reach you.
-          </p>
+          <h1>{t("email.hero.title")}</h1>
+          <p>{t("email.hero.desc")}</p>
         </div>
 
         <div className="hero-image">
-          <Image src="/email-security.webp" alt="" width={500} height={350} />
+          <Image
+            src="/email-security.webp"
+            alt="email security"
+            width={500}
+            height={350}
+          />
         </div>
       </section>
 
       {/* WHY */}
       <section className="info-section alt">
-        <h2>Why phishing emails are dangerous</h2>
-        <p>
-          Email is the #1 attack vector used by cybercriminals. A single click
-          on a malicious email can compromise your entire system.
-        </p>
+        <h2>{t("email.why.title")}</h2>
+        <p>{t("email.why.desc")}</p>
+
         <ul>
-          <li>🎣 Fake emails impersonate banks, services or coworkers</li>
-          <li>🔐 Steal login credentials and sensitive data</li>
-          <li>💻 Deliver malware through attachments</li>
-          <li>💸 Trigger fraudulent payments</li>
+          <li>{t("email.why.f1")}</li>
+          <li>{t("email.why.f2")}</li>
+          <li>{t("email.why.f3")}</li>
+          <li>{t("email.why.f4")}</li>
         </ul>
       </section>
 
       {/* PROTECT */}
       <section className="info-section alt split">
-        <Image src="/phishing-example.webp" alt="" width={400} height={300} />
+        <Image
+          src="/phishing-example.webp"
+          alt="phishing example"
+          width={400}
+          height={300}
+        />
 
         <div>
-          <h2>How to protect yourself</h2>
+          <h2>{t("email.protect.title")}</h2>
           <ul>
-            <li>✔ Always verify the sender address carefully</li>
-            <li>✔ Never click suspicious links or attachments</li>
-            <li>✔ Watch for urgency or pressure tactics</li>
-            <li>✔ Use security tools before interacting</li>
+            <li>{t("email.protect.f1")}</li>
+            <li>{t("email.protect.f2")}</li>
+            <li>{t("email.protect.f3")}</li>
+            <li>{t("email.protect.f4")}</li>
           </ul>
         </div>
       </section>
 
       {/* OXO */}
       <section className="info-section highlight">
-        <h2>How OXO protects you</h2>
-        <p>
-          OXO goes beyond simple checks. Our platform analyzes behavior,
-          patterns, and threat intelligence in real-time.
-        </p>
+        <h2>{t("email.oxo.title")}</h2>
+        <p>{t("email.oxo.desc")}</p>
+
         <ul>
-          <li>⚡ Real-time phishing detection engine</li>
-          <li>🧠 AI-powered pattern recognition</li>
-          <li>🔍 Deep email & link inspection</li>
-          <li>🔔 Instant alerts on suspicious activity</li>
+          <li>{t("email.oxo.f1")}</li>
+          <li>{t("email.oxo.f2")}</li>
+          <li>{t("email.oxo.f3")}</li>
+          <li>{t("email.oxo.f4")}</li>
         </ul>
+
         <div className="cta">
           <Link href={`/${lang}/auth`} className="btn primary">
-            Acces with your account now !
+            {t("email.oxo.cta")}
           </Link>
         </div>
       </section>
 
       {/* CTA */}
       <section className="cta">
-        <h2>Protect your inbox in real time</h2>
-        <p>Upgrade to get continuous email protection across all devices.</p>
-        <a href={`/${lang}/pricing`} className="btn primary">
-          Explore Plans
-        </a>
+        <h2>{t("email.cta.title")}</h2>
+        <p>{t("email.cta.desc")}</p>
+
+        <Link href={`/${lang}/pricing`} className="btn primary">
+          {t("email.cta.button")}
+        </Link>
       </section>
     </main>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/freetoolspage.scss";
 
 import { checkEmail } from "@/utils/tools/emailChecker";
@@ -9,6 +10,7 @@ import { testPassword, generatePassword } from "@/utils/tools/passwordTools";
 import { analyzeScam } from "@/utils/tools/scamAnalyzer";
 
 export default function ToolsPage() {
+  const { t } = useTranslation();
   const [activeTool, setActiveTool] = useState<string | null>(null);
 
   // INPUTS
@@ -20,8 +22,6 @@ export default function ToolsPage() {
   // RESULTS
   const [result, setResult] = useState<any>(null);
   const [generatedPassword, setGeneratedPassword] = useState("");
-
-  // ===== HANDLERS =====
 
   const handleEmailCheck = async () => {
     const res = await checkEmail(emailInput);
@@ -48,7 +48,6 @@ export default function ToolsPage() {
     setGeneratedPassword(pass);
   };
 
-  // RESET result quand on change d'outil
   const switchTool = (tool: string) => {
     setActiveTool(activeTool === tool ? null : tool);
     setResult(null);
@@ -56,63 +55,71 @@ export default function ToolsPage() {
 
   return (
     <div className="tools-page">
-      <h1>Free Tools</h1>
+      <h1>{t("freeTools.title")}</h1>
 
-      {/* NAV */}
       <div className="tool-buttons">
-        <button onClick={() => switchTool("email")}>Email Checker</button>
-        <button onClick={() => switchTool("link")}>Link Checker</button>
+        <button onClick={() => switchTool("email")}>
+          {t("freeTools.nav.email")}
+        </button>
+        <button onClick={() => switchTool("link")}>
+          {t("freeTools.nav.link")}
+        </button>
         <button onClick={() => switchTool("passwordGen")}>
-          Password Generator
+          {t("freeTools.nav.passwordGenerator")}
         </button>
         <button onClick={() => switchTool("passwordCheck")}>
-          Password Checker
+          {t("freeTools.nav.passwordChecker")}
         </button>
-        <button onClick={() => switchTool("scam")}>Scam Analyzer</button>
+        <button onClick={() => switchTool("scam")}>
+          {t("freeTools.nav.scam")}
+        </button>
       </div>
 
-      {/* EMAIL */}
       {activeTool === "email" && (
         <div className="tool-card">
-          <h2>Email Checker</h2>
+          <h2>{t("freeTools.email.title")}</h2>
 
           <input
             type="email"
-            placeholder="Enter email"
+            placeholder={t("freeTools.email.placeholder")}
             value={emailInput}
             onChange={(e) => setEmailInput(e.target.value)}
           />
 
-          <button onClick={handleEmailCheck}>Check</button>
+          <button onClick={handleEmailCheck}>
+            {t("freeTools.email.button")}
+          </button>
 
           {result && <ResultBox result={result} />}
         </div>
       )}
 
-      {/* LINK */}
       {activeTool === "link" && (
         <div className="tool-card">
-          <h2>Link Checker</h2>
+          <h2>{t("freeTools.link.title")}</h2>
 
           <input
             type="text"
-            placeholder="Enter URL"
+            placeholder={t("freeTools.link.placeholder")}
             value={linkInput}
             onChange={(e) => setLinkInput(e.target.value)}
           />
 
-          <button onClick={handleLinkCheck}>Check</button>
+          <button onClick={handleLinkCheck}>
+            {t("freeTools.link.button")}
+          </button>
 
           {result && <ResultBox result={result} />}
         </div>
       )}
 
-      {/* PASSWORD GENERATOR */}
       {activeTool === "passwordGen" && (
         <div className="tool-card">
-          <h2>Password Generator</h2>
+          <h2>{t("freeTools.passwordGenerator.title")}</h2>
 
-          <button onClick={handleGeneratePassword}>Generate Password</button>
+          <button onClick={handleGeneratePassword}>
+            {t("freeTools.passwordGenerator.button")}
+          </button>
 
           {generatedPassword && (
             <div className="result-box">
@@ -122,36 +129,38 @@ export default function ToolsPage() {
         </div>
       )}
 
-      {/* PASSWORD CHECK */}
       {activeTool === "passwordCheck" && (
         <div className="tool-card">
-          <h2>Password Checker</h2>
+          <h2>{t("freeTools.passwordChecker.title")}</h2>
 
           <input
             type="password"
-            placeholder="Enter password"
+            placeholder={t("freeTools.passwordChecker.placeholder")}
             value={passwordInput}
             onChange={(e) => setPasswordInput(e.target.value)}
           />
 
-          <button onClick={handlePasswordCheck}>Check Strength</button>
+          <button onClick={handlePasswordCheck}>
+            {t("freeTools.passwordChecker.button")}
+          </button>
 
           {result && <ResultBox result={result} />}
         </div>
       )}
 
-      {/* SCAM */}
       {activeTool === "scam" && (
         <div className="tool-card">
-          <h2>Scam Analyzer</h2>
+          <h2>{t("freeTools.scam.title")}</h2>
 
           <textarea
-            placeholder="Paste text here"
+            placeholder={t("freeTools.scam.placeholder")}
             value={scamInput}
             onChange={(e) => setScamInput(e.target.value)}
           />
 
-          <button onClick={handleScamCheck}>Analyze</button>
+          <button onClick={handleScamCheck}>
+            {t("freeTools.scam.button")}
+          </button>
 
           {result && <ResultBox result={result} />}
         </div>
@@ -163,12 +172,12 @@ export default function ToolsPage() {
     return (
       <div className={`result-box ${result.status}`}>
         <p>
-          <strong>Score:</strong> {result.score}
+          <strong>{t("freeTools.result.score")}</strong> {result.score}
         </p>
 
         <ul>
           {result.messages.map((msg: string, i: number) => (
-            <li key={i}>• {msg}</li>
+            <li key={i}>• {t(msg)}</li>
           ))}
         </ul>
       </div>

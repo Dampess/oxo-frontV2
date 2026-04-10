@@ -4,30 +4,30 @@ import Link from "next/link";
 import { useState } from "react";
 import "../../styles/pages/downloads.scss";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const downloads = [
   {
-    os: "Windows",
-    personalDesc: "Protect your personal browsing, emails and downloads.",
-    businessDesc:
-      "Advanced endpoint protection and threat monitoring for teams.",
-    meta: "Windows 10+",
+    osKey: "windows",
+    personalDescKey: "downloads.items.windows.personalDesc",
+    businessDescKey: "downloads.items.windows.businessDesc",
+    metaKey: "downloads.items.windows.meta",
     linkPersonal: "#",
     linkBusiness: "#",
   },
   {
-    os: "macOS",
-    personalDesc: "Lightweight protection for macOS users.",
-    businessDesc: "Enterprise-grade macOS security agent.",
-    meta: "macOS 12+",
+    osKey: "macos",
+    personalDescKey: "downloads.items.macos.personalDesc",
+    businessDescKey: "downloads.items.macos.businessDesc",
+    metaKey: "downloads.items.macos.meta",
     linkPersonal: "#",
     linkBusiness: "#",
   },
   {
-    os: "Mobile",
-    personalDesc: "Scan links, SMS and emails on the go.",
-    businessDesc: "Secure mobile access for employees and executives.",
-    meta: "iOS & Android",
+    osKey: "mobile",
+    personalDescKey: "downloads.items.mobile.personalDesc",
+    businessDescKey: "downloads.items.mobile.businessDesc",
+    metaKey: "downloads.items.mobile.meta",
     linkPersonal: "#",
     linkBusiness: "#",
   },
@@ -35,7 +35,8 @@ const downloads = [
 
 export default function DownloadsPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
   const [segment, setSegment] = useState<"personal" | "business">("personal");
 
   return (
@@ -43,11 +44,8 @@ export default function DownloadsPage() {
       {/* ================= HERO ================= */}
       <section className="downloads-hero">
         <div className="container">
-          <h1 className="title">Download Oxo Apps & Tools</h1>
-          <p className="subtitle">
-            Secure your digital activity with Oxo applications for desktop and
-            mobile platforms.
-          </p>
+          <h1 className="title">{t("downloads.hero.title")}</h1>
+          <p className="subtitle">{t("downloads.hero.subtitle")}</p>
         </div>
       </section>
 
@@ -57,13 +55,13 @@ export default function DownloadsPage() {
           className={segment === "personal" ? "active" : ""}
           onClick={() => setSegment("personal")}
         >
-          Personal
+          {t("downloads.tabs.personal")}
         </button>
         <button
           className={segment === "business" ? "active" : ""}
           onClick={() => setSegment("business")}
         >
-          Business
+          {t("downloads.tabs.business")}
         </button>
       </div>
 
@@ -71,18 +69,22 @@ export default function DownloadsPage() {
       <section className="downloads-grid">
         {downloads.map((item, idx) => (
           <div key={idx} className="download-card">
-            <div className="os">{item.os}</div>
+            <div className="os">{t(`downloads.items.${item.osKey}.os`)}</div>
             <p className="desc">
-              {segment === "personal" ? item.personalDesc : item.businessDesc}
+              {segment === "personal"
+                ? t(item.personalDescKey)
+                : t(item.businessDescKey)}
             </p>
-            <div className="meta">{item.meta}</div>
+            <div className="meta">{t(item.metaKey)}</div>
             <Link
               href={
                 segment === "personal" ? item.linkPersonal : item.linkBusiness
               }
               className="btn"
             >
-              {segment === "personal" ? "Download" : "Get for Business"}
+              {segment === "personal"
+                ? t("downloads.buttons.download")
+                : t("downloads.buttons.getForBusiness")}
             </Link>
           </div>
         ))}
@@ -90,20 +92,16 @@ export default function DownloadsPage() {
 
       {/* ================= INFO ================= */}
       <section className="downloads-info">
-        <p>
-          All Oxo applications are digitally signed, regularly updated, and
-          comply with industry security standards. Business editions include
-          centralized management, advanced reporting, and priority support.
-        </p>
+        <p>{t("downloads.info.description")}</p>
       </section>
 
       {/* ================= CTA ================= */}
       <section className="downloads-cta">
         <div className="container">
-          <h2>Ready to get started?</h2>
-          <p>Download Oxo now and protect your digital life instantly.</p>
+          <h2>{t("downloads.cta.title")}</h2>
+          <p>{t("downloads.cta.description")}</p>
           <Link href={`/${lang}/signup`} className="btn-primary">
-            Get Oxo
+            {t("downloads.cta.button")}
           </Link>
         </div>
       </section>

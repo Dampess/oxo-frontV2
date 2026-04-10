@@ -3,45 +3,43 @@
 import Link from "next/link";
 import "@/app/styles/pages/auth.scss";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function SignupInfoPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="signup-info-page">
       <section className="hero">
         <div className="container">
-          <h1>Before You Sign Up</h1>
-          <p>
-            Here&apos;s what you should know before creating your OXO account.
-          </p>
+          <h1>{t("signupInfo.hero.title")}</h1>
+          <p>{t("signupInfo.hero.description")}</p>
         </div>
       </section>
 
       <section className="info-section">
         <div className="container">
-          <h2>Why secure your account?</h2>
+          <h2>{t("signupInfo.security.title")}</h2>
           <ul>
-            <li>🔒 Protect personal data from phishing and malware</li>
-            <li>⚡ Prevent unauthorized access with strong passwords</li>
-            <li>🌐 Secure your online activity across devices</li>
+            <li>{t("signupInfo.security.items.data")}</li>
+            <li>{t("signupInfo.security.items.access")}</li>
+            <li>{t("signupInfo.security.items.activity")}</li>
           </ul>
 
-          <h2>What you will need</h2>
+          <h2>{t("signupInfo.requirements.title")}</h2>
           <ul>
-            <li>📧 A valid email address</li>
-            <li>🔑 A strong password (we can help generate one)</li>
-            <li>💻 Optional: Browser or device you want to secure</li>
+            <li>{t("signupInfo.requirements.items.email")}</li>
+            <li>{t("signupInfo.requirements.items.password")}</li>
+            <li>{t("signupInfo.requirements.items.device")}</li>
           </ul>
 
-          <h2>OXO Privacy</h2>
-          <p>
-            Your information is never sold. All data is encrypted and processed
-            securely in real-time.
-          </p>
+          <h2>{t("signupInfo.privacy.title")}</h2>
+          <p>{t("signupInfo.privacy.description")}</p>
 
           <Link href={`/${lang}/auth/signup`} className="btn primary">
-            Proceed to Sign Up
+            {t("signupInfo.cta.button")}
           </Link>
         </div>
       </section>

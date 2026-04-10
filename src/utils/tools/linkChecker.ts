@@ -6,33 +6,32 @@ export function checkLink(url: string) {
 
   // ===================== 1. FORMAT =====================
   try {
-    new URL(url); // valide le format URL
+    new URL(url);
   } catch {
     return {
       score: 0,
       status: "danger",
-      messages: ["Invalid URL format"],
+      messages: ["toolsUtils.linkChecker.messages.invalidFormat"],
     };
   }
 
   // ===================== 2. HTTPS CHECK =====================
   if (!url.startsWith("https://")) {
     score -= 40;
-    messages.push("Not using HTTPS");
+    messages.push("toolsUtils.linkChecker.messages.noHttps");
   }
 
   // ===================== 3. LENGTH & ENTROPY =====================
   if (url.length > 100) {
     score -= 20;
-    messages.push("Suspiciously long URL");
+    messages.push("toolsUtils.linkChecker.messages.longUrl");
   }
 
-  // Calcul rapide d’entropie pour détecter URLs aléatoires / phishing
   const chars = new Set(url).size;
   const entropy = chars / url.length;
   if (entropy > 0.7) {
     score -= 15;
-    messages.push("High entropy URL (looks suspicious)");
+    messages.push("toolsUtils.linkChecker.messages.highEntropy");
   }
 
   // ===================== 4. PHISHING KEYWORDS =====================
@@ -48,28 +47,22 @@ export function checkLink(url: string) {
   ];
   if (phishingKeywords.some((kw) => url.toLowerCase().includes(kw))) {
     score -= 30;
-    messages.push("Contains phishing keywords");
+    messages.push("toolsUtils.linkChecker.messages.phishingKeywords");
   }
 
   // ===================== 5. NUMERIC PATTERNS =====================
-  // URLs avec beaucoup de chiffres souvent générés automatiquement
   const numericPattern = url.match(/[0-9]{3,}/g);
   if (numericPattern && numericPattern.length > 0) {
     score -= 20;
-    messages.push("Strange numeric pattern");
+    messages.push("toolsUtils.linkChecker.messages.numericPattern");
   }
 
   // ===================== 6. LOCAL BLACKLIST =====================
-  // Simule un contrôle contre des domaines connus malveillants
-  const blacklistedDomains = [
-    "spamdomain.com",
-    "malware.net",
-    "fake-bank.org",
-  ];
+  const blacklistedDomains = ["spamdomain.com", "malware.net", "fake-bank.org"];
   const domain = url.split("/")[2]?.toLowerCase();
   if (domain && blacklistedDomains.includes(domain)) {
     score = 0;
-    messages.push("Domain blacklisted (malicious)");
+    messages.push("toolsUtils.linkChecker.messages.blacklisted");
   }
 
   // ===================== 7. FINAL SCORING =====================

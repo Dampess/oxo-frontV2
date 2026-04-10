@@ -6,7 +6,7 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: var(--card-bg);
+    background: var(--hover-bg);
     border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
 
     &:hover {
       transform: scale(1.1);
-      background: var(--hover-bg);
+      background: var(--card-bg);
     }
   }
 

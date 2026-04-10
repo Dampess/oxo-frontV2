@@ -1,23 +1,28 @@
+"use client";
+
 import "@/app/styles/pages/contact.scss";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
+
   return (
     <main className="contact">
-      <h1>Contact Us</h1>
+      <h1>{t("contact.title")}</h1>
 
       <div className="contact-wrapper">
         <form className="contact-form">
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <input type="text" placeholder="Subject" />
-          <textarea placeholder="Message" rows={5} />
-          <button type="submit">Send</button>
+          <input type="text" placeholder={t("contact.form.name")} required />
+          <input type="email" placeholder={t("contact.form.email")} required />
+          <input type="text" placeholder={t("contact.form.subject")} />
+          <textarea placeholder={t("contact.form.message")} rows={5} />
+          <button type="submit">{t("contact.form.button")}</button>
         </form>
 
         <div className="contact-info">
-          <p>📍 Europe</p>
-          <p>⏱ Response within 24h</p>
-          <p>🔒 Secure & private</p>
+          <p>{t("contact.info.location")}</p>
+          <p>{t("contact.info.response")}</p>
+          <p>{t("contact.info.security")}</p>
         </div>
       </div>
     </main>

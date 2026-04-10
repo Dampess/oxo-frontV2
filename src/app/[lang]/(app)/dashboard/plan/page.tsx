@@ -1,21 +1,24 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/plan.scss";
 
 export default function PlanPage() {
+  const { t } = useTranslation();
+
   const [plan] = useState({
     name: "Pro Plan",
     price: "$9.99/month",
     renewal: "May 12, 2026",
-    status: "Active",
+    status: t("plan.status.active"),
     devices: "3 devices",
     maxDevices: 5,
     features: [
-      "Real-time protection",
-      "Phishing detection",
-      "Device security scan",
-      "Priority support",
+      t("plan.features.f1"),
+      t("plan.features.f2"),
+      t("plan.features.f3"),
+      t("plan.features.f4"),
     ],
   });
 
@@ -53,23 +56,24 @@ export default function PlanPage() {
 
         <div className="plan-info">
           <p>
-            <strong>Renewal date:</strong> {plan.renewal}
+            <strong>{t("plan.labels.renewal")}:</strong> {plan.renewal}
           </p>
           <p>
-            <strong>Devices:</strong> {plan.devices} / {plan.maxDevices}
+            <strong>{t("plan.labels.devices")}:</strong> {plan.devices} /{" "}
+            {plan.maxDevices}
           </p>
         </div>
 
         {/* UPGRADE BANNER */}
         <div className="upgrade-banner">
-          🚀 Upgrade to Premium and secure up to 10 devices
-          <button className="primary small">Upgrade</button>
+          {t("plan.upgrade.text")}
+          <button className="primary small">{t("plan.upgrade.button")}</button>
         </div>
       </div>
 
       {/* ===== FEATURES ===== */}
       <div className="plan-card">
-        <h3>Included Features</h3>
+        <h3>{t("plan.features.title")}</h3>
 
         <ul className="features">
           {plan.features.map((f, i) => (
@@ -80,23 +84,25 @@ export default function PlanPage() {
 
       {/* ===== PAYMENT ===== */}
       <div className="plan-card">
-        <h3>Payment Method</h3>
+        <h3>{t("plan.payment.title")}</h3>
 
         <div className="payment">
           <div>
             <p>
               {payment.brand} •••• {payment.last4}
             </p>
-            <span>Expires {payment.expiry}</span>
+            <span>
+              {t("plan.payment.expires")} {payment.expiry}
+            </span>
           </div>
 
-          <button className="secondary">Update</button>
+          <button className="secondary">{t("plan.payment.update")}</button>
         </div>
       </div>
 
       {/* ===== INVOICES ===== */}
       <div className="plan-card">
-        <h3>Billing History</h3>
+        <h3>{t("plan.invoices.title")}</h3>
 
         <div className="invoices">
           {invoices.map((inv) => (
@@ -110,8 +116,12 @@ export default function PlanPage() {
                 <p>{inv.amount}</p>
 
                 <div className="invoice-actions">
-                  <button className="secondary small">View</button>
-                  <button className="small">Download</button>
+                  <button className="secondary small">
+                    {t("plan.invoices.view")}
+                  </button>
+                  <button className="small">
+                    {t("plan.invoices.download")}
+                  </button>
                 </div>
               </div>
             </div>
@@ -121,12 +131,12 @@ export default function PlanPage() {
 
       {/* ===== ACTIONS ===== */}
       <div className="plan-card actions">
-        <h3>Manage your plan</h3>
+        <h3>{t("plan.actions.title")}</h3>
 
         <div className="actions-grid">
-          <button className="primary">Upgrade Plan</button>
-          <button>Downgrade</button>
-          <button className="danger">Cancel Subscription</button>
+          <button className="primary">{t("plan.actions.upgrade")}</button>
+          <button>{t("plan.actions.downgrade")}</button>
+          <button className="danger">{t("plan.actions.cancel")}</button>
         </div>
       </div>
     </div>

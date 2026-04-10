@@ -9,25 +9,26 @@ const defaultLocale = "en";
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Ignore fichiers (images, css, etc.)
+  // Ignore fichiers statiques, next internals et api
   if (
     pathname.startsWith("/_next") ||
-    pathname.includes("/api") ||
+    pathname.startsWith("/api") ||
     PUBLIC_FILE.test(pathname)
   ) {
-    return;
+    return NextResponse.next();
   }
 
-  // Vérifie si une langue est déjà dans l'URL
-  const pathnameHasLocale = supportedLocales.some((locale) =>
-    pathname.startsWith(`/${locale}`),
+  // Vérifie si une langue est déjà présente dans l’URL
+  const pathnameHasLocale = supportedLocales.some(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),
   );
 
-  if (pathnameHasLocale) return;
+  if (pathnameHasLocale) {
+    return NextResponse.next();
+  }
 
-  // 👉 Detect browser language
+  // Détecte la langue du navigateur
   const acceptLang = request.headers.get("accept-language");
-
   let detectedLocale = defaultLocale;
 
   if (acceptLang) {
@@ -38,7 +39,6 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // 👉 Redirect vers /lang
   return NextResponse.redirect(
     new URL(`/${detectedLocale}${pathname}`, request.url),
   );

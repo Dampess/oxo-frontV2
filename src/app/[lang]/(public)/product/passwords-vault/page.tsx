@@ -3,26 +3,26 @@
 import "@/app/styles/pages/tools.scss";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function PasswordVaultPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="tools-page">
       {/* HERO */}
       <section className="hero hero-main">
         <div className="container hero-grid">
           <div className="hero-text">
-            <h1>Password Vault</h1>
-            <p>
-              Securely store, generate, and manage all your passwords in one
-              encrypted vault.
-            </p>
+            <h1>{t("passwordVault.hero.title")}</h1>
+            <p>{t("passwordVault.hero.description")}</p>
           </div>
           <div className="hero-visual">
             <Image
               src="/password-security.webp"
-              alt="Password Vault illustration"
+              alt={t("passwordVault.hero.imageAlt")}
               width={400}
               height={300}
             />
@@ -32,29 +32,29 @@ export default function PasswordVaultPage() {
 
       {/* WHY PROTECT */}
       <section className="info-section alt">
-        <h2>Why a password vault is important</h2>
+        <h2>{t("passwordVault.dangers.title")}</h2>
         <ul>
-          <li>🔐 Strong, unique passwords for every account</li>
-          <li>✅ Prevent reuse across multiple sites</li>
-          <li>🕵️ Detect compromised credentials instantly</li>
+          <li>{t("passwordVault.dangers.items.strongPasswords")}</li>
+          <li>{t("passwordVault.dangers.items.noReuse")}</li>
+          <li>{t("passwordVault.dangers.items.compromisedDetection")}</li>
         </ul>
       </section>
 
       {/* HOW IT WORKS */}
       <section className="info-section alt">
-        <h2>How our password vault works</h2>
+        <h2>{t("passwordVault.protection.title")}</h2>
         <ul>
-          <li>🛡️ End-to-end encryption for all stored credentials</li>
-          <li>⚡ Generate complex passwords instantly</li>
-          <li>📱 Accessible on all your devices securely</li>
+          <li>{t("passwordVault.protection.items.encryption")}</li>
+          <li>{t("passwordVault.protection.items.generate")}</li>
+          <li>{t("passwordVault.protection.items.multiDevice")}</li>
         </ul>
       </section>
 
       {/* CTA */}
       <section className="cta">
-        <h2>Protect your accounts with OXO</h2>
+        <h2>{t("passwordVault.cta.title")}</h2>
         <a href={`/${lang}/pricing`} className="btn primary">
-          Explore Plans
+          {t("passwordVault.cta.button")}
         </a>
       </section>
     </main>

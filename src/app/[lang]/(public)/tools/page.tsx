@@ -1,31 +1,31 @@
 "use client";
 
+import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "../../styles/pages/tools.scss";
+import "@/app/styles/pages/tools.scss";
 
 export default function ToolsPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="tools-page">
       {/* ================= HERO ================= */}
       <section className="hero hero-main">
         <div className="container hero-grid">
           <div className="hero-text">
-            <h1>Free Security Tools</h1>
-            <p>
-              Analyze emails, links and passwords instantly. Stay safe online
-              with simple but powerful cybersecurity tools.
-            </p>
+            <h1>{t("toolsPage.hero.title")}</h1>
+            <p>{t("toolsPage.hero.description")}</p>
 
             <div className="cta">
               <Link href={`/${lang}/tools/email-sec`} className="btn primary">
-                Check Email
+                {t("toolsPage.hero.ctaEmail")}
               </Link>
               <Link href={`/${lang}/tools/link-sec`} className="btn secondary">
-                Analyze Link
+                {t("toolsPage.hero.ctaLink")}
               </Link>
             </div>
           </div>
@@ -44,39 +44,31 @@ export default function ToolsPage() {
       {/* ================= FEATURES ================= */}
       <section className="tools-features">
         <div className="container">
-          <h2>Why use Oxo tools?</h2>
+          <h2>{t("toolsPage.features.title")}</h2>
 
           <div className="features-grid">
             <div className="feature-card">
               <span>⚡</span>
-              <h3>Instant analysis</h3>
-              <p>
-                Get results in seconds without installing anything or creating
-                an account.
-              </p>
+              <h3>{t("toolsPage.features.instant.title")}</h3>
+              <p>{t("toolsPage.features.instant.desc")}</p>
             </div>
 
             <div className="feature-card">
               <span>🧠</span>
-              <h3>Smart detection</h3>
-              <p>
-                Our logic detects suspicious patterns used in phishing and
-                cyberattacks.
-              </p>
+              <h3>{t("toolsPage.features.smart.title")}</h3>
+              <p>{t("toolsPage.features.smart.desc")}</p>
             </div>
 
             <div className="feature-card">
               <span>🔒</span>
-              <h3>Privacy first</h3>
-              <p>
-                Your data is never stored. All checks are processed securely.
-              </p>
+              <h3>{t("toolsPage.features.privacy.title")}</h3>
+              <p>{t("toolsPage.features.privacy.desc")}</p>
             </div>
 
             <div className="feature-card">
               <span>🌍</span>
-              <h3>Accessible anywhere</h3>
-              <p>Use our tools on any device without downloading software.</p>
+              <h3>{t("toolsPage.features.access.title")}</h3>
+              <p>{t("toolsPage.features.access.desc")}</p>
             </div>
           </div>
         </div>
@@ -85,7 +77,7 @@ export default function ToolsPage() {
       {/* ================= TOOLS LIST ================= */}
       <section className="tools-list">
         <div className="container">
-          <h2>Explore our tools</h2>
+          <h2>{t("toolsPage.list.title")}</h2>
 
           <div className="tools-grid">
             {/* EMAIL */}
@@ -96,22 +88,16 @@ export default function ToolsPage() {
                 width={120}
                 height={120}
               />
-
-              <h3>Email Checker</h3>
-
-              <p>
-                Detect phishing attempts and suspicious email patterns before
-                they compromise your data.
-              </p>
-
+              <h3>{t("toolsPage.email.title")}</h3>
+              <p>{t("toolsPage.email.desc")}</p>
               <ul>
-                <li>✔ Validate email format</li>
-                <li>✔ Detect phishing keywords</li>
-                <li>✔ Analyze suspicious patterns</li>
+                <li>{t("toolsPage.email.f1")}</li>
+                <li>{t("toolsPage.email.f2")}</li>
+                <li>{t("toolsPage.email.f3")}</li>
               </ul>
               <div className="cta">
                 <Link href={`/${lang}/tools/email-sec`} className="btn primary">
-                  Use tool
+                  {t("toolsPage.common.use")}
                 </Link>
               </div>
             </div>
@@ -124,25 +110,19 @@ export default function ToolsPage() {
                 width={120}
                 height={120}
               />
-
-              <h3>Password Tool</h3>
-
-              <p>
-                Generate strong passwords and evaluate their strength to protect
-                your accounts.
-              </p>
-
+              <h3>{t("toolsPage.password.title")}</h3>
+              <p>{t("toolsPage.password.desc")}</p>
               <ul>
-                <li>✔ Strong password generator</li>
-                <li>✔ Strength evaluation</li>
-                <li>✔ Security best practices</li>
+                <li>{t("toolsPage.password.f1")}</li>
+                <li>{t("toolsPage.password.f2")}</li>
+                <li>{t("toolsPage.password.f3")}</li>
               </ul>
               <div className="cta">
                 <Link
                   href={`/${lang}/tools/password-sec`}
                   className="btn primary"
                 >
-                  Use tool
+                  {t("toolsPage.common.use")}
                 </Link>
               </div>
             </div>
@@ -155,21 +135,16 @@ export default function ToolsPage() {
                 width={120}
                 height={120}
               />
-
-              <h3>Link Checker</h3>
-
-              <p>
-                Analyze URLs and detect malicious links before clicking on them.
-              </p>
-
+              <h3>{t("toolsPage.link.title")}</h3>
+              <p>{t("toolsPage.link.desc")}</p>
               <ul>
-                <li>✔ URL validation</li>
-                <li>✔ Suspicious pattern detection</li>
-                <li>✔ Phishing protection</li>
+                <li>{t("toolsPage.link.f1")}</li>
+                <li>{t("toolsPage.link.f2")}</li>
+                <li>{t("toolsPage.link.f3")}</li>
               </ul>
               <div className="cta">
                 <Link href={`/${lang}/tools/link-sec`} className="btn primary">
-                  Use tool
+                  {t("toolsPage.common.use")}
                 </Link>
               </div>
             </div>
@@ -180,27 +155,25 @@ export default function ToolsPage() {
       {/* ================= HOW IT WORKS ================= */}
       <section className="tools-steps alt">
         <div className="container">
-          <h2>How it works</h2>
+          <h2>{t("toolsPage.steps.title")}</h2>
 
           <div className="steps-grid">
             <div className="step">
               <span>1</span>
-              <h3>Enter your data</h3>
-              <p>Paste a link, email or generate a password using our tools.</p>
+              <h3>{t("toolsPage.steps.s1.title")}</h3>
+              <p>{t("toolsPage.steps.s1.desc")}</p>
             </div>
 
             <div className="step">
               <span>2</span>
-              <h3>Instant analysis</h3>
-              <p>
-                Our system analyzes patterns and potential risks in real-time.
-              </p>
+              <h3>{t("toolsPage.steps.s2.title")}</h3>
+              <p>{t("toolsPage.steps.s2.desc")}</p>
             </div>
 
             <div className="step">
               <span>3</span>
-              <h3>Get results</h3>
-              <p>Receive clear feedback and actionable security insights.</p>
+              <h3>{t("toolsPage.steps.s3.title")}</h3>
+              <p>{t("toolsPage.steps.s3.desc")}</p>
             </div>
           </div>
         </div>
@@ -209,14 +182,11 @@ export default function ToolsPage() {
       {/* ================= CTA ================= */}
       <section className="cta">
         <div className="container">
-          <h2>Go beyond free tools</h2>
-          <p>
-            Unlock real-time protection across all your devices with Oxo
-            security suite.
-          </p>
+          <h2>{t("toolsPage.cta.title")}</h2>
+          <p>{t("toolsPage.cta.desc")}</p>
 
           <Link href={`/${lang}/pricing`} className="btn primary">
-            Explore Plans
+            {t("toolsPage.cta.button")}
           </Link>
         </div>
       </section>

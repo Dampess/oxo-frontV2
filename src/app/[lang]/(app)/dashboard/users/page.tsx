@@ -1,22 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/pro-dashboard-pages.scss";
 
 export default function UsersPage() {
+  const { t } = useTranslation();
+
   const [devices, setDevices] = useState([
     {
       name: "MacBook Pro",
       user: "Alice",
       os: "macOS",
-      lastSeen: "Today",
+      lastSeen: t("usersPage.devices.lastSeen.today"),
       status: "secure",
     },
     {
       name: "iPhone 14",
       user: "Bob",
       os: "iOS",
-      lastSeen: "Yesterday",
+      lastSeen: t("usersPage.devices.lastSeen.yesterday"),
       status: "warning",
     },
   ]);
@@ -24,17 +27,17 @@ export default function UsersPage() {
   return (
     <div className="dashboard-grid">
       <div className="card full">
-        <h3>All Devices</h3>
+        <h3>{t("usersPage.title")}</h3>
 
         <table className="table">
           <thead>
             <tr>
-              <th>Device</th>
-              <th>User</th>
-              <th>OS</th>
-              <th>Last Active</th>
-              <th>Status</th>
-              <th>Action</th>
+              <th>{t("usersPage.table.device")}</th>
+              <th>{t("usersPage.table.user")}</th>
+              <th>{t("usersPage.table.os")}</th>
+              <th>{t("usersPage.table.lastActive")}</th>
+              <th>{t("usersPage.table.status")}</th>
+              <th>{t("usersPage.table.action")}</th>
             </tr>
           </thead>
 
@@ -47,12 +50,18 @@ export default function UsersPage() {
                 <td>{d.lastSeen}</td>
                 <td>
                   <span className={d.status}>
-                    {d.status === "secure" ? "Secure" : "Warning"}
+                    {d.status === "secure"
+                      ? t("usersPage.status.secure")
+                      : t("usersPage.status.warning")}
                   </span>
                 </td>
                 <td>
-                  <button className="secondary">Locate</button>
-                  <button className="danger">Remove</button>
+                  <button className="secondary">
+                    {t("usersPage.actions.locate")}
+                  </button>
+                  <button className="danger">
+                    {t("usersPage.actions.remove")}
+                  </button>
                 </td>
               </tr>
             ))}

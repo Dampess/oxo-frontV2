@@ -1,29 +1,31 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/faq.scss";
 
-const faqs = [
-  {
-    q: "Is the free plan really free?",
-    a: "Yes, it includes limited features with no time limit.",
-  },
-  {
-    q: "Can I upgrade anytime?",
-    a: "Yes, you can upgrade or downgrade anytime.",
-  },
-  {
-    q: "Is my data secure?",
-    a: "We follow strict security and privacy standards.",
-  },
-];
-
 export default function FAQPage() {
+  const { t } = useTranslation();
   const [open, setOpen] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      q: t("faq.items.free.q"),
+      a: t("faq.items.free.a"),
+    },
+    {
+      q: t("faq.items.upgrade.q"),
+      a: t("faq.items.upgrade.a"),
+    },
+    {
+      q: t("faq.items.security.q"),
+      a: t("faq.items.security.a"),
+    },
+  ];
 
   return (
     <main className="faq">
-      <h1>Frequently Asked Questions</h1>
+      <h1>{t("faq.title")}</h1>
 
       <div className="faq-list">
         {faqs.map((item, i) => (

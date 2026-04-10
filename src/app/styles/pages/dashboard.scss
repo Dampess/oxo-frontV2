@@ -68,7 +68,7 @@
 /* ================= BURGER BUTTON ================= */
 .burger-btn {
   display: none;
-  position: fixed;
+  position: relative;
   top: 20px;
   left: 20px;
   width: 35px;
@@ -464,6 +464,11 @@
     .welcome {
       margin-left: 38%;
     }
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
   }
 
   .sidebar {

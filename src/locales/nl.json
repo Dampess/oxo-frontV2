@@ -1,15 +1,1548 @@
 {
-  "dashboard": "Tableau de bord",
-  "welcome": "Ravi de vous revoir",
-  "contact": "Contact",
-  "currentPlan": "Plan actuel",
-  "devices": "Appareils",
-  "account": "Compte",
-  "tools": "Outils gratuits",
-  "recentActivity": "Activité récente",
-  "check": "Vérifier",
-  "generatePassword": "Générer un mot de passe",
-  "analyze": "Analyser",
-  "emailInvalid": "Email invalide ❌",
-  "emailValid": "Email valide ✅"
+  "common": {
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "update": "Bijwerken",
+    "close": "Sluiten",
+    "back": "Terug",
+    "loading": "Laden...",
+    "search": "Zoeken"
+  },
+  "nav": {
+    "tagline": "Zien. Detecteren. Beschermen.",
+    "forusers": "Voor gebruikers",
+    "individuals": "Particulieren",
+    "products": "Producten",
+    "product": {
+      "antivirus": "Antivirus & Anti-malware",
+      "vault": "Wachtwoordkluis",
+      "phishing": "Spam- & phishingbescherming",
+      "mission": "Onze missie"
+    },
+    "cta": {
+      "allInOne": "Alles-in-één cybersecurityplatform.",
+      "exploreProducts": "Producten ontdekken"
+    },
+    "businesses": "Bedrijven",
+    "blog": "Blog",
+    "support": "Ondersteuning",
+    "useful": "Bronnen",
+    "supportLinks": {
+      "hub": "Supportcentrum",
+      "faq": "FAQ",
+      "client": "Klantenservice",
+      "advices": "Cybersecurity advies"
+    },
+    "tools": {
+      "title": "Gratis tools",
+      "email": "E-mailcontrole",
+      "emailDesc": "Verdachte e-mails direct detecteren",
+      "password": "Wachtwoordtester",
+      "passwordDesc": "Controleer de sterkte van je wachtwoord",
+      "link": "Linkscanner",
+      "linkDesc": "Verdachte URL's analyseren",
+      "all": "Alle gratis tools bekijken",
+      "explore": "Tools verkennen"
+    },
+    "pricing": {
+      "title": "Prijzen",
+      "allPlans": "Alle plannen bekijken",
+      "ourPlans": "Onze plannen",
+      "notSure": "Weet je niet welk plan past?",
+      "advisor": "Plan adviseur"
+    },
+    "account": "Mijn account",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "Alle rechten voorbehouden.",
+    "privacy": "Privacybeleid",
+    "terms": "Gebruiksvoorwaarden",
+    "ugc": "UGC",
+    "sgc": "SGC"
+  },
+  "hero": {
+    "title": {
+      "line1": "Blijf veilig online.",
+      "line2": "Zonder complexiteit."
+    },
+    "description": "Oxo beschermt je e-mails, wachtwoorden en apparaten in realtime. Simpele tools. Krachtige beveiliging.",
+    "trust": "Creditcard vereist • Gratis tools beschikbaar • AVG-compliant",
+    "cta": {
+      "primary": "Gratis starten",
+      "secondary": "Gratis tools proberen"
+    }
+  },
+  "features": {
+    "title": "Alles wat je nodig hebt om veilig te blijven",
+    "subtitle": "Krachtige tools om je digitale leven te beschermen zonder complexiteit.",
+    "items": {
+      "antivirus": {
+        "title": "Antivirusbescherming",
+        "description": "Realtime detectie van bedreigingen op al je apparaten."
+      },
+      "vault": {
+        "title": "Wachtwoordkluis",
+        "description": "Beheer en bewaar al je inloggegevens veilig."
+      },
+      "phishing": {
+        "title": "E-mail & SMS beveiliging",
+        "description": "Detecteer phishing en kwaadaardige berichten direct."
+      },
+      "device": {
+        "title": "Apparaatscan",
+        "description": "Ontdek kwetsbaarheden en los ze snel op."
+      }
+    },
+    "button": "Product bekijken"
+  },
+  "trust": {
+    "title": "Waarom Oxo vertrouwen?",
+    "subtitle": "Ontworpen om je online te beschermen met eenvoudige, krachtige en transparante tools.",
+    "items": {
+      "allInOne": {
+        "title": "Alles-in-één bescherming",
+        "description": "Bescherm e-mails, wachtwoorden, apparaten en links met één platform."
+      },
+      "instant": {
+        "title": "Directe beveiligingschecks",
+        "description": "Analyseer bedreigingen in seconden met krachtige tools."
+      },
+      "privacy": {
+        "title": "Privacy by design",
+        "description": "Jouw data blijft van jou. Gebouwd volgens AVG en best practices."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Bekijk je beveiliging in één oogopslag",
+    "description": "Ons dashboard geeft direct inzicht in je apparaten, accounts en beveiligingsstatus.",
+    "cta": "Producten ontdekken",
+    "imageAlt": "Oxo dashboard preview"
+  },
+  "pricing": {
+    "title": "Eenvoudige prijzen, maximale bescherming",
+    "subtitle": "Gratis of premium, voor individuen of teams.",
+    "mostPopular": "Meest populair",
+    "device": "apparaat",
+    "devices": "apparaten",
+    "getStarted": "Aan de slag",
+    "contact": "Contact"
+  },
+  "cta": {
+    "title": "Klaar om je digitale leven te beveiligen?",
+    "button": "Beveilig nu"
+  },
+  "tools": {
+    "title": "Gratis beveiligingstools",
+    "subtitle": "Test je beveiliging in seconden. Geen account nodig.",
+    "items": {
+      "email": {
+        "title": "E-mail lekcontrole",
+        "desc": "Controleer of je e-mail gelekt is in een datalek."
+      },
+      "password": {
+        "title": "Wachtwoordtester",
+        "desc": "Controleer direct de sterkte van je wachtwoord."
+      },
+      "link": {
+        "title": "Linkscanner",
+        "desc": "Analyseer verdachte URLs veilig voordat je klikt."
+      }
+    },
+    "cta": "Alle tools bekijken"
+  },
+  "testimonials": {
+    "title": "Wat onze gebruikers zeggen"
+  },
+  "newsletter": {
+    "title": "Blijf op de hoogte",
+    "placeholder": "Voer je e-mail in",
+    "button": "Abonneren"
+  },
+  "legal": {
+    "back": "← Terug naar de startpagina",
+    "terms": {
+      "title": "Servicevoorwaarden",
+      "updated": "Laatst bijgewerkt: januari 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Aanvaarding van de voorwaarden",
+          "text": "Door toegang te verkrijgen tot of gebruik te maken van de diensten van Oxo, stemt u ermee in gebonden te zijn aan deze servicevoorwaarden. Indien u niet akkoord gaat met deze voorwaarden, mag u het platform niet gebruiken."
+        },
+        "services": {
+          "title": "2. Beschrijving van de diensten",
+          "text": "Oxo biedt tools voor het analyseren van links, e-mails, telefoonnummers en digitale inhoud om fraude, phishing en kwaadwillige activiteiten te helpen detecteren."
+        },
+        "responsibilities": {
+          "title": "3. Verantwoordelijkheden van de gebruiker",
+          "item1": "U dient de diensten te gebruiken in overeenstemming met de toepasselijke wetgeving",
+          "item2": "U mag het platform niet misbruiken, reverse engineeren of verstoren",
+          "item3": "U bent verantwoordelijk voor de gegevens die u indient"
+        },
+        "limitations": {
+          "title": "4. Beperkingen",
+          "text": "Oxo biedt risicoanalyses en indicatoren, maar garandeert geen absolute bescherming tegen bedreigingen."
+        },
+        "ip": {
+          "title": "5. Intellectuele eigendom",
+          "text": "Alle inhoud, branding en technologie behoren toe aan Oxo en mogen niet zonder toestemming worden gebruikt."
+        },
+        "termination": {
+          "title": "6. Beëindiging",
+          "text": "Wij behouden ons het recht voor om de toegang tot de dienst op ieder moment op te schorten of te beëindigen in geval van misbruik."
+        },
+        "contact": {
+          "title": "7. Contact",
+          "text": "Voor vragen over deze voorwaarden kunt u contact met ons opnemen via"
+        }
+      }
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "updated": "Laatst bijgewerkt: januari 2026",
+      "sections": {
+        "collect": {
+          "title": "1. Welke informatie wij verzamelen",
+          "text": "Wij kunnen informatie verzamelen die u vrijwillig verstrekt, zoals links, e-mails of contactgegevens wanneer u gebruikmaakt van onze diensten."
+        },
+        "usage": {
+          "title": "2. Hoe wij uw gegevens gebruiken",
+          "item1": "Om potentiële bedreigingen te analyseren en te detecteren",
+          "item2": "Om onze beveiligingsmodellen te verbeteren",
+          "item3": "Om servicegerelateerde informatie te communiceren"
+        },
+        "retention": {
+          "title": "3. Bewaartermijn van gegevens",
+          "text": "Gegevens worden uitsluitend bewaard zolang dit noodzakelijk is voor beveiligingsanalyse en operationele doeleinden."
+        },
+        "sharing": {
+          "title": "4. Delen van gegevens",
+          "text": "Wij verkopen geen persoonsgegevens. Gegevens kunnen uitsluitend worden gedeeld indien dit wettelijk vereist is of ter bescherming van onze gebruikers en infrastructuur."
+        },
+        "security": {
+          "title": "5. Beveiliging",
+          "text": "Wij treffen technische en organisatorische maatregelen om uw gegevens te beschermen tegen ongeoorloofde toegang."
+        },
+        "rights": {
+          "title": "6. Uw rechten",
+          "text": "U kunt verzoeken om inzage, correctie of verwijdering van uw gegevens door contact met ons op te nemen."
+        },
+        "contact": {
+          "title": "7. Contact",
+          "text": "Voor privacygerelateerde vragen kunt u contact opnemen via"
+        }
+      }
+    },
+    "sale": {
+      "title": "Verkoopvoorwaarden",
+      "updated": "Laatst bijgewerkt: januari 2026",
+      "sections": {
+        "scope": {
+          "title": "1. Toepassingsgebied",
+          "text": "Deze verkoopvoorwaarden zijn van toepassing op alle aankopen van producten en diensten van Oxo. Door een bestelling te plaatsen, gaat u akkoord met deze voorwaarden."
+        },
+        "products": {
+          "title": "2. Producten en diensten",
+          "text": "Oxo biedt digitale beveiligingsoplossingen aan, waaronder het scannen van links en e-mails, systeemaudits en abonnementsplannen voor particulieren en bedrijven."
+        },
+        "orders": {
+          "title": "3. Bestellingen en betaling",
+          "item1": "Alle bestellingen dienen via ons officiële platform te worden geplaatst.",
+          "item2": "Betalingen zijn verschuldigd op het moment van aankoop en kunnen worden voldaan via ondersteunde betaalmethoden.",
+          "item3": "Prijzen kunnen worden gewijzigd, maar een bevestigde bestelling wordt gefactureerd tegen de vermelde prijs."
+        },
+        "subscription": {
+          "title": "4. Abonnement en verlenging",
+          "text": "Abonnementsplannen worden automatisch verlengd tenzij zij vóór de verlengingsdatum worden opgezegd. Gebruikers kunnen hun abonnement beheren vanuit hun accountdashboard."
+        },
+        "refund": {
+          "title": "5. Terugbetalingen en annuleringen",
+          "text": "Terugbetalingen worden uitsluitend verstrekt zoals uiteengezet in ons terugbetalingsbeleid. Annuleringen moeten vóór de volgende factureringscyclus worden aangevraagd om kosten te voorkomen."
+        },
+        "liability": {
+          "title": "6. Aansprakelijkheid",
+          "text": "Oxo levert diensten ter verbetering van digitale beveiliging, maar kan geen volledige bescherming tegen cyberdreigingen garanderen. De aansprakelijkheid is beperkt tot het bedrag van de aankoop."
+        },
+        "law": {
+          "title": "7. Toepasselijk recht",
+          "text": "Op deze verkoopvoorwaarden is het recht van toepassing van de jurisdictie waarin Oxo opereert."
+        },
+        "contact": {
+          "title": "8. Contact",
+          "text": "Voor vragen over verkoop of abonnementen kunt u contact met ons opnemen via"
+        }
+      }
+    },
+    "use": {
+      "title": "Gebruiksvoorwaarden",
+      "updated": "Laatst bijgewerkt: januari 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Aanvaarding van de voorwaarden",
+          "text": "Door toegang te verkrijgen tot of gebruik te maken van de diensten van Oxo, stemt u ermee in deze gebruiksvoorwaarden na te leven. Indien u niet akkoord gaat, verzoeken wij u geen gebruik te maken van onze diensten."
+        },
+        "accounts": {
+          "title": "2. Gebruikersaccounts",
+          "text": "Voor sommige diensten kan het nodig zijn een account aan te maken. U bent verantwoordelijk voor het vertrouwelijk houden van uw inloggegevens en voor alle activiteiten die onder uw account plaatsvinden."
+        },
+        "prohibited": {
+          "title": "3. Verboden gedrag",
+          "item1": "Maak geen misbruik van het platform en probeer het niet te hacken",
+          "item2": "Upload geen kwaadaardige of illegale inhoud",
+          "item3": "Voer geen activiteiten uit die andere gebruikers schade berokkenen"
+        },
+        "availability": {
+          "title": "4. Beschikbaarheid van de dienst",
+          "text": "Oxo streeft naar continue beschikbaarheid van de diensten, maar garandeert geen ononderbroken dienstverlening. Wij behouden ons het recht voor diensten op te schorten voor onderhoud of in noodsituaties."
+        },
+        "ip": {
+          "title": "5. Intellectuele eigendom",
+          "text": "Alle inhoud, logo’s, handelsmerken en software zijn eigendom van Oxo en mogen niet zonder uitdrukkelijke toestemming worden gekopieerd of verspreid."
+        },
+        "liability": {
+          "title": "6. Beperking van aansprakelijkheid",
+          "text": "Oxo biedt tools voor risicoanalyse, maar kan niet aansprakelijk worden gehouden voor verliezen als gevolg van phishing, fraude of kwaadaardige inhoud."
+        },
+        "termination": {
+          "title": "7. Beëindiging",
+          "text": "Wij kunnen de toegang tot het platform opschorten of beëindigen indien u deze gebruiksvoorwaarden schendt."
+        },
+        "law": {
+          "title": "8. Toepasselijk recht",
+          "text": "Op deze voorwaarden is het recht van toepassing van de jurisdictie waarin Oxo opereert."
+        },
+        "contact": {
+          "title": "9. Contact",
+          "text": "Voor vragen over deze voorwaarden kunt u contact met ons opnemen via"
+        }
+      }
+    }
+  },
+  "toolsPage": {
+    "hero": {
+      "title": "Gratis beveiligingstools",
+      "description": "Analyseer e-mails, links en wachtwoorden direct. Blijf veilig online met eenvoudige maar krachtige tools.",
+      "ctaEmail": "E-mail controleren",
+      "ctaLink": "Link analyseren"
+    },
+    "features": {
+      "title": "Waarom Oxo-tools gebruiken?",
+      "instant": {
+        "title": "Directe analyse",
+        "desc": "Resultaten in seconden, zonder installatie of account."
+      },
+      "smart": {
+        "title": "Slimme detectie",
+        "desc": "Onze technologie herkent verdachte patronen van phishing en cyberaanvallen."
+      },
+      "privacy": {
+        "title": "Privacy eerst",
+        "desc": "Je gegevens worden nooit opgeslagen. Alles gebeurt veilig."
+      },
+      "access": {
+        "title": "Overal toegankelijk",
+        "desc": "Gebruik onze tools op elk apparaat zonder download."
+      }
+    },
+    "list": {
+      "title": "Ontdek onze tools"
+    },
+    "email": {
+      "title": "E-mail checker",
+      "desc": "Detecteer phishing en verdachte e-mails voordat ze schade veroorzaken.",
+      "f1": "✔ Controle van e-mailformaat",
+      "f2": "✔ Detectie van phishingwoorden",
+      "f3": "✔ Analyse van verdachte patronen"
+    },
+    "password": {
+      "title": "Wachtwoord tool",
+      "desc": "Genereer sterke wachtwoorden en controleer hun veiligheid.",
+      "f1": "✔ Sterke wachtwoorden genereren",
+      "f2": "✔ Sterktecontrole",
+      "f3": "✔ Beste beveiligingspraktijken"
+    },
+    "link": {
+      "title": "Link checker",
+      "desc": "Analyseer URLs en detecteer schadelijke links.",
+      "f1": "✔ URL-validatie",
+      "f2": "✔ Detectie van verdachte patronen",
+      "f3": "✔ Phishingbescherming"
+    },
+    "steps": {
+      "title": "Hoe werkt het",
+      "s1": {
+        "title": "Voer je gegevens in",
+        "desc": "Plak een link, e-mail of genereer een wachtwoord."
+      },
+      "s2": {
+        "title": "Analyse",
+        "desc": "Ons systeem controleert risico’s in realtime."
+      },
+      "s3": {
+        "title": "Resultaten",
+        "desc": "Ontvang duidelijke en bruikbare inzichten."
+      }
+    },
+    "cta": {
+      "title": "Ga verder dan gratis tools",
+      "desc": "Activeer realtime bescherming op al je apparaten.",
+      "button": "Bekijk plannen"
+    },
+    "common": {
+      "use": "Gebruik tool"
+    }
+  },
+  "password": {
+    "hero": {
+      "title": "Wachtwoord beveiligingstool",
+      "desc": "Genereer sterke wachtwoorden en controleer direct hun veiligheid."
+    },
+    "why": {
+      "title": "Waarom zwakke wachtwoorden gevaarlijk zijn",
+      "desc": "Zwakke wachtwoorden veroorzaken de meeste datalekken wereldwijd.",
+      "f1": "🔓 Direct gekraakt door brute-force",
+      "f2": "♻️ Hergebruik brengt meerdere accounts in gevaar",
+      "f3": "💥 Datalekken onthullen miljoenen gegevens"
+    },
+    "protect": {
+      "title": "Hoe jezelf beschermen",
+      "f1": "✔ Gebruik lange en complexe wachtwoorden",
+      "f2": "✔ Gebruik nooit hetzelfde wachtwoord",
+      "f3": "✔ Activeer 2FA",
+      "f4": "✔ Gebruik een wachtwoordmanager"
+    },
+    "oxo": {
+      "title": "Hoe Oxo je beschermt",
+      "f1": "🔐 Versleutelde wachtwoordkluis",
+      "f2": "⚡ Veilige generatie met één klik",
+      "f3": "🚨 Meldingen bij datalekken",
+      "f4": "🔄 Automatische updates",
+      "cta": "Ga naar je account"
+    },
+    "cta": {
+      "title": "Verbeter je wachtwoordbeveiliging",
+      "button": "Bekijk plannen"
+    }
+  },
+  "link": {
+    "hero": {
+      "title": "Link beveiligingschecker",
+      "desc": "Analyseer elke URL en detecteer direct schadelijke of phishing websites."
+    },
+    "why": {
+      "title": "Waarom schadelijke links gevaarlijk zijn",
+      "desc": "Kwaadaardige URL’s zijn een van de snelste manieren waarop aanvallers gebruikers compromitteren.",
+      "f1": "🎣 Nep loginpagina’s stelen gegevens",
+      "f2": "💻 Malware wordt stil geïnstalleerd",
+      "f3": "🔄 Verborgen redirects verbergen aanvallen"
+    },
+    "protect": {
+      "title": "Hoe jezelf beschermen",
+      "f1": "✔ Controleer links voordat je klikt",
+      "f2": "✔ Vermijd verkorte URL’s",
+      "f3": "✔ Gebruik beveiligingstools"
+    },
+    "oxo": {
+      "title": "Hoe Oxo je beschermt",
+      "f1": "⚡ Real-time URL-analyse",
+      "f2": "🧠 Threat intelligence detectie",
+      "f3": "🚫 Automatisch blokkeren van gevaarlijke sites",
+      "cta": "Ga naar je account"
+    },
+    "cta": {
+      "title": "Blijf veilig online",
+      "button": "Bekijk plannen"
+    }
+  },
+  "email": {
+    "hero": {
+      "title": "E-mail beveiligingsscanner",
+      "desc": "Analyseer verdachte e-mails direct en detecteer phishingpogingen voordat ze schade aanrichten."
+    },
+    "why": {
+      "title": "Waarom phishing e-mails gevaarlijk zijn",
+      "desc": "E-mail is de belangrijkste aanvalsvector. Eén klik kan je hele systeem compromitteren.",
+      "f1": "🎣 Nep e-mails doen zich voor als banken of diensten",
+      "f2": "🔐 Stelen inloggegevens en gevoelige data",
+      "f3": "💻 Verspreiden malware via bijlagen",
+      "f4": "💸 Leiden tot frauduleuze betalingen"
+    },
+    "protect": {
+      "title": "Hoe jezelf beschermen",
+      "f1": "✔ Controleer altijd het afzenderadres",
+      "f2": "✔ Klik niet op verdachte links of bijlagen",
+      "f3": "✔ Let op urgentie of druk",
+      "f4": "✔ Gebruik beveiligingstools"
+    },
+    "oxo": {
+      "title": "Hoe Oxo je beschermt",
+      "desc": "Oxo analyseert gedrag, patronen en dreigingen in real-time.",
+      "f1": "⚡ Real-time phishing detectie",
+      "f2": "🧠 AI-gedreven analyse",
+      "f3": "🔍 Diepe inspectie van e-mails en links",
+      "f4": "🔔 Directe waarschuwingen",
+      "cta": "Ga naar je account"
+    },
+    "cta": {
+      "title": "Bescherm je inbox in real-time",
+      "desc": "Upgrade voor continue bescherming op al je apparaten.",
+      "button": "Bekijk plannen"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "Hoe kunnen we je helpen?",
+      "desc": "Vind antwoorden, neem contact op met ons team of verbeter je beveiliging."
+    },
+    "cards": {
+      "faq": {
+        "title": "📚 FAQ",
+        "desc": "Snelle antwoorden op veelgestelde vragen"
+      },
+      "contact": {
+        "title": "💬 Klantenservice",
+        "desc": "Praat met ons supportteam"
+      },
+      "advice": {
+        "title": "🛡 Beveiligingsadvies",
+        "desc": "Leer hoe je online veilig blijft"
+      }
+    }
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": {
+      "free": {
+        "q": "Is het gratis plan echt gratis?",
+        "a": "Ja, het bevat beperkte functies zonder tijdslimiet."
+      },
+      "upgrade": {
+        "q": "Kan ik altijd upgraden?",
+        "a": "Ja, je kunt op elk moment upgraden of downgraden."
+      },
+      "security": {
+        "q": "Zijn mijn gegevens veilig?",
+        "a": "Wij volgen strikte beveiligings- en privacyrichtlijnen."
+      }
+    }
+  },
+  "advice": {
+    "title": "Cybersecurity advies",
+    "items": {
+      "phishing": {
+        "title": "Phishing e-mails herkennen",
+        "desc": "Herken scams voordat ze schade veroorzaken."
+      },
+      "password": {
+        "title": "Beveilig je wachtwoorden",
+        "desc": "Beste praktijken om veilig te blijven."
+      }
+    }
+  },
+  "clientSupport": {
+    "title": "Contact opnemen met support",
+    "subtitle": "We reageren meestal binnen 24 uur",
+    "cards": {
+      "email": {
+        "title": "E-mail",
+        "value": "support@oxo.com"
+      },
+      "form": {
+        "title": "Contactformulier",
+        "cta": "Bericht verzenden"
+      },
+      "faq": {
+        "title": "Zelfhulp",
+        "cta": "Bekijk FAQ"
+      }
+    }
+  },
+  "product": {
+    "hero": {
+      "title": "OXO Security Suite",
+      "description": "Bescherm je apparaten, e-mails, wachtwoorden en links in real-time. Enterprise-grade cybersecurity eenvoudig gemaakt.",
+      "ctaPrimary": "Aan de slag",
+      "ctaSecondary": "Ontdek tools",
+      "imageAlt": "OXO productillustratie"
+    },
+    "products": {
+      "title": "Onze producten",
+      "learnMore": "Meer info",
+      "items": {
+        "antivirus": {
+          "title": "Antivirus",
+          "description": "Detecteer en verwijder virussen, malware en ransomware op al je apparaten.",
+          "f1": "✔ Real-time virusscan",
+          "f2": "✔ Automatische updates",
+          "f3": "✔ Bescherming op meerdere apparaten"
+        },
+        "antispam": {
+          "title": "Anti-spam",
+          "description": "Filter ongewenste en schadelijke e-mails voordat ze je inbox bereiken.",
+          "f1": "✔ Phishing detectie",
+          "f2": "✔ Slimme spamfilters",
+          "f3": "✔ Inbox beveiligingsscore"
+        },
+        "antimalware": {
+          "title": "Anti-malware",
+          "description": "Geavanceerde detectie van malware, spyware en andere bedreigingen in real-time.",
+          "f1": "✔ Zero-day detectie",
+          "f2": "✔ Diepe systeemscans",
+          "f3": "✔ Automatische verwijdering"
+        },
+        "phishing": {
+          "title": "Phishing bescherming",
+          "description": "Detecteer en blokkeer phishing websites en e-mails voordat ze schade veroorzaken.",
+          "f1": "✔ Real-time URL scanning",
+          "f2": "✔ E-mail analyse",
+          "f3": "✔ Fraudewaarschuwingen"
+        },
+        "vault": {
+          "title": "Wachtwoordkluis",
+          "description": "Beheer en bewaar al je wachtwoorden veilig in één versleutelde kluis.",
+          "f1": "✔ Veilige opslag",
+          "f2": "✔ Automatisch invullen",
+          "f3": "✔ Sterke wachtwoorden genereren",
+          "f4": "✔ Toegang op alle apparaten"
+        }
+      }
+    },
+    "steps": {
+      "title": "Hoe OXO werkt",
+      "s1": {
+        "title": "Installeren & verbinden",
+        "description": "Installeer OXO en verbind je apparaten en accounts veilig."
+      },
+      "s2": {
+        "title": "Real-time monitoring",
+        "description": "Continue scanning van e-mails, links en systemen."
+      },
+      "s3": {
+        "title": "Beschermen & waarschuwen",
+        "description": "Directe meldingen en automatische blokkering van bedreigingen."
+      }
+    },
+    "security": {
+      "title": "Enterprise beveiliging voor iedereen",
+      "description": "OXO biedt end-to-end encryptie, AI-detectie en een zero-logs beleid.",
+      "f1": "🔒 End-to-end encryptie",
+      "f2": "🧠 AI-gedreven analyse",
+      "f3": "✅ Geen data opgeslagen of verkocht",
+      "imageAlt": "OXO beveiligingsillustratie"
+    },
+    "cta": {
+      "title": "Klaar om je digitale leven te beveiligen?",
+      "description": "Start vandaag met OXO en bescherm al je apparaten en accounts.",
+      "button": "Aan de slag"
+    }
+  },
+  "antiPhishing": {
+    "hero": {
+      "title": "Anti-phishing & spam bescherming",
+      "description": "Detecteer phishing e-mails en spam voordat ze je gegevens compromitteren.",
+      "imageAlt": "Phishing illustratie"
+    },
+    "dangers": {
+      "title": "Waarom phishing en spam gevaarlijk zijn",
+      "items": {
+        "credentialTheft": "🎣 Diefstal van inloggegevens en financiële data",
+        "malwareInstall": "💻 Onopgemerkte installatie van malware",
+        "identityFraud": "⚠️ Identiteitsfraude"
+      }
+    },
+    "protection": {
+      "title": "Hoe OXO je beschermt",
+      "items": {
+        "aiScanning": "🧠 AI-gestuurde e-mailanalyse",
+        "linkDetection": "🔍 Detectie van verdachte links",
+        "realTimeAlerts": "⚡ Real-time waarschuwingen"
+      }
+    },
+    "cta": {
+      "title": "Bescherm jezelf tegen phishing",
+      "button": "Bekijk plannen"
+    }
+  },
+  "passwordVault": {
+    "hero": {
+      "title": "Wachtwoordkluis",
+      "description": "Bewaar, genereer en beheer al je wachtwoorden veilig in één versleutelde kluis.",
+      "imageAlt": "Illustratie van de wachtwoordkluis"
+    },
+    "dangers": {
+      "title": "Waarom een wachtwoordkluis belangrijk is",
+      "items": {
+        "strongPasswords": "🔐 Sterke, unieke wachtwoorden voor elk account",
+        "noReuse": "✅ Voorkomt hergebruik op meerdere websites",
+        "compromisedDetection": "🕵️ Detecteert gecompromitteerde inloggegevens direct"
+      }
+    },
+    "protection": {
+      "title": "Hoe onze wachtwoordkluis werkt",
+      "items": {
+        "encryption": "🛡️ End-to-end encryptie voor alle opgeslagen inloggegevens",
+        "generate": "⚡ Direct complexe wachtwoorden genereren",
+        "multiDevice": "📱 Veilig toegankelijk op al je apparaten"
+      }
+    },
+    "cta": {
+      "title": "Bescherm je accounts met OXO",
+      "button": "Bekijk plannen"
+    }
+  },
+  "individuals": {
+    "hero": {
+      "title": "OXO voor particulieren",
+      "description": "Bescherm je persoonlijke accounts, apparaten en online activiteiten met onze alles-in-één beveiligingssuite.",
+      "imageAlt": "Bescherming voor particulieren"
+    },
+    "threats": {
+      "title": "Cyberdreigingen in 2025 voor particulieren",
+      "items": {
+        "phishing": "🎣 62% van de phishingaanvallen richt zich op persoonlijke e-mailadressen",
+        "malware": "💻 48% van de particulieren krijgt te maken met malware- of ransomwarepogingen",
+        "passwords": "🔑 39% van de accountinbraken is te wijten aan zwakke of hergebruikte wachtwoorden"
+      }
+    },
+    "protection": {
+      "title": "Hoe OXO je beschermt",
+      "items": {
+        "vault": "🔐 Wachtwoordkluis met realtime detectie van datalekken",
+        "antivirus": "🛡️ Antivirus- en malwarescans op al je apparaten",
+        "email": "📧 Anti-phishing- en anti-spambeveiliging voor e-mail",
+        "links": "🌐 Veilige linkanalyse en realtime waarschuwingen"
+      }
+    },
+    "cta": {
+      "title": "Beveilig je digitale leven",
+      "description": "Begin vandaag nog met het beschermen van je persoonlijke gegevens met OXO.",
+      "button": "Aan de slag"
+    }
+  },
+  "businesses": {
+    "hero": {
+      "title": "OXO voor bedrijven",
+      "description": "Bescherm de gegevens, medewerkers en klanten van je bedrijf met cybersecuritytools van enterprise-niveau.",
+      "imageAlt": "Bescherming voor bedrijven"
+    },
+    "threats": {
+      "title": "Cyberdreigingen in 2025 voor bedrijven",
+      "items": {
+        "phishing": "🛡️ 73% van de bedrijven krijgt te maken met phishing- of spear-phishingaanvallen",
+        "ransomware": "💻 59% ervaart ransomwarepogingen",
+        "cost": "🔒 Gemiddelde kosten van een datalek: $3,2 miljoen",
+        "credentials": "📈 41% van de datalekken komt voort uit gecompromitteerde medewerkersaccounts"
+      }
+    },
+    "protection": {
+      "title": "Hoe OXO je bedrijf beschermt",
+      "items": {
+        "endpoint": "🛡️ Endpointbeveiliging voor alle bedrijfsapparaten",
+        "email": "📧 Geavanceerde anti-phishing- en anti-spamfilters",
+        "vault": "🔐 Centrale wachtwoordkluis voor teams",
+        "alerts": "⚡ Realtime dreigingsinformatie en waarschuwingen"
+      }
+    },
+    "cta": {
+      "title": "Beveilig je bedrijfsvoering",
+      "description": "Bescherm je bedrijf, medewerkers en klanten tegen cyberdreigingen.",
+      "button": "Bekijk plannen"
+    }
+  },
+  "antivirus": {
+    "hero": {
+      "title": "Antivirus- & malwarebescherming",
+      "description": "Bescherm je apparaten tegen virussen, malware en ransomware met realtime scanning en AI-detectie.",
+      "imageAlt": "Antivirus illustratie"
+    },
+    "dangers": {
+      "title": "Waarom antivirus essentieel is",
+      "items": {
+        "infections": "💻 Voorkomt malware-infecties",
+        "data": "🔒 Beschermt gevoelige gegevens",
+        "performance": "⚡ Houdt apparaten snel en veilig"
+      }
+    },
+    "protection": {
+      "title": "Hoe onze antivirus werkt",
+      "items": {
+        "aiDetection": "🧠 AI-detectie van verdachte bestanden",
+        "realTime": "🛡️ Realtime scanning van apps en downloads",
+        "alerts": "🔔 Directe waarschuwingen bij dreigingen"
+      }
+    },
+    "cta": {
+      "title": "Blijf beschermd tegen malware",
+      "button": "Bekijk plannen"
+    }
+  },
+  "pricingHome": {
+    "hero": {
+      "title": "Eenvoudige & transparante prijzen",
+      "description": "Kies het plan dat bij je past, voor particulieren en bedrijven."
+    },
+    "billing": {
+      "monthly": "Maandelijks",
+      "yearly": "Jaarlijks",
+      "discount": "-20%",
+      "monthUnit": "maand",
+      "yearUnit": "jaar"
+    },
+    "personal": {
+      "title": "Persoonlijke plannen",
+      "devicesSingular": "apparaat",
+      "devicesPlural": "apparaten",
+      "ctaFree": "Aan de slag",
+      "ctaTrial": "Gratis proefperiode"
+    },
+    "business": {
+      "title": "Bedrijfsplannen",
+      "custom": "Op maat",
+      "usersSingular": "gebruiker",
+      "usersPlural": "gebruikers",
+      "ctaEnterprise": "Contact verkoop",
+      "ctaStandard": "Beveilig nu"
+    },
+    "compare": {
+      "title": "Functies vergelijken",
+      "headers": {
+        "features": "Functies",
+        "free": "Gratis",
+        "personalPro": "Personal Pro",
+        "personalMax": "Personal Max",
+        "startup": "Startup",
+        "smePro": "SME Pro",
+        "enterprise": "Enterprise"
+      },
+      "rows": {
+        "linkAnalysis": {
+          "feature": "Linkanalyse",
+          "free": "Beperkt"
+        },
+        "emailPhishing": {
+          "feature": "E-mail phishingbescherming",
+          "free": "—"
+        },
+        "deviceChecks": {
+          "feature": "Apparaatbeveiligingscontrole",
+          "free": "—"
+        },
+        "fraudDetection": {
+          "feature": "Fraudedetectie",
+          "free": "—"
+        },
+        "prioritySupport": {
+          "feature": "Prioriteit support",
+          "free": "Community",
+          "personalPro": "E-mail",
+          "personalMax": "E-mail",
+          "startup": "Prioriteit",
+          "smePro": "Prioriteit",
+          "enterprise": "Dedicated"
+        }
+      }
+    },
+    "advisor": {
+      "title": "Niet zeker? Wij helpen je het juiste plan te vinden!",
+      "button": "BEKIJK"
+    }
+  },
+  "planAdvisor": {
+    "actions": {
+      "continue": "Doorgaan",
+      "back": "Terug",
+      "seeResult": "Bekijk resultaat",
+      "restart": "Opnieuw starten"
+    },
+    "steps": {
+      "userType": {
+        "title": "Ben je een particuliere of zakelijke gebruiker?",
+        "options": {
+          "personal": "👤 Particulier",
+          "business": "🏢 Bedrijf"
+        }
+      },
+      "devices": {
+        "title": "Hoeveel apparaten?"
+      },
+      "protections": {
+        "title": "Kies je beveiliging",
+        "options": {
+          "phishing": "🛡️ Phishingbescherming",
+          "deviceScan": "💻 Apparaatbeveiligingsscan"
+        }
+      },
+      "budget": {
+        "title": "Je maandelijkse budget",
+        "placeholder": "Bijv.: 20"
+      }
+    },
+    "result": {
+      "title": "✨ Jouw perfecte plan",
+      "badge": "Beste keuze",
+      "monthUnit": "maand",
+      "whyTitle": "Waarom dit plan?",
+      "cta": "Aan de slag",
+      "explanations": {
+        "userTypePersonal": "Je bent een particuliere gebruiker.",
+        "userTypeBusiness": "Je bent een zakelijke gebruiker.",
+        "devicesLarge": "Je hebt {{count}} apparaten of meer, daarom raden we een plan aan dat grootschalige bescherming efficiënt aankan.",
+        "devicesMedium": "Je hebt {{count}} apparaten, daarom raden we een plan aan dat meerdere apparaten efficiënt beschermt.",
+        "phishing": "Phishingbescherming is ingeschakeld om je e-mails en links te beveiligen.",
+        "deviceScan": "Een apparaatbeveiligingsscan is inbegrepen om al je apparaten veilig te houden.",
+        "budget": "We hebben plannen gefilterd binnen je budget van ${{budget}}/maand."
+      }
+    }
+  },
+  "downloads": {
+    "hero": {
+      "title": "Download Oxo apps & tools",
+      "subtitle": "Beveilig je digitale activiteiten met Oxo-applicaties voor desktop en mobiel."
+    },
+    "tabs": {
+      "personal": "Particulier",
+      "business": "Bedrijf"
+    },
+    "buttons": {
+      "download": "Downloaden",
+      "getForBusiness": "Voor bedrijven"
+    },
+    "items": {
+      "windows": {
+        "os": "Windows",
+        "personalDesc": "Bescherm je persoonlijke browsegedrag, e-mails en downloads.",
+        "businessDesc": "Geavanceerde endpointbescherming en dreigingsmonitoring voor teams.",
+        "meta": "Windows 10+"
+      },
+      "macos": {
+        "os": "macOS",
+        "personalDesc": "Lichte bescherming voor macOS-gebruikers.",
+        "businessDesc": "macOS-beveiligingsagent op enterprise-niveau.",
+        "meta": "macOS 12+"
+      },
+      "mobile": {
+        "os": "Mobiel",
+        "personalDesc": "Scan onderweg links, sms-berichten en e-mails.",
+        "businessDesc": "Veilige mobiele toegang voor medewerkers en leidinggevenden.",
+        "meta": "iOS & Android"
+      }
+    },
+    "info": {
+      "description": "Alle Oxo-applicaties zijn digitaal ondertekend, worden regelmatig bijgewerkt en voldoen aan de beveiligingsstandaarden van de sector. Business-edities bevatten centraal beheer, geavanceerde rapportages en prioriteitsondersteuning."
+    },
+    "cta": {
+      "title": "Klaar om te beginnen?",
+      "description": "Download Oxo nu en bescherm direct je digitale leven.",
+      "button": "Download Oxo"
+    }
+  },
+  "contact": {
+    "title": "Neem contact met ons op",
+    "form": {
+      "name": "Naam",
+      "email": "E-mail",
+      "subject": "Onderwerp",
+      "message": "Bericht",
+      "button": "Verzenden"
+    },
+    "info": {
+      "location": "📍 Europa",
+      "response": "⏱ Reactie binnen 24 uur",
+      "security": "🔒 Veilig & privé"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Oxo Blog",
+      "description": "Inzichten, analyses en praktische adviezen om digitale dreigingen beter te begrijpen en beschermd te blijven."
+    },
+    "filters": {
+      "all": "Alle"
+    },
+    "categories": {
+      "threatIntelligence": "Threat Intelligence",
+      "practicalSecurity": "Praktische beveiliging",
+      "businessSecurity": "Bedrijfsbeveiliging"
+    },
+    "posts": {
+      "readArticle": "Artikel lezen →",
+      "threats2026": {
+        "title": "De belangrijkste cyberdreigingen om in 2026 op te letten",
+        "excerpt": "Van phishing-as-a-service tot AI-gestuurde scams: ontdek de opkomende dreigingen die het digitale risicolandschap vormgeven."
+      },
+      "maliciousLink": {
+        "title": "Hoe je in enkele seconden een kwaadaardige link herkent",
+        "excerpt": "Een praktische gids om gevaarlijke links snel te herkennen voordat je klikt — zelfs zonder technische kennis."
+      },
+      "emailAttacks": {
+        "title": "Waarom bedrijven e-mailaanvallen onderschatten",
+        "excerpt": "E-mail blijft de belangrijkste aanvalsvector. Dit is waarom organisaties er nog steeds moeite mee hebben om zich ertegen te verdedigen."
+      }
+    },
+    "pagination": {
+      "previous": "← Vorige",
+      "next": "Volgende →"
+    },
+    "cta": {
+      "title": "Blijf een stap voor",
+      "description": "Test een verdachte link of e-mail voordat het een echte dreiging wordt.",
+      "button": "Scan starten"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welkom terug",
+      "subtitle": "Log in op je account",
+      "email": "E-mailadres",
+      "password": "Wachtwoord",
+      "button": "Inloggen",
+      "forgot": "Wachtwoord vergeten?",
+      "alert": "Inlogpoging met"
+    },
+    "signup": {
+      "title": "Nieuw hier?",
+      "description": "Maak een account aan en begin je digitale leven te beschermen met OXO.",
+      "button": "Account aanmaken"
+    }
+  },
+  "verifyEmail": {
+    "loading": {
+      "title": "Je e-mail wordt geverifieerd...",
+      "description": "Even geduld alstublieft."
+    },
+    "success": {
+      "title": "✅ E-mail geverifieerd",
+      "description": "Je account is nu actief. Je kunt Oxo nu gebruiken.",
+      "button": "Ga naar inloggen"
+    },
+    "error": {
+      "title": "❌ Verificatie mislukt",
+      "description": "De link is ongeldig of verlopen.",
+      "button": "Opnieuw proberen"
+    }
+  },
+  "signupInfo": {
+    "hero": {
+      "title": "Voordat je je aanmeldt",
+      "description": "Dit moet je weten voordat je een OXO-account aanmaakt."
+    },
+    "security": {
+      "title": "Waarom je account beveiligen?",
+      "items": {
+        "data": "🔒 Bescherm persoonlijke gegevens tegen phishing en malware",
+        "access": "⚡ Voorkom ongeautoriseerde toegang met sterke wachtwoorden",
+        "activity": "🌐 Beveilig je online activiteiten op al je apparaten"
+      }
+    },
+    "requirements": {
+      "title": "Wat je nodig hebt",
+      "items": {
+        "email": "📧 Een geldig e-mailadres",
+        "password": "🔑 Een sterk wachtwoord (wij kunnen helpen er een te genereren)",
+        "device": "💻 Optioneel: Een browser of apparaat dat je wilt beveiligen"
+      }
+    },
+    "privacy": {
+      "title": "OXO Privacy",
+      "description": "Je gegevens worden nooit verkocht. Alle gegevens worden versleuteld en veilig in realtime verwerkt."
+    },
+    "cta": {
+      "button": "Doorgaan naar registratie"
+    }
+  },
+  "signup": {
+    "title": "Maak je account aan",
+    "form": {
+      "email": "E-mailadres",
+      "password": "Wachtwoord",
+      "confirm": "Bevestig wachtwoord",
+      "button": "Registreren"
+    },
+    "errors": {
+      "passwordMismatch": "Wachtwoorden komen niet overeen"
+    },
+    "success": "Account aangemaakt voor",
+    "footer": {
+      "text": "Heb je al een account?",
+      "link": "Log hier in"
+    }
+  },
+  "resetPassword": {
+    "form": {
+      "title": "Wachtwoord resetten",
+      "description": "Voer hieronder je nieuwe wachtwoord in.",
+      "password": "Nieuw wachtwoord",
+      "confirmPassword": "Bevestig je wachtwoord",
+      "button": "Wachtwoord bijwerken",
+      "error": "Wachtwoorden komen niet overeen!"
+    },
+    "success": {
+      "title": "✅ Wachtwoord bijgewerkt",
+      "description": "Je wachtwoord is succesvol bijgewerkt.",
+      "button": "Terug naar inloggen"
+    }
+  },
+  "forgotPassword": {
+    "form": {
+      "title": "Wachtwoord vergeten?",
+      "description": "Voer je e-mailadres in en we sturen je een resetlink.",
+      "email": "Je e-mail",
+      "button": "Resetlink verzenden",
+      "footerText": "Weet je het weer?",
+      "footerLink": "Terug naar inloggen"
+    },
+    "success": {
+      "title": "📩 Controleer je inbox",
+      "descriptionBefore": "Als er een account bestaat voor ",
+      "descriptionAfter": ", ontvang je binnenkort een resetlink.",
+      "button": "Terug naar inloggen"
+    }
+  },
+  "dashboardLayout": {
+    "greetings": {
+      "morning": "Goedemorgen",
+      "afternoon": "Goedemiddag",
+      "evening": "Goedenavond"
+    },
+    "nav": {
+      "overview": "Overzicht",
+      "team": "Team",
+      "security": "Beveiliging",
+      "devices": "Apparaten",
+      "tools": "Tools",
+      "plan": "Abonnement",
+      "settings": "Instellingen"
+    },
+    "header": {
+      "title": "Dashboard",
+      "contact": "Contact"
+    },
+    "chatbot": {
+      "title": "Chatbot",
+      "placeholder": "Typ een bericht...",
+      "send": "Verzenden",
+      "botPrefix": "Bot zegt: Hallo,"
+    }
+  },
+  "dashboardPage": {
+    "plan": {
+      "title": "Huidig abonnement",
+      "renewsOn": "Wordt verlengd op",
+      "button": "Abonnement beheren"
+    },
+    "devices": {
+      "title": "Apparaten",
+      "activeDevices": "actieve apparaten",
+      "button": "Alles bekijken",
+      "items": {
+        "macbook": "Vandaag",
+        "iphone": "Gisteren",
+        "windows": "2 dagen geleden"
+      }
+    },
+    "account": {
+      "title": "Account",
+      "created": "Aangemaakt op:",
+      "button": "Instellingen"
+    },
+    "tools": {
+      "title": "Snelle tools",
+      "nav": {
+        "email": "E-mail checker",
+        "link": "Link scanner",
+        "scam": "Scam analyzer"
+      },
+      "placeholders": {
+        "email": "Voer e-mail in",
+        "link": "Voer link in",
+        "scam": "Voer tekst in om te analyseren"
+      },
+      "run": "Uitvoeren",
+      "results": {
+        "validEmail": "Geldige e-mail ✅",
+        "invalidEmail": "Ongeldige e-mail ❌",
+        "safeLink": "Link lijkt veilig ✅",
+        "suspiciousLink": "Verdachte link ❌",
+        "potentialScam": "Mogelijke scam ⚠️",
+        "seemsSafe": "Lijkt veilig ✅"
+      }
+    },
+    "activity": {
+      "title": "Recente activiteit",
+      "items": {
+        "login": "Ingelogd via Chrome — Vandaag",
+        "passwordCheck": "Wachtwoordcontrole — Gisteren",
+        "deviceAdded": "Apparaat toegevoegd — 3 dagen geleden"
+      }
+    }
+  },
+  "usersPage": {
+    "title": "Alle apparaten",
+    "table": {
+      "device": "Apparaat",
+      "user": "Gebruiker",
+      "os": "Besturingssysteem",
+      "lastActive": "Laatst actief",
+      "status": "Status",
+      "action": "Actie"
+    },
+    "status": {
+      "secure": "Beveiligd",
+      "warning": "Waarschuwing"
+    },
+    "actions": {
+      "locate": "Lokaliseren",
+      "remove": "Verwijderen"
+    },
+    "devices": {
+      "lastSeen": {
+        "today": "Vandaag",
+        "yesterday": "Gisteren"
+      }
+    }
+  },
+  "freeTools": {
+    "title": "Gratis tools",
+    "nav": {
+      "email": "E-mail checker",
+      "link": "Link checker",
+      "passwordGenerator": "Wachtwoordgenerator",
+      "passwordChecker": "Wachtwoord checker",
+      "scam": "Scam analyzer"
+    },
+    "email": {
+      "title": "E-mail checker",
+      "placeholder": "Voer e-mail in",
+      "button": "Controleren"
+    },
+    "link": {
+      "title": "Link checker",
+      "placeholder": "Voer URL in",
+      "button": "Controleren"
+    },
+    "passwordGenerator": {
+      "title": "Wachtwoordgenerator",
+      "button": "Genereer wachtwoord"
+    },
+    "passwordChecker": {
+      "title": "Wachtwoord checker",
+      "placeholder": "Voer wachtwoord in",
+      "button": "Controleer sterkte"
+    },
+    "scam": {
+      "title": "Scam analyzer",
+      "placeholder": "Plak hier tekst",
+      "button": "Analyseren"
+    },
+    "result": {
+      "score": "Score:"
+    }
+  },
+  "teamPage": {
+    "title": "Teamleden",
+    "pending": "In behandeling",
+    "table": {
+      "name": "Naam",
+      "email": "E-mail",
+      "role": "Rol",
+      "action": "Actie"
+    },
+    "roles": {
+      "admin": "Beheerder",
+      "user": "Gebruiker"
+    },
+    "actions": {
+      "changeRole": "Rol wijzigen",
+      "remove": "Verwijderen"
+    },
+    "invite": {
+      "title": "Lid uitnodigen",
+      "placeholder": "E-mailadres",
+      "button": "Uitnodiging verzenden"
+    }
+  },
+  "settings": {
+    "title": "Accountinstellingen",
+    "alerts": {
+      "profileUpdated": "Profiel bijgewerkt!",
+      "passwordUpdated": "Wachtwoord bijgewerkt!",
+      "deleteConfirm": "Weet je zeker dat je je account wilt verwijderen? Deze actie is onomkeerbaar.",
+      "accountDeleted": "Account verwijderd!"
+    },
+    "profile": {
+      "title": "Profiel",
+      "name": "Naam",
+      "email": "E-mail",
+      "button": "Profiel bijwerken"
+    },
+    "password": {
+      "title": "Wachtwoord",
+      "changeButton": "Wachtwoord wijzigen",
+      "modal": {
+        "title": "Wachtwoord wijzigen",
+        "currentPassword": "Huidig wachtwoord",
+        "newPassword": "Nieuw wachtwoord",
+        "update": "Bijwerken",
+        "cancel": "Annuleren"
+      }
+    },
+    "notifications": {
+      "title": "Meldingen",
+      "email": "E-mailmeldingen",
+      "sms": "SMS-meldingen",
+      "push": "Pushmeldingen"
+    },
+    "sessions": {
+      "title": "Actieve sessies",
+      "table": {
+        "device": "Apparaat",
+        "os": "Besturingssysteem",
+        "lastActive": "Laatst actief",
+        "location": "Locatie",
+        "action": "Actie"
+      },
+      "logout": "Uitloggen"
+    },
+    "dangerZone": {
+      "title": "Gevarenzone",
+      "description": "Het verwijderen van je account is onomkeerbaar. Al je gegevens gaan verloren.",
+      "button": "Account verwijderen"
+    }
+  },
+  "securityPage": {
+    "score": {
+      "title": "Beveiligingsscore",
+      "description": "Algemeen beschermingsniveau"
+    },
+    "alerts": {
+      "title": "Meldingen",
+      "weakPassword": "Zwak wachtwoord gedetecteerd",
+      "suspiciousLogin": "Verdachte inlogpoging",
+      "systemsUpdated": "Alle systemen zijn up-to-date"
+    },
+    "logs": {
+      "title": "Activiteitslog",
+      "login": "Login via Chrome — Parijs",
+      "passwordChanged": "Wachtwoord gewijzigd",
+      "deviceAdded": "Nieuw apparaat toegevoegd"
+    }
+  },
+  "proDashboard": {
+    "security": {
+      "title": "Beveiligingsoverzicht",
+      "secure": "Beveiligd",
+      "devices": "apparaten bewaakt",
+      "members": "teamleden",
+      "button": "Details bekijken"
+    },
+    "team": {
+      "title": "Team",
+      "activeMembers": "actieve leden",
+      "button": "Team beheren"
+    },
+    "alerts": {
+      "title": "Meldingen",
+      "suspiciousLogin": "⚠ Verdachte login gedetecteerd",
+      "weakPasswords": "⚠ 2 zwakke wachtwoorden gevonden",
+      "devicesUpdated": "✔ Alle apparaten zijn bijgewerkt",
+      "button": "Problemen oplossen"
+    },
+    "devices": {
+      "title": "Apparaten",
+      "total": "totaal aantal apparaten",
+      "button": "Apparaten beheren"
+    },
+    "billing": {
+      "title": "Facturatie",
+      "nextInvoice": "Volgende factuur:",
+      "month": "maand",
+      "button": "Facturatie bekijken"
+    },
+    "activity": {
+      "title": "Recente activiteit",
+      "items": {
+        "deviceAdded": "Nieuw apparaat toegevoegd — Vandaag",
+        "userJoined": "Gebruiker Bob toegevoegd — Gisteren",
+        "passwordIssue": "Wachtwoordprobleem gedetecteerd — 2 dagen geleden"
+      }
+    },
+    "roles": {
+      "admin": "Beheerder",
+      "user": "Gebruiker"
+    }
+  },
+  "plan": {
+    "status": {
+      "active": "Actief"
+    },
+    "labels": {
+      "renewal": "Verlengingsdatum",
+      "devices": "Apparaten"
+    },
+    "upgrade": {
+      "text": "🚀 Upgrade naar Premium en beveilig tot 10 apparaten",
+      "button": "Upgraden"
+    },
+    "features": {
+      "title": "Inbegrepen functies",
+      "f1": "Realtime bescherming",
+      "f2": "Phishingdetectie",
+      "f3": "Apparaatbeveiligingsscan",
+      "f4": "Prioriteitsondersteuning"
+    },
+    "payment": {
+      "title": "Betaalmethode",
+      "expires": "Verloopt op",
+      "update": "Bijwerken"
+    },
+    "invoices": {
+      "title": "Facturatiegeschiedenis",
+      "view": "Bekijken",
+      "download": "Downloaden"
+    },
+    "actions": {
+      "title": "Beheer je abonnement",
+      "upgrade": "Upgrade",
+      "downgrade": "Downgrade",
+      "cancel": "Abonnement annuleren"
+    }
+  },
+  "devicesPage": {
+    "title": "Je apparaten",
+    "header": {
+      "used": "gebruikte apparaten"
+    },
+    "labels": {
+      "lastActive": "Laatst actief"
+    },
+    "actions": {
+      "add": "+ Apparaat toevoegen",
+      "rename": "Hernoemen",
+      "block": "Blokkeren",
+      "unblock": "Deblokkeren",
+      "locate": "Lokaliseren",
+      "remove": "Verwijderen"
+    },
+    "prompts": {
+      "rename": "Voer een nieuwe apparaatnaam in"
+    },
+    "defaults": {
+      "newDevice": "Nieuw apparaat",
+      "unknownOs": "Onbekend",
+      "now": "Nu"
+    }
+  },
+  "plans": {
+    "personal": {
+      "free": {
+        "name": "Gratis",
+        "features": [
+          "Beperkte linkanalyse",
+          "Handmatige e-mailcontrole",
+          "Telefoonverificatie"
+        ]
+      },
+      "pro": {
+        "name": "Personal Pro",
+        "features": [
+          "Onbeperkte linkanalyse",
+          "E-mail phishingdetectie",
+          "Apparaatbeveiligingscontrole",
+          "Realtime meldingen"
+        ]
+      },
+      "max": {
+        "name": "Personal Max",
+        "features": ["Alle Pro-functies", "Prioriteitsondersteuning"]
+      }
+    },
+    "business": {
+      "startup": {
+        "name": "Startup",
+        "features": [
+          "E-mail- & phishingbescherming",
+          "Fraudedetectie",
+          "Basisrapportage"
+        ]
+      },
+      "smePro": {
+        "name": "SME Pro",
+        "features": [
+          "Alle Startup-functies",
+          "Geavanceerde rapportage",
+          "Teambeheer"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "features": [
+          "Volledige audits & compliance",
+          "Aangepaste integraties",
+          "Toegewijd beveiligingsteam"
+        ]
+      }
+    }
+  },
+  "toolsUtils": {
+    "emailChecker": {
+      "messages": {
+        "invalidFormat": "Ongeldig e-mailformaat",
+        "numericLocalPart": "Het lokale deel van het e-mailadres is numeriek",
+        "autogeneratedLocalPart": "Het lokale deel van het e-mailadres lijkt automatisch gegenereerd",
+        "disposableEmail": "Wegwerp e-mailadres gedetecteerd",
+        "suspiciousDomainKeywords": "Verdachte trefwoorden in het domein",
+        "longDomain": "Domeinnaam is ongewoon lang",
+        "highEntropyDomain": "Domein met hoge entropie (lijkt verdacht)",
+        "flaggedMx": "MX-records van domein gemarkeerd (lokale database)"
+      }
+    },
+    "linkChecker": {
+      "messages": {
+        "invalidFormat": "Ongeldig URL-formaat",
+        "noHttps": "Gebruikt geen HTTPS",
+        "longUrl": "Ongebruikelijk lange URL",
+        "highEntropy": "URL met hoge entropie (lijkt verdacht)",
+        "phishingKeywords": "Bevat phishing-trefwoorden",
+        "numericPattern": "Vreemd numeriek patroon",
+        "blacklisted": "Domein staat op blacklist (kwaadaardig)"
+      }
+    },
+    "passwordTools": {
+      "messages": {
+        "tooShort": "Te kort, minimaal 12 tekens aanbevolen",
+        "addUppercase": "Voeg hoofdletters toe",
+        "addLowercase": "Voeg kleine letters toe",
+        "addNumbers": "Voeg cijfers toe",
+        "addSymbols": "Voeg symbolen toe",
+        "avoidPatterns": "Vermijd veelvoorkomende patronen of reeksen",
+        "lowEntropy": "Lage entropie, gebruik meer unieke tekens",
+        "commonPassword": "Veelvoorkomend wachtwoord"
+      }
+    },
+    "scamAnalyzer": {
+      "messages": {
+        "excessiveUppercase": "Overmatig gebruik van hoofdletters gedetecteerd",
+        "excessiveExclamations": "Te veel uitroeptekens",
+        "containsLinks": "Bevat één of meer links",
+        "moneyMention": "Vermelding van geld of prijs",
+        "repeatedWords": "Herhaalde woorden gedetecteerd",
+        "keyword": {
+          "urgent": "Trefwoord gedetecteerd: \"urgent\"",
+          "free": "Trefwoord gedetecteerd: \"gratis\"",
+          "clickHere": "Trefwoord gedetecteerd: \"klik hier\"",
+          "verify": "Trefwoord gedetecteerd: \"verifiëren\"",
+          "limitedTime": "Trefwoord gedetecteerd: \"beperkte tijd\"",
+          "actNow": "Trefwoord gedetecteerd: \"handel nu\"",
+          "winner": "Trefwoord gedetecteerd: \"winnaar\"",
+          "congratulations": "Trefwoord gedetecteerd: \"gefeliciteerd\"",
+          "prize": "Trefwoord gedetecteerd: \"prijs\"",
+          "bank": "Trefwoord gedetecteerd: \"bank\"",
+          "password": "Trefwoord gedetecteerd: \"wachtwoord\""
+        }
+      }
+    }
+  }
 }

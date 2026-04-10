@@ -1,33 +1,39 @@
 "use client";
 
 import "@/app/styles/pages/support.scss";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function SupportPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="support">
+      {/* HERO */}
       <section className="hero">
-        <h1>How can we help you?</h1>
-        <p>Find answers, contact our team, or improve your security.</p>
+        <h1>{t("support.hero.title")}</h1>
+        <p>{t("support.hero.desc")}</p>
       </section>
 
+      {/* GRID */}
       <section className="support-grid">
-        <a href={`/${lang}/support/faq`} className="card">
-          <h3>📚 FAQ</h3>
-          <p>Quick answers to common questions</p>
-        </a>
+        <Link href={`/${lang}/support/faq`} className="card">
+          <h3>{t("support.cards.faq.title")}</h3>
+          <p>{t("support.cards.faq.desc")}</p>
+        </Link>
 
-        <a href={`/${lang}/support/client-support`} className="card">
-          <h3>💬 Client Support</h3>
-          <p>Talk with our support team</p>
-        </a>
+        <Link href={`/${lang}/support/client-support`} className="card">
+          <h3>{t("support.cards.contact.title")}</h3>
+          <p>{t("support.cards.contact.desc")}</p>
+        </Link>
 
-        <a href={`/${lang}/support/cybersecurity-advice`} className="card">
-          <h3>🛡 Security Advice</h3>
-          <p>Learn how to stay safe online</p>
-        </a>
+        <Link href={`/${lang}/support/cybersecurity-advice`} className="card">
+          <h3>{t("support.cards.advice.title")}</h3>
+          <p>{t("support.cards.advice.desc")}</p>
+        </Link>
       </section>
     </main>
   );

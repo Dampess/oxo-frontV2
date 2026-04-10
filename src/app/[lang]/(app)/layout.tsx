@@ -13,8 +13,8 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
-  const t = useTranslation();
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
   const isPro = true; // TODO dynamique
   const userName = "Alex"; // TODO: récupérer depuis le back
   const hour = new Date().getHours();
@@ -27,7 +27,11 @@ export default function DashboardLayout({
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const greeting =
-    hour < 12 ? "Good morning" : hour < 18 ? "Good afternoon" : "Good evening";
+    hour < 12
+      ? t("dashboardLayout.greetings.morning")
+      : hour < 18
+        ? t("dashboardLayout.greetings.afternoon")
+        : t("dashboardLayout.greetings.evening");
 
   const handleChatSend = () => {
     if (!chatInput) return;
@@ -38,7 +42,10 @@ export default function DashboardLayout({
     setTimeout(() => {
       setChatMessages((prev) => [
         ...prev,
-        { from: "bot", text: `Bot says: Hello, ${userName}! 👋` },
+        {
+          from: "bot",
+          text: `${t("dashboardLayout.chatbot.botPrefix")} ${userName}! 👋`,
+        },
       ]);
     }, 500);
   };
@@ -65,22 +72,38 @@ export default function DashboardLayout({
         <div className="logo">Oxo</div>
 
         <nav>
-          <Link href={`/${lang}/dashboard`}>Overview</Link>
+          <Link href={`/${lang}/dashboard`}>
+            {t("dashboardLayout.nav.overview")}
+          </Link>
 
           {isPro ? (
             <>
-              <Link href={`/${lang}/dashboard/team`}>Team</Link>
-              <Link href={`/${lang}/dashboard/security`}>Security</Link>
-              <Link href={`/${lang}/dashboard/users`}>Devices</Link>
+              <Link href={`/${lang}/dashboard/team`}>
+                {t("dashboardLayout.nav.team")}
+              </Link>
+              <Link href={`/${lang}/dashboard/security`}>
+                {t("dashboardLayout.nav.security")}
+              </Link>
+              <Link href={`/${lang}/dashboard/users`}>
+                {t("dashboardLayout.nav.devices")}
+              </Link>
             </>
           ) : (
             <>
-              <Link href={`/${lang}/dashboard/devices`}>Devices</Link>
+              <Link href={`/${lang}/dashboard/devices`}>
+                {t("dashboardLayout.nav.devices")}
+              </Link>
             </>
           )}
-          <Link href={`/${lang}/dashboard/tools`}>Tools</Link>
-          <Link href={`/${lang}/dashboard/plan`}>Plan</Link>
-          <Link href={`/${lang}/dashboard/settings`}>Settings</Link>
+          <Link href={`/${lang}/dashboard/tools`}>
+            {t("dashboardLayout.nav.tools")}
+          </Link>
+          <Link href={`/${lang}/dashboard/plan`}>
+            {t("dashboardLayout.nav.plan")}
+          </Link>
+          <Link href={`/${lang}/dashboard/settings`}>
+            {t("dashboardLayout.nav.settings")}
+          </Link>
         </nav>
       </aside>
 
@@ -93,7 +116,7 @@ export default function DashboardLayout({
       <div className="dashboard-main">
         <header className="dashboard-header">
           <div className="header-left">
-            <h1>{t.dashboard}</h1>
+            <h1>{t("dashboardLayout.header.title")}</h1>
             <p className="welcome">
               {greeting}, <strong>{userName}</strong> 👋
             </p>
@@ -101,7 +124,7 @@ export default function DashboardLayout({
 
           <div className="header-right">
             <Link href={`/${lang}/contact`} className="contact-btn">
-              Contact
+              {t("dashboardLayout.header.contact")}
             </Link>
             <div className="user-avatar">{userName.charAt(0)}</div>
             <LanguageSwitcher />
@@ -122,7 +145,7 @@ export default function DashboardLayout({
           <div className="chatbot-overlay" onClick={() => setChatOpen(false)} />
           <div className="chatbot-modal">
             <div className="chatbot-header">
-              <h4>Chatbot</h4>
+              <h4>{t("dashboardLayout.chatbot.title")}</h4>
               <button className="close-btn" onClick={() => setChatOpen(false)}>
                 ✕
               </button>
@@ -140,12 +163,14 @@ export default function DashboardLayout({
             <div className="chatbot-input">
               <input
                 type="text"
-                placeholder="Type a message..."
+                placeholder={t("dashboardLayout.chatbot.placeholder")}
                 value={chatInput}
                 onChange={(e) => setChatInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleChatSend()}
               />
-              <button onClick={handleChatSend}>Send</button>
+              <button onClick={handleChatSend}>
+                {t("dashboardLayout.chatbot.send")}
+              </button>
             </div>
           </div>
         </>

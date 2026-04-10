@@ -1,12 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/pro-dashboard-pages.scss";
 
 export default function TeamPage() {
+  const { t } = useTranslation();
+
   const [members, setMembers] = useState([
-    { name: "Alice", email: "alice@oxo.com", role: "Admin" },
-    { name: "Bob", email: "bob@oxo.com", role: "User" },
+    { name: "Alice", email: "alice@oxo.com", role: t("teamPage.roles.admin") },
+    { name: "Bob", email: "bob@oxo.com", role: t("teamPage.roles.user") },
   ]);
 
   const [inviteEmail, setInviteEmail] = useState("");
@@ -15,7 +18,11 @@ export default function TeamPage() {
     if (!inviteEmail) return;
     setMembers([
       ...members,
-      { name: "Pending", email: inviteEmail, role: "User" },
+      {
+        name: t("teamPage.pending"),
+        email: inviteEmail,
+        role: t("teamPage.roles.user"),
+      },
     ]);
     setInviteEmail("");
   };
@@ -24,15 +31,15 @@ export default function TeamPage() {
     <div className="dashboard-grid">
       {/* TEAM LIST */}
       <div className="card full">
-        <h3>Team Members</h3>
+        <h3>{t("teamPage.title")}</h3>
 
         <table className="table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th>Action</th>
+              <th>{t("teamPage.table.name")}</th>
+              <th>{t("teamPage.table.email")}</th>
+              <th>{t("teamPage.table.role")}</th>
+              <th>{t("teamPage.table.action")}</th>
             </tr>
           </thead>
 
@@ -43,8 +50,12 @@ export default function TeamPage() {
                 <td>{m.email}</td>
                 <td>{m.role}</td>
                 <td>
-                  <button className="secondary">Change role</button>
-                  <button className="danger">Remove</button>
+                  <button className="secondary">
+                    {t("teamPage.actions.changeRole")}
+                  </button>
+                  <button className="danger">
+                    {t("teamPage.actions.remove")}
+                  </button>
                 </td>
               </tr>
             ))}
@@ -54,17 +65,17 @@ export default function TeamPage() {
 
       {/* INVITE */}
       <div className="card">
-        <h3>Invite Member</h3>
+        <h3>{t("teamPage.invite.title")}</h3>
 
         <input
           type="email"
-          placeholder="Email address"
+          placeholder={t("teamPage.invite.placeholder")}
           value={inviteEmail}
           onChange={(e) => setInviteEmail(e.target.value)}
         />
 
         <button className="primary" onClick={inviteUser}>
-          Send invite
+          {t("teamPage.invite.button")}
         </button>
       </div>
     </div>

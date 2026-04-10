@@ -3,60 +3,57 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import "../../styles/pages/blog.scss";
+import { useTranslation } from "@/hooks/useTranslation";
+import "@/app/styles/pages/blog.scss";
 
 type Post = {
-  title: string;
-  excerpt: string;
-  category: string;
+  titleKey: string;
+  excerptKey: string;
+  categoryKey: string;
   date: string;
   slug: string;
 };
 
 const allPosts: Post[] = [
   {
-    title: "Top Cyber Threats to Watch in 2026",
-    excerpt:
-      "From phishing-as-a-service to AI-powered scams, discover the emerging threats shaping the digital risk landscape.",
-    category: "Threat Intelligence",
+    titleKey: "blog.posts.threats2026.title",
+    excerptKey: "blog.posts.threats2026.excerpt",
+    categoryKey: "blog.categories.threatIntelligence",
     date: "Jan 12, 2026",
     slug: "#",
   },
   {
-    title: "How to Detect a Malicious Link in Seconds",
-    excerpt:
-      "A practical guide to quickly identify dangerous links before clicking — even without technical knowledge.",
-    category: "Practical Security",
+    titleKey: "blog.posts.maliciousLink.title",
+    excerptKey: "blog.posts.maliciousLink.excerpt",
+    categoryKey: "blog.categories.practicalSecurity",
     date: "Jan 5, 2026",
     slug: "#",
   },
   {
-    title: "Why Businesses Underestimate Email Attacks",
-    excerpt:
-      "Email remains the primary attack vector. Here’s why organizations still struggle to defend against it.",
-    category: "Business Security",
+    titleKey: "blog.posts.emailAttacks.title",
+    excerptKey: "blog.posts.emailAttacks.excerpt",
+    categoryKey: "blog.categories.businessSecurity",
     date: "Dec 20, 2025",
     slug: "#",
   },
-  // Ajouter d'autres articles si nécessaire
 ];
 
 const POSTS_PER_PAGE = 6;
 
 export default function BlogPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
-  const categories = Array.from(new Set(allPosts.map((p) => p.category)));
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
+  const categories = Array.from(new Set(allPosts.map((p) => p.categoryKey)));
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Filtrage par catégorie
   const filteredPosts =
-    selectedCategory === "All"
+    selectedCategory === "all"
       ? allPosts
-      : allPosts.filter((p) => p.category === selectedCategory);
+      : allPosts.filter((p) => p.categoryKey === selectedCategory);
 
-  // Pagination
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
   const paginatedPosts = filteredPosts.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
@@ -68,11 +65,8 @@ export default function BlogPage() {
       {/* ================= HERO ================= */}
       <section className="blog-hero">
         <div className="container">
-          <h1>Oxo Blog</h1>
-          <p>
-            Insights, analysis and practical guidance to help you understand
-            digital threats and stay protected.
-          </p>
+          <h1>{t("blog.hero.title")}</h1>
+          <p>{t("blog.hero.description")}</p>
         </div>
       </section>
 
@@ -80,13 +74,13 @@ export default function BlogPage() {
       <section className="blog-filters">
         <div className="container">
           <button
-            className={selectedCategory === "All" ? "active" : ""}
+            className={selectedCategory === "all" ? "active" : ""}
             onClick={() => {
-              setSelectedCategory("All");
+              setSelectedCategory("all");
               setCurrentPage(1);
             }}
           >
-            All
+            {t("blog.filters.all")}
           </button>
           {categories.map((cat, idx) => (
             <button
@@ -97,7 +91,7 @@ export default function BlogPage() {
                 setCurrentPage(1);
               }}
             >
-              {cat}
+              {t(cat)}
             </button>
           ))}
         </div>
@@ -110,13 +104,13 @@ export default function BlogPage() {
             {paginatedPosts.map((post, idx) => (
               <article key={idx} className="post-card">
                 <div className="post-meta">
-                  <span className="category">{post.category}</span>
+                  <span className="category">{t(post.categoryKey)}</span>
                   <span className="date">{post.date}</span>
                 </div>
-                <h2 className="post-title">{post.title}</h2>
-                <p className="post-excerpt">{post.excerpt}</p>
+                <h2 className="post-title">{t(post.titleKey)}</h2>
+                <p className="post-excerpt">{t(post.excerptKey)}</p>
                 <Link href={post.slug} className="post-link">
-                  Read article →
+                  {t("blog.posts.readArticle")}
                 </Link>
               </article>
             ))}
@@ -129,7 +123,7 @@ export default function BlogPage() {
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(currentPage - 1)}
               >
-                ← Previous
+                {t("blog.pagination.previous")}
               </button>
               {[...Array(totalPages)].map((_, i) => (
                 <button
@@ -144,7 +138,7 @@ export default function BlogPage() {
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage(currentPage + 1)}
               >
-                Next →
+                {t("blog.pagination.next")}
               </button>
             </div>
           )}
@@ -154,12 +148,10 @@ export default function BlogPage() {
       {/* ================= CTA ================= */}
       <section className="blog-cta">
         <div className="container">
-          <h2>Stay one step ahead</h2>
-          <p>
-            Test a suspicious link or email before it becomes a real threat.
-          </p>
+          <h2>{t("blog.cta.title")}</h2>
+          <p>{t("blog.cta.description")}</p>
           <Link href={`/${lang}/scan`} className="button-primary">
-            Start a scan
+            {t("blog.cta.button")}
           </Link>
         </div>
       </section>

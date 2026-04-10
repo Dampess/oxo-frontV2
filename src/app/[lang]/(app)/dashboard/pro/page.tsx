@@ -3,10 +3,13 @@
 import "@/app/styles/pages/dashboard.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function ProDashboardPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   const company = {
     name: "Oxo Corp",
     members: 8,
@@ -15,35 +18,43 @@ export default function ProDashboardPage() {
   };
 
   const alerts = [
-    "⚠ Suspicious login detected",
-    "⚠ 2 weak passwords found",
-    "✔ All devices updated",
+    t("proDashboard.alerts.suspiciousLogin"),
+    t("proDashboard.alerts.weakPasswords"),
+    t("proDashboard.alerts.devicesUpdated"),
   ];
 
   const members = [
-    { name: "Alice", role: "Admin" },
-    { name: "Bob", role: "User" },
-    { name: "Charlie", role: "User" },
+    { name: "Alice", role: t("proDashboard.roles.admin") },
+    { name: "Bob", role: t("proDashboard.roles.user") },
+    { name: "Charlie", role: t("proDashboard.roles.user") },
   ];
 
   return (
     <div className="dashboard-grid">
       {/* SECURITY OVERVIEW */}
       <div className="card">
-        <h3>Security Overview</h3>
-        <p className="highlight">{company.securityScore}% Secure</p>
-        <p>{company.devices} devices monitored</p>
-        <p>{company.members} team members</p>
+        <h3>{t("proDashboard.security.title")}</h3>
+        <p className="highlight">
+          {company.securityScore}% {t("proDashboard.security.secure")}
+        </p>
+        <p>
+          {company.devices} {t("proDashboard.security.devices")}
+        </p>
+        <p>
+          {company.members} {t("proDashboard.security.members")}
+        </p>
 
         <Link href={`/${lang}/dashboard/security`} className="btn">
-          View details
+          {t("proDashboard.security.button")}
         </Link>
       </div>
 
       {/* TEAM */}
       <div className="card">
-        <h3>Team</h3>
-        <p>{company.members} active members</p>
+        <h3>{t("proDashboard.team.title")}</h3>
+        <p>
+          {company.members} {t("proDashboard.team.activeMembers")}
+        </p>
 
         <ul>
           {members.map((m, i) => (
@@ -54,13 +65,13 @@ export default function ProDashboardPage() {
         </ul>
 
         <Link href={`/${lang}/dashboard/team`} className="btn">
-          Manage team
+          {t("proDashboard.team.button")}
         </Link>
       </div>
 
       {/* ALERTS */}
       <div className="card">
-        <h3>Alerts</h3>
+        <h3>{t("proDashboard.alerts.title")}</h3>
 
         <ul>
           {alerts.map((a, i) => (
@@ -69,39 +80,41 @@ export default function ProDashboardPage() {
         </ul>
 
         <Link href={`/${lang}/dashboard/security`} className="btn">
-          Resolve issues
+          {t("proDashboard.alerts.button")}
         </Link>
       </div>
 
       {/* DEVICES */}
       <div className="card">
-        <h3>Devices</h3>
-        <p>{company.devices} total devices</p>
+        <h3>{t("proDashboard.devices.title")}</h3>
+        <p>
+          {company.devices} {t("proDashboard.devices.total")}
+        </p>
 
         <Link href={`/${lang}/dashboard/devices`} className="btn">
-          Manage devices
+          {t("proDashboard.devices.button")}
         </Link>
       </div>
 
       {/* BILLING */}
       <div className="card">
-        <h3>Billing</h3>
-        <p>Next invoice: May 12, 2026</p>
-        <p>$79.99 / month</p>
+        <h3>{t("proDashboard.billing.title")}</h3>
+        <p>{t("proDashboard.billing.nextInvoice")} May 12, 2026</p>
+        <p>$79.99 / {t("proDashboard.billing.month")}</p>
 
         <Link href={`/${lang}/dashboard/plan`} className="btn">
-          View billing
+          {t("proDashboard.billing.button")}
         </Link>
       </div>
 
       {/* ACTIVITY */}
       <div className="card full">
-        <h3>Recent Activity</h3>
+        <h3>{t("proDashboard.activity.title")}</h3>
 
         <ul>
-          <li>New device added — Today</li>
-          <li>User Bob joined — Yesterday</li>
-          <li>Password issue detected — 2 days ago</li>
+          <li>{t("proDashboard.activity.items.deviceAdded")}</li>
+          <li>{t("proDashboard.activity.items.userJoined")}</li>
+          <li>{t("proDashboard.activity.items.passwordIssue")}</li>
         </ul>
       </div>
     </div>

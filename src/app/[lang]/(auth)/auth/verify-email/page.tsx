@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/auth.scss";
 
 export default function VerifyEmailPage() {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
   const [status, setStatus] = useState<"loading" | "success" | "error">(
     "loading",
   );
@@ -24,29 +26,29 @@ export default function VerifyEmailPage() {
       <div className="signup-form-container">
         {status === "loading" && (
           <>
-            <h2>Verifying your email...</h2>
-            <p>Please wait a moment.</p>
+            <h2>{t("verifyEmail.loading.title")}</h2>
+            <p>{t("verifyEmail.loading.description")}</p>
           </>
         )}
 
         {status === "success" && (
           <>
-            <h2>✅ Email verified</h2>
-            <p>Your account is now active. You can start using Oxo.</p>
+            <h2>{t("verifyEmail.success.title")}</h2>
+            <p>{t("verifyEmail.success.description")}</p>
 
             <Link href={`/${lang}/auth`} className="btn">
-              Go to login
+              {t("verifyEmail.success.button")}
             </Link>
           </>
         )}
 
         {status === "error" && (
           <>
-            <h2>❌ Verification failed</h2>
-            <p>The link is invalid or expired.</p>
+            <h2>{t("verifyEmail.error.title")}</h2>
+            <p>{t("verifyEmail.error.description")}</p>
 
             <Link href={`/${lang}/auth`} className="btn">
-              Try again
+              {t("verifyEmail.error.button")}
             </Link>
           </>
         )}

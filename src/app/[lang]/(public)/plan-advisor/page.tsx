@@ -1,10 +1,13 @@
 "use client";
 
-import { recommendPlan } from "@/lib/recommendPlan";
-import { useEffect, useState } from "react";
 import "@/app/styles/pages/plan-advisor.scss";
+import { useTranslation } from "@/hooks/useTranslation";
+import { recommendPlan } from "@/lib/recommendPlan";
+
+import { useEffect, useState } from "react";
 
 export default function PlanAdvisor() {
+  const { t } = useTranslation();
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState<"next" | "back">("next");
 
@@ -102,23 +105,23 @@ export default function PlanAdvisor() {
           {/* STEP 0: User Type */}
           {step === 0 && (
             <div className="step">
-              <h2>Are you a personal or business user?</h2>
+              <h2>{t("planAdvisor.steps.userType.title")}</h2>
               <div className="options">
                 <div
                   className={`option-card ${userType === "personal" ? "active" : ""}`}
                   onClick={() => setUserType("personal")}
                 >
-                  👤 Personal
+                  {t("planAdvisor.steps.userType.options.personal")}
                 </div>
                 <div
                   className={`option-card ${userType === "business" ? "active" : ""}`}
                   onClick={() => setUserType("business")}
                 >
-                  🏢 Business
+                  {t("planAdvisor.steps.userType.options.business")}
                 </div>
               </div>
               <button className="primary" onClick={next}>
-                Continue
+                {t("planAdvisor.actions.continue")}
               </button>
             </div>
           )}
@@ -126,7 +129,7 @@ export default function PlanAdvisor() {
           {/* STEP 1: Devices */}
           {step === 1 && (
             <div className="step">
-              <h2>How many devices?</h2>
+              <h2>{t("planAdvisor.steps.devices.title")}</h2>
               <div className="range-wrapper">
                 <input
                   type="range"
@@ -138,7 +141,7 @@ export default function PlanAdvisor() {
                 <div className="range-value">{devicesCount}</div>
               </div>
               <button className="primary" onClick={next}>
-                Continue
+                {t("planAdvisor.actions.continue")}
               </button>
             </div>
           )}
@@ -146,25 +149,25 @@ export default function PlanAdvisor() {
           {/* STEP 2: Protections */}
           {step === 2 && (
             <div className="step">
-              <h2>Choose your protections</h2>
+              <h2>{t("planAdvisor.steps.protections.title")}</h2>
               <div className="options">
                 <div
                   className={`option-card ${needsPhishing ? "active" : ""}`}
                   onClick={() => setNeedsPhishing(!needsPhishing)}
                 >
-                  🛡️ Phishing protection
+                  {t("planAdvisor.steps.protections.options.phishing")}
                 </div>
                 <div
                   className={`option-card ${needsDeviceScan ? "active" : ""}`}
                   onClick={() => setNeedsDeviceScan(!needsDeviceScan)}
                 >
-                  💻 Device security scan
+                  {t("planAdvisor.steps.protections.options.deviceScan")}
                 </div>
               </div>
               <div className="actions">
-                <button onClick={back}>Back</button>
+                <button onClick={back}>{t("planAdvisor.actions.back")}</button>
                 <button className="primary" onClick={next}>
-                  Continue
+                  {t("planAdvisor.actions.continue")}
                 </button>
               </div>
             </div>
@@ -173,16 +176,16 @@ export default function PlanAdvisor() {
           {/* STEP 3: Budget */}
           {step === 3 && (
             <div className="step">
-              <h2>Your monthly budget</h2>
+              <h2>{t("planAdvisor.steps.budget.title")}</h2>
               <input
                 type="number"
-                placeholder="Ex: 20"
+                placeholder={t("planAdvisor.steps.budget.placeholder")}
                 onChange={(e) => setMaxBudget(Number(e.target.value))}
               />
               <div className="actions">
-                <button onClick={back}>Back</button>
+                <button onClick={back}>{t("planAdvisor.actions.back")}</button>
                 <button className="primary" onClick={next}>
-                  See result
+                  {t("planAdvisor.actions.seeResult")}
                 </button>
               </div>
             </div>
@@ -191,13 +194,15 @@ export default function PlanAdvisor() {
           {/* STEP 4: Result */}
           {step === 4 && (
             <div className="result">
-              <h2>✨ Your perfect plan</h2>
+              <h2>{t("planAdvisor.result.title")}</h2>
               <div className="card highlight">
-                <div className="badge">Best match</div>
+                <div className="badge">{t("planAdvisor.result.badge")}</div>
                 <h3>{plan.name}</h3>
                 <p className="price">
                   ${plan.priceMonthly}
-                  {plan.priceMonthly !== 0 && <span>/month</span>}
+                  {plan.priceMonthly !== 0 && (
+                    <span>/{t("planAdvisor.result.monthUnit")}</span>
+                  )}
                 </p>
                 <ul>
                   {plan.features.map((f: string, i: number) => (
@@ -205,7 +210,7 @@ export default function PlanAdvisor() {
                   ))}
                 </ul>
                 <div className="explanation">
-                  <h4>Why this plan?</h4>
+                  <h4>{t("planAdvisor.result.whyTitle")}</h4>
                   <ul>
                     {explanation.map((line, idx) => (
                       <li key={idx}>{line}</li>
@@ -213,10 +218,12 @@ export default function PlanAdvisor() {
                   </ul>
                 </div>
                 <a href={plan.cta} className="btn">
-                  Get started
+                  {t("planAdvisor.result.cta")}
                 </a>
               </div>
-              <button onClick={() => setStep(0)}>Restart</button>
+              <button onClick={() => setStep(0)}>
+                {t("planAdvisor.actions.restart")}
+              </button>
             </div>
           )}
         </div>

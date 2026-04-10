@@ -1,68 +1,62 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/legal.scss";
 
 export default function PrivacyPage() {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1] || "en";
+  const { t } = useTranslation();
+
   return (
     <main className="legal-page">
-      <Link href={"/"}>← Return Home</Link>
+      <Link href={`/${lang}`}>{t("legal.back")}</Link>
+
       <div className="container">
-        <h1>Privacy Policy</h1>
-        <p className="legal-date">Last updated: January 2026</p>
+        <h1>{t("legal.privacy.title")}</h1>
+        <p className="legal-date">{t("legal.privacy.updated")}</p>
 
         <section>
-          <h2>1. Information We Collect</h2>
-          <p>
-            We may collect information you voluntarily submit such as links,
-            emails, or contact details when using our services.
-          </p>
+          <h2>{t("legal.privacy.sections.collect.title")}</h2>
+          <p>{t("legal.privacy.sections.collect.text")}</p>
         </section>
 
         <section>
-          <h2>2. How We Use Your Data</h2>
+          <h2>{t("legal.privacy.sections.usage.title")}</h2>
           <ul>
-            <li>To analyze and detect potential threats</li>
-            <li>To improve our security models</li>
-            <li>To communicate service-related information</li>
+            <li>{t("legal.privacy.sections.usage.item1")}</li>
+            <li>{t("legal.privacy.sections.usage.item2")}</li>
+            <li>{t("legal.privacy.sections.usage.item3")}</li>
           </ul>
         </section>
 
         <section>
-          <h2>3. Data Retention</h2>
-          <p>
-            Data is retained only as long as necessary for security analysis and
-            operational purposes.
-          </p>
+          <h2>{t("legal.privacy.sections.retention.title")}</h2>
+          <p>{t("legal.privacy.sections.retention.text")}</p>
         </section>
 
         <section>
-          <h2>4. Data Sharing</h2>
-          <p>
-            We do not sell personal data. Data may be shared only when required
-            by law or to protect our users and infrastructure.
-          </p>
+          <h2>{t("legal.privacy.sections.sharing.title")}</h2>
+          <p>{t("legal.privacy.sections.sharing.text")}</p>
         </section>
 
         <section>
-          <h2>5. Security</h2>
-          <p>
-            We implement technical and organizational measures to protect your
-            data against unauthorized access.
-          </p>
+          <h2>{t("legal.privacy.sections.security.title")}</h2>
+          <p>{t("legal.privacy.sections.security.text")}</p>
         </section>
 
         <section>
-          <h2>6. Your Rights</h2>
-          <p>
-            You may request access, correction or deletion of your data by
-            contacting us.
-          </p>
+          <h2>{t("legal.privacy.sections.rights.title")}</h2>
+          <p>{t("legal.privacy.sections.rights.text")}</p>
         </section>
 
         <section>
-          <h2>7. Contact</h2>
+          <h2>{t("legal.privacy.sections.contact.title")}</h2>
           <p>
-            For privacy-related inquiries, contact{" "}
-            <a href="mailto:privacy@oxo.security">privacy@oxo.security</a>.
+            {t("legal.privacy.sections.contact.text")}{" "}
+            <a href="mailto:privacy@oxo.security">privacy@oxo.security</a>
           </p>
         </section>
       </div>

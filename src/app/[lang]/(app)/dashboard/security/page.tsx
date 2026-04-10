@@ -1,34 +1,37 @@
 "use client";
 
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/pro-dashboard-pages.scss";
 
 export default function SecurityPage() {
+  const { t } = useTranslation();
+
   const score = 78;
 
   const alerts = [
-    { text: "Weak password detected", type: "warning" },
-    { text: "Suspicious login attempt", type: "warning" },
-    { text: "All systems updated", type: "ok" },
+    { text: t("securityPage.alerts.weakPassword"), type: "warning" },
+    { text: t("securityPage.alerts.suspiciousLogin"), type: "warning" },
+    { text: t("securityPage.alerts.systemsUpdated"), type: "ok" },
   ];
 
   const logs = [
-    "Login from Chrome — Paris",
-    "Password changed",
-    "New device added",
+    t("securityPage.logs.login"),
+    t("securityPage.logs.passwordChanged"),
+    t("securityPage.logs.deviceAdded"),
   ];
 
   return (
     <div className="dashboard-grid">
       {/* SCORE */}
       <div className="card">
-        <h3>Security Score</h3>
+        <h3>{t("securityPage.score.title")}</h3>
         <p className="highlight">{score}%</p>
-        <p>Overall protection level</p>
+        <p>{t("securityPage.score.description")}</p>
       </div>
 
       {/* ALERTS */}
       <div className="card">
-        <h3>Alerts</h3>
+        <h3>{t("securityPage.alerts.title")}</h3>
 
         <ul>
           {alerts.map((a, i) => (
@@ -41,7 +44,7 @@ export default function SecurityPage() {
 
       {/* LOGS */}
       <div className="card full">
-        <h3>Activity Logs</h3>
+        <h3>{t("securityPage.logs.title")}</h3>
 
         <ul>
           {logs.map((log, i) => (

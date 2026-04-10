@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import "../styles/components/navbar.scss";
+import LanguageSwitcher from "./LangageSwitcher";
 
 export default function Header() {
   const pathname = usePathname();
@@ -194,8 +195,8 @@ export default function Header() {
 
         {/* ACCOUNT */}
         <div className="account-icon">
-          <Link href={`/${lang}/auth`}>👤{t("nav.account")}</Link>
-          <Link href={`/${lang}/contact`}> | {t("nav.contact")}</Link>
+          <Link href={`/${lang}/auth`}>👤{t("nav.account")} | </Link>
+          <LanguageSwitcher />
         </div>
       </div>
 

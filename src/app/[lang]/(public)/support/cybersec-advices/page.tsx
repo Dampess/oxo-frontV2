@@ -1,20 +1,25 @@
+"use client";
+
+import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/cybersecurity-advices.scss";
 
-const articles = [
-  {
-    title: "Recognize phishing emails",
-    desc: "Identify scams before they harm you.",
-  },
-  {
-    title: "Secure your passwords",
-    desc: "Best practices to stay safe.",
-  },
-];
-
 export default function AdvicePage() {
+  const { t } = useTranslation();
+
+  const articles = [
+    {
+      title: t("advice.items.phishing.title"),
+      desc: t("advice.items.phishing.desc"),
+    },
+    {
+      title: t("advice.items.password.title"),
+      desc: t("advice.items.password.desc"),
+    },
+  ];
+
   return (
     <main className="advice">
-      <h1>Cybersecurity Advice</h1>
+      <h1>{t("advice.title")}</h1>
 
       <div className="articles">
         {articles.map((a, i) => (

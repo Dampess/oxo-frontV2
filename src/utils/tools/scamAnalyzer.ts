@@ -8,22 +8,23 @@ export function analyzeScam(text: string) {
 
   // 1️⃣ MOTS CLÉS SUSPICIEUX
   const keywords = [
-    "urgent",
-    "free",
-    "click here",
-    "verify",
-    "limited time",
-    "act now",
-    "winner",
-    "congratulations",
-    "prize",
-    "bank",
-    "password",
+    { value: "urgent", key: "urgent" },
+    { value: "free", key: "free" },
+    { value: "click here", key: "clickHere" },
+    { value: "verify", key: "verify" },
+    { value: "limited time", key: "limitedTime" },
+    { value: "act now", key: "actNow" },
+    { value: "winner", key: "winner" },
+    { value: "congratulations", key: "congratulations" },
+    { value: "prize", key: "prize" },
+    { value: "bank", key: "bank" },
+    { value: "password", key: "password" },
   ];
-  keywords.forEach((word) => {
-    if (lowerText.includes(word)) {
+
+  keywords.forEach((item) => {
+    if (lowerText.includes(item.value)) {
       score += 15;
-      messages.push(`Keyword detected: "${word}"`);
+      messages.push(`tools.scamAnalyzer.messages.keyword.${item.key}`);
     }
   });
 
@@ -31,34 +32,34 @@ export function analyzeScam(text: string) {
   const uppercaseMatch = text.match(/[A-Z]{5,}/g);
   if (uppercaseMatch) {
     score += 15;
-    messages.push("Excessive uppercase sequences");
+    messages.push("toolsUtils.scamAnalyzer.messages.excessiveUppercase");
   }
 
   // 3️⃣ PONCTUATION EXCESSIVE
   const exclamations = (text.match(/!{2,}/g) || []).length;
   if (exclamations > 0) {
     score += exclamations * 5;
-    messages.push("Excessive exclamation marks");
+    messages.push("toolsUtils.scamAnalyzer.messages.excessiveExclamations");
   }
 
   // 4️⃣ LIENS DANS LE TEXTE
   const links = text.match(/https?:\/\/\S+/g);
   if (links) {
     score += 20;
-    messages.push("Contains link(s)");
+    messages.push("toolsUtils.scamAnalyzer.messages.containsLinks");
   }
 
   // 5️⃣ NOMBRES ET PROMESSES D’ARGENT
   if (/\$\d+/.test(text) || /\d+ dollars/.test(lowerText)) {
     score += 10;
-    messages.push("Mentions money or prize");
+    messages.push("toolsUtils.scamAnalyzer.messages.moneyMention");
   }
 
   // 6️⃣ RÉPÉTITIONS
   const repeatedWords = lowerText.match(/\b(\w+)\b(?=.*\b\1\b)/gi);
   if (repeatedWords && repeatedWords.length > 0) {
     score += 10;
-    messages.push("Repeated words detected");
+    messages.push("toolsUtils.scamAnalyzer.messages.repeatedWords");
   }
 
   // 7️⃣ STATUS FINAL
