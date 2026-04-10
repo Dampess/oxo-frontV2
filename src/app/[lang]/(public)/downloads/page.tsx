@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import "../../styles/pages/downloads.scss";
+import "@/app/styles/pages/downloads.scss";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@/hooks/useTranslation";
 

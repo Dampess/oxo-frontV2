@@ -1,12 +1,12 @@
-import CTASection from "../../components/CTASection";
-import DashboardSection from "../../components/DashboardSection";
-import FeaturesSection from "../../components/FeaturesSection";
-import Hero from "../../components/Hero";
-import Newsletter from "../../components/NewsLetter";
-import PricingTeaser from "../../components/PricingTeaserSection";
-import Testimonials from "../../components/Testimonials";
-import ToolsSection from "../../components/ToolsSection";
-import TrustReasons from "../../components/TrustReasons";
+import CTASection from "@/app/components/CTASection";
+import DashboardSection from "@/app/components/DashboardSection";
+import FeaturesSection from "@/app/components/FeaturesSection";
+import Hero from "@/app/components/Hero";
+import Newsletter from "@/app/components/NewsLetter";
+import PricingTeaser from "@/app/components/PricingTeaserSection";
+import Testimonials from "@/app/components/Testimonials";
+import ToolsSection from "@/app/components/ToolsSection";
+import TrustReasons from "@/app/components/TrustReasons";
 
 export default function HomePage() {
   return (
