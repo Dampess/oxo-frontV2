@@ -820,19 +820,39 @@
       "rows": {
         "linkAnalysis": {
           "feature": "Linkanalyse",
-          "free": "Beperkt"
+          "free": "Beperkt",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "emailPhishing": {
           "feature": "E-mail phishingbescherming",
-          "free": "—"
+          "free": "—",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "deviceChecks": {
           "feature": "Apparaatbeveiligingscontrole",
-          "free": "—"
+          "free": "—",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "—",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "fraudDetection": {
           "feature": "Fraudedetectie",
-          "free": "—"
+          "free": "—",
+          "personalPro": "—",
+          "personalMax": "—",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "prioritySupport": {
           "feature": "Prioriteit support",

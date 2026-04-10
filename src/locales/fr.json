@@ -821,19 +821,39 @@
       "rows": {
         "linkAnalysis": {
           "feature": "Analyse de liens",
-          "free": "Limité"
+          "free": "Limité",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "emailPhishing": {
           "feature": "Protection phishing email",
-          "free": "—"
+          "free": "—",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "deviceChecks": {
           "feature": "Analyse de sécurité des appareils",
-          "free": "—"
+          "free": "—",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "—",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "fraudDetection": {
           "feature": "Détection de fraude",
-          "free": "—"
+          "free": "—",
+          "personalPro": "—",
+          "personalMax": "—",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
         },
         "prioritySupport": {
           "feature": "Support prioritaire",

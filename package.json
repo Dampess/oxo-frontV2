@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:i18n": "node scripts/check-i18n.js",
+    "sync:i18n": "node scripts/sync-i18n.js"
   },
   "dependencies": {
     "next": "16.2.2",
