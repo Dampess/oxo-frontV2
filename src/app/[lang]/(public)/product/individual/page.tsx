@@ -1,64 +1,55 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import IndividualsPageView from "@/app/components/pages/IndividualsPageView";
 
-import "@/app/styles/pages/individual&business.scss";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function IndividualsPage() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Cybersecurity for Individuals",
+    description:
+      "Protect your personal accounts, devices and online activity with OXO.",
+  },
+  fr: {
+    title: "Cybersécurité pour les particuliers",
+    description:
+      "Protégez vos comptes personnels, vos appareils et votre activité en ligne avec OXO.",
+  },
+  de: {
+    title: "Cybersicherheit für Privatpersonen",
+    description:
+      "Schützen Sie Ihre persönlichen Konten, Geräte und Online-Aktivitäten mit OXO.",
+  },
+  nl: {
+    title: "Cybersecurity voor particulieren",
+    description:
+      "Bescherm uw persoonlijke accounts, apparaten en online activiteit met OXO.",
+  },
+  es: {
+    title: "Ciberseguridad para particulares",
+    description:
+      "Protege tus cuentas personales, dispositivos y actividad online con OXO.",
+  },
+  it: {
+    title: "Cybersicurezza per privati",
+    description:
+      "Proteggi account personali, dispositivi e attività online con OXO.",
+  },
+};
 
-  return (
-    <main className="individuals-page">
-      {/* HERO */}
-      <section className="hero hero-main">
-        <div className="container hero-grid">
-          <div className="hero-text">
-            <h1>{t("individuals.hero.title")}</h1>
-            <p>{t("individuals.hero.description")}</p>
-          </div>
-          <div className="hero-visual">
-            <Image
-              src="/justStart.jpg"
-              alt={t("individuals.hero.imageAlt")}
-              width={400}
-              height={300}
-            />
-          </div>
-        </div>
-      </section>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/product/individuals", seoByLocale);
+}
 
-      {/* THREATS STATISTICS */}
-      <section className="info-section">
-        <h2>{t("individuals.threats.title")}</h2>
-        <ul>
-          <li>{t("individuals.threats.items.phishing")}</li>
-          <li>{t("individuals.threats.items.malware")}</li>
-          <li>{t("individuals.threats.items.passwords")}</li>
-        </ul>
-      </section>
+export default async function IndividualsPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      {/* PROTECTION */}
-      <section className="info-section alt">
-        <h2>{t("individuals.protection.title")}</h2>
-        <ul>
-          <li>{t("individuals.protection.items.vault")}</li>
-          <li>{t("individuals.protection.items.antivirus")}</li>
-          <li>{t("individuals.protection.items.email")}</li>
-          <li>{t("individuals.protection.items.links")}</li>
-        </ul>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <h2>{t("individuals.cta.title")}</h2>
-        <p>{t("individuals.cta.description")}</p>
-        <a href={`/${lang}/pricing`} className="btn primary">
-          {t("individuals.cta.button")}
-        </a>
-      </section>
-    </main>
-  );
+  return <IndividualsPageView lang={lang} />;
 }

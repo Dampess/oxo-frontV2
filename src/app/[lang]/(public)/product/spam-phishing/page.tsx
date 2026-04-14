@@ -1,62 +1,55 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import SpamPhishingPageView from "@/app/components/pages/SpamPhishingPageView";
 
-import Image from "next/image";
-import "@/app/styles/pages/tools.scss";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function AntiPhishingPage() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Spam & Phishing Protection",
+    description:
+      "Detect phishing emails and malicious messages before they cause harm.",
+  },
+  fr: {
+    title: "Protection anti-spam et anti-phishing",
+    description:
+      "Détectez les emails de phishing et les messages malveillants avant qu’ils ne causent des dommages.",
+  },
+  de: {
+    title: "Spam- & Phishing-Schutz",
+    description:
+      "Erkennen Sie Phishing-E-Mails und schädliche Nachrichten, bevor sie Schaden anrichten.",
+  },
+  nl: {
+    title: "Spam- en phishingbescherming",
+    description:
+      "Detecteer phishingmails en schadelijke berichten voordat ze schade veroorzaken.",
+  },
+  es: {
+    title: "Protección anti-spam y anti-phishing",
+    description:
+      "Detecta correos de phishing y mensajes maliciosos antes de que causen daños.",
+  },
+  it: {
+    title: "Protezione anti-spam e anti-phishing",
+    description:
+      "Rileva email di phishing e messaggi dannosi prima che causino danni.",
+  },
+};
 
-  return (
-    <main className="tools-page">
-      {/* HERO */}
-      <section className="hero hero-main">
-        <div className="container hero-grid">
-          <div className="hero-text">
-            <h1>{t("antiPhishing.hero.title")}</h1>
-            <p>{t("antiPhishing.hero.description")}</p>
-          </div>
-          <div className="hero-visual">
-            <Image
-              src="/email-security.webp"
-              alt={t("antiPhishing.hero.imageAlt")}
-              width={400}
-              height={300}
-            />
-          </div>
-        </div>
-      </section>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/product/spam-phishing", seoByLocale);
+}
 
-      {/* WHY PROTECT */}
-      <section className="info-section alt">
-        <h2>{t("antiPhishing.dangers.title")}</h2>
-        <ul>
-          <li>{t("antiPhishing.dangers.items.credentialTheft")}</li>
-          <li>{t("antiPhishing.dangers.items.malwareInstall")}</li>
-          <li>{t("antiPhishing.dangers.items.identityFraud")}</li>
-        </ul>
-      </section>
+export default async function SpamPhishingPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      {/* HOW IT WORKS */}
-      <section className="info-section alt">
-        <h2>{t("antiPhishing.protection.title")}</h2>
-        <ul>
-          <li>{t("antiPhishing.protection.items.aiScanning")}</li>
-          <li>{t("antiPhishing.protection.items.linkDetection")}</li>
-          <li>{t("antiPhishing.protection.items.realTimeAlerts")}</li>
-        </ul>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <h2>{t("antiPhishing.cta.title")}</h2>
-        <a href={`/${lang}/pricing`} className="btn primary">
-          {t("antiPhishing.cta.button")}
-        </a>
-      </section>
-    </main>
-  );
+  return <SpamPhishingPageView lang={lang} />;
 }

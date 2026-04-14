@@ -1,34 +1,50 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import CybersecAdvicesPageView from "@/app/components/pages/CybersecAdvicesPageView";
 
-import { useTranslation } from "@/hooks/useTranslation";
-import "@/app/styles/pages/cybersecurity-advices.scss";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function AdvicePage() {
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Cybersecurity Advice",
+    description: "Learn practical cybersecurity tips to stay protected online.",
+  },
+  fr: {
+    title: "Conseils de cybersécurité",
+    description:
+      "Découvrez des conseils pratiques pour rester protégé en ligne.",
+  },
+  de: {
+    title: "Cybersicherheits-Tipps",
+    description: "Lernen Sie praktische Tipps, um online geschützt zu bleiben.",
+  },
+  nl: {
+    title: "Cybersecurity-advies",
+    description: "Ontdek praktische tips om online beschermd te blijven.",
+  },
+  es: {
+    title: "Consejos de ciberseguridad",
+    description: "Aprende consejos prácticos para mantenerte protegido online.",
+  },
+  it: {
+    title: "Consigli di cybersicurezza",
+    description: "Scopri consigli pratici per restare protetto online.",
+  },
+};
 
-  const articles = [
-    {
-      title: t("advice.items.phishing.title"),
-      desc: t("advice.items.phishing.desc"),
-    },
-    {
-      title: t("advice.items.password.title"),
-      desc: t("advice.items.password.desc"),
-    },
-  ];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/support/cybersec-advices", seoByLocale);
+}
 
-  return (
-    <main className="advice">
-      <h1>{t("advice.title")}</h1>
+export default async function CybersecAdvicesPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      <div className="articles">
-        {articles.map((a, i) => (
-          <div key={i} className="card">
-            <h3>{a.title}</h3>
-            <p>{a.desc}</p>
-          </div>
-        ))}
-      </div>
-    </main>
-  );
+  return <CybersecAdvicesPageView lang={lang} />;
 }

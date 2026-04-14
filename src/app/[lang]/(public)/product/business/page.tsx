@@ -1,65 +1,55 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import BusinessesPageView from "@/app/components/pages/BusinessesPageView";
 
-import "@/app/styles/pages/individual&business.scss";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function BusinessesPage() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Cybersecurity for Businesses",
+    description:
+      "Protect your company, employees and clients with enterprise-grade cybersecurity.",
+  },
+  fr: {
+    title: "Cybersécurité pour les entreprises",
+    description:
+      "Protégez votre entreprise, vos employés et vos clients avec une cybersécurité de niveau professionnel.",
+  },
+  de: {
+    title: "Cybersicherheit für Unternehmen",
+    description:
+      "Schützen Sie Ihr Unternehmen, Ihre Mitarbeitenden und Kunden mit Cybersicherheit auf Enterprise-Niveau.",
+  },
+  nl: {
+    title: "Cybersecurity voor bedrijven",
+    description:
+      "Bescherm uw bedrijf, medewerkers en klanten met enterprise-grade cybersecurity.",
+  },
+  es: {
+    title: "Ciberseguridad para empresas",
+    description:
+      "Protege tu empresa, empleados y clientes con ciberseguridad de nivel empresarial.",
+  },
+  it: {
+    title: "Cybersicurezza per aziende",
+    description:
+      "Proteggi azienda, dipendenti e clienti con cybersecurity di livello enterprise.",
+  },
+};
 
-  return (
-    <main className="businesses-page">
-      {/* HERO */}
-      <section className="hero hero-main">
-        <div className="container hero-grid">
-          <div className="hero-text">
-            <h1>{t("businesses.hero.title")}</h1>
-            <p>{t("businesses.hero.description")}</p>
-          </div>
-          <div className="hero-visual">
-            <Image
-              src="/handcheck.jpg"
-              alt={t("businesses.hero.imageAlt")}
-              width={400}
-              height={300}
-            />
-          </div>
-        </div>
-      </section>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/product/businesses", seoByLocale);
+}
 
-      {/* THREATS STATISTICS */}
-      <section className="info-section">
-        <h2>{t("businesses.threats.title")}</h2>
-        <ul>
-          <li>{t("businesses.threats.items.phishing")}</li>
-          <li>{t("businesses.threats.items.ransomware")}</li>
-          <li>{t("businesses.threats.items.cost")}</li>
-          <li>{t("businesses.threats.items.credentials")}</li>
-        </ul>
-      </section>
+export default async function BusinessesPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      {/* PROTECTION */}
-      <section className="info-section alt">
-        <h2>{t("businesses.protection.title")}</h2>
-        <ul>
-          <li>{t("businesses.protection.items.endpoint")}</li>
-          <li>{t("businesses.protection.items.email")}</li>
-          <li>{t("businesses.protection.items.vault")}</li>
-          <li>{t("businesses.protection.items.alerts")}</li>
-        </ul>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <h2>{t("businesses.cta.title")}</h2>
-        <p>{t("businesses.cta.description")}</p>
-        <a href={`/${lang}/pricing`} className="btn primary">
-          {t("businesses.cta.button")}
-        </a>
-      </section>
-    </main>
-  );
+  return <BusinessesPageView lang={lang} />;
 }

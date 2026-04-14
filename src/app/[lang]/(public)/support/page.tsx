@@ -1,41 +1,54 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import SupportPageView from "@/app/components/pages/SupportPageView";
 
-import "@/app/styles/pages/support.scss";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Support Center",
+    description: "Find help, contact our team and improve your cybersecurity.",
+  },
+  fr: {
+    title: "Centre de support",
+    description:
+      "Obtenez de l’aide, contactez notre équipe et améliorez votre cybersécurité.",
+  },
+  de: {
+    title: "Support-Center",
+    description:
+      "Erhalten Sie Hilfe, kontaktieren Sie unser Team und verbessern Sie Ihre Cybersicherheit.",
+  },
+  nl: {
+    title: "Supportcentrum",
+    description:
+      "Krijg hulp, neem contact op met ons team en verbeter uw cyberbeveiliging.",
+  },
+  es: {
+    title: "Centro de soporte",
+    description:
+      "Obtén ayuda, contacta con nuestro equipo y mejora tu ciberseguridad.",
+  },
+  it: {
+    title: "Centro di supporto",
+    description:
+      "Ottieni aiuto, contatta il nostro team e migliora la tua cybersicurezza.",
+  },
+};
 
-export default function SupportPage() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/support", seoByLocale);
+}
 
-  return (
-    <main className="support">
-      {/* HERO */}
-      <section className="hero">
-        <h1>{t("support.hero.title")}</h1>
-        <p>{t("support.hero.desc")}</p>
-      </section>
+export default async function SupportPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      {/* GRID */}
-      <section className="support-grid">
-        <Link href={`/${lang}/support/faq`} className="card">
-          <h3>{t("support.cards.faq.title")}</h3>
-          <p>{t("support.cards.faq.desc")}</p>
-        </Link>
-
-        <Link href={`/${lang}/support/client-support`} className="card">
-          <h3>{t("support.cards.contact.title")}</h3>
-          <p>{t("support.cards.contact.desc")}</p>
-        </Link>
-
-        <Link href={`/${lang}/support/cybersecurity-advice`} className="card">
-          <h3>{t("support.cards.advice.title")}</h3>
-          <p>{t("support.cards.advice.desc")}</p>
-        </Link>
-      </section>
-    </main>
-  );
+  return <SupportPageView lang={lang} />;
 }

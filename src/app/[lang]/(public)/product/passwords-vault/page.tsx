@@ -1,62 +1,55 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import PasswordsVaultPageView from "@/app/components/pages/PasswordsVaultPageView";
 
-import "@/app/styles/pages/tools.scss";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function PasswordVaultPage() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Password Vault",
+    description:
+      "Store, generate and manage passwords securely in one encrypted vault.",
+  },
+  fr: {
+    title: "Coffre-fort de mots de passe",
+    description:
+      "Stockez, générez et gérez vos mots de passe dans un coffre-fort chiffré.",
+  },
+  de: {
+    title: "Passwort-Tresor",
+    description:
+      "Speichern, generieren und verwalten Sie Passwörter sicher in einem verschlüsselten Tresor.",
+  },
+  nl: {
+    title: "Wachtwoordkluis",
+    description:
+      "Bewaar, genereer en beheer wachtwoorden veilig in één versleutelde kluis.",
+  },
+  es: {
+    title: "Bóveda de contraseñas",
+    description:
+      "Almacena, genera y gestiona contraseñas de forma segura en una bóveda cifrada.",
+  },
+  it: {
+    title: "Cassaforte password",
+    description:
+      "Archivia, genera e gestisci password in modo sicuro in una cassaforte crittografata.",
+  },
+};
 
-  return (
-    <main className="tools-page">
-      {/* HERO */}
-      <section className="hero hero-main">
-        <div className="container hero-grid">
-          <div className="hero-text">
-            <h1>{t("passwordVault.hero.title")}</h1>
-            <p>{t("passwordVault.hero.description")}</p>
-          </div>
-          <div className="hero-visual">
-            <Image
-              src="/password-security.webp"
-              alt={t("passwordVault.hero.imageAlt")}
-              width={400}
-              height={300}
-            />
-          </div>
-        </div>
-      </section>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/product/passwords-vault", seoByLocale);
+}
 
-      {/* WHY PROTECT */}
-      <section className="info-section alt">
-        <h2>{t("passwordVault.dangers.title")}</h2>
-        <ul>
-          <li>{t("passwordVault.dangers.items.strongPasswords")}</li>
-          <li>{t("passwordVault.dangers.items.noReuse")}</li>
-          <li>{t("passwordVault.dangers.items.compromisedDetection")}</li>
-        </ul>
-      </section>
+export default async function PasswordsVaultPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      {/* HOW IT WORKS */}
-      <section className="info-section alt">
-        <h2>{t("passwordVault.protection.title")}</h2>
-        <ul>
-          <li>{t("passwordVault.protection.items.encryption")}</li>
-          <li>{t("passwordVault.protection.items.generate")}</li>
-          <li>{t("passwordVault.protection.items.multiDevice")}</li>
-        </ul>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <h2>{t("passwordVault.cta.title")}</h2>
-        <a href={`/${lang}/pricing`} className="btn primary">
-          {t("passwordVault.cta.button")}
-        </a>
-      </section>
-    </main>
-  );
+  return <PasswordsVaultPageView lang={lang} />;
 }

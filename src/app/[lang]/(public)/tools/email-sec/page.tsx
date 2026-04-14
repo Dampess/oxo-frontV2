@@ -1,96 +1,53 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import EmailSecPageView from "@/app/components/pages/EmailSecPageView";
 
-import "@/app/styles/pages/tools.scss";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function EmailCheckPage() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Email Security Checker",
+    description:
+      "Analyze suspicious email addresses and detect phishing indicators.",
+  },
+  fr: {
+    title: "Analyseur de sécurité email",
+    description:
+      "Analysez les adresses email suspectes et détectez les signaux de phishing.",
+  },
+  de: {
+    title: "E-Mail-Sicherheitsprüfung",
+    description:
+      "Analysieren Sie verdächtige E-Mail-Adressen und erkennen Sie Phishing-Indikatoren.",
+  },
+  nl: {
+    title: "E-mailbeveiligingscontrole",
+    description:
+      "Analyseer verdachte e-mailadressen en detecteer phishing-signalen.",
+  },
+  es: {
+    title: "Verificador de seguridad de email",
+    description: "Analiza correos sospechosos y detecta señales de phishing.",
+  },
+  it: {
+    title: "Controllo sicurezza email",
+    description: "Analizza email sospette e rileva indicatori di phishing.",
+  },
+};
 
-  return (
-    <main className="tools-page">
-      {/* HERO */}
-      <section className="hero hero-split">
-        <div className="hero-text">
-          <h1>{t("email.hero.title")}</h1>
-          <p>{t("email.hero.desc")}</p>
-        </div>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/tools/email-sec", seoByLocale);
+}
 
-        <div className="hero-image">
-          <Image
-            src="/email-security.webp"
-            alt="email security"
-            width={500}
-            height={350}
-          />
-        </div>
-      </section>
+export default async function EmailSecPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      {/* WHY */}
-      <section className="info-section alt">
-        <h2>{t("email.why.title")}</h2>
-        <p>{t("email.why.desc")}</p>
-
-        <ul>
-          <li>{t("email.why.f1")}</li>
-          <li>{t("email.why.f2")}</li>
-          <li>{t("email.why.f3")}</li>
-          <li>{t("email.why.f4")}</li>
-        </ul>
-      </section>
-
-      {/* PROTECT */}
-      <section className="info-section alt split">
-        <Image
-          src="/phishing-example.webp"
-          alt="phishing example"
-          width={400}
-          height={300}
-        />
-
-        <div>
-          <h2>{t("email.protect.title")}</h2>
-          <ul>
-            <li>{t("email.protect.f1")}</li>
-            <li>{t("email.protect.f2")}</li>
-            <li>{t("email.protect.f3")}</li>
-            <li>{t("email.protect.f4")}</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* OXO */}
-      <section className="info-section highlight">
-        <h2>{t("email.oxo.title")}</h2>
-        <p>{t("email.oxo.desc")}</p>
-
-        <ul>
-          <li>{t("email.oxo.f1")}</li>
-          <li>{t("email.oxo.f2")}</li>
-          <li>{t("email.oxo.f3")}</li>
-          <li>{t("email.oxo.f4")}</li>
-        </ul>
-
-        <div className="cta">
-          <Link href={`/${lang}/auth`} className="btn primary">
-            {t("email.oxo.cta")}
-          </Link>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <h2>{t("email.cta.title")}</h2>
-        <p>{t("email.cta.desc")}</p>
-
-        <Link href={`/${lang}/pricing`} className="btn primary">
-          {t("email.cta.button")}
-        </Link>
-      </section>
-    </main>
-  );
+  return <EmailSecPageView lang={lang} />;
 }

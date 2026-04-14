@@ -1,93 +1,54 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import PasswordsSecPageView from "@/app/components/pages/PasswordsSecPageView";
 
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useTranslation } from "@/hooks/useTranslation";
-import "@/app/styles/pages/tools.scss";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function PasswordPage() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Password Security Tool",
+    description:
+      "Generate strong passwords and test password strength instantly.",
+  },
+  fr: {
+    title: "Outil de sécurité des mots de passe",
+    description:
+      "Générez des mots de passe robustes et testez leur solidité instantanément.",
+  },
+  de: {
+    title: "Passwort-Sicherheitstool",
+    description:
+      "Erstellen Sie starke Passwörter und prüfen Sie ihre Sicherheit sofort.",
+  },
+  nl: {
+    title: "Wachtwoordbeveiligingstool",
+    description:
+      "Genereer sterke wachtwoorden en test direct de sterkte ervan.",
+  },
+  es: {
+    title: "Herramienta de seguridad de contraseñas",
+    description:
+      "Genera contraseñas seguras y comprueba su fortaleza al instante.",
+  },
+  it: {
+    title: "Strumento di sicurezza password",
+    description: "Genera password sicure e verifica subito la loro robustezza.",
+  },
+};
 
-  return (
-    <main className="tools-page">
-      {/* HERO */}
-      <section className="hero hero-split">
-        <div className="hero-text">
-          <h1>{t("password.hero.title")}</h1>
-          <p>{t("password.hero.desc")}</p>
-        </div>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/tools/passwords-sec", seoByLocale);
+}
 
-        <div className="hero-image">
-          <Image
-            src="/password-security.webp"
-            alt="password security"
-            width={500}
-            height={350}
-          />
-        </div>
-      </section>
+export default async function PasswordsSecPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      {/* WHY */}
-      <section className="info-section alt">
-        <h2>{t("password.why.title")}</h2>
-        <p>{t("password.why.desc")}</p>
-
-        <ul>
-          <li>{t("password.why.f1")}</li>
-          <li>{t("password.why.f2")}</li>
-          <li>{t("password.why.f3")}</li>
-        </ul>
-      </section>
-
-      {/* PROTECTION */}
-      <section className="info-section alt split">
-        <Image
-          src="/password-hacker.webp"
-          alt="password hacker"
-          width={400}
-          height={300}
-        />
-
-        <div>
-          <h2>{t("password.protect.title")}</h2>
-          <ul>
-            <li>{t("password.protect.f1")}</li>
-            <li>{t("password.protect.f2")}</li>
-            <li>{t("password.protect.f3")}</li>
-            <li>{t("password.protect.f4")}</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* OXO */}
-      <section className="info-section highlight">
-        <h2>{t("password.oxo.title")}</h2>
-
-        <ul>
-          <li>{t("password.oxo.f1")}</li>
-          <li>{t("password.oxo.f2")}</li>
-          <li>{t("password.oxo.f3")}</li>
-          <li>{t("password.oxo.f4")}</li>
-        </ul>
-
-        <div className="cta">
-          <Link href={`/${lang}/auth`} className="btn primary">
-            {t("password.oxo.cta")}
-          </Link>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <h2>{t("password.cta.title")}</h2>
-
-        <Link href={`/${lang}/pricing`} className="btn primary">
-          {t("password.cta.button")}
-        </Link>
-      </section>
-    </main>
-  );
+  return <PasswordsSecPageView lang={lang} />;
 }

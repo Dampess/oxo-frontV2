@@ -1,46 +1,55 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import FaqPageView from "@/app/components/pages/FaqPageView";
 
-import { useState } from "react";
-import { useTranslation } from "@/hooks/useTranslation";
-import "@/app/styles/pages/faq.scss";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function FAQPage() {
-  const { t } = useTranslation();
-  const [open, setOpen] = useState<number | null>(null);
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "FAQ",
+    description:
+      "Find answers to common questions about OXO products and services.",
+  },
+  fr: {
+    title: "FAQ",
+    description:
+      "Trouvez les réponses aux questions fréquentes sur les produits et services OXO.",
+  },
+  de: {
+    title: "FAQ",
+    description:
+      "Finden Sie Antworten auf häufige Fragen zu OXO-Produkten und -Services.",
+  },
+  nl: {
+    title: "FAQ",
+    description:
+      "Vind antwoorden op veelgestelde vragen over OXO-producten en -diensten.",
+  },
+  es: {
+    title: "FAQ",
+    description:
+      "Encuentra respuestas a las preguntas frecuentes sobre los productos y servicios de OXO.",
+  },
+  it: {
+    title: "FAQ",
+    description:
+      "Trova le risposte alle domande frequenti sui prodotti e servizi OXO.",
+  },
+};
 
-  const faqs = [
-    {
-      q: t("faq.items.free.q"),
-      a: t("faq.items.free.a"),
-    },
-    {
-      q: t("faq.items.upgrade.q"),
-      a: t("faq.items.upgrade.a"),
-    },
-    {
-      q: t("faq.items.security.q"),
-      a: t("faq.items.security.a"),
-    },
-  ];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/support/faq", seoByLocale);
+}
 
-  return (
-    <main className="faq">
-      <h1>{t("faq.title")}</h1>
+export default async function FaqPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-      <div className="faq-list">
-        {faqs.map((item, i) => (
-          <div key={i} className="faq-item">
-            <div
-              className="faq-question"
-              onClick={() => setOpen(open === i ? null : i)}
-            >
-              {item.q}
-            </div>
-
-            {open === i && <div className="faq-answer">{item.a}</div>}
-          </div>
-        ))}
-      </div>
-    </main>
-  );
+  return <FaqPageView lang={lang} />;
 }

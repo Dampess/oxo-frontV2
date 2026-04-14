@@ -1,43 +1,53 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import ClientSupportPageView from "@/app/components/pages/ClientSupportPageView";
 
-import "@/app/styles/pages/client-support.scss";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function ClientSupport() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Client Support",
+    description: "Contact the OXO support team and get help quickly.",
+  },
+  fr: {
+    title: "Support client",
+    description:
+      "Contactez l’équipe support OXO et obtenez de l’aide rapidement.",
+  },
+  de: {
+    title: "Kundensupport",
+    description:
+      "Kontaktieren Sie das OXO-Supportteam und erhalten Sie schnell Hilfe.",
+  },
+  nl: {
+    title: "Klantenservice",
+    description: "Neem contact op met het OXO-supportteam en krijg snel hulp.",
+  },
+  es: {
+    title: "Soporte al cliente",
+    description:
+      "Contacta con el equipo de soporte de OXO y obtén ayuda rápidamente.",
+  },
+  it: {
+    title: "Supporto clienti",
+    description:
+      "Contatta il team di supporto OXO e ottieni aiuto rapidamente.",
+  },
+};
 
-  return (
-    <main className="client-support">
-      <h1>{t("clientSupport.title")}</h1>
-      <p className="subtitle">{t("clientSupport.subtitle")}</p>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
+  return createPageMetadata(lang, "/support/client-support", seoByLocale);
+}
 
-      <div className="support-options">
-        {/* EMAIL */}
-        <div className="card">
-          <h3>{t("clientSupport.cards.email.title")}</h3>
-          <p>{t("clientSupport.cards.email.value")}</p>
-        </div>
+export default async function ClientSupportPage({ params }: Props) {
+  const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-        {/* FORM */}
-        <div className="card">
-          <h3>{t("clientSupport.cards.form.title")}</h3>
-          <Link href={`/${lang}/contact`}>
-            {t("clientSupport.cards.form.cta")}
-          </Link>
-        </div>
-
-        {/* FAQ */}
-        <div className="card">
-          <h3>{t("clientSupport.cards.faq.title")}</h3>
-          <Link href={`/${lang}/support/faq`}>
-            {t("clientSupport.cards.faq.cta")}
-          </Link>
-        </div>
-      </div>
-    </main>
-  );
+  return <ClientSupportPageView lang={lang} />;
 }
