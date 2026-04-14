@@ -1,0 +1,1571 @@
+{
+  "common": {
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "update": "Aggiorna",
+    "close": "Chiudi",
+    "back": "Indietro",
+    "loading": "Caricamento...",
+    "search": "Cerca"
+  },
+  "nav": {
+    "tagline": "Vedere. Rilevare. Proteggere.",
+    "forusers": "Per gli utenti",
+    "individuals": "Privati",
+    "products": "Prodotti",
+    "product": {
+      "antivirus": "Antivirus e Anti-malware",
+      "vault": "Vault password",
+      "phishing": "Protezione spam e phishing",
+      "mission": "La nostra missione"
+    },
+    "cta": {
+      "allInOne": "Piattaforma di cybersicurezza all-in-one.",
+      "exploreProducts": "Scopri i prodotti"
+    },
+    "businesses": "Aziende",
+    "blog": "Blog",
+    "support": "Supporto",
+    "useful": "Utile",
+    "supportLinks": {
+      "hub": "Centro assistenza",
+      "faq": "FAQ",
+      "client": "Supporto clienti",
+      "advices": "Consigli di cybersicurezza"
+    },
+    "tools": {
+      "title": "Strumenti gratuiti",
+      "email": "Controllo email",
+      "emailDesc": "Rileva email sospette all’istante",
+      "password": "Verifica password",
+      "passwordDesc": "Controlla la sicurezza della tua password",
+      "link": "Scanner link",
+      "linkDesc": "Analizza URL sospetti",
+      "all": "Vedi tutti gli strumenti gratuiti",
+      "explore": "Scopri gli strumenti"
+    },
+    "pricing": {
+      "title": "Prezzi",
+      "allPlans": "Vedi tutti i piani",
+      "ourPlans": "I nostri piani",
+      "notSure": "Non sai quale piano fa per te?",
+      "advisor": "Consulente piani"
+    },
+    "account": "Il mio account",
+    "contact": "Contatti"
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di servizio",
+    "ugc": "UGC",
+    "sgc": "SGC"
+  },
+  "hero": {
+    "title": {
+      "line1": "Resta al sicuro online.",
+      "line2": "Senza complicazioni."
+    },
+    "description": "Oxo protegge email, password e dispositivi in tempo reale. Strumenti semplici. Sicurezza potente.",
+    "trust": "Carta di credito richiesta • Strumenti gratuiti disponibili • Conforme al GDPR",
+    "cta": {
+      "primary": "Inizia gratis",
+      "secondary": "Prova gli strumenti gratuiti"
+    }
+  },
+  "features": {
+    "title": "Tutto ciò di cui hai bisogno per restare al sicuro",
+    "subtitle": "Strumenti potenti progettati per proteggere la tua vita digitale senza complessità.",
+    "items": {
+      "antivirus": {
+        "title": "Protezione antivirus",
+        "description": "Rilevamento delle minacce in tempo reale su tutti i tuoi dispositivi."
+      },
+      "vault": {
+        "title": "Vault password",
+        "description": "Conserva e gestisci tutte le tue credenziali in modo sicuro."
+      },
+      "phishing": {
+        "title": "Sicurezza email e SMS",
+        "description": "Rileva istantaneamente phishing e messaggi dannosi."
+      },
+      "device": {
+        "title": "Scansione del dispositivo",
+        "description": "Individua le vulnerabilità e risolvile rapidamente."
+      }
+    },
+    "button": "Vedi prodotto"
+  },
+  "trust": {
+    "title": "Perché fidarsi di Oxo?",
+    "subtitle": "Progettato per tenerti al sicuro online con strumenti semplici, potenti e trasparenti.",
+    "items": {
+      "allInOne": {
+        "title": "Protezione all-in-one",
+        "description": "Proteggi email, password, dispositivi e link da un’unica piattaforma."
+      },
+      "instant": {
+        "title": "Controlli istantanei di sicurezza",
+        "description": "Analizza le minacce in pochi secondi con strumenti potenti e facili da usare."
+      },
+      "privacy": {
+        "title": "Privacy by design",
+        "description": "I tuoi dati restano tuoi. Progettato con conformità GDPR e migliori pratiche di sicurezza."
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Visualizza la tua sicurezza a colpo d’occhio",
+    "description": "La nostra dashboard intuitiva ti offre una visione immediata dei tuoi dispositivi, account e del livello complessivo di sicurezza. Monitora i rischi e agisci in tempo reale.",
+    "cta": "Scopri i prodotti",
+    "imageAlt": "Anteprima dashboard Oxo"
+  },
+  "pricing": {
+    "title": "Prezzi semplici, protezione massima",
+    "subtitle": "Gratis o premium, per privati o team: scegli la soluzione più adatta alle tue esigenze.",
+    "mostPopular": "Più popolare",
+    "device": "dispositivo",
+    "devices": "dispositivi",
+    "getStarted": "Inizia",
+    "contact": "Contatti"
+  },
+  "cta": {
+    "title": "Pronto a proteggere la tua vita digitale?",
+    "button": "Proteggi ora"
+  },
+  "tools": {
+    "title": "Strumenti di sicurezza gratuiti",
+    "subtitle": "Metti alla prova la tua sicurezza in pochi secondi. Nessun account richiesto.",
+    "items": {
+      "email": {
+        "title": "Controllo violazioni email",
+        "desc": "Verifica se il tuo indirizzo email è stato esposto in una violazione dei dati."
+      },
+      "password": {
+        "title": "Verifica password",
+        "desc": "Valuta immediatamente la sicurezza della tua password."
+      },
+      "link": {
+        "title": "Scanner link",
+        "desc": "Analizza in sicurezza URL sospetti prima di cliccare."
+      }
+    },
+    "cta": "Scopri tutti gli strumenti"
+  },
+  "testimonials": {
+    "title": "Cosa dicono i nostri utenti"
+  },
+  "newsletter": {
+    "title": "Resta aggiornato",
+    "placeholder": "Inserisci la tua email",
+    "button": "Iscriviti"
+  },
+  "legal": {
+    "back": "← Torna alla home",
+    "terms": {
+      "title": "Termini di servizio",
+      "updated": "Ultimo aggiornamento: gennaio 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Accettazione dei termini",
+          "text": "Accedendo o utilizzando i servizi Oxo, l’utente accetta di essere vincolato dai presenti Termini di Servizio. In caso di disaccordo, l’utente non deve utilizzare la piattaforma."
+        },
+        "services": {
+          "title": "2. Descrizione dei servizi",
+          "text": "Oxo fornisce strumenti per analizzare link, email, numeri di telefono e contenuti digitali al fine di individuare frodi, phishing e attività dannose."
+        },
+        "responsibilities": {
+          "title": "3. Responsabilità dell’utente",
+          "item1": "L’utente deve utilizzare i servizi nel rispetto delle leggi applicabili",
+          "item2": "Non è consentito abusare, effettuare reverse engineering o compromettere la piattaforma",
+          "item3": "L’utente è responsabile dei dati che invia"
+        },
+        "limitations": {
+          "title": "4. Limitazioni",
+          "text": "Oxo fornisce analisi dei rischi e indicatori, ma non garantisce una protezione assoluta contro le minacce."
+        },
+        "ip": {
+          "title": "5. Proprietà intellettuale",
+          "text": "Tutti i contenuti, il marchio e la tecnologia appartengono a Oxo e non possono essere utilizzati senza autorizzazione."
+        },
+        "termination": {
+          "title": "6. Risoluzione",
+          "text": "Ci riserviamo il diritto di sospendere o terminare l’accesso al servizio in qualsiasi momento in caso di uso improprio."
+        },
+        "contact": {
+          "title": "7. Contatti",
+          "text": "Per qualsiasi domanda relativa ai presenti termini, contattaci a"
+        }
+      }
+    },
+    "privacy": {
+      "title": "Informativa sulla privacy",
+      "updated": "Ultimo aggiornamento: gennaio 2026",
+      "sections": {
+        "collect": {
+          "title": "1. Informazioni raccolte",
+          "text": "Possiamo raccogliere informazioni fornite volontariamente dall’utente, come link, email o dati di contatto durante l’utilizzo dei nostri servizi."
+        },
+        "usage": {
+          "title": "2. Utilizzo dei dati",
+          "item1": "Per analizzare e rilevare potenziali minacce",
+          "item2": "Per migliorare i nostri modelli di sicurezza",
+          "item3": "Per comunicare informazioni relative al servizio"
+        },
+        "retention": {
+          "title": "3. Conservazione dei dati",
+          "text": "I dati sono conservati solo per il tempo necessario alle finalità di analisi della sicurezza e operative."
+        },
+        "sharing": {
+          "title": "4. Condivisione dei dati",
+          "text": "Non vendiamo dati personali. I dati possono essere condivisi solo se richiesto dalla legge o per proteggere utenti e infrastrutture."
+        },
+        "security": {
+          "title": "5. Sicurezza",
+          "text": "Adottiamo misure tecniche e organizzative per proteggere i dati da accessi non autorizzati."
+        },
+        "rights": {
+          "title": "6. Diritti dell’utente",
+          "text": "L’utente può richiedere accesso, rettifica o cancellazione dei propri dati contattandoci."
+        },
+        "contact": {
+          "title": "7. Contatti",
+          "text": "Per richieste relative alla privacy, contattaci a"
+        }
+      }
+    },
+    "sale": {
+      "title": "Condizioni di vendita",
+      "updated": "Ultimo aggiornamento: gennaio 2026",
+      "sections": {
+        "scope": {
+          "title": "1. Ambito di applicazione",
+          "text": "Le presenti Condizioni di Vendita si applicano a tutti gli acquisti di prodotti e servizi Oxo. Effettuando un ordine, l’utente accetta tali condizioni."
+        },
+        "products": {
+          "title": "2. Prodotti e servizi",
+          "text": "Oxo offre soluzioni di sicurezza digitale, inclusi analisi di link ed email, audit di sistema e piani di abbonamento per privati e aziende."
+        },
+        "orders": {
+          "title": "3. Ordini e pagamenti",
+          "item1": "Tutti gli ordini devono essere effettuati tramite la piattaforma ufficiale.",
+          "item2": "I pagamenti sono dovuti al momento dell’acquisto tramite i metodi supportati.",
+          "item3": "I prezzi possono variare, ma l’ordine confermato sarà addebitato al prezzo indicato."
+        },
+        "subscription": {
+          "title": "4. Abbonamento e rinnovo",
+          "text": "I piani si rinnovano automaticamente salvo disdetta prima della data di rinnovo. Gli utenti possono gestire l’abbonamento dal proprio account."
+        },
+        "refund": {
+          "title": "5. Rimborsi e cancellazioni",
+          "text": "I rimborsi sono concessi esclusivamente secondo la nostra Politica di Rimborso. Le cancellazioni devono essere effettuate prima del ciclo successivo."
+        },
+        "liability": {
+          "title": "6. Responsabilità",
+          "text": "Oxo fornisce servizi per migliorare la sicurezza digitale, ma non garantisce una protezione totale. La responsabilità è limitata all’importo pagato."
+        },
+        "law": {
+          "title": "7. Legge applicabile",
+          "text": "Le presenti condizioni sono regolate dalla legge applicabile nella giurisdizione in cui opera Oxo."
+        },
+        "contact": {
+          "title": "8. Contatti",
+          "text": "Per qualsiasi domanda su vendite o abbonamenti, contattaci a"
+        }
+      }
+    },
+    "use": {
+      "title": "Condizioni d’uso",
+      "updated": "Ultimo aggiornamento: gennaio 2026",
+      "sections": {
+        "acceptance": {
+          "title": "1. Accettazione dei termini",
+          "text": "Accedendo o utilizzando i servizi Oxo, l’utente accetta di rispettare le presenti Condizioni d’Uso."
+        },
+        "accounts": {
+          "title": "2. Account utente",
+          "text": "Alcuni servizi richiedono la creazione di un account. L’utente è responsabile della riservatezza delle proprie credenziali."
+        },
+        "prohibited": {
+          "title": "3. Condotte vietate",
+          "item1": "Non utilizzare impropriamente o tentare di violare la piattaforma",
+          "item2": "Non caricare contenuti illegali o dannosi",
+          "item3": "Non svolgere attività che possano danneggiare altri utenti"
+        },
+        "availability": {
+          "title": "4. Disponibilità del servizio",
+          "text": "Oxo si impegna a garantire la disponibilità, ma non assicura un accesso continuo."
+        },
+        "ip": {
+          "title": "5. Proprietà intellettuale",
+          "text": "Tutti i contenuti, marchi e software sono di proprietà di Oxo."
+        },
+        "liability": {
+          "title": "6. Limitazione di responsabilità",
+          "text": "Oxo non è responsabile per perdite derivanti da phishing, frodi o contenuti dannosi."
+        },
+        "termination": {
+          "title": "7. Risoluzione",
+          "text": "Possiamo sospendere o terminare l’accesso in caso di violazione dei termini."
+        },
+        "law": {
+          "title": "8. Legge applicabile",
+          "text": "Le presenti condizioni sono regolate dalla legge applicabile."
+        },
+        "contact": {
+          "title": "9. Contatti",
+          "text": "Per qualsiasi domanda, contattaci a"
+        }
+      }
+    }
+  },
+  "toolsPage": {
+    "hero": {
+      "title": "Strumenti di sicurezza gratuiti",
+      "description": "Analizza email, link e password in pochi secondi. Proteggiti online con strumenti di sicurezza semplici ma potenti.",
+      "ctaEmail": "Controlla email",
+      "ctaLink": "Analizza link"
+    },
+    "features": {
+      "title": "Perché usare gli strumenti Oxo?",
+      "instant": {
+        "title": "Analisi immediata",
+        "desc": "Ottieni risultati in pochi secondi senza installare nulla o creare un account."
+      },
+      "smart": {
+        "title": "Rilevamento intelligente",
+        "desc": "La nostra tecnologia identifica schemi sospetti utilizzati nel phishing e negli attacchi informatici."
+      },
+      "privacy": {
+        "title": "Privacy al primo posto",
+        "desc": "I tuoi dati non vengono mai salvati. Tutte le verifiche sono elaborate in modo sicuro."
+      },
+      "access": {
+        "title": "Accessibile ovunque",
+        "desc": "Usa i nostri strumenti su qualsiasi dispositivo senza scaricare software."
+      }
+    },
+    "list": {
+      "title": "Esplora i nostri strumenti"
+    },
+    "email": {
+      "title": "Controllo email",
+      "desc": "Rileva tentativi di phishing e schemi sospetti prima che compromettano i tuoi dati.",
+      "f1": "✔ Verifica formato email",
+      "f2": "✔ Rileva parole chiave di phishing",
+      "f3": "✔ Analizza schemi sospetti"
+    },
+    "password": {
+      "title": "Strumento password",
+      "desc": "Genera password sicure e valuta la loro robustezza per proteggere i tuoi account.",
+      "f1": "✔ Generatore di password sicure",
+      "f2": "✔ Valutazione della sicurezza",
+      "f3": "✔ Buone pratiche di sicurezza"
+    },
+    "link": {
+      "title": "Controllo link",
+      "desc": "Analizza URL e rileva link dannosi prima di cliccarci sopra.",
+      "f1": "✔ Validazione URL",
+      "f2": "✔ Rilevamento schemi sospetti",
+      "f3": "✔ Protezione phishing"
+    },
+    "steps": {
+      "title": "Come funziona",
+      "s1": {
+        "title": "Inserisci i tuoi dati",
+        "desc": "Incolla un link, un'email o genera una password utilizzando i nostri strumenti."
+      },
+      "s2": {
+        "title": "Analisi immediata",
+        "desc": "Il nostro sistema analizza schemi e rischi in tempo reale."
+      },
+      "s3": {
+        "title": "Ottieni risultati",
+        "desc": "Ricevi risultati chiari e suggerimenti di sicurezza utili."
+      }
+    },
+    "cta": {
+      "title": "Vai oltre gli strumenti gratuiti",
+      "desc": "Attiva la protezione in tempo reale su tutti i tuoi dispositivi con la suite di sicurezza Oxo.",
+      "button": "Scopri i piani"
+    },
+    "common": {
+      "use": "Usa strumento"
+    }
+  },
+  "password": {
+    "hero": {
+      "title": "Strumento di sicurezza password",
+      "desc": "Genera password sicure e valuta immediatamente la loro resistenza agli attacchi."
+    },
+    "why": {
+      "title": "Perché le password deboli sono pericolose",
+      "desc": "Le password deboli sono responsabili della maggior parte delle violazioni di dati nel mondo.",
+      "f1": "🔓 Violabili istantaneamente con attacchi brute-force",
+      "f2": "♻️ Password riutilizzate compromettono più account",
+      "f3": "💥 Le fughe di dati espongono milioni di credenziali"
+    },
+    "protect": {
+      "title": "Come proteggerti",
+      "f1": "✔ Usa password lunghe e complesse",
+      "f2": "✔ Non riutilizzare mai le password",
+      "f3": "✔ Attiva l'autenticazione a due fattori (2FA)",
+      "f4": "✔ Usa un gestore di password"
+    },
+    "oxo": {
+      "title": "Come ti protegge Oxo",
+      "f1": "🔐 Vault password crittografato",
+      "f2": "⚡ Generazione sicura con un clic",
+      "f3": "🚨 Avvisi di violazione",
+      "f4": "🔄 Aggiornamento automatico delle password",
+      "cta": "Accedi ora con il tuo account!"
+    },
+    "cta": {
+      "title": "Migliora la sicurezza delle tue password",
+      "button": "Scopri i piani"
+    }
+  },
+  "link": {
+    "hero": {
+      "title": "Controllo sicurezza link",
+      "desc": "Analizza qualsiasi URL e rileva siti dannosi o di phishing in pochi secondi."
+    },
+    "why": {
+      "title": "Perché i link dannosi sono pericolosi",
+      "desc": "Gli URL malevoli sono uno dei metodi più rapidi per compromettere gli utenti.",
+      "f1": "🎣 Pagine false rubano credenziali",
+      "f2": "💻 Installano malware in modo invisibile",
+      "f3": "🔄 Reindirizzamenti nascosti mascherano attacchi"
+    },
+    "protect": {
+      "title": "Come proteggerti",
+      "f1": "✔ Controlla sempre i link prima di cliccare",
+      "f2": "✔ Evita URL abbreviati",
+      "f3": "✔ Usa strumenti di sicurezza"
+    },
+    "oxo": {
+      "title": "Come ti protegge Oxo",
+      "f1": "⚡ Scansione URL in tempo reale",
+      "f2": "🧠 Rilevamento tramite threat intelligence",
+      "f3": "🚫 Blocco automatico dei siti pericolosi",
+      "cta": "Accedi ora con il tuo account!"
+    },
+    "cta": {
+      "title": "Resta al sicuro online",
+      "button": "Scopri i piani"
+    }
+  },
+  "email": {
+    "hero": {
+      "title": "Scanner sicurezza email",
+      "desc": "Analizza indirizzi email sospetti e rileva tentativi di phishing prima che ti colpiscano."
+    },
+    "why": {
+      "title": "Perché le email di phishing sono pericolose",
+      "desc": "L'email è il principale vettore di attacco. Un solo clic può compromettere l'intero sistema.",
+      "f1": "🎣 Email false imitano banche o servizi",
+      "f2": "🔐 Rubano credenziali e dati sensibili",
+      "f3": "💻 Diffondono malware tramite allegati",
+      "f4": "💸 Attivano pagamenti fraudolenti"
+    },
+    "protect": {
+      "title": "Come proteggerti",
+      "f1": "✔ Verifica sempre il mittente",
+      "f2": "✔ Non cliccare link o allegati sospetti",
+      "f3": "✔ Diffida da urgenza o pressione",
+      "f4": "✔ Usa strumenti di sicurezza"
+    },
+    "oxo": {
+      "title": "Come ti protegge Oxo",
+      "desc": "Oxo va oltre i controlli di base. Analizza comportamenti e minacce in tempo reale.",
+      "f1": "⚡ Rilevamento phishing in tempo reale",
+      "f2": "🧠 Analisi basata su IA",
+      "f3": "🔍 Ispezione approfondita di email e link",
+      "f4": "🔔 Avvisi immediati",
+      "cta": "Accedi ora con il tuo account!"
+    },
+    "cta": {
+      "title": "Proteggi la tua casella email in tempo reale",
+      "desc": "Attiva la protezione continua su tutti i tuoi dispositivi.",
+      "button": "Scopri i piani"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "Come possiamo aiutarti?",
+      "desc": "Trova risposte, contatta il nostro team o migliora la tua sicurezza."
+    },
+    "cards": {
+      "faq": {
+        "title": "📚 FAQ",
+        "desc": "Risposte rapide alle domande più comuni"
+      },
+      "contact": {
+        "title": "💬 Supporto clienti",
+        "desc": "Parla con il nostro team di supporto"
+      },
+      "advice": {
+        "title": "🛡 Consigli di sicurezza",
+        "desc": "Scopri come proteggerti online"
+      }
+    }
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "items": {
+      "free": {
+        "q": "Il piano gratuito è davvero gratuito?",
+        "a": "Sì, include funzionalità limitate senza limiti di tempo."
+      },
+      "upgrade": {
+        "q": "Posso aggiornare il piano in qualsiasi momento?",
+        "a": "Sì, puoi passare a un piano superiore o inferiore in qualsiasi momento."
+      },
+      "security": {
+        "q": "I miei dati sono sicuri?",
+        "a": "Seguiamo rigorosi standard di sicurezza e privacy."
+      }
+    }
+  },
+  "advice": {
+    "title": "Consigli di cybersicurezza",
+    "items": {
+      "phishing": {
+        "title": "Riconoscere email di phishing",
+        "desc": "Individua le truffe prima che possano danneggiarti."
+      },
+      "password": {
+        "title": "Proteggi le tue password",
+        "desc": "Le migliori pratiche per restare al sicuro."
+      }
+    }
+  },
+  "clientSupport": {
+    "title": "Contatta il supporto",
+    "subtitle": "Rispondiamo generalmente entro 24 ore",
+    "cards": {
+      "email": {
+        "title": "Email",
+        "value": "support@oxo.com"
+      },
+      "form": {
+        "title": "Modulo di contatto",
+        "cta": "Invia un messaggio"
+      },
+      "faq": {
+        "title": "Auto-aiuto",
+        "cta": "Consulta le FAQ"
+      }
+    }
+  },
+  "product": {
+    "hero": {
+      "title": "OXO Security Suite",
+      "description": "Proteggi dispositivi, email, password e link in tempo reale. Sicurezza informatica di livello enterprise resa semplice.",
+      "ctaPrimary": "Inizia ora",
+      "ctaSecondary": "Esplora gli strumenti",
+      "imageAlt": "Illustrazione del prodotto OXO"
+    },
+    "products": {
+      "title": "I nostri prodotti",
+      "learnMore": "Scopri di più",
+      "items": {
+        "antivirus": {
+          "title": "Antivirus",
+          "description": "Rileva e rimuove virus, malware e ransomware su tutti i tuoi dispositivi.",
+          "f1": "✔ Scansione antivirus in tempo reale",
+          "f2": "✔ Aggiornamenti automatici",
+          "f3": "✔ Protezione multi-dispositivo"
+        },
+        "antispam": {
+          "title": "Anti-Spam",
+          "description": "Filtra email indesiderate e dannose prima che arrivino nella tua casella.",
+          "f1": "✔ Rilevamento email di phishing",
+          "f2": "✔ Filtri antispam intelligenti",
+          "f3": "✔ Valutazione sicurezza inbox"
+        },
+        "antimalware": {
+          "title": "Anti-Malware",
+          "description": "Rilevamento avanzato di malware, spyware e altre minacce in tempo reale.",
+          "f1": "✔ Rilevamento minacce zero-day",
+          "f2": "✔ Scansioni approfondite del sistema",
+          "f3": "✔ Rimozione automatica delle minacce"
+        },
+        "phishing": {
+          "title": "Protezione phishing",
+          "description": "Identifica e blocca siti e email di phishing prima che compromettano i tuoi dati.",
+          "f1": "✔ Scansione URL in tempo reale",
+          "f2": "✔ Analisi delle minacce email",
+          "f3": "✔ Notifiche di frodi"
+        },
+        "vault": {
+          "title": "Password Vault",
+          "description": "Conserva e gestisci tutte le tue password in modo sicuro in un vault crittografato.",
+          "f1": "✔ Archiviazione sicura delle password",
+          "f2": "✔ Compilazione automatica credenziali",
+          "f3": "✔ Generazione password sicure",
+          "f4": "✔ Accesso multi-dispositivo"
+        }
+      }
+    },
+    "steps": {
+      "title": "Come funziona OXO",
+      "s1": {
+        "title": "Installa e collega",
+        "description": "Installa OXO e collega in sicurezza dispositivi, email e browser."
+      },
+      "s2": {
+        "title": "Monitoraggio in tempo reale",
+        "description": "Scansione continua di email, link e sistema alla ricerca di minacce."
+      },
+      "s3": {
+        "title": "Proteggi e ricevi avvisi",
+        "description": "Notifiche immediate e blocco automatico di phishing, malware e vulnerabilità."
+      }
+    },
+    "security": {
+      "title": "Sicurezza di livello enterprise per tutti",
+      "description": "OXO garantisce crittografia end-to-end, rilevamento AI delle minacce e una politica zero-log.",
+      "f1": "🔒 Crittografia end-to-end",
+      "f2": "🧠 Analisi delle minacce con IA",
+      "f3": "✅ Nessun dato memorizzato o venduto",
+      "imageAlt": "Illustrazione sicurezza OXO"
+    },
+    "cta": {
+      "title": "Pronto a proteggere la tua vita digitale?",
+      "description": "Inizia a usare OXO Security Suite e proteggi subito dispositivi, email e account.",
+      "button": "Inizia ora"
+    }
+  },
+  "antiPhishing": {
+    "hero": {
+      "title": "Protezione anti-phishing e anti-spam",
+      "description": "Rileva email di phishing e spam prima che compromettano le tue credenziali o installino malware.",
+      "imageAlt": "Illustrazione anti-phishing"
+    },
+    "dangers": {
+      "title": "Perché phishing e spam sono pericolosi",
+      "items": {
+        "credentialTheft": "🎣 Furto di credenziali e dati finanziari",
+        "malwareInstall": "💻 Installazione silenziosa di malware",
+        "identityFraud": "⚠️ Furto di identità o frodi"
+      }
+    },
+    "protection": {
+      "title": "Come OXO ti protegge",
+      "items": {
+        "aiScanning": "🧠 Analisi email basata su IA",
+        "linkDetection": "🔍 Rilevamento di link e allegati sospetti",
+        "realTimeAlerts": "⚡ Avvisi in tempo reale per tentativi di phishing"
+      }
+    },
+    "cta": {
+      "title": "Proteggiti dal phishing",
+      "button": "Scopri i piani"
+    }
+  },
+  "passwordVault": {
+    "hero": {
+      "title": "Cassaforte password",
+      "description": "Archivia, genera e gestisci tutte le tue password in modo sicuro in una cassaforte crittografata.",
+      "imageAlt": "Illustrazione cassaforte password"
+    },
+    "dangers": {
+      "title": "Perché una cassaforte password è importante",
+      "items": {
+        "strongPasswords": "🔐 Password forti e uniche per ogni account",
+        "noReuse": "✅ Evita il riutilizzo su più siti",
+        "compromisedDetection": "🕵️ Rileva credenziali compromesse in tempo reale"
+      }
+    },
+    "protection": {
+      "title": "Come funziona la nostra cassaforte password",
+      "items": {
+        "encryption": "🛡️ Crittografia end-to-end per tutte le credenziali",
+        "generate": "⚡ Generazione istantanea di password complesse",
+        "multiDevice": "📱 Accesso sicuro da tutti i tuoi dispositivi"
+      }
+    },
+    "cta": {
+      "title": "Proteggi i tuoi account con OXO",
+      "button": "Scopri i piani"
+    }
+  },
+  "individuals": {
+    "hero": {
+      "title": "OXO per privati",
+      "description": "Proteggi i tuoi account personali, dispositivi e attività online con la nostra suite di sicurezza all-in-one.",
+      "imageAlt": "Protezione per privati"
+    },
+    "threats": {
+      "title": "Minacce informatiche nel 2025 per i privati",
+      "items": {
+        "phishing": "🎣 Il 62% degli attacchi di phishing prende di mira email personali",
+        "malware": "💻 Il 48% degli utenti subisce tentativi di malware o ransomware",
+        "passwords": "🔑 Il 39% delle violazioni è causato da password deboli o riutilizzate"
+      }
+    },
+    "protection": {
+      "title": "Come OXO ti protegge",
+      "items": {
+        "vault": "🔐 Cassaforte password con rilevamento delle violazioni in tempo reale",
+        "antivirus": "🛡️ Antivirus e scansione malware su tutti i dispositivi",
+        "email": "📧 Protezione anti-phishing e anti-spam per email",
+        "links": "🌐 Analisi sicura dei link con avvisi in tempo reale"
+      }
+    },
+    "cta": {
+      "title": "Proteggi la tua vita digitale",
+      "description": "Inizia oggi a proteggere i tuoi dati personali con OXO.",
+      "button": "Inizia ora"
+    }
+  },
+  "businesses": {
+    "hero": {
+      "title": "OXO per aziende",
+      "description": "Proteggi i dati della tua azienda, i dipendenti e i clienti con strumenti di cybersecurity di livello enterprise.",
+      "imageAlt": "Protezione aziendale"
+    },
+    "threats": {
+      "title": "Minacce informatiche nel 2025 per le aziende",
+      "items": {
+        "phishing": "🛡️ Il 73% delle aziende affronta attacchi di phishing o spear-phishing",
+        "ransomware": "💻 Il 59% subisce tentativi di ransomware",
+        "cost": "🔒 Costo medio di una violazione: 3,2M$ per incidente",
+        "credentials": "📈 Il 41% delle violazioni deriva da credenziali compromesse"
+      }
+    },
+    "protection": {
+      "title": "Come OXO protegge la tua azienda",
+      "items": {
+        "endpoint": "🛡️ Sicurezza endpoint su tutti i dispositivi aziendali",
+        "email": "📧 Filtri avanzati anti-phishing e anti-spam",
+        "vault": "🔐 Cassaforte password centralizzata per i team",
+        "alerts": "⚡ Intelligence sulle minacce e avvisi in tempo reale"
+      }
+    },
+    "cta": {
+      "title": "Proteggi le operazioni della tua azienda",
+      "description": "Proteggi azienda, dipendenti e clienti dalle minacce digitali.",
+      "button": "Scopri i piani"
+    }
+  },
+  "antivirus": {
+    "hero": {
+      "title": "Protezione Antivirus e Malware",
+      "description": "Proteggi i tuoi dispositivi da virus, malware e ransomware con scansione in tempo reale e rilevamento basato su IA.",
+      "imageAlt": "Illustrazione antivirus"
+    },
+    "dangers": {
+      "title": "Perché un antivirus è essenziale",
+      "items": {
+        "infections": "💻 Previene infezioni da malware",
+        "data": "🔒 Protegge i dati sensibili",
+        "performance": "⚡ Mantiene i dispositivi veloci e sicuri"
+      }
+    },
+    "protection": {
+      "title": "Come funziona il nostro antivirus",
+      "items": {
+        "aiDetection": "🧠 Rilevamento tramite IA di file sospetti",
+        "realTime": "🛡️ Scansione in tempo reale di app e download",
+        "alerts": "🔔 Avvisi immediati per potenziali minacce"
+      }
+    },
+    "cta": {
+      "title": "Proteggiti dal malware",
+      "button": "Scopri i piani"
+    }
+  },
+  "pricingHome": {
+    "hero": {
+      "title": "Prezzi semplici e trasparenti",
+      "description": "Scegli il piano più adatto alle tue esigenze, per privati e aziende."
+    },
+    "billing": {
+      "monthly": "Mensile",
+      "yearly": "Annuale",
+      "discount": "-20%",
+      "monthUnit": "mese",
+      "yearUnit": "anno"
+    },
+    "personal": {
+      "title": "Piani personali",
+      "devicesSingular": "dispositivo",
+      "devicesPlural": "dispositivi",
+      "ctaFree": "Inizia ora",
+      "ctaTrial": "Prova gratuita"
+    },
+    "business": {
+      "title": "Piani aziendali",
+      "custom": "Personalizzato",
+      "usersSingular": "utente",
+      "usersPlural": "utenti",
+      "ctaEnterprise": "Contatta le vendite",
+      "ctaStandard": "Proteggi ora"
+    },
+    "compare": {
+      "title": "Confronta le funzionalità",
+      "headers": {
+        "features": "Funzionalità",
+        "free": "Gratis",
+        "personalPro": "Personal Pro",
+        "personalMax": "Personal Max",
+        "startup": "Startup",
+        "smePro": "SME Pro",
+        "enterprise": "Enterprise"
+      },
+      "rows": {
+        "linkAnalysis": {
+          "feature": "Analisi dei link",
+          "free": "Limitato",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
+        },
+        "emailPhishing": {
+          "feature": "Protezione phishing email",
+          "free": "—",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
+        },
+        "deviceChecks": {
+          "feature": "Controlli di sicurezza dei dispositivi",
+          "free": "—",
+          "personalPro": "✔",
+          "personalMax": "✔",
+          "startup": "—",
+          "smePro": "✔",
+          "enterprise": "✔"
+        },
+        "fraudDetection": {
+          "feature": "Rilevamento frodi",
+          "free": "—",
+          "personalPro": "—",
+          "personalMax": "—",
+          "startup": "✔",
+          "smePro": "✔",
+          "enterprise": "✔"
+        },
+        "prioritySupport": {
+          "feature": "Supporto prioritario",
+          "free": "Community",
+          "personalPro": "Email",
+          "personalMax": "Email",
+          "startup": "Prioritario",
+          "smePro": "Prioritario",
+          "enterprise": "Dedicato"
+        }
+      }
+    },
+    "advisor": {
+      "title": "Non sei sicuro? Ti aiutiamo a trovare il piano giusto!",
+      "button": "SCOPRI"
+    }
+  },
+  "planAdvisor": {
+    "actions": {
+      "continue": "Continua",
+      "back": "Indietro",
+      "seeResult": "Vedi risultato",
+      "restart": "Ricomincia"
+    },
+    "steps": {
+      "userType": {
+        "title": "Sei un utente privato o aziendale?",
+        "options": {
+          "personal": "👤 Privato",
+          "business": "🏢 Azienda"
+        }
+      },
+      "devices": {
+        "title": "Quanti dispositivi?"
+      },
+      "protections": {
+        "title": "Scegli le tue protezioni",
+        "options": {
+          "phishing": "🛡️ Protezione phishing",
+          "deviceScan": "💻 Scansione sicurezza dispositivi"
+        }
+      },
+      "budget": {
+        "title": "Il tuo budget mensile",
+        "placeholder": "Es: 20"
+      }
+    },
+    "result": {
+      "title": "✨ Il tuo piano ideale",
+      "badge": "Migliore scelta",
+      "monthUnit": "mese",
+      "whyTitle": "Perché questo piano?",
+      "cta": "Inizia ora",
+      "explanations": {
+        "userTypePersonal": "Sei un utente privato.",
+        "userTypeBusiness": "Sei un utente aziendale.",
+        "devicesLarge": "Hai {{count}} dispositivi o più, quindi consigliamo un piano adatto a una protezione su larga scala.",
+        "devicesMedium": "Hai {{count}} dispositivi, quindi consigliamo un piano che copra più dispositivi in modo efficiente.",
+        "phishing": "La protezione phishing è attiva per proteggere email e link.",
+        "deviceScan": "La scansione dei dispositivi è inclusa per garantire la sicurezza di tutti i tuoi dispositivi.",
+        "budget": "Abbiamo filtrato i piani per restare nel tuo budget di ${{budget}}/mese."
+      }
+    }
+  },
+  "downloads": {
+    "hero": {
+      "title": "Scarica app e strumenti Oxo",
+      "subtitle": "Proteggi la tua attività digitale con le applicazioni Oxo per desktop e dispositivi mobili."
+    },
+    "tabs": {
+      "personal": "Personale",
+      "business": "Azienda"
+    },
+    "buttons": {
+      "download": "Scarica",
+      "getForBusiness": "Per aziende"
+    },
+    "items": {
+      "windows": {
+        "os": "Windows",
+        "personalDesc": "Proteggi la tua navigazione, email e download personali.",
+        "businessDesc": "Protezione avanzata degli endpoint e monitoraggio delle minacce per i team.",
+        "meta": "Windows 10+"
+      },
+      "macos": {
+        "os": "macOS",
+        "personalDesc": "Protezione leggera per utenti macOS.",
+        "businessDesc": "Agente di sicurezza macOS di livello enterprise.",
+        "meta": "macOS 12+"
+      },
+      "mobile": {
+        "os": "Mobile",
+        "personalDesc": "Analizza link, SMS ed email ovunque.",
+        "businessDesc": "Accesso mobile sicuro per dipendenti e dirigenti.",
+        "meta": "iOS e Android"
+      }
+    },
+    "info": {
+      "description": "Tutte le applicazioni Oxo sono firmate digitalmente, aggiornate regolarmente e conformi agli standard di sicurezza del settore. Le versioni aziendali includono gestione centralizzata, report avanzati e supporto prioritario."
+    },
+    "cta": {
+      "title": "Pronto per iniziare?",
+      "description": "Scarica Oxo ora e proteggi la tua vita digitale all’istante.",
+      "button": "Scarica Oxo"
+    }
+  },
+  "contact": {
+    "title": "Contattaci",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "button": "Invia"
+    },
+    "info": {
+      "location": "📍 Europa",
+      "response": "⏱ Risposta entro 24h",
+      "security": "🔒 Sicuro e privato"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "Blog Oxo",
+      "description": "Approfondimenti, analisi e guide pratiche per comprendere le minacce digitali e restare protetti."
+    },
+    "filters": {
+      "all": "Tutti"
+    },
+    "categories": {
+      "threatIntelligence": "Intelligence sulle minacce",
+      "practicalSecurity": "Sicurezza pratica",
+      "businessSecurity": "Sicurezza aziendale"
+    },
+    "posts": {
+      "readArticle": "Leggi articolo →",
+      "threats2026": {
+        "title": "Principali minacce informatiche da monitorare nel 2026",
+        "excerpt": "Dal phishing-as-a-service alle truffe basate su IA, scopri le minacce emergenti che stanno ridefinendo il panorama dei rischi digitali."
+      },
+      "maliciousLink": {
+        "title": "Come rilevare un link dannoso in pochi secondi",
+        "excerpt": "Una guida pratica per identificare rapidamente link pericolosi prima di cliccare, anche senza competenze tecniche."
+      },
+      "emailAttacks": {
+        "title": "Perché le aziende sottovalutano gli attacchi via email",
+        "excerpt": "L’email resta il principale vettore di attacco. Ecco perché le organizzazioni faticano ancora a difendersi."
+      }
+    },
+    "pagination": {
+      "previous": "← Precedente",
+      "next": "Successivo →"
+    },
+    "cta": {
+      "title": "Anticipa le minacce",
+      "description": "Analizza un link o un’email sospetta prima che diventi una minaccia reale.",
+      "button": "Avvia analisi"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Bentornato",
+      "subtitle": "Accedi al tuo account",
+      "email": "Indirizzo email",
+      "password": "Password",
+      "button": "Accedi",
+      "forgot": "Password dimenticata?",
+      "alert": "Tentativo di accesso con"
+    },
+    "signup": {
+      "title": "Nuovo qui?",
+      "description": "Crea un account per iniziare a proteggere la tua vita digitale con OXO.",
+      "button": "Crea account"
+    }
+  },
+  "verifyEmail": {
+    "loading": {
+      "title": "Verifica email in corso...",
+      "description": "Attendi un momento."
+    },
+    "success": {
+      "title": "✅ Email verificata",
+      "description": "Il tuo account è ora attivo. Puoi iniziare a usare Oxo.",
+      "button": "Vai al login"
+    },
+    "error": {
+      "title": "❌ Verifica fallita",
+      "description": "Il link non è valido o è scaduto.",
+      "button": "Riprova"
+    }
+  },
+  "signupInfo": {
+    "hero": {
+      "title": "Prima di registrarti",
+      "description": "Ecco cosa devi sapere prima di creare il tuo account OXO."
+    },
+    "security": {
+      "title": "Perché proteggere il tuo account?",
+      "items": {
+        "data": "🔒 Proteggi i dati personali da phishing e malware",
+        "access": "⚡ Previeni accessi non autorizzati con password sicure",
+        "activity": "🌐 Proteggi la tua attività online su tutti i dispositivi"
+      }
+    },
+    "requirements": {
+      "title": "Cosa ti serve",
+      "items": {
+        "email": "📧 Un indirizzo email valido",
+        "password": "🔑 Una password forte (possiamo aiutarti a crearla)",
+        "device": "💻 Opzionale: browser o dispositivo da proteggere"
+      }
+    },
+    "privacy": {
+      "title": "Privacy OXO",
+      "description": "Le tue informazioni non vengono mai vendute. Tutti i dati sono cifrati e trattati in modo sicuro in tempo reale."
+    },
+    "cta": {
+      "button": "Continua con la registrazione"
+    }
+  },
+  "signup": {
+    "title": "Crea il tuo account",
+    "form": {
+      "email": "Email",
+      "password": "Password",
+      "confirm": "Conferma password",
+      "button": "Registrati"
+    },
+    "errors": {
+      "passwordMismatch": "Le password non corrispondono"
+    },
+    "success": "Account creato per",
+    "footer": {
+      "text": "Hai già un account?",
+      "link": "Accedi qui"
+    }
+  },
+  "resetPassword": {
+    "form": {
+      "title": "Reimposta la tua password",
+      "description": "Inserisci la tua nuova password qui sotto.",
+      "password": "Nuova password",
+      "confirmPassword": "Conferma password",
+      "button": "Aggiorna password",
+      "error": "Le password non corrispondono!"
+    },
+    "success": {
+      "title": "✅ Password aggiornata",
+      "description": "La tua password è stata aggiornata con successo.",
+      "button": "Torna al login"
+    }
+  },
+  "forgotPassword": {
+    "form": {
+      "title": "Hai dimenticato la password?",
+      "description": "Inserisci la tua email e ti invieremo un link per reimpostarla.",
+      "email": "La tua email",
+      "button": "Invia link",
+      "footerText": "Ti è tornata in mente?",
+      "footerLink": "Torna al login"
+    },
+    "success": {
+      "title": "📩 Controlla la tua email",
+      "descriptionBefore": "Se esiste un account per ",
+      "descriptionAfter": ", riceverai a breve un link per reimpostare la password.",
+      "button": "Torna al login"
+    }
+  },
+  "dashboardLayout": {
+    "greetings": {
+      "morning": "Buongiorno",
+      "afternoon": "Buon pomeriggio",
+      "evening": "Buonasera"
+    },
+    "nav": {
+      "overview": "Panoramica",
+      "team": "Team",
+      "security": "Sicurezza",
+      "devices": "Dispositivi",
+      "tools": "Strumenti",
+      "plan": "Piano",
+      "settings": "Impostazioni"
+    },
+    "header": {
+      "title": "Dashboard",
+      "contact": "Contatto"
+    },
+    "chatbot": {
+      "title": "Chatbot",
+      "placeholder": "Scrivi un messaggio...",
+      "send": "Invia",
+      "botPrefix": "Il bot dice: Ciao,"
+    }
+  },
+  "dashboardPage": {
+    "plan": {
+      "title": "Piano attuale",
+      "renewsOn": "Rinnovo il",
+      "button": "Gestisci piano"
+    },
+    "devices": {
+      "title": "Dispositivi",
+      "activeDevices": "dispositivi attivi",
+      "button": "Visualizza tutti",
+      "items": {
+        "macbook": "Oggi",
+        "iphone": "Ieri",
+        "windows": "2 giorni fa"
+      }
+    },
+    "account": {
+      "title": "Account",
+      "created": "Creato:",
+      "button": "Impostazioni"
+    },
+    "tools": {
+      "title": "Strumenti rapidi",
+      "nav": {
+        "email": "Verifica email",
+        "link": "Scanner link",
+        "scam": "Analizzatore truffe"
+      },
+      "placeholders": {
+        "email": "Inserisci email",
+        "link": "Inserisci link",
+        "scam": "Inserisci testo da analizzare"
+      },
+      "run": "Esegui",
+      "results": {
+        "validEmail": "Email valida ✅",
+        "invalidEmail": "Email non valida ❌",
+        "safeLink": "Il link sembra sicuro ✅",
+        "suspiciousLink": "Link sospetto ❌",
+        "potentialScam": "Possibile truffa ⚠️",
+        "seemsSafe": "Sembra sicuro ✅"
+      }
+    },
+    "activity": {
+      "title": "Attività recenti",
+      "items": {
+        "login": "Accesso da Chrome — Oggi",
+        "passwordCheck": "Controllo password — Ieri",
+        "deviceAdded": "Dispositivo aggiunto — 3 giorni fa"
+      }
+    }
+  },
+  "usersPage": {
+    "title": "Tutti i dispositivi",
+    "table": {
+      "device": "Dispositivo",
+      "user": "Utente",
+      "os": "OS",
+      "lastActive": "Ultima attività",
+      "status": "Stato",
+      "action": "Azione"
+    },
+    "status": {
+      "secure": "Sicuro",
+      "warning": "Avviso"
+    },
+    "actions": {
+      "locate": "Localizza",
+      "remove": "Rimuovi"
+    },
+    "devices": {
+      "lastSeen": {
+        "today": "Oggi",
+        "yesterday": "Ieri"
+      }
+    }
+  },
+  "freeTools": {
+    "title": "Strumenti gratuiti",
+    "nav": {
+      "email": "Verifica email",
+      "link": "Verifica link",
+      "passwordGenerator": "Generatore password",
+      "passwordChecker": "Controllo password",
+      "scam": "Analizzatore truffe"
+    },
+    "email": {
+      "title": "Verifica email",
+      "placeholder": "Inserisci email",
+      "button": "Verifica"
+    },
+    "link": {
+      "title": "Verifica link",
+      "placeholder": "Inserisci URL",
+      "button": "Verifica"
+    },
+    "passwordGenerator": {
+      "title": "Generatore password",
+      "button": "Genera password"
+    },
+    "passwordChecker": {
+      "title": "Controllo password",
+      "placeholder": "Inserisci password",
+      "button": "Verifica sicurezza"
+    },
+    "scam": {
+      "title": "Analizzatore truffe",
+      "placeholder": "Incolla il testo qui",
+      "button": "Analizza"
+    },
+    "result": {
+      "score": "Punteggio:"
+    }
+  },
+  "teamPage": {
+    "title": "Membri del team",
+    "pending": "In attesa",
+    "table": {
+      "name": "Nome",
+      "email": "Email",
+      "role": "Ruolo",
+      "action": "Azione"
+    },
+    "roles": {
+      "admin": "Amministratore",
+      "user": "Utente"
+    },
+    "actions": {
+      "changeRole": "Cambia ruolo",
+      "remove": "Rimuovi"
+    },
+    "invite": {
+      "title": "Invita membro",
+      "placeholder": "Indirizzo email",
+      "button": "Invia invito"
+    }
+  },
+  "settings": {
+    "title": "Impostazioni account",
+    "alerts": {
+      "profileUpdated": "Profilo aggiornato!",
+      "passwordUpdated": "Password aggiornata!",
+      "deleteConfirm": "Sei sicuro di voler eliminare il tuo account? Questa azione è irreversibile.",
+      "accountDeleted": "Account eliminato!"
+    },
+    "profile": {
+      "title": "Profilo",
+      "name": "Nome",
+      "email": "Email",
+      "button": "Aggiorna profilo"
+    },
+    "password": {
+      "title": "Password",
+      "changeButton": "Cambia password",
+      "modal": {
+        "title": "Cambia password",
+        "currentPassword": "Password attuale",
+        "newPassword": "Nuova password",
+        "update": "Aggiorna",
+        "cancel": "Annulla"
+      }
+    },
+    "notifications": {
+      "title": "Notifiche",
+      "email": "Notifiche email",
+      "sms": "Notifiche SMS",
+      "push": "Notifiche push"
+    },
+    "sessions": {
+      "title": "Sessioni attive",
+      "table": {
+        "device": "Dispositivo",
+        "os": "OS",
+        "lastActive": "Ultima attività",
+        "location": "Posizione",
+        "action": "Azione"
+      },
+      "logout": "Disconnetti"
+    },
+    "dangerZone": {
+      "title": "Zona pericolosa",
+      "description": "Eliminare il tuo account è irreversibile. Tutti i tuoi dati verranno persi.",
+      "button": "Elimina account"
+    }
+  },
+  "securityPage": {
+    "score": {
+      "title": "Punteggio di sicurezza",
+      "description": "Livello di protezione complessivo"
+    },
+    "alerts": {
+      "title": "Avvisi",
+      "weakPassword": "Password debole rilevata",
+      "suspiciousLogin": "Tentativo di accesso sospetto",
+      "systemsUpdated": "Tutti i sistemi aggiornati"
+    },
+    "logs": {
+      "title": "Registro attività",
+      "login": "Accesso da Chrome — Parigi",
+      "passwordChanged": "Password modificata",
+      "deviceAdded": "Nuovo dispositivo aggiunto"
+    }
+  },
+  "proDashboard": {
+    "security": {
+      "title": "Panoramica sicurezza",
+      "secure": "Sicuro",
+      "devices": "dispositivi monitorati",
+      "members": "membri del team",
+      "button": "Visualizza dettagli"
+    },
+    "team": {
+      "title": "Team",
+      "activeMembers": "membri attivi",
+      "button": "Gestisci team"
+    },
+    "alerts": {
+      "title": "Avvisi",
+      "suspiciousLogin": "⚠ Accesso sospetto rilevato",
+      "weakPasswords": "⚠ 2 password deboli rilevate",
+      "devicesUpdated": "✔ Tutti i dispositivi aggiornati",
+      "button": "Risolvi problemi"
+    },
+    "devices": {
+      "title": "Dispositivi",
+      "total": "dispositivi totali",
+      "button": "Gestisci dispositivi"
+    },
+    "billing": {
+      "title": "Fatturazione",
+      "nextInvoice": "Prossima fattura:",
+      "month": "mese",
+      "button": "Visualizza fatturazione"
+    },
+    "activity": {
+      "title": "Attività recenti",
+      "items": {
+        "deviceAdded": "Nuovo dispositivo aggiunto — Oggi",
+        "userJoined": "Utente Bob aggiunto — Ieri",
+        "passwordIssue": "Problema password rilevato — 2 giorni fa"
+      }
+    },
+    "roles": {
+      "admin": "Amministratore",
+      "user": "Utente"
+    }
+  },
+  "plan": {
+    "status": {
+      "active": "Attivo"
+    },
+    "labels": {
+      "renewal": "Data di rinnovo",
+      "devices": "Dispositivi"
+    },
+    "upgrade": {
+      "text": "🚀 Passa a Premium e proteggi fino a 10 dispositivi",
+      "button": "Aggiorna"
+    },
+    "features": {
+      "title": "Funzionalità incluse",
+      "f1": "Protezione in tempo reale",
+      "f2": "Rilevamento phishing",
+      "f3": "Scansione sicurezza dispositivi",
+      "f4": "Supporto prioritario"
+    },
+    "payment": {
+      "title": "Metodo di pagamento",
+      "expires": "Scade",
+      "update": "Aggiorna"
+    },
+    "invoices": {
+      "title": "Storico fatturazione",
+      "view": "Visualizza",
+      "download": "Scarica"
+    },
+    "actions": {
+      "title": "Gestisci il tuo piano",
+      "upgrade": "Aggiorna piano",
+      "downgrade": "Downgrade",
+      "cancel": "Annulla abbonamento"
+    }
+  },
+  "devicesPage": {
+    "title": "I tuoi dispositivi",
+    "header": {
+      "used": "dispositivi utilizzati"
+    },
+    "labels": {
+      "lastActive": "Ultima attività"
+    },
+    "actions": {
+      "add": "+ Aggiungi dispositivo",
+      "rename": "Rinomina",
+      "block": "Blocca",
+      "unblock": "Sblocca",
+      "locate": "Localizza",
+      "remove": "Rimuovi"
+    },
+    "prompts": {
+      "rename": "Inserisci il nuovo nome del dispositivo"
+    },
+    "defaults": {
+      "newDevice": "Nuovo dispositivo",
+      "unknownOs": "Sconosciuto",
+      "now": "Ora"
+    }
+  },
+  "plans": {
+    "personal": {
+      "free": {
+        "name": "Gratuito",
+        "features": [
+          "Controlli link limitati",
+          "Scansione email manuale",
+          "Verifica telefono"
+        ]
+      },
+      "pro": {
+        "name": "Personal Pro",
+        "features": [
+          "Analisi link illimitata",
+          "Rilevamento phishing email",
+          "Controlli sicurezza dispositivi",
+          "Avvisi in tempo reale"
+        ]
+      },
+      "max": {
+        "name": "Personal Max",
+        "features": [
+          "Tutte le funzionalità Personal Pro",
+          "Supporto prioritario"
+        ]
+      }
+    },
+    "business": {
+      "startup": {
+        "name": "Startup",
+        "features": [
+          "Protezione email e phishing",
+          "Rilevamento frodi",
+          "Report di base"
+        ]
+      },
+      "smePro": {
+        "name": "SME Pro",
+        "features": [
+          "Tutte le funzionalità Startup",
+          "Report avanzati",
+          "Gestione team"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "features": [
+          "Audit completi e conformità",
+          "Integrazioni personalizzate",
+          "Team di sicurezza dedicato"
+        ]
+      }
+    }
+  },
+  "toolsUtils": {
+    "emailChecker": {
+      "messages": {
+        "invalidFormat": "Formato email non valido",
+        "numericLocalPart": "La parte locale dell'email è numerica",
+        "autogeneratedLocalPart": "La parte locale sembra generata automaticamente",
+        "disposableEmail": "Email temporanea rilevata",
+        "suspiciousDomainKeywords": "Parole sospette nel dominio",
+        "longDomain": "Nome dominio insolitamente lungo",
+        "highEntropyDomain": "Dominio ad alta entropia (sospetto)",
+        "flaggedMx": "Record MX del dominio segnalati (DB locale)"
+      }
+    },
+    "linkChecker": {
+      "messages": {
+        "invalidFormat": "Formato URL non valido",
+        "noHttps": "HTTPS non utilizzato",
+        "longUrl": "URL sospettosamente lungo",
+        "highEntropy": "URL ad alta entropia (sospetto)",
+        "phishingKeywords": "Contiene parole chiave di phishing",
+        "numericPattern": "Pattern numerico sospetto",
+        "blacklisted": "Dominio in blacklist (malevolo)"
+      }
+    },
+    "passwordTools": {
+      "messages": {
+        "tooShort": "Troppo corta, almeno 12 caratteri consigliati",
+        "addUppercase": "Aggiungi lettere maiuscole",
+        "addLowercase": "Aggiungi lettere minuscole",
+        "addNumbers": "Aggiungi numeri",
+        "addSymbols": "Aggiungi simboli",
+        "avoidPatterns": "Evita pattern o sequenze comuni",
+        "lowEntropy": "Bassa entropia, usa caratteri più unici",
+        "commonPassword": "Password molto comune"
+      }
+    },
+    "scamAnalyzer": {
+      "messages": {
+        "excessiveUppercase": "Uso eccessivo di maiuscole",
+        "excessiveExclamations": "Uso eccessivo di punti esclamativi",
+        "containsLinks": "Contiene link",
+        "moneyMention": "Menziona denaro o premi",
+        "repeatedWords": "Parole ripetute rilevate",
+        "keyword": {
+          "urgent": "Parola chiave rilevata: \"urgent\"",
+          "free": "Parola chiave rilevata: \"free\"",
+          "clickHere": "Parola chiave rilevata: \"click here\"",
+          "verify": "Parola chiave rilevata: \"verify\"",
+          "limitedTime": "Parola chiave rilevata: \"limited time\"",
+          "actNow": "Parola chiave rilevata: \"act now\"",
+          "winner": "Parola chiave rilevata: \"winner\"",
+          "congratulations": "Parola chiave rilevata: \"congratulations\"",
+          "prize": "Parola chiave rilevata: \"prize\"",
+          "bank": "Parola chiave rilevata: \"bank\"",
+          "password": "Parola chiave rilevata: \"password\""
+        }
+      }
+    }
+  }
+}

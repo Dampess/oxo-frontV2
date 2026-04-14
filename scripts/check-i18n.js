@@ -4,7 +4,7 @@ const path = require("path");
 const basePath = path.join(__dirname, "..", "src", "locales");
 // adapte ce chemin si tes fichiers sont ailleurs
 const baseLocale = "en";
-const targetLocales = ["fr", "de", "nl"];
+const targetLocales = ["fr", "de", "nl", "es", "it"];
 
 function readJson(filePath) {
   try {

@@ -1,14 +1,16 @@
 "use client";
 
+import "@/app/styles/components/langageswitcher.scss";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
-import "@/app/styles/components/langageswitcher.scss";
 
 const languages = [
   { code: "en", flag: "🇬🇧" },
   { code: "fr", flag: "🇫🇷" },
   { code: "de", flag: "🇩🇪" },
   { code: "nl", flag: "🇳🇱" },
+  { code: "es", flag: "🇪🇸" },
+  { code: "it", flag: "🇮🇹" },
 ];
 
 export default function LanguageSwitcher() {

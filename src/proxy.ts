@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
 
-const supportedLocales = ["en", "fr", "de", "nl"] as const;
+const supportedLocales = ["en", "fr", "de", "nl", "es", "it"] as const;
 const defaultLocale = "en";
 const localeCookieName = "NEXT_LOCALE";
 

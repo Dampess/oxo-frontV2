@@ -1,24 +1,35 @@
 import "../styles/globals.scss";
 import { ReactNode } from "react";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import {
+  locales,
+  isValidLocale,
+  siteUrl,
+  buildLanguageAlternates,
+} from "@/lib/i18n";
 
-// Langues supportées
-const supportedLangs = ["en", "fr", "de", "nl"];
+type LayoutProps = {
+  children: ReactNode;
+  params: Promise<{ lang: string }>;
+};
 
-// Génération dynamique des metadata selon la langue
 export async function generateMetadata({
   params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
+}: LayoutProps): Promise<Metadata> {
   const { lang } = await params;
 
-  const safeLang = supportedLangs.includes(lang) ? lang : "en";
+  if (!isValidLocale(lang)) {
+    notFound();
+  }
 
   const titles: Record<string, string> = {
     en: "OXO Security | Official website",
     fr: "OXO Security | Site officiel",
     de: "OXO Security | Offizielle Website",
     nl: "OXO Security | Officiële website",
+    es: "OXO Security | Sitio oficial",
+    it: "OXO Security | Sito ufficiale",
   };
 
   const descriptions: Record<string, string> = {
@@ -26,13 +37,16 @@ export async function generateMetadata({
     fr: "Plateforme de protection contre les menaces numériques",
     de: "Plattform zum Schutz vor digitalen Bedrohungen",
     nl: "Platform voor bescherming tegen digitale bedreigingen",
+    es: "Plataforma y aplicación de protección contra amenazas digitales",
+    it: "Piattaforma e applicazione di protezione contro le minacce digitali",
   };
 
   return {
-    title: titles[safeLang],
-    description: descriptions[safeLang],
+    metadataBase: new URL(siteUrl),
 
-    // SEO
+    title: titles[lang],
+    description: descriptions[lang],
+
     keywords: [
       "cybersecurity",
       "email checker",
@@ -42,52 +56,50 @@ export async function generateMetadata({
       "OXO",
     ],
 
-    // Open Graph (social)
+    alternates: {
+      canonical: `/${lang}`,
+      languages: buildLanguageAlternates(""),
+    },
+
     openGraph: {
-      title: titles[safeLang],
-      description: descriptions[safeLang],
-      url: `https://oxo-security.com/${safeLang}`,
+      title: titles[lang],
+      description: descriptions[lang],
+      url: `${siteUrl}/${lang}`,
       siteName: "OXO Security",
       images: [
         {
-          url: "https://oxo-security.com/og-image.png",
+          url: `${siteUrl}/og-image.png`,
           width: 1200,
           height: 630,
+          alt: "OXO Security",
         },
       ],
-      locale: safeLang,
+      locale: lang,
       type: "website",
     },
 
-    // Twitter
     twitter: {
       card: "summary_large_image",
-      title: titles[safeLang],
-      description: descriptions[safeLang],
-      images: ["https://oxo-security.com/og-image.png"],
+      title: titles[lang],
+      description: descriptions[lang],
+      images: [`${siteUrl}/og-image.png`],
     },
-
-    // Robots
-    // robots: {
-    //   index: true,
-    //   follow: true,
-    // },
   };
 }
 
-export default async function RootLayout({
-  children,
-  params,
-}: {
-  children: ReactNode;
-  params: Promise<{ lang: string }>;
-}) {
+export function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
+
+export default async function RootLayout({ children, params }: LayoutProps) {
   const { lang } = await params;
 
-  const safeLang = supportedLangs.includes(lang) ? lang : "en";
+  if (!isValidLocale(lang)) {
+    notFound();
+  }
 
   return (
-    <html lang={safeLang}>
+    <html lang={lang}>
       <body>{children}</body>
     </html>
   );

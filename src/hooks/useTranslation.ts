@@ -6,8 +6,10 @@ import en from "@/locales/en.json";
 import fr from "@/locales/fr.json";
 import de from "@/locales/de.json";
 import nl from "@/locales/nl.json";
+import es from "@/locales/es.json";
+import it from "@/locales/it.json";
 
-const dictionaries: Record<string, any> = { en, fr, de, nl };
+const dictionaries: Record<string, any> = { en, fr, de, nl, es, it };
 
 export function useTranslation() {
   const pathname = usePathname() || "";

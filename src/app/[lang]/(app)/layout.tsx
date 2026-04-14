@@ -69,7 +69,7 @@ export default function DashboardLayout({
 
       {/* SIDEBAR */}
       <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
-        <div className="logo">Oxo</div>
+        <div className="logo">Oxo Sec</div>
 
         <nav>
           <Link href={`/${lang}/dashboard`}>

@@ -1,30 +1,56 @@
-"use client";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { createPageMetadata } from "@/lib/seo";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import ContactPageView from "@/app/components/pages/ContactPageView";
 
-import "@/app/styles/pages/contact.scss";
-import { useTranslation } from "@/hooks/useTranslation";
+type Props = {
+  params: Promise<{ lang: string }>;
+};
 
-export default function ContactPage() {
-  const { t } = useTranslation();
+const seoByLocale: Record<Locale, { title: string; description: string }> = {
+  en: {
+    title: "Contact",
+    description: "Get in touch with the Oxo team.",
+  },
+  fr: {
+    title: "Contact",
+    description: "Contactez l’équipe Oxo.",
+  },
+  de: {
+    title: "Kontakt",
+    description: "Kontaktieren Sie das Oxo-Team.",
+  },
+  nl: {
+    title: "Contact",
+    description: "Neem contact op met het Oxo-team.",
+  },
+  es: {
+    title: "Contacto",
+    description: "Contacta con el equipo de Oxo.",
+  },
+  it: {
+    title: "Contatti",
+    description: "Contatta il team Oxo.",
+  },
+};
 
-  return (
-    <main className="contact">
-      <h1>{t("contact.title")}</h1>
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
 
-      <div className="contact-wrapper">
-        <form className="contact-form">
-          <input type="text" placeholder={t("contact.form.name")} required />
-          <input type="email" placeholder={t("contact.form.email")} required />
-          <input type="text" placeholder={t("contact.form.subject")} />
-          <textarea placeholder={t("contact.form.message")} rows={5} />
-          <button type="submit">{t("contact.form.button")}</button>
-        </form>
+  if (!isValidLocale(lang)) {
+    notFound();
+  }
 
-        <div className="contact-info">
-          <p>{t("contact.info.location")}</p>
-          <p>{t("contact.info.response")}</p>
-          <p>{t("contact.info.security")}</p>
-        </div>
-      </div>
-    </main>
-  );
+  return createPageMetadata(lang, "/contact", seoByLocale);
+}
+
+export default async function ContactPage({ params }: Props) {
+  const { lang } = await params;
+
+  if (!isValidLocale(lang)) {
+    notFound();
+  }
+
+  return <ContactPageView lang={lang} />;
 }

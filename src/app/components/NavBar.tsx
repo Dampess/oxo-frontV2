@@ -37,7 +37,7 @@ export default function Header() {
                   height={90}
                 />
                 <div>
-                  <div className="brand-name">Oxo</div>
+                  <div className="brand-name">Oxo Sec</div>
                   <div className="brand-tagline">{t("nav.tagline")}</div>
                 </div>
               </div>

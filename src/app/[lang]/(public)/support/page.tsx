@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@/hooks/useTranslation";
 
+
 export default function SupportPage() {
   const pathname = usePathname();
   const lang = pathname.split("/")[1] || "en";
