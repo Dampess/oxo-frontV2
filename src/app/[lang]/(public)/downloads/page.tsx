@@ -100,7 +100,7 @@ export default function DownloadsPage() {
         <div className="container">
           <h2>{t("downloads.cta.title")}</h2>
           <p>{t("downloads.cta.description")}</p>
-          <Link href={`/${lang}/signup`} className="btn-primary">
+          <Link href={`/${lang}/signup`} className="btn primary">
             {t("downloads.cta.button")}
           </Link>
         </div>

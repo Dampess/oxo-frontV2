@@ -201,7 +201,7 @@ export default function PlanAdvisorPageView({ lang }: Props) {
               <h2>{t("planAdvisor.result.title")}</h2>
               <div className="card highlight">
                 <div className="badge">{t("planAdvisor.result.badge")}</div>
-                <h3>{plan.name}</h3>
+                <h3>{t(plan.name)}</h3>
                 <p className="price">
                   ${plan.priceMonthly}
                   {plan.priceMonthly !== 0 && (
@@ -210,7 +210,7 @@ export default function PlanAdvisorPageView({ lang }: Props) {
                 </p>
                 <ul>
                   {plan.features.map((f: string, i: number) => (
-                    <li key={i}>✔ {f}</li>
+                    <li key={i}>✔ {t(f)}</li>
                   ))}
                 </ul>
                 <div className="explanation">

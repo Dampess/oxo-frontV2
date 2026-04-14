@@ -21,9 +21,9 @@ export default function AuthPage() {
 
   return (
     <main className="auth-page">
-      <div className="split">
+      <div className="auth-split">
         {/* LOGIN */}
-        <div className="auth-login">
+        <div className="auth-panel">
           <h2>{t("auth.login.title")}</h2>
           <p>{t("auth.login.subtitle")}</p>
 
@@ -53,7 +53,7 @@ export default function AuthPage() {
         </div>
 
         {/* SIGNUP */}
-        <div className="auth-signup">
+        <div className="auth-aside">
           <h2>{t("auth.signup.title")}</h2>
           <p>{t("auth.signup.description")}</p>
           <Link href={`/${lang}/auth/signupinfo`} className="btn secondary">

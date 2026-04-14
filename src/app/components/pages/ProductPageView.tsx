@@ -177,7 +177,7 @@ export default function ProductPageView({ lang }: Props) {
             </ul>
           </div>
 
-          <div>
+          <div className="security-visual">
             <Image
               src="/oxo-protection.webp"
               alt={t("product.security.imageAlt")}

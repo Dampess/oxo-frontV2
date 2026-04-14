@@ -246,7 +246,7 @@ export default function PricingPageView({ lang }: Props) {
       <section className="cta-section">
         <div className="container">
           <h2>{t("pricingHome.advisor.title")}</h2>
-          <Link href={`/${lang}/plan-advisor`} className="btn-primary">
+          <Link href={`/${lang}/plan-advisor`} className="btn primary">
             {t("pricingHome.advisor.button")}
           </Link>
         </div>

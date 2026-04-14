@@ -1,61 +1,124 @@
 @use "../variables.scss" as vars;
 
 .legal-page {
-  padding: 6rem 1.5rem;
+  padding: clamp(4.5rem, 8vw, 6.5rem) 1.25rem;
+  background: var(--bg-main);
+  color: var(--text-main);
 
   .container {
-    max-width: 56rem;
+    width: min(100%, 56rem);
     margin: 0 auto;
   }
 
   h1 {
-    font-size: 2.6rem;
+    margin: 0;
+    font-size: clamp(2.1rem, 4vw, 3rem);
     font-weight: 800;
-    margin-bottom: 0.5rem;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
     color: vars.$oxo-orange;
+    text-wrap: balance;
   }
 
   .legal-date {
-    font-size: 0.85rem;
-    color: #9ca3af;
-    margin-bottom: 3rem;
+    margin: 0.75rem 0 3rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-muted, #9ca3af);
   }
 
   section {
     margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+
+    &:last-of-type {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
   }
 
   h2 {
-    font-size: 1.4rem;
+    margin: 0 0 0.85rem;
+    font-size: clamp(1.25rem, 2vw, 1.55rem);
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     color: var(--text-main);
   }
 
   p {
+    margin: 0 0 1rem;
     font-size: 1rem;
-    line-height: 1.7;
-    color: #4b5563;
-    margin-bottom: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted-dark, #4b5563);
   }
 
-  ul {
-    padding-left: 1.2rem;
-    margin-bottom: 1rem;
+  ul,
+  ol {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
 
     li {
-      list-style: disc;
-      margin-bottom: 0.5rem;
-      color: #4b5563;
+      margin-bottom: 0.55rem;
+      line-height: 1.7;
+      color: var(--text-muted-dark, #4b5563);
+
+      &::marker {
+        color: var(--text-muted, #9ca3af);
+      }
     }
+  }
+
+  strong {
+    color: var(--text-main);
+    font-weight: 600;
   }
 
   a {
     color: vars.$oxo-blue;
     text-decoration: none;
+    text-underline-offset: 0.18em;
+    transition:
+      color 0.2s ease,
+      text-decoration-color 0.2s ease;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.14);
+      border-radius: 0.2rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 4rem 1rem;
+
+    .legal-date {
+      margin-bottom: 2.5rem;
+      font-size: 0.85rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    p,
+    ul li,
+    ol li {
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    a {
+      transition: none;
     }
   }
 }
@@ -63,36 +126,17 @@
 /* ================= DARK MODE ================= */
 @media (prefers-color-scheme: dark) {
   .legal-page {
-    background-color: #0f172a; /* fond sombre général */
-    color: #e5e7eb; /* texte principal clair */
+    --bg-main: #0f172a;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --text-muted-dark: #d1d5db;
+    --border-color: #374151;
 
-    h1 {
-      color: vars.$oxo-orange;
-    }
-
-    .legal-date {
-      color: #9ca3af;
-    }
-
-    h2 {
-      color: #f3f4f6;
-    }
-
-    p,
-    ul li {
-      color: #d1d5db;
-    }
+    background-color: var(--bg-main);
+    color: var(--text-main);
 
     a {
       color: vars.$oxo-blue;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    section {
-      border-color: #374151; /* si tu as des bordures à ajouter pour séparation */
     }
   }
 }

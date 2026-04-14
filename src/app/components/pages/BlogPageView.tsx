@@ -151,7 +151,7 @@ export default function BlogPageView({ lang }: Props) {
         <div className="container">
           <h2>{t("blog.cta.title")}</h2>
           <p>{t("blog.cta.description")}</p>
-          <Link href={`/${lang}/scan`} className="button-primary">
+          <Link href={`/${lang}/scan`} className="btn primary">
             {t("blog.cta.button")}
           </Link>
         </div>

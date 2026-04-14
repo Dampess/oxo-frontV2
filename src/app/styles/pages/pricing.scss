@@ -1,171 +1,254 @@
 @use "../variables.scss" as vars;
 
 .pricing {
+  --section-padding: clamp(4rem, 7vw, 5.5rem);
+  --max-width: 1120px;
   background-color: var(--bg-main);
+  color: var(--text-main);
+
+  .container {
+    width: min(100%, var(--max-width));
+    margin: 0 auto;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      filter 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &.primary {
+      background-color: vars.$oxo-orange;
+      color: white;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+
+      &:hover {
+        background-color: vars.$oxo-blue;
+      }
+    }
+
+    &.secondary {
+      background-color: transparent;
+      border: 2px solid vars.$oxo-orange;
+      color: vars.$oxo-orange;
+
+      &:hover {
+        background-color: vars.$oxo-orange;
+        color: white;
+      }
+    }
+  }
+
+  .section-title {
+    margin: 0 0 3rem;
+    text-align: center;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: vars.$oxo-orange;
+    text-wrap: balance;
+  }
 
   /* ================= HERO ================= */
   .pricing-hero {
-    padding: 6rem 1.5rem 4rem;
+    padding: clamp(4.5rem, 8vw, 6rem) 1.25rem 4rem;
     text-align: center;
 
     h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
+      margin: 0;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
       color: var(--text-main);
+      text-wrap: balance;
     }
 
     p {
-      margin-top: 1rem;
+      max-width: 680px;
+      margin: 1rem auto 0;
       color: var(--text-muted);
-      font-size: 1.15rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.5;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      text-wrap: pretty;
     }
 
     .billing-toggle {
       margin-top: 2rem;
       display: inline-flex;
-      background-color: var(--bg-soft);
+      align-items: center;
+      padding: 0.3rem;
       border-radius: 999px;
-      padding: 0.25rem;
+      background-color: var(--bg-soft);
       box-shadow: var(--shadow-sm);
 
       button {
-        padding: 0.5rem 1.25rem;
-        border-radius: 999px;
+        padding: 0.65rem 1.2rem;
         border: none;
+        border-radius: 999px;
         background: transparent;
         cursor: pointer;
         font-weight: 600;
         color: var(--text-muted);
-        transition: 0.25s;
+        transition:
+          background-color 0.2s ease,
+          color 0.2s ease,
+          transform 0.2s ease;
 
         span {
+          margin-left: 0.3rem;
           color: vars.$oxo-orange;
-          font-size: 0.8rem;
-          margin-left: 0.25rem;
+          font-size: 0.78rem;
+          font-weight: 700;
         }
 
         &.active {
           background-color: vars.$oxo-blue;
           color: white;
+          box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
         }
       }
     }
   }
+
   /* ================= PLAN RECOMMENDER ================= */
   .plan-recommender {
-    padding: 4rem 1.5rem;
+    padding: var(--section-padding) 1.25rem;
     background-color: var(--bg-soft);
 
     .container {
-      max-width: 960px;
-      margin: 0 auto;
+      width: min(100%, 960px);
       text-align: center;
     }
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
       color: vars.$oxo-orange;
     }
 
     p {
-      margin-bottom: 2rem;
+      margin: 1rem auto 0;
+      max-width: 680px;
       color: var(--text-muted);
+      line-height: 1.7;
     }
 
     .recommender-form {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1.25rem;
+      margin-top: 2rem;
       margin-bottom: 2rem;
 
       label {
         display: flex;
         flex-direction: column;
+        gap: 0.55rem;
         font-size: 0.95rem;
         color: var(--text-main);
-        input[type="number"] {
-          margin-top: 0.5rem;
-          padding: 0.5rem;
-          border-radius: 0.5rem;
-          border: 1px solid var(--border-soft);
-          width: 80px;
-          text-align: center;
-        }
-        input[type="checkbox"] {
-          margin-right: 0.5rem;
-        }
+        text-align: left;
+      }
+
+      input[type="number"] {
+        width: 92px;
+        min-height: 2.8rem;
+        padding: 0.55rem 0.75rem;
+        border: 1px solid var(--border-soft);
+        border-radius: 0.75rem;
+        background: var(--card-bg);
+        color: var(--text-main);
+        text-align: center;
+        font: inherit;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 0.45rem;
       }
     }
 
     .recommended-plan {
-      background-color: var(--card-bg);
-      border-radius: 1rem;
-      padding: 2rem;
       display: inline-block;
+      min-width: min(100%, 420px);
+      padding: 1.8rem;
       text-align: center;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color, transparent);
+      border-radius: 1.25rem;
       box-shadow: var(--shadow-md);
 
       h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        margin: 0;
+        font-size: 1.45rem;
+        line-height: 1.2;
       }
 
       .price {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
+        margin-top: 0.75rem;
+        font-size: 1.2rem;
+        color: var(--text-main);
       }
 
       .btn {
-        margin-top: 1rem;
+        margin-top: 1.25rem;
       }
     }
   }
 
   /* ================= SECTIONS ================= */
   .pricing-section {
-    padding: 4rem 1.5rem;
+    padding: var(--section-padding) 1.25rem;
 
     &.alt {
       background-color: var(--bg-soft);
     }
 
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-
     .section-title {
-      text-align: center;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 3rem;
-      color: vars.$oxo-orange;
+      @extend .section-title;
     }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      gap: clamp(1rem, 2vw, 1.5rem);
       align-items: stretch;
     }
   }
 
   /* ================= CARD ================= */
   .pricing-card {
-    background-color: var(--card-bg);
-    border-radius: 1.25rem;
-    padding: 2.5rem 2rem;
-    box-shadow: var(--shadow-md);
     display: flex;
     flex-direction: column;
+    height: 85%;
+    padding: 2rem 1.6rem;
     text-align: center;
-    transition: 0.3s ease;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color, transparent);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-md);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
 
     &:hover {
       transform: translateY(-6px);
@@ -174,201 +257,177 @@
 
     &.highlight {
       border: 2px solid vars.$oxo-blue;
-      transform: translateY(-6px);
+      box-shadow:
+        var(--shadow-md),
+        0 0 0 6px rgba(74, 144, 226, 0.08);
     }
 
     h3 {
-      font-size: 1.4rem;
+      margin: 0;
+      font-size: 1.35rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      line-height: 1.25;
     }
 
     .price {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin: 0.5rem 0;
+      margin: 0.85rem 0 0.5rem;
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1;
 
       span {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        font-weight: 500;
         color: var(--text-muted);
       }
     }
 
     .devices,
     .users {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       color: var(--text-muted);
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
+      line-height: 1.5;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin-bottom: 2rem;
+      margin: 0 0 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      text-align: left;
+      flex: 1;
 
       li {
-        margin-bottom: 0.6rem;
+        position: relative;
+        padding-left: 1.2rem;
         color: var(--text-main);
+        line-height: 1.55;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: vars.$oxo-orange;
+          font-weight: 700;
+        }
       }
     }
 
     .btn {
       margin-top: auto;
-      padding: 0.65rem 1.5rem;
-      font-weight: 600;
-      border-radius: 0.75rem;
-      text-decoration: none;
-      transition: 0.25s;
-
-      &.primary {
-        background-color: vars.$oxo-orange;
-        color: white;
-
-        &:hover {
-          background-color: vars.$oxo-blue;
-        }
-      }
-
-      &.secondary {
-        background-color: transparent;
-        border: 2px solid vars.$oxo-orange;
-        color: vars.$oxo-orange;
-
-        &:hover {
-          background-color: vars.$oxo-orange;
-          color: white;
-        }
-      }
+      width: 85%;
     }
   }
 
   /* ================= COMPARISON TABLE ================= */
   .pricing-compare {
-    padding: 5rem 1.5rem;
+    padding: var(--section-padding) 1.25rem;
     background-color: var(--bg-main);
-
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
 
     .table-wrapper {
       overflow-x: auto;
-      margin-top: 3rem;
+      margin-top: 2.5rem;
+      border-radius: 1rem;
+    }
 
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: var(--card-bg);
-        border-radius: 1rem;
-        overflow: hidden;
-        box-shadow: var(--shadow-md);
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      background-color: var(--card-bg);
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
 
-        th,
-        td {
-          padding: 1rem;
-          text-align: center;
-          font-size: 0.95rem;
-        }
+      th,
+      td {
+        padding: 1rem;
+        text-align: center;
+        font-size: 0.95rem;
+      }
 
-        th {
-          background-color: var(--bg-soft);
-          font-weight: 700;
-        }
+      th {
+        background-color: var(--bg-soft);
+        font-weight: 700;
+        color: var(--text-main);
+      }
 
-        td:first-child,
-        th:first-child {
-          text-align: left;
-          font-weight: 600;
-        }
+      td:first-child,
+      th:first-child {
+        text-align: left;
+        font-weight: 600;
+      }
 
-        tbody tr {
-          border-top: 1px solid var(--border-color);
-        }
+      tbody tr {
+        border-top: 1px solid var(--border-color);
+      }
 
-        tbody td {
-          font-size: 0.95rem;
-
-          &::before {
-            /* Optionnel: icône ✔ / — pour lisibilité */
-          }
-        }
+      tbody td {
+        color: var(--text-main);
       }
     }
   }
 
   /* ================= CTA ================= */
-  .pricing-cta {
-    padding: 5rem 1.5rem;
+  .cta-section {
+    padding: var(--section-padding) 1.25rem;
     text-align: center;
 
+    .container {
+      width: min(100%, 760px);
+    }
+
     h2 {
-      font-size: 2rem;
-      margin-bottom: 0.75rem;
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      text-wrap: balance;
     }
 
     p {
+      max-width: 620px;
+      margin: 1rem auto 0;
       color: var(--text-muted);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      line-height: 1.75;
     }
 
-    .btn {
+    .btn.primary {
+      background-color: vars.$oxo-orange;
+      color: #fff;
+      margin-top: 2rem;
       font-size: 1rem;
-      padding: 0.75rem 2rem;
-    }
-  }
-
-  .cta-section {
-    text-align: center;
-    padding: 5rem 1rem;
-    background-color: var(--cta-bg);
-    color: var(--cta-text);
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .btn-primary {
-      background-color: var(--cta-button-bg);
-      color: var(--cta-button-text);
-      padding: 0.75rem 2rem;
-      border-radius: 0.5rem;
-      text-decoration: none;
-
+      padding-inline: 2rem;
       &:hover {
-        filter: brightness(1.1);
+        background-color: vars.$oxo-blue;
       }
     }
   }
+}
 
-  /* ================= DARK MODE ================= */
-  @media (prefers-color-scheme: dark) {
-    .pricing {
-      --bg-main: #0f172a;
-      --bg-soft: #1e293b;
-      --card-bg: #1f2937;
-      --text-main: #ededed;
-      --text-muted: #9ca3af;
-      --border-color: #374151;
-      --border-soft: #4b5563;
-      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.5);
-      --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
-      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.7);
-    }
+/* ================= DARK MODE ================= */
+@media (prefers-color-scheme: dark) {
+  .pricing {
+    --bg-main: #0f172a;
+    --bg-soft: #1e293b;
+    --card-bg: #1f2937;
+    --text-main: #ededed;
+    --text-muted: #9ca3af;
+    --border-color: #374151;
+    --border-soft: #4b5563;
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 12px 34px rgba(0, 0, 0, 0.72);
+  }
 
-    /* Hero */
+  .pricing {
     .pricing-hero {
-      background: transparent;
-
-      h1,
-      p {
-        color: var(--text-main);
-      }
-
       .billing-toggle {
         background-color: var(--bg-soft);
 
@@ -379,136 +438,83 @@
             background-color: vars.$oxo-blue;
             color: #fff;
           }
-
-          span {
-            color: vars.$oxo-orange;
-          }
-        }
-      }
-    }
-
-    /* Plan Recommender */
-    .plan-recommender {
-      background-color: var(--bg-soft);
-
-      h2 {
-        color: vars.$oxo-orange;
-      }
-      p {
-        color: var(--text-muted);
-      }
-      .recommender-form label {
-        color: var(--text-main);
-      }
-
-      .recommended-plan {
-        background-color: var(--card-bg);
-        h3,
-        .price {
-          color: var(--text-main);
-        }
-        .btn {
-          background-color: vars.$oxo-orange;
-          color: #fff;
-        }
-      }
-    }
-
-    /* Pricing sections */
-    .pricing-section {
-      &.alt {
-        background-color: var(--bg-soft);
-      }
-      .section-title {
-        color: vars.$oxo-orange;
-      }
-
-      .pricing-card {
-        background-color: var(--card-bg);
-        color: var(--text-main);
-
-        h3,
-        .price,
-        ul li,
-        .devices,
-        .users {
-          color: var(--text-main);
-        }
-
-        .btn.primary {
-          background-color: vars.$oxo-orange;
-          color: #fff;
-          &:hover {
-            background-color: vars.$oxo-blue;
-          }
-        }
-
-        .btn.secondary {
-          background-color: transparent;
-          border-color: vars.$oxo-orange;
-          color: vars.$oxo-orange;
-          &:hover {
-            background-color: vars.$oxo-orange;
-            color: #fff;
-          }
-        }
-      }
-    }
-
-    /* Comparison table */
-    .pricing-compare {
-      background-color: var(--bg-main);
-
-      table {
-        background-color: var(--card-bg);
-
-        th {
-          background-color: var(--bg-soft);
-          color: var(--text-main);
-        }
-        td {
-          color: var(--text-main);
-        }
-        tbody tr {
-          border-top: 1px solid var(--border-color);
-        }
-      }
-    }
-
-    /* CTA */
-    .pricing-cta {
-      h2,
-      p {
-        color: var(--text-main);
-      }
-
-      .btn.primary {
-        background-color: vars.$oxo-orange;
-        color: #fff;
-        &:hover {
-          background-color: vars.$oxo-blue;
         }
       }
     }
   }
+}
 
-  /* ================= RESPONSIVE ================= */
-  @media (max-width: 768px) {
-    .pricing-section .pricing-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .pricing {
+    .pricing-hero {
+      h1 {
+        font-size: clamp(2rem, 8vw, 2.8rem);
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.65;
+      }
     }
 
-    .pricing-hero h1 {
-      font-size: 2rem;
+    .pricing-section {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
     }
 
-    .pricing-hero p {
-      font-size: 1rem;
+    .pricing-card {
+      .price {
+        font-size: 1.9rem;
+      }
     }
 
-    .pricing-card .price {
-      font-size: 1.8rem;
+    .plan-recommender {
+      .recommender-form {
+        flex-direction: column;
+        align-items: center;
+
+        label {
+          width: 100%;
+          max-width: 280px;
+        }
+
+        input[type="number"] {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing {
+    --section-padding: 4rem;
+
+    .pricing-hero,
+    .plan-recommender,
+    .pricing-section,
+    .pricing-compare,
+    .pricing-cta {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .pricing-hero {
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing {
+    .btn,
+    .pricing-card,
+    .pricing-hero .billing-toggle button {
+      transition: none;
     }
   }
 }

@@ -1,25 +1,107 @@
 .faq {
-  max-width: 700px;
-  margin: auto;
-  padding: 6rem 1.5rem;
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vw, 6.5rem) 1.25rem;
 
   h1 {
+    margin: 0 0 3rem;
     text-align: center;
-    margin-bottom: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text-main);
+    text-wrap: balance;
   }
 
   .faq-item {
+    padding: 1.1rem 0;
     border-bottom: 1px solid var(--card-border);
-    padding: 1rem 0;
   }
 
   .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--text-main);
+    font: inherit;
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.45;
+    text-align: left;
     cursor: pointer;
-    font-weight: 600;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--brand-color, var(--text-main));
+    }
+
+    &::after {
+      content: "+";
+      flex-shrink: 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--text-muted);
+      transition:
+        transform 0.2s ease,
+        color 0.2s ease;
+    }
+
+    &[aria-expanded="true"]::after,
+    &.is-open::after {
+      content: "−";
+      color: var(--brand-color, var(--text-main));
+      transform: rotate(180deg);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(100, 108, 255, 0.14);
+      border-radius: 0.5rem;
+    }
   }
 
   .faq-answer {
-    margin-top: 0.5rem;
+    max-width: 62ch;
+    margin-top: 0.75rem;
+    padding-right: 2rem;
     color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 640px) {
+    padding: 4rem 1rem;
+
+    h1 {
+      margin-bottom: 2.5rem;
+    }
+
+    .faq-item {
+      padding: 1rem 0;
+    }
+
+    .faq-question {
+      font-size: 0.98rem;
+    }
+
+    .faq-answer {
+      padding-right: 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .faq-question,
+    .faq-question::after {
+      transition: none;
+    }
   }
 }
