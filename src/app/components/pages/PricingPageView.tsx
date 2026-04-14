@@ -1,16 +1,17 @@
 "use client";
 
+import "@/app/styles/pages/pricing.scss";
+import { useTranslation } from "@/hooks/useTranslation";
 import { businessPlans, personalPlans } from "@/lib/plans";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { useTranslation } from "@/hooks/useTranslation";
-import "@/app/styles/pages/pricing.scss";
 
-export default function PricingPageView() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+type Props = {
+  lang: string;
+};
+
+export default function PricingPageView({ lang }: Props) {
+  const { t } = useTranslation(lang);
   const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
 
   return (

@@ -11,9 +11,10 @@ import it from "@/locales/it.json";
 
 const dictionaries: Record<string, any> = { en, fr, de, nl, es, it };
 
-export function useTranslation() {
+export function useTranslation(forcedLang?: string) {
   const pathname = usePathname() || "";
-  const lang = pathname.split("/")[1] || "en";
+  const detectedLang = pathname.split("/")[1] || "en";
+  const lang = forcedLang || detectedLang;
 
   const dict = dictionaries[lang] || dictionaries.en;
 

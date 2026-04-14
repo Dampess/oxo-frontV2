@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/product.scss";
 
-export default function ProductPageView() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+type Props = {
+  lang: string;
+};
+
+export default function ProductPageView({ lang }: Props) {
+  const { t } = useTranslation(lang);
 
   return (
     <main className="product-page">

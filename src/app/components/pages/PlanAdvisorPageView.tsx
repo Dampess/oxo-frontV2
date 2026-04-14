@@ -6,8 +6,12 @@ import { recommendPlan } from "@/lib/recommendPlan";
 
 import { useEffect, useState } from "react";
 
-export default function PlanAdvisor() {
-  const { t } = useTranslation();
+type Props = {
+  lang: string;
+};
+
+export default function PlanAdvisorPageView({ lang }: Props) {
+  const { t } = useTranslation(lang);
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState<"next" | "back">("next");
 

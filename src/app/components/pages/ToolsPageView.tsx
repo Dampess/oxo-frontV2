@@ -3,13 +3,14 @@
 import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import "@/app/styles/pages/tools.scss";
 
-export default function ToolsPageView() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+type Props = {
+  lang: string;
+};
+
+export default function ToolsPageView({ lang }: Props) {
+  const { t } = useTranslation(lang);
 
   return (
     <main className="tools-page">

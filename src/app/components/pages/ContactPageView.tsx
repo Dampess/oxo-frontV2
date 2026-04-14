@@ -3,8 +3,12 @@
 import "@/app/styles/pages/contact.scss";
 import { useTranslation } from "@/hooks/useTranslation";
 
-export default function ContactPageView() {
-  const { t } = useTranslation();
+type Props = {
+  lang: string;
+};
+
+export default function ContactPageView({ lang }: Props) {
+  const { t } = useTranslation(lang);
 
   return (
     <main className="contact">

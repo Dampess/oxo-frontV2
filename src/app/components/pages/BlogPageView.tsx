@@ -1,10 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import "@/app/styles/pages/blog.scss";
+
+type Props = {
+  lang: string;
+};
 
 type Post = {
   titleKey: string;
@@ -40,10 +43,8 @@ const allPosts: Post[] = [
 
 const POSTS_PER_PAGE = 6;
 
-export default function BlogPageView() {
-  const pathname = usePathname();
-  const lang = pathname.split("/")[1] || "en";
-  const { t } = useTranslation();
+export default function BlogPageView({ lang }: Props) {
+  const { t } = useTranslation(lang);
 
   const categories = Array.from(new Set(allPosts.map((p) => p.categoryKey)));
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
