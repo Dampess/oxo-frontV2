@@ -3,8 +3,8 @@
 import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import "../styles/components/navbar.scss";
 import LanguageSwitcher from "./LangageSwitcher";
 
@@ -44,29 +44,25 @@ export default function Header() {
             </Link>
 
             <div className="nav-principal">
-              {/* INDIVIDUALS */}
+              {/* Products */}
               <div className="nav-item">
-                <span className="nav-link">{t("nav.individuals")}</span>
+                <span className="nav-link">{t("nav.products")}</span>
 
                 <div className="dropdown">
                   <div className="dropdown-column">
                     <span className="dropdown-title">{t("nav.products")}</span>
 
-                    <Link href={`/${lang}/product/anti-virus`}>
-                      {t("nav.product.antivirus")}
+                    <Link href={`/${lang}/product/web`}>
+                      {t("nav.product.web")}
                     </Link>
-                    <Link href={`/${lang}/product/passwords-vault`}>
-                      {t("nav.product.vault")}
+                    <Link href={`/${lang}/product/comm`}>
+                      {t("nav.product.comm")}
                     </Link>
-                    <Link href={`/${lang}/product/spam-phishing`}>
-                      {t("nav.product.phishing")}
+                    <Link href={`/${lang}/product/trackers`}>
+                      {t("nav.product.trackers")}
                     </Link>
-                  </div>
-
-                  <div className="dropdown-column">
-                    <span className="dropdown-title">{t("nav.forusers")}</span>
-                    <Link href={`/${lang}/product/individual`}>
-                      {t("nav.product.mission")}
+                    <Link href={`/${lang}/product/score`}>
+                      {t("nav.product.score")}
                     </Link>
                   </div>
 
@@ -79,10 +75,51 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* BUSINESS */}
-              <Link href={`/${lang}/product/business`} className="nav-link">
-                {t("nav.businesses")}
-              </Link>
+              {/* FREE TOOLS */}
+              <div className="nav-item">
+                <span className="nav-link">{t("nav.tools.title")}</span>
+
+                <div className="dropdown">
+                  <div className="dropdown-column">
+                    <span className="dropdown-title">
+                      {t("nav.tools.title")}
+                    </span>
+
+                    <Link
+                      href={`/${lang}/tools/email-sec`}
+                      className="dropdown-item"
+                    >
+                      {t("nav.tools.email")}
+                      <br />
+                      <small>({t("nav.tools.emailDesc")})</small>
+                    </Link>
+
+                    <Link
+                      href={`/${lang}/tools/password-sec`}
+                      className="dropdown-item"
+                    >
+                      {t("nav.tools.password")}
+                      <br />
+                      <small>({t("nav.tools.passwordDesc")})</small>
+                    </Link>
+
+                    <Link
+                      href={`/${lang}/tools/link-sec`}
+                      className="dropdown-item"
+                    >
+                      {t("nav.tools.link")}
+                      <br />
+                      <small>({t("nav.tools.linkDesc")})</small>
+                    </Link>
+                  </div>
+                  <div className="dropdown-cta">
+                    <p>{t("nav.tools.all")}</p>
+                    <Link href={`/${lang}/tools`} className="nav-button">
+                      {t("nav.tools.explore")}
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
               {/* BLOG */}
               <Link href={`/${lang}/blog`} className="nav-link">
@@ -109,40 +146,6 @@ export default function Header() {
                     <Link href={`/${lang}/support/cybersec-advices`}>
                       {t("nav.supportLinks.advices")}
                     </Link>
-
-                    {/* FREE TOOLS */}
-                    <div className="dropdown-column">
-                      <span className="dropdown-title">
-                        {t("nav.tools.title")}
-                      </span>
-
-                      <Link
-                        href={`/${lang}/tools/email-sec`}
-                        className="dropdown-item"
-                      >
-                        {t("nav.tools.email")}
-                        <br />
-                        <small>({t("nav.tools.emailDesc")})</small>
-                      </Link>
-
-                      <Link
-                        href={`/${lang}/tools/password-sec`}
-                        className="dropdown-item"
-                      >
-                        {t("nav.tools.password")}
-                        <br />
-                        <small>({t("nav.tools.passwordDesc")})</small>
-                      </Link>
-
-                      <Link
-                        href={`/${lang}/tools/link-sec`}
-                        className="dropdown-item"
-                      >
-                        {t("nav.tools.link")}
-                        <br />
-                        <small>({t("nav.tools.linkDesc")})</small>
-                      </Link>
-                    </div>
                   </div>
 
                   <div className="dropdown-cta">
@@ -217,22 +220,19 @@ export default function Header() {
 
               {mobileProductOpen && (
                 <div className="mobile-dropdown">
-                  <Link
-                    href={`/${lang}/product/anti-virus`}
-                    onClick={handleLinkClick}
-                  >
-                    {t("nav.product.antivirus")}
+                  <Link href={`/${lang}/product/web`} onClick={handleLinkClick}>
+                    {t("nav.product.web")}
                   </Link>
 
                   <Link
-                    href={`/${lang}/product/passwords-vault`}
+                    href={`/${lang}/product/comm`}
                     onClick={handleLinkClick}
                   >
                     {t("nav.product.vault")}
                   </Link>
 
                   <Link
-                    href={`/${lang}/product/spam-phishing`}
+                    href={`/${lang}/product/trackers`}
                     onClick={handleLinkClick}
                   >
                     {t("nav.product.phishing")}

@@ -1,8 +1,8 @@
+import ScorePageView from "@/app/components/pages/ScorePageView";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import { createPageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { createPageMetadata } from "@/lib/seo";
-import { isValidLocale, type Locale } from "@/lib/i18n";
-import SpamPhishingPageView from "@/app/components/pages/SpamPhishingPageView";
 
 type Props = {
   params: Promise<{ lang: string }>;
@@ -44,12 +44,12 @@ const seoByLocale: Record<Locale, { title: string; description: string }> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   if (!isValidLocale(lang)) notFound();
-  return createPageMetadata(lang, "/product/spam-phishing", seoByLocale);
+  return createPageMetadata(lang, "/product/trackers", seoByLocale);
 }
 
-export default async function SpamPhishingPage({ params }: Props) {
+export default async function TrackersPage({ params }: Props) {
   const { lang } = await params;
   if (!isValidLocale(lang)) notFound();
 
-  return <SpamPhishingPageView lang={lang} />;
+  return <ScorePageView lang={lang} />;
 }

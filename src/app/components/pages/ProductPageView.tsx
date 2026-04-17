@@ -1,9 +1,9 @@
 "use client";
 
+import "@/app/styles/pages/product.scss";
+import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "@/hooks/useTranslation";
-import "@/app/styles/pages/product.scss";
 
 type Props = {
   lang: string;
@@ -48,88 +48,58 @@ export default function ProductPageView({ lang }: Props) {
           <h2>{t("product.products.title")}</h2>
 
           <div className="products-grid">
-            {/* Antivirus */}
+            {/* web */}
             <div className="product-card">
-              <h3>{t("product.products.items.antivirus.title")}</h3>
-              <p>{t("product.products.items.antivirus.description")}</p>
+              <h3>{t("product.products.items.web.title")}</h3>
+              <p>{t("product.products.items.web.description")}</p>
               <ul>
-                <li>{t("product.products.items.antivirus.f1")}</li>
-                <li>{t("product.products.items.antivirus.f2")}</li>
-                <li>{t("product.products.items.antivirus.f3")}</li>
+                <li>{t("product.products.items.web.f1")}</li>
+                <li>{t("product.products.items.web.f2")}</li>
+                <li>{t("product.products.items.web.f3")}</li>
               </ul>
-              <Link
-                href={`/${lang}/product/anti-virus`}
-                className="btn primary"
-              >
+              <Link href={`/${lang}/product/web`} className="btn primary">
                 {t("product.products.learnMore")}
               </Link>
             </div>
 
             {/* Anti-Spam */}
             <div className="product-card">
-              <h3>{t("product.products.items.antispam.title")}</h3>
-              <p>{t("product.products.items.antispam.description")}</p>
+              <h3>{t("product.products.items.tracking.title")}</h3>
+              <p>{t("product.products.items.tracking.description")}</p>
               <ul>
-                <li>{t("product.products.items.antispam.f1")}</li>
-                <li>{t("product.products.items.antispam.f2")}</li>
-                <li>{t("product.products.items.antispam.f3")}</li>
+                <li>{t("product.products.items.tracking.f1")}</li>
+                <li>{t("product.products.items.tracking.f2")}</li>
+                <li>{t("product.products.items.tracking.f3")}</li>
               </ul>
-              <Link
-                href={`/${lang}/product/spam-phishing`}
-                className="btn primary"
-              >
+              <Link href={`/${lang}/product/trackers`} className="btn primary">
                 {t("product.products.learnMore")}
               </Link>
             </div>
 
-            {/* Anti-Malware */}
+            {/* Password communications */}
             <div className="product-card">
-              <h3>{t("product.products.items.antimalware.title")}</h3>
-              <p>{t("product.products.items.antimalware.description")}</p>
+              <h3>{t("product.products.items.communications.title")}</h3>
+              <p>{t("product.products.items.communications.description")}</p>
               <ul>
-                <li>{t("product.products.items.antimalware.f1")}</li>
-                <li>{t("product.products.items.antimalware.f2")}</li>
-                <li>{t("product.products.items.antimalware.f3")}</li>
+                <li>{t("product.products.items.communications.f1")}</li>
+                <li>{t("product.products.items.communications.f2")}</li>
+                <li>{t("product.products.items.communications.f3")}</li>
               </ul>
-              <Link
-                href={`/${lang}/product/anti-virus`}
-                className="btn primary"
-              >
+              <Link href={`/${lang}/product/comm`} className="btn primary">
                 {t("product.products.learnMore")}
               </Link>
             </div>
 
-            {/* Phishing Protection */}
+            {/* dashboard */}
             <div className="product-card">
-              <h3>{t("product.products.items.phishing.title")}</h3>
-              <p>{t("product.products.items.phishing.description")}</p>
+              <h3>{t("product.products.items.score.title")}</h3>
+              <p>{t("product.products.items.score.description")}</p>
               <ul>
-                <li>{t("product.products.items.phishing.f1")}</li>
-                <li>{t("product.products.items.phishing.f2")}</li>
-                <li>{t("product.products.items.phishing.f3")}</li>
+                <li>{t("product.products.items.score.f1")}</li>
+                <li>{t("product.products.items.score.f2")}</li>
+                <li>{t("product.products.items.score.f3")}</li>
               </ul>
-              <Link
-                href={`/${lang}/product/spam-phishing`}
-                className="btn primary"
-              >
-                {t("product.products.learnMore")}
-              </Link>
-            </div>
-
-            {/* Password Vault */}
-            <div className="product-card">
-              <h3>{t("product.products.items.vault.title")}</h3>
-              <p>{t("product.products.items.vault.description")}</p>
-              <ul>
-                <li>{t("product.products.items.vault.f1")}</li>
-                <li>{t("product.products.items.vault.f2")}</li>
-                <li>{t("product.products.items.vault.f3")}</li>
-                <li>{t("product.products.items.vault.f4")}</li>
-              </ul>
-              <Link
-                href={`/${lang}/product/passwords-vault`}
-                className="btn primary"
-              >
+              <Link href={`/${lang}/product/dashboard`} className="btn primary">
                 {t("product.products.learnMore")}
               </Link>
             </div>

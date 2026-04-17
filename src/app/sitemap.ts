@@ -1,5 +1,5 @@
-import type { MetadataRoute } from "next";
 import { locales, siteUrl } from "@/lib/i18n";
+import type { MetadataRoute } from "next";
 
 const staticPages = [
   "",
@@ -10,11 +10,11 @@ const staticPages = [
   "/support",
   "/blog",
   "/contact",
-  "/product/anti-virus",
+  "/product/web",
   "/product/businesses",
   "/product/individuals",
-  "/product/passwords-vault",
-  "/product/spam-phishing",
+  "/product/comm",
+  "/product/trackers",
   "/tools/email-sec",
   "/tools/link-sec",
   "/tools/passwords-sec",

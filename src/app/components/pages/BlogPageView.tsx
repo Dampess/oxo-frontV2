@@ -149,10 +149,10 @@ export default function BlogPageView({ lang }: Props) {
       {/* ================= CTA ================= */}
       <section className="blog-cta">
         <div className="container">
-          <h2>{t("blog.cta.title")}</h2>
-          <p>{t("blog.cta.description")}</p>
-          <Link href={`/${lang}/scan`} className="btn primary">
-            {t("blog.cta.button")}
+          <h2>{t("product.cta.title")}</h2>
+          <p>{t("product.cta.description")}</p>
+          <Link href={`/${lang}/pricing`} className="btn primary">
+            {t("product.cta.button")}
           </Link>
         </div>
       </section>

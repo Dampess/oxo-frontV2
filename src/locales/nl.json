@@ -12,45 +12,42 @@
   },
   "nav": {
     "tagline": "Zien. Detecteren. Beschermen.",
-    "forusers": "Voor gebruikers",
-    "individuals": "Particulieren",
     "products": "Producten",
     "product": {
-      "antivirus": "Antivirus & Anti-malware",
-      "vault": "Wachtwoordkluis",
-      "phishing": "Spam- & phishingbescherming",
-      "mission": "Onze missie"
+      "web": "Webbescherming",
+      "comm": "Communicatiebeveiliging",
+      "trackers": "Anti-tracking",
+      "score": "Dashboard"
     },
     "cta": {
-      "allInOne": "Alles-in-één cybersecurityplatform.",
+      "allInOne": "Veilig surfen en privacybescherming",
       "exploreProducts": "Producten ontdekken"
     },
-    "businesses": "Bedrijven",
     "blog": "Blog",
-    "support": "Ondersteuning",
-    "useful": "Bronnen",
+    "support": "Support",
+    "useful": "Hulpmiddelen",
     "supportLinks": {
-      "hub": "Supportcentrum",
+      "hub": "Helpcentrum",
       "faq": "FAQ",
       "client": "Klantenservice",
-      "advices": "Cybersecurity advies"
+      "advices": "Cybersecurity tips"
     },
     "tools": {
       "title": "Gratis tools",
       "email": "E-mailcontrole",
-      "emailDesc": "Verdachte e-mails direct detecteren",
+      "emailDesc": "Detecteer direct verdachte e-mails",
       "password": "Wachtwoordtester",
-      "passwordDesc": "Controleer de sterkte van je wachtwoord",
+      "passwordDesc": "Controleer de sterkte van uw wachtwoord",
       "link": "Linkscanner",
-      "linkDesc": "Verdachte URL's analyseren",
-      "all": "Alle gratis tools bekijken",
-      "explore": "Tools verkennen"
+      "linkDesc": "Analyseer verdachte URL’s",
+      "all": "Bekijk alle gratis tools",
+      "explore": "Tools ontdekken"
     },
     "pricing": {
       "title": "Prijzen",
-      "allPlans": "Alle plannen bekijken",
+      "allPlans": "Bekijk alle plannen",
       "ourPlans": "Onze plannen",
-      "notSure": "Weet je niet welk plan past?",
+      "notSure": "Weet u niet welk plan te kiezen?",
       "advisor": "Plan adviseur"
     },
     "account": "Mijn account",
@@ -65,62 +62,62 @@
   },
   "hero": {
     "title": {
-      "line1": "Blijf veilig online.",
+      "line1": "Privacy en veiligheid.",
       "line2": "Zonder complexiteit."
     },
-    "description": "Oxo beschermt je e-mails, wachtwoorden en apparaten in realtime. Simpele tools. Krachtige beveiliging.",
-    "trust": "Creditcard vereist • Gratis tools beschikbaar • AVG-compliant",
+    "description": "Oxo beschermt uw webgebruik, communicatie en tegen trackers.",
+    "trust": "Betaalmethode vereist • Gratis tools beschikbaar • AVG-conform",
     "cta": {
       "primary": "Gratis starten",
       "secondary": "Gratis tools proberen"
     }
   },
   "features": {
-    "title": "Alles wat je nodig hebt om veilig te blijven",
-    "subtitle": "Krachtige tools om je digitale leven te beschermen zonder complexiteit.",
+    "title": "Alles wat u nodig heeft om beschermd te blijven",
+    "subtitle": "Krachtige tools om uw digitale leven eenvoudig te beschermen.",
     "items": {
-      "antivirus": {
-        "title": "Antivirusbescherming",
-        "description": "Realtime detectie van bedreigingen op al je apparaten."
+      "web": {
+        "title": "Webbescherming",
+        "description": "Realtime detectie van bedreigingen tijdens het browsen."
       },
       "vault": {
-        "title": "Wachtwoordkluis",
-        "description": "Beheer en bewaar al je inloggegevens veilig."
+        "title": "Communicatiebeveiliging",
+        "description": "Detecteert kwaadaardige e-mails, sms en oproepen."
       },
       "phishing": {
-        "title": "E-mail & SMS beveiliging",
-        "description": "Detecteer phishing en kwaadaardige berichten direct."
+        "title": "Anti-tracking",
+        "description": "Beperkt trackers voor betere privacy."
       },
       "device": {
-        "title": "Apparaatscan",
-        "description": "Ontdek kwetsbaarheden en los ze snel op."
+        "title": "Dashboard",
+        "description": "Een persoonlijk dashboard met een beveiligingsscore en inzichten."
       }
     },
     "button": "Product bekijken"
   },
   "trust": {
     "title": "Waarom Oxo vertrouwen?",
-    "subtitle": "Ontworpen om je online te beschermen met eenvoudige, krachtige en transparante tools.",
+    "subtitle": "Ontworpen om u online te beschermen met eenvoudige en transparante tools.",
     "items": {
       "allInOne": {
         "title": "Alles-in-één bescherming",
-        "description": "Bescherm e-mails, wachtwoorden, apparaten en links met één platform."
+        "description": "Beschermt uw webgebruik, communicatie en privacy."
       },
       "instant": {
-        "title": "Directe beveiligingschecks",
-        "description": "Analyseer bedreigingen in seconden met krachtige tools."
+        "title": "Directe analyse",
+        "description": "Analyseer bedreigingen binnen enkele seconden."
       },
       "privacy": {
         "title": "Privacy by design",
-        "description": "Jouw data blijft van jou. Gebouwd volgens AVG en best practices."
+        "description": "Uw data blijft van u. Ontworpen volgens AVG-principes."
       }
     }
   },
   "dashboard": {
-    "title": "Bekijk je beveiliging in één oogopslag",
-    "description": "Ons dashboard geeft direct inzicht in je apparaten, accounts en beveiligingsstatus.",
+    "title": "Uw veiligheid in één oogopslag",
+    "description": "Ons dashboard geeft u direct inzicht in uw activiteit en beveiligingsniveau.",
     "cta": "Producten ontdekken",
-    "imageAlt": "Oxo dashboard preview"
+    "imageAlt": "Oxo dashboard overzicht"
   },
   "pricing": {
     "title": "Eenvoudige prijzen, maximale bescherming",
@@ -562,221 +559,209 @@
   },
   "product": {
     "hero": {
-      "title": "OXO Security Suite",
-      "description": "Bescherm je apparaten, e-mails, wachtwoorden en links in real-time. Enterprise-grade cybersecurity eenvoudig gemaakt.",
-      "ctaPrimary": "Aan de slag",
-      "ctaSecondary": "Ontdek tools",
+      "title": "Platform voor web- en communicatiebeveiliging",
+      "description": "OXO detecteert gevaarlijke links, frauduleuze berichten en webdreigingen voordat ze u bereiken. Eenvoudige, duidelijke en realtime bescherming.",
+      "ctaPrimary": "Starten",
+      "ctaSecondary": "Tools ontdekken",
       "imageAlt": "OXO productillustratie"
     },
     "products": {
-      "title": "Onze producten",
-      "learnMore": "Meer info",
+      "title": "Wat OXO beschermt",
+      "learnMore": "Meer informatie",
       "items": {
-        "antivirus": {
-          "title": "Antivirus",
-          "description": "Detecteer en verwijder virussen, malware en ransomware op al je apparaten.",
-          "f1": "✔ Real-time virusscan",
-          "f2": "✔ Automatische updates",
-          "f3": "✔ Bescherming op meerdere apparaten"
+        "web": {
+          "title": "Webbescherming",
+          "description": "Analyseer links, detecteer frauduleuze websites en vermijd phishing voordat u klikt.",
+          "f1": "✔ Realtime URL-analyse",
+          "f2": "✔ Detectie van frauduleuze websites",
+          "f3": "✔ Bescherming tijdens het browsen"
         },
-        "antispam": {
-          "title": "Anti-spam",
-          "description": "Filter ongewenste en schadelijke e-mails voordat ze je inbox bereiken.",
-          "f1": "✔ Phishing detectie",
-          "f2": "✔ Slimme spamfilters",
-          "f3": "✔ Inbox beveiligingsscore"
+        "communications": {
+          "title": "Communicatiebeveiliging",
+          "description": "Detecteer frauduleuze sms-berichten, verdachte oproepen en phishing-e-mails.",
+          "f1": "✔ Analyse van links in sms en e-mails",
+          "f2": "✔ Detectie van verdachte nummers",
+          "f3": "✔ Waarschuwingen bij fraude"
         },
-        "antimalware": {
-          "title": "Anti-malware",
-          "description": "Geavanceerde detectie van malware, spyware en andere bedreigingen in real-time.",
-          "f1": "✔ Zero-day detectie",
-          "f2": "✔ Diepe systeemscans",
-          "f3": "✔ Automatische verwijdering"
+        "tracking": {
+          "title": "Anti-tracking bescherming",
+          "description": "Blokkeer onzichtbare trackers en beperk het volgen van uw online activiteit.",
+          "f1": "✔ Blokkering van bekende trackers",
+          "f2": "✔ Detectie van externe verbindingen",
+          "f3": "✔ Inzicht in geblokkeerde elementen"
         },
-        "phishing": {
-          "title": "Phishing bescherming",
-          "description": "Detecteer en blokkeer phishing websites en e-mails voordat ze schade veroorzaken.",
-          "f1": "✔ Real-time URL scanning",
-          "f2": "✔ E-mail analyse",
-          "f3": "✔ Fraudewaarschuwingen"
-        },
-        "vault": {
-          "title": "Wachtwoordkluis",
-          "description": "Beheer en bewaar al je wachtwoorden veilig in één versleutelde kluis.",
-          "f1": "✔ Veilige opslag",
-          "f2": "✔ Automatisch invullen",
-          "f3": "✔ Sterke wachtwoorden genereren",
-          "f4": "✔ Toegang op alle apparaten"
+        "score": {
+          "title": "Beveiligingsscore",
+          "description": "Krijg inzicht in uw beveiligingsniveau met duidelijke aanbevelingen.",
+          "f1": "✔ Persoonlijke beveiligingsscore",
+          "f2": "✔ Geschiedenis van gedetecteerde bedreigingen",
+          "f3": "✔ Aanbevelingen om uw veiligheid te verbeteren"
         }
       }
     },
     "steps": {
       "title": "Hoe OXO werkt",
       "s1": {
-        "title": "Installeren & verbinden",
-        "description": "Installeer OXO en verbind je apparaten en accounts veilig."
+        "title": "Installeren en verbinden",
+        "description": "Installeer OXO op uw browser en apparaten om uw activiteit te analyseren."
       },
       "s2": {
-        "title": "Real-time monitoring",
-        "description": "Continue scanning van e-mails, links en systemen."
+        "title": "Analyseren en detecteren",
+        "description": "OXO controleert links, berichten en verbindingen in realtime."
       },
       "s3": {
-        "title": "Beschermen & waarschuwen",
-        "description": "Directe meldingen en automatische blokkering van bedreigingen."
+        "title": "Waarschuwen en beschermen",
+        "description": "Ontvang duidelijke waarschuwingen en neem de juiste beslissingen."
       }
     },
     "security": {
-      "title": "Enterprise beveiliging voor iedereen",
-      "description": "OXO biedt end-to-end encryptie, AI-detectie en een zero-logs beleid.",
-      "f1": "🔒 End-to-end encryptie",
-      "f2": "🧠 AI-gedreven analyse",
-      "f3": "✅ Geen data opgeslagen of verkocht",
+      "title": "Eenvoudige, transparante en effectieve beveiliging",
+      "description": "OXO beschermt u zonder complexiteit: slimme analyse, respect voor privacy en volledige controle.",
+      "f1": "🔒 Privacy en gegevensbescherming",
+      "f2": "🧠 Slimme risicodetectie",
+      "f3": "⚙️ Controle en transparantie",
       "imageAlt": "OXO beveiligingsillustratie"
     },
     "cta": {
-      "title": "Klaar om je digitale leven te beveiligen?",
-      "description": "Start vandaag met OXO en bescherm al je apparaten en accounts.",
-      "button": "Aan de slag"
+      "title": "Neem de controle over uw online veiligheid",
+      "description": "Analyseer, begrijp en vermijd risico’s met OXO.",
+      "button": "Starten"
     }
   },
-  "antiPhishing": {
+
+  "antiTracking": {
     "hero": {
-      "title": "Anti-phishing & spam bescherming",
-      "description": "Detecteer phishing e-mails en spam voordat ze je gegevens compromitteren.",
-      "imageAlt": "Phishing illustratie"
+      "title": "Anti-tracking & privacybescherming",
+      "description": "Blokkeer onzichtbare trackers en verdachte verbindingen die uw online activiteit volgen. OXO beperkt tracking zonder uw surfervaring te verstoren.",
+      "imageAlt": "Anti-tracking illustratie"
     },
     "dangers": {
-      "title": "Waarom phishing en spam gevaarlijk zijn",
+      "title": "Waarom trackers een risico zijn",
       "items": {
-        "credentialTheft": "🎣 Diefstal van inloggegevens en financiële data",
-        "malwareInstall": "💻 Onopgemerkte installatie van malware",
-        "identityFraud": "⚠️ Identiteitsfraude"
+        "tracking": "👁️ Volgen van uw activiteit op meerdere websites",
+        "profiling": "📊 Opbouw van advertentie- en gedragsprofielen",
+        "dataLeak": "⚠️ Blootstelling van gegevens via externe scripts"
       }
     },
     "protection": {
-      "title": "Hoe OXO je beschermt",
+      "title": "Hoe OXO uw privacy beschermt",
       "items": {
-        "aiScanning": "🧠 AI-gestuurde e-mailanalyse",
-        "linkDetection": "🔍 Detectie van verdachte links",
-        "realTimeAlerts": "⚡ Real-time waarschuwingen"
+        "trackerBlocking": "🛡️ Blokkering van bekende trackers",
+        "thirdParty": "🔍 Detectie van verdachte externe verbindingen",
+        "transparency": "📊 Duidelijk inzicht in geblokkeerde elementen"
       }
     },
     "cta": {
-      "title": "Bescherm jezelf tegen phishing",
-      "button": "Bekijk plannen"
+      "title": "Neem controle over uw privacy",
+      "button": "Activeer anti-tracking"
     }
   },
-  "passwordVault": {
+
+  "comm": {
     "hero": {
-      "title": "Wachtwoordkluis",
-      "description": "Bewaar, genereer en beheer al je wachtwoorden veilig in één versleutelde kluis.",
-      "imageAlt": "Illustratie van de wachtwoordkluis"
+      "title": "Bescherming van communicatie",
+      "description": "Detecteer frauduleuze sms-berichten, verdachte oproepen en phishing-e-mails voordat ze u misleiden.",
+      "imageAlt": "Communicatie bescherming illustratie"
     },
     "dangers": {
-      "title": "Waarom een wachtwoordkluis belangrijk is",
+      "title": "Waarom fraude via berichten en oproepen gevaarlijk is",
       "items": {
-        "strongPasswords": "🔐 Sterke, unieke wachtwoorden voor elk account",
-        "noReuse": "✅ Voorkomt hergebruik op meerdere websites",
-        "compromisedDetection": "🕵️ Detecteert gecompromitteerde inloggegevens direct"
+        "smsPhishing": "📱 Frauduleuze sms (smishing) en gevaarlijke links",
+        "callScam": "📞 Frauduleuze oproepen en nummer spoofing",
+        "emailPhishing": "📧 Phishing-e-mails die legitieme diensten imiteren"
       }
     },
     "protection": {
-      "title": "Hoe onze wachtwoordkluis werkt",
+      "title": "Hoe OXO u beschermt",
       "items": {
-        "encryption": "🛡️ End-to-end encryptie voor alle opgeslagen inloggegevens",
-        "generate": "⚡ Direct complexe wachtwoorden genereren",
-        "multiDevice": "📱 Veilig toegankelijk op al je apparaten"
+        "linkAnalysis": "🔍 Analyse van links in berichten",
+        "numberDetection": "📞 Detectie van verdachte nummers",
+        "realTimeAlerts": "🚨 Duidelijke waarschuwingen bij fraude"
       }
     },
     "cta": {
-      "title": "Bescherm je accounts met OXO",
-      "button": "Bekijk plannen"
+      "title": "Beveilig uw berichten en oproepen",
+      "button": "Activeer bescherming"
     }
   },
-  "individuals": {
+
+  "web": {
     "hero": {
-      "title": "OXO voor particulieren",
-      "description": "Bescherm je persoonlijke accounts, apparaten en online activiteiten met onze alles-in-één beveiligingssuite.",
-      "imageAlt": "Bescherming voor particulieren"
-    },
-    "threats": {
-      "title": "Cyberdreigingen in 2025 voor particulieren",
-      "items": {
-        "phishing": "🎣 62% van de phishingaanvallen richt zich op persoonlijke e-mailadressen",
-        "malware": "💻 48% van de particulieren krijgt te maken met malware- of ransomwarepogingen",
-        "passwords": "🔑 39% van de accountinbraken is te wijten aan zwakke of hergebruikte wachtwoorden"
-      }
-    },
-    "protection": {
-      "title": "Hoe OXO je beschermt",
-      "items": {
-        "vault": "🔐 Wachtwoordkluis met realtime detectie van datalekken",
-        "antivirus": "🛡️ Antivirus- en malwarescans op al je apparaten",
-        "email": "📧 Anti-phishing- en anti-spambeveiliging voor e-mail",
-        "links": "🌐 Veilige linkanalyse en realtime waarschuwingen"
-      }
-    },
-    "cta": {
-      "title": "Beveilig je digitale leven",
-      "description": "Begin vandaag nog met het beschermen van je persoonlijke gegevens met OXO.",
-      "button": "Aan de slag"
-    }
-  },
-  "businesses": {
-    "hero": {
-      "title": "OXO voor bedrijven",
-      "description": "Bescherm de gegevens, medewerkers en klanten van je bedrijf met cybersecuritytools van enterprise-niveau.",
-      "imageAlt": "Bescherming voor bedrijven"
-    },
-    "threats": {
-      "title": "Cyberdreigingen in 2025 voor bedrijven",
-      "items": {
-        "phishing": "🛡️ 73% van de bedrijven krijgt te maken met phishing- of spear-phishingaanvallen",
-        "ransomware": "💻 59% ervaart ransomwarepogingen",
-        "cost": "🔒 Gemiddelde kosten van een datalek: $3,2 miljoen",
-        "credentials": "📈 41% van de datalekken komt voort uit gecompromitteerde medewerkersaccounts"
-      }
-    },
-    "protection": {
-      "title": "Hoe OXO je bedrijf beschermt",
-      "items": {
-        "endpoint": "🛡️ Endpointbeveiliging voor alle bedrijfsapparaten",
-        "email": "📧 Geavanceerde anti-phishing- en anti-spamfilters",
-        "vault": "🔐 Centrale wachtwoordkluis voor teams",
-        "alerts": "⚡ Realtime dreigingsinformatie en waarschuwingen"
-      }
-    },
-    "cta": {
-      "title": "Beveilig je bedrijfsvoering",
-      "description": "Bescherm je bedrijf, medewerkers en klanten tegen cyberdreigingen.",
-      "button": "Bekijk plannen"
-    }
-  },
-  "antivirus": {
-    "hero": {
-      "title": "Antivirus- & malwarebescherming",
-      "description": "Bescherm je apparaten tegen virussen, malware en ransomware met realtime scanning en AI-detectie.",
-      "imageAlt": "Antivirus illustratie"
+      "title": "Slimme webbescherming",
+      "description": "Detecteer gevaarlijke links, frauduleuze websites en phishingpagina’s voordat ze u bereiken.",
+      "imageAlt": "Webbescherming illustratie"
     },
     "dangers": {
-      "title": "Waarom antivirus essentieel is",
+      "title": "Waarom webbescherming essentieel is",
       "items": {
-        "infections": "💻 Voorkomt malware-infecties",
-        "data": "🔒 Beschermt gevoelige gegevens",
-        "performance": "⚡ Houdt apparaten snel en veilig"
+        "infections": "🎣 Vermijd phishing en valse websites",
+        "data": "💳 Bescherm tegen frauduleuze betaalpagina’s",
+        "performance": "⚠️ Blokkeer risicovolle downloads"
       }
     },
     "protection": {
-      "title": "Hoe onze antivirus werkt",
+      "title": "Hoe OXO u beschermt",
       "items": {
-        "aiDetection": "🧠 AI-detectie van verdachte bestanden",
-        "realTime": "🛡️ Realtime scanning van apps en downloads",
-        "alerts": "🔔 Directe waarschuwingen bij dreigingen"
+        "realTime": "🔍 Realtime analyse van links",
+        "aiDetection": "🧠 Detectie van frauduleuze pagina’s",
+        "alerts": "🚨 Waarschuwingen bij risico’s"
       }
     },
     "cta": {
-      "title": "Blijf beschermd tegen malware",
-      "button": "Bekijk plannen"
+      "title": "Surf veilig",
+      "button": "Activeer webbescherming"
+    }
+  },
+
+  "score": {
+    "hero": {
+      "title": "Uw beveiligingsdashboard",
+      "description": "Bekijk uw beveiligingsniveau en begrijp risico’s met een duidelijke score.",
+      "imageAlt": "Dashboard illustratie"
+    },
+    "overview": {
+      "title": "Een duidelijk overzicht van uw veiligheid",
+      "description": "Het dashboard centraliseert alle waarschuwingen en analyses."
+    },
+    "score": {
+      "title": "Uw beveiligingsscore",
+      "description": "Een eenvoudige indicator van uw beveiligingsniveau.",
+      "items": {
+        "score": "🧠 Score van 0 tot 100",
+        "levels": "🟢 🟠 🔴 Duidelijke risiconiveaus",
+        "evolution": "📈 Evolutie in de tijd"
+      }
+    },
+    "insights": {
+      "title": "Begrijp de risico’s",
+      "items": {
+        "links": "🔗 Gevaarlijke links",
+        "messages": "📱 Verdachte berichten en oproepen",
+        "tracking": "👁️ Geblokkeerde trackers",
+        "downloads": "⚠️ Risicovolle downloads"
+      }
+    },
+    "timeline": {
+      "title": "Gebeurtenisgeschiedenis",
+      "description": "Volg alle gebeurtenissen en bedreigingen.",
+      "items": {
+        "events": "📅 Tijdlijn",
+        "details": "🔍 Details",
+        "actions": "⚙️ Acties"
+      }
+    },
+    "recommendations": {
+      "title": "Slimme aanbevelingen",
+      "items": {
+        "actions": "💡 Persoonlijke tips",
+        "fixes": "🛠️ Snelle acties",
+        "prevention": "🛡️ Preventie"
+      }
+    },
+    "cta": {
+      "title": "Neem controle over uw veiligheid",
+      "description": "Blijf bedreigingen een stap voor.",
+      "button": "Dashboard openen"
     }
   },
   "pricingHome": {
@@ -1460,48 +1445,59 @@
       "free": {
         "name": "Gratis",
         "features": [
-          "Beperkte linkanalyse",
-          "Handmatige e-mailcontrole",
-          "Telefoonverificatie"
+          "Handmatige linkanalyse",
+          "Handmatige analyse van teksten, sms en e-mails",
+          "Basis beveiligingsscore",
+          "Beperkte geschiedenis"
         ]
       },
       "pro": {
-        "name": "Personal Pro",
+        "name": "Persoonlijk Pro",
         "features": [
           "Onbeperkte linkanalyse",
-          "E-mail phishingdetectie",
-          "Apparaatbeveiligingscontrole",
-          "Realtime meldingen"
+          "Geavanceerde phishingdetectie",
+          "Bescherming van communicatie (sms, oproepen, e-mails)",
+          "Anti-tracking bescherming",
+          "Volledige beveiligingsscore",
+          "Realtime waarschuwingen"
         ]
       },
       "max": {
-        "name": "Personal Max",
-        "features": ["Alle Pro-functies", "Prioriteitsondersteuning"]
+        "name": "Persoonlijk Max",
+        "features": [
+          "Alle Pro functies",
+          "Volledige geschiedenis",
+          "Geavanceerde aanbevelingen",
+          "Prioritaire ondersteuning"
+        ]
       }
     },
     "business": {
       "startup": {
         "name": "Startup",
         "features": [
-          "E-mail- & phishingbescherming",
-          "Fraudedetectie",
-          "Basisrapportage"
+          "Webbescherming voor teams",
+          "Detectie van frauduleuze links en berichten",
+          "Gedeelde beveiligingsscore",
+          "Basis rapportage"
         ]
       },
       "smePro": {
-        "name": "SME Pro",
+        "name": "MKB Pro",
         "features": [
-          "Alle Startup-functies",
+          "Alle Startup functies",
+          "Communicatiebescherming voor teams",
           "Geavanceerde rapportage",
-          "Teambeheer"
+          "Multi-user beheer"
         ]
       },
       "enterprise": {
         "name": "Enterprise",
         "features": [
-          "Volledige audits & compliance",
-          "Aangepaste integraties",
-          "Toegewijd beveiligingsteam"
+          "Alle MKB Pro functies",
+          "Beleid en schaalbaarheid",
+          "Maatwerk integraties",
+          "Prioritaire ondersteuning"
         ]
       }
     }

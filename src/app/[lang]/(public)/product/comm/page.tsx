@@ -1,8 +1,8 @@
+import CommPageView from "@/app/components/pages/CommPageView";
+import { isValidLocale, type Locale } from "@/lib/i18n";
+import { createPageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { createPageMetadata } from "@/lib/seo";
-import { isValidLocale, type Locale } from "@/lib/i18n";
-import PasswordsVaultPageView from "@/app/components/pages/PasswordsVaultPageView";
 
 type Props = {
   params: Promise<{ lang: string }>;
@@ -44,12 +44,12 @@ const seoByLocale: Record<Locale, { title: string; description: string }> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   if (!isValidLocale(lang)) notFound();
-  return createPageMetadata(lang, "/product/passwords-vault", seoByLocale);
+  return createPageMetadata(lang, "/product/comm", seoByLocale);
 }
 
 export default async function PasswordsVaultPage({ params }: Props) {
   const { lang } = await params;
   if (!isValidLocale(lang)) notFound();
 
-  return <PasswordsVaultPageView lang={lang} />;
+  return <CommPageView lang={lang} />;
 }

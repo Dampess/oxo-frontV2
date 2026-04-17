@@ -3,78 +3,84 @@ import { personalPlans, businessPlans } from "@/lib/plans";
 interface RecommendPlanProps {
   userType: "personal" | "business";
   devicesCount: number;
-  needsPhishing?: boolean;
-  needsDeviceScan?: boolean;
-  needsAdvancedProtection?: boolean;
-  needsPrioritySupport?: boolean;
+  needsWeb?: boolean;
+  needsCommunications?: boolean;
+  needsTracking?: boolean;
+  needsScore?: boolean;
   billing?: "monthly" | "yearly";
   maxBudget?: number | null;
 }
 
+const planCapabilities: Record<string, string[]> = {
+  "plans.personal.free.name": ["web", "communications", "score"],
+  "plans.personal.pro.name": ["web", "communications", "tracking", "score"],
+  "plans.personal.max.name": ["web", "communications", "tracking", "score"],
+
+  "plans.business.startup.name": ["web", "communications", "score"],
+  "plans.business.smePro.name": ["web", "communications", "score"],
+  "plans.business.enterprise.name": [
+    "web",
+    "communications",
+    "tracking",
+    "score",
+  ],
+};
+
 export function recommendPlan({
   userType,
   devicesCount,
-  needsPhishing = false,
-  needsDeviceScan = false,
-  needsAdvancedProtection = false,
-  needsPrioritySupport = false,
+  needsWeb = false,
+  needsCommunications = false,
+  needsTracking = false,
+  needsScore = false,
   billing = "monthly",
   maxBudget = null,
 }: RecommendPlanProps) {
-  // ======= CHOIX DES PLANS SELON TYPE ET NOMBRE DE DEVICES =======
-  let allPlans;
-  if (devicesCount > 8) {
-    // Si plus de 8 devices, on force les plans business
-    allPlans = businessPlans;
-  } else {
-    // Sinon, on utilise le type choisi par l'utilisateur
-    allPlans = userType === "personal" ? personalPlans : businessPlans;
-  }
+  const allPlans =
+    devicesCount > 8
+      ? businessPlans
+      : userType === "personal"
+        ? personalPlans
+        : businessPlans;
 
-  // ======= PRIX SELON BILLING =======
   const getPrice = (plan: any) =>
     billing === "monthly" ? plan.priceMonthly : plan.priceYearly;
 
-  // ======= LISTE DES FONCTIONNALITES REQUISES =======
-  const requiredFeatures: string[] = [];
-  if (needsPhishing)
-    requiredFeatures.push(
-      "Email phishing detection",
-      "Email & phishing protection",
-    );
-  if (needsDeviceScan) requiredFeatures.push("Device security checks");
-  if (needsAdvancedProtection) requiredFeatures.push("Fraud detection");
-  if (needsPrioritySupport)
-    requiredFeatures.push("Priority support", "Dedicated security team");
+  const requiredCapabilities: string[] = [];
+  if (needsWeb) requiredCapabilities.push("web");
+  if (needsCommunications) requiredCapabilities.push("communications");
+  if (needsTracking) requiredCapabilities.push("tracking");
+  if (needsScore) requiredCapabilities.push("score");
 
-  // ======= FILTRAGE STRICT DES PLANS =======
   const filteredPlans = allPlans.filter((plan: any) => {
     if (plan.devices < devicesCount) return false;
-    return requiredFeatures.every((f) => plan.features.includes(f));
+
+    const capabilities = planCapabilities[plan.name] || [];
+    return requiredCapabilities.every((cap) => capabilities.includes(cap));
   });
 
-  // ======= SI AUCUN PLAN NE CORRESPOND, ON SCORE TOUS =======
   const candidates = filteredPlans.length > 0 ? filteredPlans : allPlans;
 
   const scored = candidates.map((plan: any) => {
     let score = 0;
+    const capabilities = planCapabilities[plan.name] || [];
+    const price = getPrice(plan);
 
-    // Devices adequacy (max 2 points)
     score += Math.min(plan.devices / devicesCount, 2);
 
-    // Bonus pour features optionnelles
-    requiredFeatures.forEach((f) => {
-      if (plan.features.includes(f)) score += 1;
+    requiredCapabilities.forEach((cap) => {
+      if (capabilities.includes(cap)) score += 1.5;
     });
 
-    // Bonus pour budget
-    const price = getPrice(plan);
-    if (maxBudget !== null && price > 0 && price <= maxBudget) score += 1;
+    if (maxBudget !== null) {
+      if (price === 0) score += 0.5;
+      else if (price <= maxBudget) score += 1;
+      else score -= 1;
+    }
 
     return { plan, score, price };
   });
 
-  // ======= TRI PAR SCORE, PUIS PRIX CROISSANT =======
   scored.sort((a, b) =>
     b.score === a.score ? a.price - b.price : b.score - a.score,
   );

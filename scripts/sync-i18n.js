@@ -4,8 +4,8 @@ const path = require("path");
 const basePath = path.join(__dirname, "..", "src", "locales");
 // adapte si besoin : path.join(__dirname, "..", "locales")
 
-const baseLocale = "en";
-const targetLocales = ["fr", "de", "nl", "es", "it"];
+const baseLocale = "fr";
+const targetLocales = ["en", "de", "nl", "es", "it"];
 
 function readJson(filePath) {
   try {

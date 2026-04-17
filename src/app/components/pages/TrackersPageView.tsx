@@ -8,7 +8,7 @@ type Props = {
   lang: string;
 };
 
-export default function AntivirusPageView({ lang }: Props) {
+export default function TrackersPageView({ lang }: Props) {
   const { t } = useTranslation(lang);
 
   return (
@@ -17,13 +17,13 @@ export default function AntivirusPageView({ lang }: Props) {
       <section className="hero hero-main">
         <div className="container hero-grid">
           <div className="hero-text">
-            <h1>{t("antivirus.hero.title")}</h1>
-            <p>{t("antivirus.hero.description")}</p>
+            <h1>{t("antiTracking.hero.title")}</h1>
+            <p>{t("antiTracking.hero.description")}</p>
           </div>
           <div className="hero-visual">
             <Image
-              src="/malware-attack.webp"
-              alt={t("antivirus.hero.imageAlt")}
+              src="/email-security.webp"
+              alt={t("antiTracking.hero.imageAlt")}
               width={400}
               height={300}
             />
@@ -33,29 +33,29 @@ export default function AntivirusPageView({ lang }: Props) {
 
       {/* WHY PROTECT */}
       <section className="info-section alt">
-        <h2>{t("antivirus.dangers.title")}</h2>
+        <h2>{t("antiTracking.dangers.title")}</h2>
         <ul>
-          <li>{t("antivirus.dangers.items.infections")}</li>
-          <li>{t("antivirus.dangers.items.data")}</li>
-          <li>{t("antivirus.dangers.items.performance")}</li>
+          <li>{t("antiTracking.dangers.items.tracking")}</li>
+          <li>{t("antiTracking.dangers.items.profiling")}</li>
+          <li>{t("antiTracking.dangers.items.dataLeak")}</li>
         </ul>
       </section>
 
       {/* HOW IT WORKS */}
       <section className="info-section alt">
-        <h2>{t("antivirus.protection.title")}</h2>
+        <h2>{t("antiTracking.protection.title")}</h2>
         <ul>
-          <li>{t("antivirus.protection.items.aiDetection")}</li>
-          <li>{t("antivirus.protection.items.realTime")}</li>
-          <li>{t("antivirus.protection.items.alerts")}</li>
+          <li>{t("antiTracking.protection.items.trackerBlocking")}</li>
+          <li>{t("antiTracking.protection.items.thirdParty")}</li>
+          <li>{t("antiTracking.protection.items.transparency")}</li>
         </ul>
       </section>
 
       {/* CTA */}
       <section className="cta">
-        <h2>{t("antivirus.cta.title")}</h2>
+        <h2>{t("antiTracking.cta.title")}</h2>
         <a href={`/${lang}/pricing`} className="btn primary">
-          {t("antivirus.cta.button")}
+          {t("antiTracking.cta.button")}
         </a>
       </section>
     </main>

@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useTranslation } from "@/hooks/useTranslation";
 import "../styles/components/featuressection.scss";
 import FeatureCard from "./FeatureCard";
@@ -10,28 +9,28 @@ export default function FeaturesSection() {
 
   const features = [
     {
-      title: t("features.items.antivirus.title"),
-      description: t("features.items.antivirus.description"),
-      icon: "🛡️",
-      link: "product/anti-virus",
+      title: t("features.items.web.title"),
+      description: t("features.items.web.description"),
+      icon: "@",
+      link: "product/web",
     },
     {
       title: t("features.items.vault.title"),
       description: t("features.items.vault.description"),
-      icon: "🔑",
-      link: "product/passwords-vault",
+      icon: "✉️",
+      link: "product/comm",
     },
     {
       title: t("features.items.phishing.title"),
       description: t("features.items.phishing.description"),
-      icon: "✉️",
-      link: "product/spam-phishing",
+      icon: "🛡️",
+      link: "product/trackers",
     },
     {
       title: t("features.items.device.title"),
       description: t("features.items.device.description"),
       icon: "💻",
-      link: "product/anti-virus",
+      link: "product/web",
     },
   ];
 

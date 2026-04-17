@@ -12,20 +12,17 @@
   },
   "nav": {
     "tagline": "Voir. Détecter. Protéger.",
-    "forusers": "Pour les utilisateurs",
-    "individuals": "Particuliers",
     "products": "Produits",
     "product": {
-      "antivirus": "Antivirus & Anti-malware",
-      "vault": "Coffre-fort de mots de passe",
-      "phishing": "Protection anti-spam & phishing",
-      "mission": "Notre mission"
+      "web": "Protection web",
+      "comm": "Sécurisation des communications",
+      "trackers": "Anti-trackers",
+      "score": "Tableau de bord"
     },
     "cta": {
-      "allInOne": "Plateforme de cybersécurité tout-en-un.",
+      "allInOne": "Navigation web et vie privée sécurisées",
       "exploreProducts": "Découvrir les produits"
     },
-    "businesses": "Entreprises",
     "blog": "Blog",
     "support": "Support",
     "useful": "Ressources",
@@ -66,11 +63,11 @@
   },
   "hero": {
     "title": {
-      "line1": "Restez en sécurité en ligne.",
+      "line1": "Vie privée et sécurité.",
       "line2": "Sans complexité."
     },
-    "description": "Oxo protège vos emails, mots de passe et appareils en temps réel. Des outils simples. Une sécurité puissante.",
-    "trust": "Carte bancaire requise • Outils gratuits disponibles • Conforme RGPD",
+    "description": "Oxo protège vos navigations web, vos communications et contre les trackers. ",
+    "trust": "Moyen de paiement requis • Outils gratuits disponibles • Conforme RGPD",
     "cta": {
       "primary": "Commencer gratuitement",
       "secondary": "Essayer les outils gratuits"
@@ -80,21 +77,21 @@
     "title": "Tout ce dont vous avez besoin pour rester protégé",
     "subtitle": "Des outils puissants conçus pour protéger votre vie numérique sans complexité.",
     "items": {
-      "antivirus": {
-        "title": "Protection antivirus",
-        "description": "Détection des menaces en temps réel sur tous vos appareils."
+      "web": {
+        "title": "Protection Web",
+        "description": "Détection des menaces en temps réel pendant la navigation."
       },
       "vault": {
-        "title": "Coffre-fort de mots de passe",
-        "description": "Stockez et gérez tous vos identifiants en toute sécurité."
+        "title": "Protection des communications",
+        "description": "Détection des emails, sms, appels et communications malveillants"
       },
       "phishing": {
-        "title": "Sécurité email & SMS",
-        "description": "Détectez instantanément le phishing et les messages malveillants."
+        "title": "Anti-trackers",
+        "description": "Limite les trackers pour garantir votre vie privée."
       },
       "device": {
-        "title": "Analyse des appareils",
-        "description": "Identifiez les vulnérabilités et corrigez-les rapidement."
+        "title": "Tableau de bord",
+        "description": "Un tableau de bord personnel avec un score global et des conseils sécurité"
       }
     },
     "button": "Voir le produit"
@@ -105,7 +102,7 @@
     "items": {
       "allInOne": {
         "title": "Protection tout-en-un",
-        "description": "Protégez vos emails, mots de passe, appareils et liens avec une seule plateforme."
+        "description": "Protége vos navigations web, vos communications et votre vie privée."
       },
       "instant": {
         "title": "Analyses instantanées",
@@ -119,13 +116,13 @@
   },
   "dashboard": {
     "title": "Visualisez votre sécurité en un coup d'œil",
-    "description": "Notre tableau de bord intuitif vous donne une vision instantanée de vos appareils, comptes et niveau de sécurité global.",
+    "description": "Notre tableau de bord intuitif vous donne une vision instantanée de vos appareils, votre compte et niveau de sécurité global.",
     "cta": "Découvrir les produits",
     "imageAlt": "Aperçu du tableau de bord Oxo"
   },
   "pricing": {
     "title": "Des prix simples, une protection maximale",
-    "subtitle": "Gratuit ou premium, pour particuliers ou équipes — choisissez ce qui vous convient.",
+    "subtitle": "Gratuit ou premium, choisissez ce qui vous convient.",
     "mostPopular": "Le plus populaire",
     "device": "appareil",
     "devices": "appareils",
@@ -141,12 +138,12 @@
     "subtitle": "Testez votre sécurité en quelques secondes. Aucun compte requis.",
     "items": {
       "email": {
-        "title": "Vérification de fuite email",
-        "desc": "Vérifiez si votre email a été exposé lors d’une fuite de données."
+        "title": "Vérification d'email",
+        "desc": "Vérifiez si un email est suceptible d'être dangeureux."
       },
       "password": {
         "title": "Testeur de mot de passe",
-        "desc": "Évaluez instantanément la robustesse de votre mot de passe."
+        "desc": "Évaluez instantanément la robustesse de votre mot de passe ou générez en un robuste."
       },
       "link": {
         "title": "Analyseur de lien",
@@ -322,6 +319,7 @@
       }
     }
   },
+
   "toolsPage": {
     "hero": {
       "title": "Outils de sécurité gratuits",
@@ -563,51 +561,43 @@
   },
   "product": {
     "hero": {
-      "title": "Suite de sécurité OXO",
-      "description": "Protégez vos appareils, emails, mots de passe et liens en temps réel. Une cybersécurité de niveau entreprise, simple à utiliser.",
+      "title": "Plateforme de protection web & communications",
+      "description": "OXO détecte les liens dangereux, les messages frauduleux et les menaces du web avant qu’elles ne vous atteignent. Une protection simple, claire et en temps réel.",
       "ctaPrimary": "Commencer",
       "ctaSecondary": "Découvrir les outils",
       "imageAlt": "Illustration du produit OXO"
     },
     "products": {
-      "title": "Nos produits",
+      "title": "Ce que protège OXO",
       "learnMore": "En savoir plus",
       "items": {
-        "antivirus": {
-          "title": "Antivirus",
-          "description": "Détectez et supprimez les virus, malwares et ransomwares sur tous vos appareils.",
-          "f1": "✔ Analyse antivirus en temps réel",
-          "f2": "✔ Mises à jour automatiques",
-          "f3": "✔ Protection multi-appareils"
-        },
-        "antispam": {
-          "title": "Anti-spam",
-          "description": "Filtrez les emails indésirables et malveillants avant qu’ils n’atteignent votre boîte de réception.",
-          "f1": "✔ Détection des emails de phishing",
-          "f2": "✔ Filtres intelligents",
-          "f3": "✔ Score de sécurité de la boîte mail"
-        },
-        "antimalware": {
-          "title": "Anti-malware",
-          "description": "Détection avancée des malwares, spywares et autres menaces en temps réel.",
-          "f1": "✔ Détection des menaces zero-day",
-          "f2": "✔ Analyse approfondie du système",
-          "f3": "✔ Suppression automatique des menaces"
-        },
-        "phishing": {
-          "title": "Protection anti-phishing",
-          "description": "Identifiez et bloquez les sites et emails frauduleux avant qu’ils ne compromettent vos données.",
+        "web": {
+          "title": "Protection web",
+          "description": "Analysez les liens, détectez les sites frauduleux et évitez les pièges du phishing avant même de cliquer.",
           "f1": "✔ Analyse des URLs en temps réel",
-          "f2": "✔ Analyse des emails",
-          "f3": "✔ Alertes de fraude"
+          "f2": "✔ Détection des sites frauduleux",
+          "f3": "✔ Protection lors de la navigation"
         },
-        "vault": {
-          "title": "Coffre-fort de mots de passe",
-          "description": "Stockez et gérez tous vos mots de passe en toute sécurité dans un coffre chiffré.",
-          "f1": "✔ Stockage sécurisé",
-          "f2": "✔ Remplissage automatique",
-          "f3": "✔ Génération de mots de passe forts",
-          "f4": "✔ Accès multi-appareils"
+        "communications": {
+          "title": "Protection des communications",
+          "description": "Identifiez les SMS frauduleux, appels suspects et emails de phishing avant qu’ils ne vous piègent.",
+          "f1": "✔ Analyse des liens dans SMS et emails",
+          "f2": "✔ Détection des numéros suspects",
+          "f3": "✔ Alertes en cas de tentative de fraude"
+        },
+        "tracking": {
+          "title": "Protection anti-tracking",
+          "description": "Bloquez les trackers invisibles et limitez le suivi de votre activité en ligne.",
+          "f1": "✔ Blocage des trackers connus",
+          "f2": "✔ Détection des connexions tierces",
+          "f3": "✔ Visibilité sur les éléments bloqués"
+        },
+        "score": {
+          "title": "Score de sécurité",
+          "description": "Visualisez votre niveau de sécurité et comprenez les risques grâce à des recommandations claires.",
+          "f1": "✔ Score de sécurité personnalisé",
+          "f2": "✔ Historique des menaces détectées",
+          "f3": "✔ Conseils pour améliorer votre protection"
         }
       }
     },
@@ -615,169 +605,167 @@
       "title": "Comment fonctionne OXO",
       "s1": {
         "title": "Installer et connecter",
-        "description": "Installez OXO et connectez vos appareils, emails et navigateurs en toute sécurité."
+        "description": "Installez OXO sur votre navigateur et vos appareils pour commencer à analyser votre activité."
       },
       "s2": {
-        "title": "Surveillance en temps réel",
-        "description": "Analyse continue des emails, liens et fichiers système pour détecter les menaces."
+        "title": "Analyser et détecter",
+        "description": "OXO vérifie les liens, messages et connexions pour identifier les risques en temps réel."
       },
       "s3": {
-        "title": "Protéger et alerter",
-        "description": "Notifications instantanées et blocage automatique des menaces."
+        "title": "Alerter et protéger",
+        "description": "Recevez des alertes claires et prenez les bonnes décisions avant qu’une menace ne vous impacte."
       }
     },
     "security": {
-      "title": "Une sécurité de niveau entreprise pour tous",
-      "description": "OXO garantit un chiffrement de bout en bout, une détection des menaces par IA et une politique zéro logs.",
-      "f1": "🔒 Chiffrement de bout en bout",
-      "f2": "🧠 Analyse des menaces par IA",
-      "f3": "✅ Aucune donnée stockée ni vendue",
+      "title": "Une sécurité simple, transparente et efficace",
+      "description": "OXO vous protège sans complexité : analyse intelligente, respect de votre vie privée et contrôle total sur votre sécurité.",
+      "f1": "🔒 Respect de la vie privée et des données",
+      "f2": "🧠 Détection intelligente des risques",
+      "f3": "⚙️ Contrôle et transparence pour l’utilisateur",
       "imageAlt": "Illustration sécurité OXO"
     },
     "cta": {
-      "title": "Prêt à sécuriser votre vie numérique ?",
-      "description": "Commencez avec OXO et protégez tous vos appareils, emails et comptes dès maintenant.",
+      "title": "Reprenez le contrôle de votre sécurité en ligne",
+      "description": "Analysez, comprenez et évitez les menaces du web avec OXO.",
       "button": "Commencer"
     }
   },
-  "antiPhishing": {
+  "antiTracking": {
     "hero": {
-      "title": "Protection Anti-Phishing & Spam",
-      "description": "Détectez les emails frauduleux et le spam avant qu’ils ne compromettent vos identifiants ou n’installent des malwares.",
-      "imageAlt": "Illustration anti-phishing"
+      "title": "Protection anti-tracking & vie privée",
+      "description": "Bloquez les trackers invisibles et les connexions suspectes qui suivent votre activité en ligne. OXO limite le suivi et renforce votre confidentialité sans casser votre navigation.",
+      "imageAlt": "Illustration anti-tracking"
     },
     "dangers": {
-      "title": "Pourquoi le phishing et le spam sont dangereux",
+      "title": "Pourquoi les trackers sont un risque",
       "items": {
-        "credentialTheft": "🎣 Vol d’identifiants et de données financières",
-        "malwareInstall": "💻 Installation silencieuse de malwares",
-        "identityFraud": "⚠️ Risque d’usurpation d’identité ou de fraude"
+        "tracking": "👁️ Suivi de votre activité sur plusieurs sites",
+        "profiling": "📊 Création de profils publicitaires et comportementaux",
+        "dataLeak": "⚠️ Exposition de données via des scripts tiers inconnus"
+      }
+    },
+    "protection": {
+      "title": "Comment OXO protège votre vie privée",
+      "items": {
+        "trackerBlocking": "🛡️ Blocage des trackers et domaines connus",
+        "thirdParty": "🔍 Détection des connexions tierces suspectes",
+        "transparency": "📊 Visibilité claire des éléments bloqués sur chaque site"
+      }
+    },
+    "cta": {
+      "title": "Reprenez le contrôle de votre navigation",
+      "button": "Activer la protection anti-tracking"
+    }
+  },
+  "comm": {
+    "hero": {
+      "title": "Protection des communications",
+      "description": "Détectez les SMS frauduleux, les appels suspects et les emails de phishing avant qu’ils ne vous piègent. OXO analyse vos communications pour identifier les tentatives d’arnaque en temps réel.",
+      "imageAlt": "Illustration protection communications"
+    },
+    "dangers": {
+      "title": "Pourquoi les arnaques par message et appel sont dangereuses",
+      "items": {
+        "smsPhishing": "📱 SMS frauduleux (smishing) et liens piégés",
+        "callScam": "📞 Appels de fraude et usurpation de numéro",
+        "emailPhishing": "📧 Emails imitant des services légitimes"
       }
     },
     "protection": {
       "title": "Comment OXO vous protège",
       "items": {
-        "aiScanning": "🧠 Analyse des emails par intelligence artificielle",
-        "linkDetection": "🔍 Détection des liens et pièces jointes suspects",
-        "realTimeAlerts": "⚡ Alertes en temps réel en cas de phishing"
+        "linkAnalysis": "🔍 Analyse des liens présents dans SMS et emails",
+        "numberDetection": "📞 Détection des numéros suspects ou signalés",
+        "realTimeAlerts": "🚨 Alertes claires en cas de tentative de fraude"
       }
     },
     "cta": {
-      "title": "Protégez-vous contre le phishing",
-      "button": "Explorer les offres"
+      "title": "Sécurisez vos messages et appels",
+      "button": "Activer la protection des communications"
     }
   },
-  "passwordVault": {
+  "web": {
     "hero": {
-      "title": "Coffre-fort de mots de passe",
-      "description": "Stockez, générez et gérez tous vos mots de passe en toute sécurité dans un coffre chiffré.",
-      "imageAlt": "Illustration coffre de mots de passe"
+      "title": "Protection web intelligente",
+      "description": "Détectez les liens dangereux, les sites frauduleux et les pages de phishing avant qu’ils ne vous piègent. OXO analyse le web en temps réel pour sécuriser chaque clic.",
+      "imageAlt": "Illustration protection web"
     },
     "dangers": {
-      "title": "Pourquoi un gestionnaire de mots de passe est essentiel",
+      "title": "Pourquoi la protection web est essentielle",
       "items": {
-        "strongPasswords": "🔐 Mots de passe forts et uniques pour chaque compte",
-        "noReuse": "✅ Évite la réutilisation entre plusieurs services",
-        "compromisedDetection": "🕵️ Détection instantanée des identifiants compromis"
-      }
-    },
-    "protection": {
-      "title": "Comment fonctionne notre coffre-fort",
-      "items": {
-        "encryption": "🛡️ Chiffrement de bout en bout",
-        "generate": "⚡ Génération instantanée de mots de passe complexes",
-        "multiDevice": "📱 Accès sécurisé sur tous vos appareils"
-      }
-    },
-    "cta": {
-      "title": "Protégez vos comptes avec OXO",
-      "button": "Explorer les offres"
-    }
-  },
-  "individuals": {
-    "hero": {
-      "title": "OXO pour les particuliers",
-      "description": "Protégez vos comptes personnels, vos appareils et votre activité en ligne avec notre solution tout-en-un.",
-      "imageAlt": "Protection des particuliers"
-    },
-    "threats": {
-      "title": "Menaces cyber en 2025 pour les particuliers",
-      "items": {
-        "phishing": "🎣 62 % des attaques de phishing ciblent les emails personnels",
-        "malware": "💻 48 % des utilisateurs subissent des tentatives de malware ou ransomware",
-        "passwords": "🔑 39 % des compromissions proviennent de mots de passe faibles ou réutilisés"
+        "infections": "🎣 Éviter les pièges de phishing et les faux sites",
+        "data": "💳 Se protéger des pages de paiement frauduleuses",
+        "performance": "⚠️ Bloquer les téléchargements à risque"
       }
     },
     "protection": {
       "title": "Comment OXO vous protège",
       "items": {
-        "vault": "🔐 Coffre de mots de passe avec détection de fuite en temps réel",
-        "antivirus": "🛡️ Antivirus et analyse des malwares",
-        "email": "📧 Protection anti-phishing et anti-spam",
-        "links": "🌐 Analyse sécurisée des liens"
+        "realTime": "🔍 Analyse des liens et domaines en temps réel",
+        "aiDetection": "🧠 Détection des pages frauduleuses et imitantes",
+        "alerts": "🚨 Alerte claire avant tout risque ou tentative de fraude"
       }
     },
     "cta": {
-      "title": "Sécurisez votre vie numérique",
-      "description": "Commencez dès aujourd’hui à protéger vos données personnelles avec OXO.",
-      "button": "Commencer"
+      "title": "Naviguez en toute confiance",
+      "button": "Activer la protection web"
     }
   },
-  "businesses": {
+  "score": {
     "hero": {
-      "title": "OXO pour les entreprises",
-      "description": "Protégez les données, les employés et les clients de votre entreprise avec des outils de cybersécurité avancés.",
-      "imageAlt": "Protection des entreprises"
+      "title": "Votre tableau de bord de sécurité",
+      "description": "Visualisez votre niveau de sécurité, comprenez les risques et prenez les bonnes décisions grâce à un score clair et des recommandations simples.",
+      "imageAlt": "Illustration dashboard OXO"
     },
-    "threats": {
-      "title": "Menaces cyber en 2025 pour les entreprises",
+
+    "overview": {
+      "title": "Une vision claire de votre sécurité",
+      "description": "Le dashboard OXO centralise toutes vos alertes, analyses et événements pour vous donner une vue complète de votre activité et des risques détectés."
+    },
+
+    "score": {
+      "title": "Votre score de sécurité",
+      "description": "Un indicateur simple pour comprendre votre niveau de protection.",
       "items": {
-        "phishing": "🛡️ 73 % des entreprises subissent des attaques de phishing",
-        "ransomware": "💻 59 % font face à des tentatives de ransomware",
-        "cost": "🔒 Coût moyen d’une violation : 3,2 M$",
-        "credentials": "📈 41 % des violations proviennent d’identifiants compromis"
+        "score": "🧠 Score global de 0 à 100",
+        "levels": "🟢 🟠 🔴 Niveau de risque clair et visuel",
+        "evolution": "📈 Suivi de votre évolution dans le temps"
       }
     },
-    "protection": {
-      "title": "Comment OXO protège votre entreprise",
+
+    "insights": {
+      "title": "Comprenez les risques",
       "items": {
-        "endpoint": "🛡️ Sécurité des endpoints",
-        "email": "📧 Filtres avancés anti-phishing et anti-spam",
-        "vault": "🔐 Gestion centralisée des mots de passe",
-        "alerts": "⚡ Alertes et intelligence des menaces en temps réel"
+        "links": "🔗 Liens dangereux détectés",
+        "messages": "📱 SMS, appels ou emails suspects",
+        "tracking": "👁️ Trackers bloqués pendant votre navigation",
+        "downloads": "⚠️ Téléchargements à risque"
       }
     },
+
+    "timeline": {
+      "title": "Historique des événements",
+      "description": "Chaque action est enregistrée pour vous permettre de suivre les menaces et comprendre ce qui s’est passé.",
+      "items": {
+        "events": "📅 Chronologie des alertes et analyses",
+        "details": "🔍 Détails sur chaque risque détecté",
+        "actions": "⚙️ Actions prises ou recommandées"
+      }
+    },
+
+    "recommendations": {
+      "title": "Des recommandations simples et utiles",
+      "items": {
+        "actions": "💡 Conseils personnalisés pour améliorer votre sécurité",
+        "fixes": "🛠️ Actions rapides à effectuer",
+        "prevention": "🛡️ Prévention des risques futurs"
+      }
+    },
+
     "cta": {
-      "title": "Sécurisez votre activité",
-      "description": "Protégez votre entreprise, vos équipes et vos clients.",
-      "button": "Explorer les offres"
-    }
-  },
-  "antivirus": {
-    "hero": {
-      "title": "Protection Antivirus & Anti-Malware",
-      "description": "Protégez vos appareils contre les virus, malwares et ransomwares grâce à une analyse en temps réel et une détection par IA.",
-      "imageAlt": "Illustration antivirus"
-    },
-    "dangers": {
-      "title": "Pourquoi un antivirus est essentiel",
-      "items": {
-        "infections": "💻 Prévenir les infections par malware",
-        "data": "🔒 Protéger les données sensibles",
-        "performance": "⚡ Maintenir des appareils rapides et sécurisés"
-      }
-    },
-    "protection": {
-      "title": "Comment fonctionne notre antivirus",
-      "items": {
-        "aiDetection": "🧠 Détection des fichiers suspects par IA",
-        "realTime": "🛡️ Analyse en temps réel des applications et téléchargements",
-        "alerts": "🔔 Alertes instantanées en cas de menace"
-      }
-    },
-    "cta": {
-      "title": "Restez protégé contre les malwares",
-      "button": "Explorer les offres"
+      "title": "Prenez le contrôle de votre sécurité",
+      "description": "Accédez à votre dashboard et gardez une longueur d’avance sur les menaces.",
+      "button": "Accéder au dashboard"
     }
   },
   "pricingHome": {
@@ -887,17 +875,19 @@
         }
       },
       "devices": {
-        "title": "Combien d’appareils ?"
+        "title": "Combien d’appareils souhaitez-vous protéger ?"
       },
       "protections": {
-        "title": "Choisissez vos protections",
+        "title": "Quelles protections sont importantes pour vous ?",
         "options": {
-          "phishing": "🛡️ Protection anti-phishing",
-          "deviceScan": "💻 Analyse de sécurité des appareils"
+          "web": "🌐 Protection web",
+          "communications": "📱 Protection des communications",
+          "tracking": "👁️ Anti-trackers",
+          "score": "🧠 Score de sécurité et recommandations"
         }
       },
       "budget": {
-        "title": "Votre budget mensuel",
+        "title": "Quel est votre budget mensuel ?",
         "placeholder": "Ex : 20"
       }
     },
@@ -908,13 +898,15 @@
       "whyTitle": "Pourquoi cette offre ?",
       "cta": "Commencer",
       "explanations": {
-        "userTypePersonal": "Vous êtes un utilisateur particulier.",
-        "userTypeBusiness": "Vous êtes un utilisateur professionnel.",
-        "devicesLarge": "Vous avez {{count}} appareils ou plus, nous vous recommandons donc une offre capable de gérer efficacement une protection à grande échelle.",
-        "devicesMedium": "Vous avez {{count}} appareils, nous vous recommandons donc une offre adaptée à la protection de plusieurs appareils.",
-        "phishing": "La protection anti-phishing est activée pour sécuriser vos emails et vos liens.",
-        "deviceScan": "L’analyse de sécurité des appareils est incluse pour garantir la protection de tous vos appareils.",
-        "budget": "Nous avons filtré les offres pour respecter votre budget de ${{budget}}/mois."
+        "userTypePersonal": "Vous recherchez une offre adaptée à un usage personnel.",
+        "userTypeBusiness": "Vous recherchez une offre adaptée à une équipe ou une entreprise.",
+        "devicesLarge": "Vous avez 19 appareils ou plus, nous vous recommandons donc une offre capable de protéger plusieurs utilisateurs ou une flotte plus large.",
+        "devicesMedium": "Vous avez Vous avec plus de 5 appareils, nous vous recommandons donc une offre adaptée à plusieurs appareils.",
+        "web": "La protection web est importante pour vous afin de détecter les liens dangereux, les sites frauduleux et les pages de phishing.",
+        "communications": "La protection des communications est importante pour vous afin de sécuriser les SMS, appels et emails suspects.",
+        "tracking": "L’anti-tracking est important pour vous afin de limiter les trackers et renforcer votre vie privée.",
+        "score": "Le score de sécurité et les recommandations vous aident à comprendre votre niveau de protection.",
+        "budget": "Nous avons priorisé les offres compatibles avec votre budget."
       }
     }
   },
@@ -1461,31 +1453,40 @@
       "free": {
         "name": "Gratuit",
         "features": [
-          "Analyse de liens limitée",
-          "Analyse manuelle des emails",
-          "Vérification par téléphone"
+          "Analyse manuelle de liens",
+          "Analyse manuelle de textes, SMS et emails",
+          "Score de sécurité simplifié",
+          "Historique limité"
         ]
       },
       "pro": {
         "name": "Personnel Pro",
         "features": [
           "Analyse illimitée des liens",
-          "Détection de phishing par email",
-          "Analyse de sécurité des appareils",
+          "Détection avancée de phishing et de pages frauduleuses",
+          "Protection des communications (SMS, appels, emails)",
+          "Protection anti-tracking",
+          "Score de sécurité complet",
           "Alertes en temps réel"
         ]
       },
       "max": {
         "name": "Personnel Max",
-        "features": ["Toutes les fonctionnalités Pro", "Support prioritaire"]
+        "features": [
+          "Toutes les fonctionnalités Personnel Pro",
+          "Historique complet des événements",
+          "Recommandations de sécurité avancées",
+          "Support prioritaire"
+        ]
       }
     },
     "business": {
       "startup": {
         "name": "Startup",
         "features": [
-          "Protection email & phishing",
-          "Détection de fraude",
+          "Protection web pour l’équipe",
+          "Détection des liens et messages frauduleux",
+          "Score de sécurité partagé",
           "Reporting basique"
         ]
       },
@@ -1493,16 +1494,18 @@
         "name": "PME Pro",
         "features": [
           "Toutes les fonctionnalités Startup",
+          "Protection des communications pour les équipes",
           "Reporting avancé",
-          "Gestion d’équipe"
+          "Gestion multi-utilisateurs"
         ]
       },
       "enterprise": {
         "name": "Entreprise",
         "features": [
-          "Audits complets & conformité",
+          "Toutes les fonctionnalités PME Pro",
+          "Politiques et déploiement à grande échelle",
           "Intégrations personnalisées",
-          "Équipe sécurité dédiée"
+          "Support prioritaire"
         ]
       }
     }
